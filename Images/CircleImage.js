@@ -49,7 +49,8 @@ var CircleImage = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverShadow: props.hovShadow
+            hoverShadow: props.hovShadow,
+            margin: props.margin || '1px'
         };
         return _this;
     }
@@ -81,7 +82,8 @@ var CircleImage = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
-                    animationFillMode: this.state.animationFillMode
+                    animationFillMode: this.state.animationFillMode,
+                    margin: this.state.margin
                 },
                 hoverStyle: {
                     color: this.state.hoverShadow

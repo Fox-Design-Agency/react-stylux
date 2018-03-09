@@ -45,7 +45,8 @@ var Figure = function (_Component) {
             figCapClassName: props.figCapClassName,
             childs: '',
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            margin: props.margin || '1px'
         };
         return _this;
     }

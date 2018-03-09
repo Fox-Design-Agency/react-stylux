@@ -127,8 +127,7 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border,
-                        flex: 1
+                        border: this.state.border
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -218,8 +217,7 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border,
-                        flex: 1
+                        border: this.state.border
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -352,8 +350,7 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border,
-                        flex: 1
+                        border: this.state.border
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {

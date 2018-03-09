@@ -5,7 +5,7 @@ This is currently an alpha stage project, documentation will be lack luster for 
 
 - **responsive testing ongoing, no sizes are set as of right now**
 - **videos being worked on to explain blocks and design choices**
-- **beta will be released soon and this project will be open for collaboration**
+- **very frequent updates will be occurring to push this project into beta and open collaboration**
 
 
 Utilizing three simple component types, this project simplifies layout and front-end considerations for react projects. The three component types are: containers (subject to change), holders, and blocks. Containers (subject to change) define the horizonal space and act as a wrapper for all blocks. Holders then go inside of the container to define the space for the blocks. Holders can go inside of Holders to further define space. Each holder has a pre determinded child length and will render children placed into the holder.
@@ -2702,6 +2702,10 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.3.9**
+* small change to images for testing
+* removed flex: 1 from certain holders that were cutting off blocks
+
 **0.3.7**
 * Updated Carousels 2-4
 * Updated All Images in an attempt to fix bug
