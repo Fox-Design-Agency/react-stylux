@@ -2702,6 +2702,10 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.3.7**
+* Updated Carousels 2-4
+* Updated All Images in an attempt to fix bug
+
 **0.3.6**
 * Don't use versions 0.3.0-0.3.4 - they don't work sadly
 * Added default holder & container condition to fix breaking with no children

@@ -85,7 +85,7 @@ var Figure = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                Fragment,
+                _react2.default.Fragment,
                 null,
                 _react2.default.createElement(
                     'figure',
