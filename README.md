@@ -103,6 +103,11 @@ npm install --save react-stylux
 * Carousels 1-5
 * Tables 1-3
 * Pie Chart 1
+* Flat Button
+* Raised Button
+* Floating Button
+* Block Button
+* Text Button
 
 #### Currently not done:
 * Dropdown Nav 2
@@ -116,7 +121,6 @@ npm install --save react-stylux
 * Table 3
 * Pie Chart 1 (having issue currently)
 
-
 #### Currently almost done:
 * Horizontal Ticker 1
 * Table 1
@@ -124,12 +128,18 @@ npm install --save react-stylux
 * Toggler 1
 * Toggler 2
 * Toggler 3
+* Toggler 4
 * Carousel 4
 * Oval Image
 * NumberList 2
 * Modul 1
 * Pull Quote 1
 * Pull Quote 2
+* Flat Button
+* Raised Button
+* Floating Button
+* Block Button
+* Text Button
 
 ### Step by step:
 
@@ -2518,6 +2528,37 @@ This accepts multiple children split by \, odd children are rendered as panel na
 
 ##### Toggler4
 **Not Finished**
+```
+<Toggler4
+    width = '400px'
+    height
+    background = 'white'
+    buttonText = 'Toggler2'
+    position
+    textVertical = 'center'
+    textHorizontal = 'center'
+    textHeight = '200px'
+    textWidth = '300px'
+    mainid
+    toggleid
+    panelClassName
+    mainClassName
+    toggleClassName
+    >
+```
+This accepts multiple children split by \, odd children are rendered as panel names, and even children are rendered as the content of the panel.
+```
+<Toggler4>
+    {'title'}
+    {'some text'}
+    {'another title'}
+    {'moar text'}
+    {'last title'}
+    {'last text'}
+    {'not last'}
+    {'most last text'}
+</Toggler4>
+```
 
 #### Moduls
 **Not Finished**
@@ -2570,6 +2611,7 @@ This accepts multiple children, a holder can be placed to divide up the space
 
 #### Buttons
 **Still working on**
+##### Flat Button 1
 ```
 <FlatButton1
     onClick
@@ -2603,7 +2645,62 @@ This accepts and renders one child
     this is a button
 </FlatButton1>
 ```
-
+##### Raised Button 1
+```
+<RaisedButton1
+    onClick
+    ??
+    >
+```
+This accepts and renders one child
+```
+<RaisedButton1
+    onClick={this.somethingToDo}>
+    this is a button
+</RaisedButton1>
+```
+##### FloatingButton 1
+```
+<FloatingButton1
+    onClick
+    ??
+    >
+```
+This accepts and renders one child
+```
+<FloatingButton1
+    onClick={this.somethingToDo}>
+    this is a button
+</FloatingButton1>
+```
+##### BlockButton 1
+```
+<BlockButton1
+    onClick
+    ??
+    >
+```
+This accepts and renders one child
+```
+<BlockButton1
+    onClick={this.somethingToDo}>
+    this is a button
+</BlockButton1>
+```
+##### TextButton 1
+```
+<TextButton1
+    onClick
+    ??
+    >
+```
+This accepts and renders one child
+```
+<TextButton1
+    onClick={this.somethingToDo}>
+    this is a button
+</TextButton1>
+```
 #### Tables
 
 
@@ -2724,8 +2821,16 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
 * Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style object
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
+* A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
+**0.3.13**
+* figuring out best way to implement parallax
+* outline in progress for new navigation blocks, not currently available
+* added first draft on buttons
+* minor changes to togglers, will work on these more after tables & forms are in first draft
+* readme updated for changes
+
 **0.3.12**
 * HR divider should actually work now
 
