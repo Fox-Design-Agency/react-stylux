@@ -2726,6 +2726,9 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.3.12**
+* HR divider should actually work now
+
 **0.3.10**
 * prepping for parallax updates
 * added dividers section, HR currently only one
