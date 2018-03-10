@@ -34,7 +34,7 @@ var Toggler1 = function (_Component) {
             show: false,
             position: props.position || 'fixed',
             width: props.width || '100px',
-            height: props.height || '100vh',
+            height: props.height || '100%',
             top: props.top || '0',
             background: props.background || 'white',
             buttonText: props.buttonText || 'toggler1',

@@ -14,6 +14,8 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+require('../css/SuperStyleSheet.css');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31,22 +33,160 @@ var Toggler4 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Toggler4.__proto__ || Object.getPrototypeOf(Toggler4)).call(this, props));
 
         _this.state = {
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
+            show: true,
+            width: props.width || '400px',
+            height: props.height,
+            background: props.background || 'white',
+            buttonText: props.buttonText || 'toggler2',
+            position: props.position,
+            textvertical: props.textVertical || 'center',
+            texthorizontal: props.textHorizontal || 'center',
+            textheight: props.textHeight || '200px',
+            textwidth: props.textWidth || '300px',
+            boxBorderLeft: props.boxBorderLeft,
+            boxBorderRight: props.boxBorderRight,
+            boxBorderTop: props.boxBorderTop,
+            boxBorderBottom: props.boxBorderBottom,
+            boxBorder: props.boxBorder || '1px solid black',
+            boxMargin: props.boxMArgin || '5px',
+            labels: [],
+            text: [],
+            mainid: props.mainid,
+            toggleid: props.toggleid,
+            panelClassName: props.panelClassName,
+            mainClassName: props.mainClassName,
+            toggleClassName: props.toggleClassName,
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
             transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
 
     _createClass(Toggler4, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var labels = [];
+            var text = [];
+            for (var i = 0; i < CHILDS.length; i += 1) {
+                if ((i + 1) % 2 === 0) {
+                    text.push(CHILDS[i]);
+                } else {
+                    labels.push(CHILDS[i]);
+                }
+            }
+            this.setState({
+                labels: labels,
+                text: text
+            });
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var labels = [];
+            var text = [];
+            for (var i = 0; i < CHILDS.length; i += 1) {
+                if ((i + 1) % 2 === 0) {
+                    text.push(CHILDS[i]);
+                } else {
+                    labels.push(CHILDS[i]);
+                }
+            }
+            this.setState({
+                labels: labels,
+                text: text
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', null);
+            var _this2 = this;
+
+            var CHECKSSTYLE = {
+                display: "none"
+            };
+            var PANELS = {
+                display: 'flex',
+                flex: 1,
+                justifyContent: 'center',
+                flexDirection: 'row',
+                alignItems: 'center',
+                position: this.state.position,
+                width: this.state.width,
+                height: this.state.height,
+                background: this.state.background,
+                top: this.state.top,
+                overflow: 'hidden'
+            };
+            var TEXTBOX = {
+                height: this.state.textheight,
+                width: this.state.textwidth,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: this.state.texthorizontal,
+                justifyContent: this.state.textvertical,
+                margin: this.state.boxMargin,
+                borderLeft: this.state.borderLeft,
+                borderRight: this.state.borderRight,
+                borderTop: this.state.borderTop,
+                borderBottom: this.state.borderBottom,
+                border: this.state.boxBorder
+            };
+            var LABELSSTYLES = {
+                cursor: 'pointer',
+                borderTop: '1px solid black',
+                borderLeft: '1px solid black',
+                margin: '3px',
+                padding: '5px',
+                width: '150px',
+                trasition: '0.3s'
+            };
+            var LABELTITLES = {
+                display: 'flex',
+                flexDirection: 'column'
+
+            };
+
+            var CHECKS = this.state.labels.map(function (x, i, arr) {
+                return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: CHECKSSTYLE });
+            });
+            var LABELS = this.state.labels.map(function (x, i, arr) {
+                return _react2.default.createElement(
+                    'label',
+                    { key: i, style: LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
+                    x
+                );
+            });
+            var TEXT = this.state.text.map(function (x, i, arr) {
+                return _react2.default.createElement(
+                    'div',
+                    { key: i, id: 'Vpanel' + (i + 1), className: _this2.state.panelClassName },
+                    _react2.default.createElement(
+                        'p',
+                        { style: TEXTBOX },
+                        x
+                    )
+                );
+            });
+
+            return _react2.default.createElement(
+                'div',
+                { style: PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                CHECKS,
+                _react2.default.createElement(
+                    'nav',
+                    { style: LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                    LABELS
+                ),
+                TEXT
+            );
         }
     }]);
 

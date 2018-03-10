@@ -14,6 +14,8 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+require('../css/SuperStyleSheet.css');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41,6 +43,12 @@ var Toggler3 = function (_Component) {
             texthorizontal: props.textHorizontal || 'center',
             textheight: props.textHeight || '200px',
             textwidth: props.textWidth || '300px',
+            boxBorderLeft: props.boxBorderLeft,
+            boxBorderRight: props.boxBorderRight,
+            boxBorderTop: props.boxBorderTop,
+            boxBorderBottom: props.boxBorderBottom,
+            boxBorder: props.boxBorder || '1px solid black',
+            boxMargin: props.boxMArgin || '5px',
             labels: [],
             text: [],
             mainid: props.mainid,
@@ -121,10 +129,20 @@ var Toggler3 = function (_Component) {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: this.state.texthorizontal,
-                justifyContent: this.state.textvertical
+                justifyContent: this.state.textvertical,
+                margin: this.state.boxMargin,
+                borderLeft: this.state.borderLeft,
+                borderRight: this.state.borderRight,
+                borderTop: this.state.borderTop,
+                borderBottom: this.state.borderBottom,
+                border: this.state.boxBorder
             };
             var LABELSSTYLES = {
-                cursor: 'pointer'
+                cursor: 'pointer',
+                borderLeft: '1px solid black',
+                borderRight: '1px solid black',
+                margin: '3px',
+                padding: '5px'
             };
             var CHECKS = this.state.labels.map(function (x, i, arr) {
                 return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: CHECKSSTYLE });
