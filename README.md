@@ -29,6 +29,7 @@ npm install --save react-stylux
 - [Layout](#layout-specific)
     - [Containers](#containers-possible-name-change-expected)
     - [Holders](#holder)
+    - [Dividers](#dividers)
 - [Text](#text-specific)
     - [Headings](#mainheadings)
     - [Paragraphs](#paragraphs-all-names-subject-to-change)
@@ -72,6 +73,7 @@ npm install --save react-stylux
 ### Whats Included:
 * Container
 * Holder
+* HR
 * H1 1-5
 * H2 1-5
 * H3 1-5
@@ -122,8 +124,6 @@ npm install --save react-stylux
 * Toggler 1
 * Toggler 2
 * Toggler 3
-* Carousel 2
-* Carousel 3
 * Carousel 4
 * Oval Image
 * NumberList 2
@@ -344,6 +344,30 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
     <Block2 />
 </Holder>
 ```
+
+#### Dividers 
+
+##### HR
+```
+<HR
+    width= '100%'
+    height= '5px'
+    background= 'black'
+    padding
+    margin= '5px 0px 5px 0px'
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
+    id
+    />
+```
+- this accepts no children and is used as a dividing element for layout
+```
+<HR />
+```
+
 
 ### Text Specific
 
@@ -2702,6 +2726,11 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.3.10**
+* prepping for parallax updates
+* added dividers section, HR currently only one
+* updated readme for changes
+
 **0.3.9**
 * small change to images for testing
 * removed flex: 1 from certain holders that were cutting off blocks

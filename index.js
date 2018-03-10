@@ -12,6 +12,10 @@ var _Holder = require('./Holders/Holder');
 
 var _Holder2 = _interopRequireDefault(_Holder);
 
+var _HR = require('./Dividers/HR');
+
+var _HR2 = _interopRequireDefault(_HR);
+
 var _MainHeading = require('./Headings/MainHeadings/MainHeading1');
 
 var _MainHeading2 = _interopRequireDefault(_MainHeading);
@@ -286,6 +290,7 @@ module.exports = {
     Block2: _TestBlock2.default,
     Container: _Container2.default,
     Holder: _Holder2.default,
+    HR: _HR2.default,
     H11: _MainHeading2.default,
     H12: _MainHeading4.default,
     H13: _MainHeading6.default,
