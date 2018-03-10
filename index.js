@@ -120,6 +120,22 @@ var _FlatButton = require('./Buttons/FlatButton1');
 
 var _FlatButton2 = _interopRequireDefault(_FlatButton);
 
+var _RaisedButton = require('./Buttons/RaisedButton1');
+
+var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
+var _FloatingButton = require('./Buttons/FloatingButton1');
+
+var _FloatingButton2 = _interopRequireDefault(_FloatingButton);
+
+var _BlockButton = require('./Buttons/BlockButton1');
+
+var _BlockButton2 = _interopRequireDefault(_BlockButton);
+
+var _TextButton = require('./Buttons/TextButton1');
+
+var _TextButton2 = _interopRequireDefault(_TextButton);
+
 var _CircleImage = require('./Images/CircleImage');
 
 var _CircleImage2 = _interopRequireDefault(_CircleImage);
@@ -252,6 +268,10 @@ var _Toggler5 = require('./Togglers/Toggler3');
 
 var _Toggler6 = _interopRequireDefault(_Toggler5);
 
+var _Toggler7 = require('./Togglers/Toggler4');
+
+var _Toggler8 = _interopRequireDefault(_Toggler7);
+
 var _Modul = require('./Togglers/Moduls/Modul1');
 
 var _Modul2 = _interopRequireDefault(_Modul);
@@ -317,6 +337,10 @@ module.exports = {
     P4: _Paragraph8.default,
     P5: _Paragraph10.default,
     FlatButton1: _FlatButton2.default,
+    RaisedButton1: _RaisedButton2.default,
+    FloatingButton1: _FloatingButton2.default,
+    BlockButton1: _BlockButton2.default,
+    TextButton1: _TextButton2.default,
     CircleImage: _CircleImage2.default,
     Figure: _Figure2.default,
     OvalImage: _OvalImage2.default,
@@ -350,6 +374,7 @@ module.exports = {
     Toggler1: _Toggler2.default,
     Toggler2: _Toggler4.default,
     Toggler3: _Toggler6.default,
+    Toggler4: _Toggler8.default,
     Modul1: _Modul2.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
