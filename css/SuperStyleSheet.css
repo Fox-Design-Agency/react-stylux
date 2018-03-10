@@ -261,7 +261,40 @@
 {
     display: flex;
 }
+/* hides paragraphs */
+.vpanels > div{
+    display:none;
+}
 
+/* used for highlighting selected tab */
+.vpanels >input[id="Vtab1"]:checked ~ nav label[for="Vtab1"],
+.vpanels >input[id="Vtab2"]:checked ~ nav label[for="Vtab2"],
+.vpanels >input[id="Vtab3"]:checked ~ nav label[for="Vtab3"],
+.vpanels >input[id="Vtab4"]:checked ~ nav label[for="Vtab4"],
+.vpanels >input[id="Vtab5"]:checked ~ nav label[for="Vtab5"],
+.vpanels >input[id="Vtab6"]:checked ~ nav label[for="Vtab6"],
+.vpanels >input[id="Vtab7"]:checked ~ nav label[for="Vtab7"],
+.vpanels >input[id="Vtab8"]:checked ~ nav label[for="Vtab8"],
+.vpanels >input[id="Vtab9"]:checked ~ nav label[for="Vtab9"],
+.vpanels >input[id="Vtab10"]:checked ~ nav label[for="Vtab10"]
+{
+    background-color: inherit;
+    color: black;
+}
+
+.vpanels > input[id="Vtab1"]:checked ~ div[id="Vpanel1"],
+.vpanels > input[id="Vtab2"]:checked ~ div[id="Vpanel2"],
+.vpanels > input[id="Vtab3"]:checked ~ div[id="Vpanel3"],
+.vpanels > input[id="Vtab4"]:checked ~ div[id="Vpanel4"],
+.vpanels > input[id="Vtab5"]:checked ~ div[id="Vpanel5"],
+.vpanels > input[id="Vtab6"]:checked ~ div[id="Vpanel6"],
+.vpanels > input[id="Vtab7"]:checked ~ div[id="Vpanel7"],
+.vpanels > input[id="Vtab8"]:checked ~ div[id="Vpanel8"],
+.vpanels > input[id="Vtab9"]:checked ~ div[id="Vpanel9"],
+.vpanels > input[id="Vtab10"]:checked ~ div[id="Vpanel10"]
+{
+    display: flex;
+}
 /* Toggler 3*/
 /* start big list numbers */
 ol.bigList li::before{
