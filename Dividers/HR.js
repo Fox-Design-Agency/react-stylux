@@ -11,9 +11,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../../css/reset.css');
+require('../css/reset.css');
 
-require('../../css/animations.css');
+require('../css/animations.css');
 
 var _nestingstyles = require('nestingstyles');
 
