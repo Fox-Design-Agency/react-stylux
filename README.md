@@ -2824,6 +2824,12 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
+**0.3.14**
+* Added access to button updates
+* updated table 1 and table 2 with borders and basic implementation
+* will update color options for table in another update
+* future update will also have hover effect for tables
+
 **0.3.13**
 * figuring out best way to implement parallax
 * outline in progress for new navigation blocks, not currently available
