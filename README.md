@@ -2824,6 +2824,12 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
+**0.4.0**
+* updated Modal naming, might break things, so updated from 0.3 => 0.4
+* added first draft of Modal 2 & 3
+* added first draft of Card 1 & 2 & 3, only can access Card1
+* will update readme in future update
+
 **0.3.14**
 * Added access to button updates
 * updated table 1 and table 2 with borders and basic implementation

@@ -22,13 +22,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Modul1 = function (_Component) {
-    _inherits(Modul1, _Component);
+var Modal1 = function (_Component) {
+    _inherits(Modal1, _Component);
 
-    function Modul1(props) {
-        _classCallCheck(this, Modul1);
+    function Modal1(props) {
+        _classCallCheck(this, Modal1);
 
-        var _this = _possibleConstructorReturn(this, (Modul1.__proto__ || Object.getPrototypeOf(Modul1)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Modal1.__proto__ || Object.getPrototypeOf(Modal1)).call(this, props));
 
         _this.state = {
             show: false,
@@ -42,7 +42,7 @@ var Modul1 = function (_Component) {
             boxWidth: props.boxWidth || '200px',
             boxAlign: props.boxAlign || 'center',
             boxJustify: props.boxJustify || 'center',
-            buttonText: props.buttonText || 'Modul 1',
+            buttonText: props.buttonText || 'Modal 1',
             boxShadow: props.boxShadow || '1px 2px 2px black',
             btnBackground: props.btnBackground || 'white',
             bColor: props.bColor || 'black',
@@ -77,7 +77,7 @@ var Modul1 = function (_Component) {
         return _this;
     }
 
-    _createClass(Modul1, [{
+    _createClass(Modal1, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
@@ -169,7 +169,7 @@ var Modul1 = function (_Component) {
         }
     }]);
 
-    return Modul1;
+    return Modal1;
 }(_react.Component);
 
-exports.default = Modul1;
+exports.default = Modal1;
