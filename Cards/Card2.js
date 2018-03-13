@@ -10,9 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../../css/reset.css');
+require('../css/reset.css');
 
-require('../../css/animations.css');
+require('../css/animations.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,30 +22,25 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Modul2 = function (_Component) {
-    _inherits(Modul2, _Component);
+var Card2 = function (_Component) {
+    _inherits(Card2, _Component);
 
-    function Modul2(props) {
-        _classCallCheck(this, Modul2);
+    function Card2(props) {
+        _classCallCheck(this, Card2);
 
-        var _this = _possibleConstructorReturn(this, (Modul2.__proto__ || Object.getPrototypeOf(Modul2)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Card2.__proto__ || Object.getPrototypeOf(Card2)).call(this, props));
 
         _this.state = {
-            childs: [],
-            show: false,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode
+            childs: '',
+            boxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
+            hovBoxShadow: props.hovShadow || '1px 8px 16px 0 rgba(0,0,0,0.2)',
+            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)'
+
         };
         return _this;
     }
 
-    _createClass(Modul2, [{
+    _createClass(Card2, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
@@ -58,24 +53,60 @@ var Modul2 = function (_Component) {
             return this.setState({ childs: CHILDS });
         }
     }, {
-        key: 'toggle',
-        value: function toggle() {
-            this.setState({
-                show: !this.state.show
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
+            var CARDSTYLE = {
+                margin: '10px',
+                display: 'flex',
+                flexDirection: 'column',
+                boxShadow: this.state.boxShadow,
+                transition: '0.3s'
+            };
+            var IMGSTYLE = {
+                height: '300px',
+                width: '250px'
+            };
+            var CARDHEADING = {};
+            var CARDBODY = {};
+            var CARDCONTENT = {
+                display: 'flex',
+                flexDirection: 'column',
+                padding: '2px 16px'
+            };
             return _react2.default.createElement(
                 'div',
-                null,
-                _react2.default.createElement('div', null)
+                { style: CARDSTYLE,
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ boxShadow: _this2.state.hovBoxShadow });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ boxShadow: _this2.state.revBoxShadow });
+                    } },
+                _react2.default.createElement('img', {
+                    src: this.state.childs[0],
+                    alt: this.state.childs[1],
+                    style: IMGSTYLE }),
+                _react2.default.createElement(
+                    'div',
+                    { style: CARDCONTENT },
+                    _react2.default.createElement(
+                        'h5',
+                        { style: CARDHEADING },
+                        this.state.childs[2]
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { style: CARDBODY },
+                        this.state.childs[3]
+                    )
+                )
             );
         }
     }]);
 
-    return Modul2;
+    return Card2;
 }(_react.Component);
 
-exports.default = Modul2;
+exports.default = Card2;

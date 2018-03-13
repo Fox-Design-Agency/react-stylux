@@ -272,9 +272,21 @@ var _Toggler7 = require('./Togglers/Toggler4');
 
 var _Toggler8 = _interopRequireDefault(_Toggler7);
 
-var _Modul = require('./Togglers/Moduls/Modul1');
+var _Modal = require('./Togglers/Modals/Modal1');
 
-var _Modul2 = _interopRequireDefault(_Modul);
+var _Modal2 = _interopRequireDefault(_Modal);
+
+var _Modal3 = require('./Togglers/Modals/Modal2');
+
+var _Modal4 = _interopRequireDefault(_Modal3);
+
+var _Modal5 = require('./Togglers/Modals/Modal3');
+
+var _Modal6 = _interopRequireDefault(_Modal5);
+
+var _Card = require('./Cards/Card1');
+
+var _Card2 = _interopRequireDefault(_Card);
 
 var _BulletList = require('./Lists/Bullet/BulletList1');
 
@@ -375,7 +387,10 @@ module.exports = {
     Toggler2: _Toggler4.default,
     Toggler3: _Toggler6.default,
     Toggler4: _Toggler8.default,
-    Modul1: _Modul2.default,
+    Modal1: _Modal2.default,
+    Modal2: _Modal4.default,
+    Modal3: _Modal6.default,
+    Card1: _Card2.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
     NumberList1: _NumberList2.default,
