@@ -61,9 +61,11 @@ npm install --save react-stylux
 - [Special Stuff](#special-stuff)
     - [Carousels](#carousels)
     - [Togglers](#togglers)
-    - [Moduls](#moduls)
+    - [Modals](#modals)
+    - [Popups](#Popups)
     - [Buttons](#buttons)
     - [Tables](#tables)
+    - [Cards](#cards)
 - [Known Bugs](#known-bugs)
 - [Feature Wish List](#feature-wish-list)
 - [Acknowledgments](#acknowledgments)
@@ -80,12 +82,13 @@ npm install --save react-stylux
 * H4 1-5
 * P (Paragraphs) 1-5
 * PLQ (Pull Quotes) 1-2
-* Navbar 1
+* Navbar 1-2
 * SubNavbar 1-5
 * Dropdowns 1-5
 * Brand 1-5
 * Togglers 1-4
 * Moduls 1-2
+* Popups 1-2
 * Horizontal Ticker 1
 * See Saw Ticker 1
 * Bullet List 1-2
@@ -116,8 +119,6 @@ npm install --save react-stylux
 * SubNavBar 4
 * SubNavBar 5
 * See Saw Ticker 1
-* Toggler 4
-* Modul 2
 * Table 3
 * Pie Chart 1 (having issue currently)
 
@@ -132,7 +133,11 @@ npm install --save react-stylux
 * Carousel 4
 * Oval Image
 * NumberList 2
+* Navbar2
+* Popup1
+* Popup2
 * Modul 1
+* Modul 2
 * Pull Quote 1
 * Pull Quote 2
 * Flat Button
@@ -1944,6 +1949,20 @@ Will render anything beyond count into the ham menu.
 <navbar1>
 ```
 
+##### Navbar2
+**Still Working on**
+```
+<Navbar2
+    left: '-100px'
+    >
+```
+This currently accepts nine children and renders them.
+responsiveness not set
+```
+<Navbar2>
+
+</Navbar2>
+```
 
 #### SubNavBars
 
@@ -2560,10 +2579,10 @@ This accepts multiple children split by \, odd children are rendered as panel na
 </Toggler4>
 ```
 
-#### Moduls
+#### Modals
 **Not Finished**
 
-##### Modul1
+##### Modal1
 ```
 <Modul1
     boxTop = '40%'
@@ -2608,6 +2627,41 @@ This accepts multiple children, a holder can be placed to divide up the space
 ```
 ##### Modul2
 **Started**
+
+
+##### Modul3
+**Started**
+
+#### Popups
+##### Popup1
+**Still working on**
+```
+<Popup1
+
+>
+```
+
+```
+<Popup1>
+{'popup to render'}
+{'what gets clicked on'}
+</Popup1>
+```
+
+##### Popup2
+**Still working on**
+```
+<Popup2
+
+>
+```
+
+```
+<Popup2>
+{'popup to render'}
+{'what gets hovered on'}
+</Popup2>
+```
 
 #### Buttons
 **Still working on**
@@ -2759,6 +2813,46 @@ This accepts unlimited? children and renders based on column and row value split
     {'body6'}
 </Table2>
 ```
+#### Cards
+
+##### Card1
+```
+<Card1
+
+>
+```
+
+```
+<Card1>
+
+</Card1>
+```
+
+##### Card2
+```
+<Card2
+
+>
+```
+
+```
+<Card2>
+
+</Card2>
+```
+##### Card3
+```
+<Card3
+
+>
+```
+
+```
+<Card3>
+
+</Card3>
+```
+
 
 ## Known Bugs
 
@@ -2824,6 +2918,12 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
+**0.4.1**
+* added Navbar2, needs major positioning and customization options but it's neat
+* added Popup1, and Popup2 blocks
+
+* minor updates to readme, rethinking the readme organization to better match mono repo organization
+
 **0.4.0**
 * updated Modal naming, might break things, so updated from 0.3 => 0.4
 * added first draft of Modal 2 & 3

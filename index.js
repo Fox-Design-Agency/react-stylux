@@ -196,6 +196,10 @@ var _Navbar = require('./NavBars/NavBars/Navbar1');
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
+var _Navbar3 = require('./NavBars/NavBars/Navbar2');
+
+var _Navbar4 = _interopRequireDefault(_Navbar3);
+
 var _SubNavBar = require('./NavBars/SubNavBar/SubNavBar1');
 
 var _SubNavBar2 = _interopRequireDefault(_SubNavBar);
@@ -284,6 +288,14 @@ var _Modal5 = require('./Togglers/Modals/Modal3');
 
 var _Modal6 = _interopRequireDefault(_Modal5);
 
+var _Popup = require('./Togglers/Popups/Popup1');
+
+var _Popup2 = _interopRequireDefault(_Popup);
+
+var _Popup3 = require('./Togglers/Popups/Popup2');
+
+var _Popup4 = _interopRequireDefault(_Popup3);
+
 var _Card = require('./Cards/Card1');
 
 var _Card2 = _interopRequireDefault(_Card);
@@ -368,6 +380,7 @@ module.exports = {
     Hero4: _Hero8.default,
     Hero5: _Hero10.default,
     NavBar1: _Navbar2.default,
+    Navbar2: _Navbar4.default,
     SubNavBar1: _SubNavBar2.default,
     SubNavBar2: _SubNavBar4.default,
     DropDownNav1: _DropDownNav2.default,
@@ -390,6 +403,8 @@ module.exports = {
     Modal1: _Modal2.default,
     Modal2: _Modal4.default,
     Modal3: _Modal6.default,
+    Popup1: _Popup2.default,
+    Popup2: _Popup4.default,
     Card1: _Card2.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
