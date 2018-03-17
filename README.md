@@ -2625,11 +2625,11 @@ This accepts multiple children, a holder can be placed to divide up the space
     <P1>This renders in the middle with a X in the upper right corner</P1>
 </Modul1>
 ```
-##### Modul2
+##### Modal2
 **Started**
 
 
-##### Modul3
+##### Modal3
 **Started**
 
 #### Popups

@@ -24,13 +24,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Modul3 = function (_Component) {
-    _inherits(Modul3, _Component);
+var Modal3 = function (_Component) {
+    _inherits(Modal3, _Component);
 
-    function Modul3(props) {
-        _classCallCheck(this, Modul3);
+    function Modal3(props) {
+        _classCallCheck(this, Modal3);
 
-        var _this = _possibleConstructorReturn(this, (Modul3.__proto__ || Object.getPrototypeOf(Modul3)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Modal3.__proto__ || Object.getPrototypeOf(Modal3)).call(this, props));
 
         _this.state = {
             childs: [],
@@ -49,7 +49,7 @@ var Modul3 = function (_Component) {
         return _this;
     }
 
-    _createClass(Modul3, [{
+    _createClass(Modal3, [{
         key: 'toggle',
         value: function toggle() {
             this.setState({
@@ -164,7 +164,7 @@ var Modul3 = function (_Component) {
         }
     }]);
 
-    return Modul3;
+    return Modal3;
 }(_react.Component);
 
-exports.default = Modul3;
+exports.default = Modal3;
