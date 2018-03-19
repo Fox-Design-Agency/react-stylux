@@ -34,7 +34,8 @@ var Card1 = function (_Component) {
             childs: '',
             boxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
             hovBoxShadow: props.hovShadow || '1px 8px 16px 0 rgba(0,0,0,0.2)',
-            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)'
+            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
+            borderRadius: props.corners
 
         };
         return _this;
@@ -62,7 +63,8 @@ var Card1 = function (_Component) {
                 display: 'flex',
                 flexDirection: 'column',
                 boxShadow: this.state.boxShadow,
-                transition: '0.3s'
+                transition: '0.3s',
+                borderRadius: this.state.borderRadius
             };
             var IMGSTYLE = {
                 height: '300px',

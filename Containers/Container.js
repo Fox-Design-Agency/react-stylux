@@ -35,6 +35,7 @@ var Container = function (_Component) {
         _this.state = {
             display: props.display || 'flex',
             direction: props.direction || 'column',
+            height: props.height,
             borderLeft: props.bLeft,
             borderRight: props.bRight,
             borderTop: props.bTop,
@@ -117,6 +118,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -207,6 +209,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -340,6 +343,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -515,6 +519,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -734,6 +739,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -995,6 +1001,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -1299,6 +1306,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -1646,6 +1654,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -2036,6 +2045,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -2469,6 +2479,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -2945,6 +2956,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -3464,6 +3476,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -4026,6 +4039,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -4631,6 +4645,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -5279,6 +5294,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -5970,6 +5986,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -6704,6 +6721,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -7481,6 +7499,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -8301,6 +8320,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -9164,6 +9184,7 @@ var Container = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -10066,7 +10087,7 @@ var Container = function (_Component) {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                'section',
+                _react2.default.Fragment,
                 null,
                 this.state.childs
             );

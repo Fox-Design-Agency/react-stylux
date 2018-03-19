@@ -300,6 +300,14 @@ var _Card = require('./Cards/Card1');
 
 var _Card2 = _interopRequireDefault(_Card);
 
+var _Card3 = require('./Cards/Card2');
+
+var _Card4 = _interopRequireDefault(_Card3);
+
+var _Card5 = require('./Cards/Card3');
+
+var _Card6 = _interopRequireDefault(_Card5);
+
 var _BulletList = require('./Lists/Bullet/BulletList1');
 
 var _BulletList2 = _interopRequireDefault(_BulletList);
@@ -406,6 +414,8 @@ module.exports = {
     Popup1: _Popup2.default,
     Popup2: _Popup4.default,
     Card1: _Card2.default,
+    Card2: _Card4.default,
+    Card3: _Card6.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
     NumberList1: _NumberList2.default,

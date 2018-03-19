@@ -46,7 +46,11 @@ var Figure = function (_Component) {
             childs: '',
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            margin: props.margin || '1px'
+            margin: props.margin || '5px',
+            padding: props.padding,
+            boxShadow: props.shadow,
+            boxShadowRev: props.shadow,
+            hoverShadow: props.hovShadow || '1px 2px 3px black'
         };
         return _this;
     }

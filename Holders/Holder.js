@@ -35,6 +35,7 @@ var Holder = function (_Component) {
         _this.state = {
             display: props.display || 'flex',
             direction: props.direction || 'row',
+            height: props.height,
             borderLeft: props.bLeft,
             borderRight: props.bRight,
             borderTop: props.bTop,
@@ -117,6 +118,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -174,7 +176,7 @@ var Holder = function (_Component) {
                     CHILDS[0]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2
@@ -207,6 +209,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -296,7 +299,7 @@ var Holder = function (_Component) {
                     CHILDS[1]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2
@@ -340,6 +343,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -350,7 +354,8 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border
+                        border: this.state.border,
+                        flex: 1
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -459,7 +464,7 @@ var Holder = function (_Component) {
                     CHILDS[2]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -515,6 +520,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -666,7 +672,7 @@ var Holder = function (_Component) {
                     CHILDS[3]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -734,6 +740,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -915,7 +922,7 @@ var Holder = function (_Component) {
                     CHILDS[4]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -995,6 +1002,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -1207,7 +1215,7 @@ var Holder = function (_Component) {
                     CHILDS[5]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -1299,6 +1307,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -1542,7 +1551,7 @@ var Holder = function (_Component) {
                     CHILDS[6]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -1646,6 +1655,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -1920,7 +1930,7 @@ var Holder = function (_Component) {
                     CHILDS[7]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -2036,6 +2046,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -2341,7 +2352,7 @@ var Holder = function (_Component) {
                     CHILDS[8]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -2469,6 +2480,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -2805,7 +2817,7 @@ var Holder = function (_Component) {
                     CHILDS[9]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -2945,6 +2957,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -3312,7 +3325,7 @@ var Holder = function (_Component) {
                     CHILDS[10]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -3464,6 +3477,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -3862,7 +3876,7 @@ var Holder = function (_Component) {
                     CHILDS[11]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -4026,6 +4040,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -4455,7 +4470,7 @@ var Holder = function (_Component) {
                     CHILDS[12]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -4631,6 +4646,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -5091,7 +5107,7 @@ var Holder = function (_Component) {
                     CHILDS[13]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -5279,6 +5295,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -5770,7 +5787,7 @@ var Holder = function (_Component) {
                     CHILDS[14]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -5970,6 +5987,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -6492,7 +6510,7 @@ var Holder = function (_Component) {
                     CHILDS[15]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -6704,6 +6722,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -7257,7 +7276,7 @@ var Holder = function (_Component) {
                     CHILDS[16]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -7481,6 +7500,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -8065,7 +8085,7 @@ var Holder = function (_Component) {
                     CHILDS[17]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -8301,6 +8321,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -8916,7 +8937,7 @@ var Holder = function (_Component) {
                     CHILDS[18]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -9164,6 +9185,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -9812,7 +9834,7 @@ var Holder = function (_Component) {
                     CHILDS[19]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2,
@@ -9929,7 +9951,7 @@ var Holder = function (_Component) {
                     CHILDS[0]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2
@@ -9961,6 +9983,7 @@ var Holder = function (_Component) {
                 holderstyles = _nestingstyles2.default.create({
                     holderstyles: {
                         width: '100%',
+                        height: this.state.height,
                         display: this.state.display,
                         flexDirection: this.state.direction,
                         flexWrap: 'wrap',
@@ -10051,7 +10074,7 @@ var Holder = function (_Component) {
                     CHILDS[1]
                 );
                 styledHolder = [_react2.default.createElement(
-                    'section',
+                    'div',
                     { key: Math.random(), style: holderstyles.holderstyles },
                     styledChilds1,
                     styledChilds2

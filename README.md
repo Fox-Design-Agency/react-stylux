@@ -290,6 +290,7 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
 <Container
     display = 'flex'
     direction = 'row'
+    height
     borderLeft
     borderRight
     borderTop
@@ -325,6 +326,7 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
 <Holder
     display = 'flex'
     direction = 'row'
+    height
     borderLeft
     borderRight
     borderTop
@@ -357,6 +359,25 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
 <Holder>
     <Block2 />
     <Block2 />
+</Holder>
+```
+- below shows how holders can be placed inside of themselves
+```
+<Holder>
+    <Holder
+        direction='column'>
+        <Block2 />
+        <Holder>
+            <Block2 />
+            <Block2 />
+        </Holder>
+    </Holder>
+    <Block2 />
+    <Holder
+        direction='column'>
+        <Block2 />
+        <Block2 />
+    </Holder>
 </Holder>
 ```
 
@@ -1550,6 +1571,10 @@ Tall Rectangle Image Sizes:
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1573,6 +1598,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1596,6 +1625,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1620,6 +1653,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1643,6 +1680,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1666,6 +1707,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1689,6 +1734,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1712,6 +1761,10 @@ this is the alt tag
     aniDur
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -1733,6 +1786,10 @@ this is the alt tag
     figCapClassName
     smdis = 'flex'
     mddis = 'flex'
+    margin = '5px'
+    padding
+    shadow 
+    hovShadow
     >
 ```
 This accepts and renders two children: first child and a caption child
@@ -2770,9 +2827,41 @@ This accepts and renders one child
     mainId
     mainClassName
     tableClassName
+
+    hbordertop
+    hborderRight
+    hborderBottom
+    hborderLeft
+    hborder = '1px solid black'
+    hvertical = 'center'
+    headWidth
+    headHeight
+    headMargin
+    headPadding = '5px'
+
+    dbordertop
+    dborderRight
+    dborderBottom
+    dborderLeft
+    dborder = '1px solid black'
+    dwidth
+    dheight
+    dmargin
+    dpadding = '5px'
+
+    tbordertop
+    tborderRight
+    tborderBottom
+    tborderLeft
+    tborder = '1px solid black'
+    tmargin ='5px'
+    tpadding
+    tableWidth
+    tableHeight
+    borderCollaspe = 'collaspe'
     >
 ```
-This accepts unlimited? children and renders based on column and row value split by '\'
+This accepts unlimited? children and renders based on column and row values
 ```
 <Table1>
     {'head1'}
@@ -2797,9 +2886,30 @@ This accepts unlimited? children and renders based on column and row value split
     mainId
     mainClassName
     tableClassName
+
+    dbordertop
+    dborderRight
+    dborderBottom
+    dborderLeft
+    dborder = '1px solid black'
+    dwidth
+    dheight
+    dmargin
+    dpadding = '5px'
+
+    tbordertop
+    tborderRight
+    tborderBottom
+    tborderLeft
+    tborder = '1px solid black'
+    tmargin ='5px'
+    tpadding
+    tableWidth
+    tableHeight
+    borderCollaspe = 'collaspe'
     >
 ```
-This accepts unlimited? children and renders based on column and row value split by '\'
+This accepts unlimited? children and renders based on column and row values
 ```
 <Table2>
     {'head1'}
@@ -2818,38 +2928,60 @@ This accepts unlimited? children and renders based on column and row value split
 ##### Card1
 ```
 <Card1
-
+    shadow = '1px 4px 8px 0 rgba(0,0,0,0.2)'
+    hovShadow = '1px 8px 16px 0 rgba(0,0,0,0.2)'
+    corners
 >
 ```
-
+ - accepts four children in this order: img, alt tag, h5, p
 ```
 <Card1>
-
+    {img}
+    {'img alt tag'}
+    {'Some title that is not styled yet'}
+    {'supporting text that is not styled yet'}
 </Card1>
 ```
 
 ##### Card2
 ```
 <Card2
-
+    shadow = '1px 4px 8px 0 rgba(0,0,0,0.2)'
+    hovShadow = '1px 8px 16px 0 rgba(0,0,0,0.2)'
+    corners
+    btnClick
+    btnText
 >
 ```
-
+- accepts four children in this order: img, alt tag, h5, p
 ```
 <Card2>
-
+     {img}
+    {'img alt tag'}
+    {'Some title that is not styled yet'}
+    {'supporting text that is not styled yet'}
 </Card2>
 ```
 ##### Card3
 ```
 <Card3
-
+    shadow = '1px 4px 8px 0 rgba(0,0,0,0.2)'
+    hovShadow = '1px 8px 16px 0 rgba(0,0,0,0.2)'
+    corners
+    height = '398px'
+    width = '250px'
 >
 ```
-
+- accepts 7 children
 ```
 <Card3>
-
+    {'Some Item'}
+    {'$00.00'}
+    {'Info'}
+    {'Info'}
+    {'Info'}
+    {'Info'}
+    {'Call to action'}
 </Card3>
 ```
 
@@ -2918,6 +3050,19 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
+**0.4.2**
+* added height props to container && Holder
+* changed Holder from section to div
+* container is still a section
+* images now have boxShadow on hover
+* tables now have 5px margin
+* Card 2 and 3 in first draft status
+* Card have borderRadius prop through corners=""
+
+* Readme updated for changes
+
+
+
 **0.4.1**
 * added Navbar2, needs major positioning and customization options but it's neat
 * added Popup1, and Popup2 blocks
