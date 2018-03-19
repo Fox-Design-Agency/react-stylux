@@ -52,8 +52,11 @@ var RectangleImage = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverShadow: props.hovShadow,
-            margin: props.margin || '1px'
+            margin: props.margin || '5px',
+            padding: props.padding,
+            boxShadow: props.shadow,
+            boxShadowRev: props.shadow,
+            hoverShadow: props.hovShadow || '1px 2px 3px black'
         };
         return _this;
     }
@@ -73,20 +76,22 @@ var RectangleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _rectangleimg,
+                _this2 = this;
 
             var IMAGE = _nestingstyles2.default.create({
-                rectangleimg: _defineProperty({
+                rectangleimg: (_rectangleimg = {
                     margin: '0 auto',
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
-                    animationFillMode: this.state.animationFillMode
-                }, 'margin', this.state.margin),
+                    animationFillMode: this.state.animationFillMode,
+                    boxShadow: this.state.boxShadow
+                }, _defineProperty(_rectangleimg, 'margin', this.state.margin), _defineProperty(_rectangleimg, 'padding', this.state.padding), _rectangleimg),
                 hoverStyle: {
-                    color: this.state.hoverShadow
+                    boxShadow: this.state.hoverShadow
                 },
                 '@media screen and (max-width: 440px)': {
                     rectangleimg: {
@@ -104,10 +109,10 @@ var RectangleImage = function (_Component) {
                 null,
                 _react2.default.createElement('img', { style: IMAGE.rectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
                     onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: IMAGE.hoverStyle.color });
+                        return _this2.setState({ boxShadow: IMAGE.hoverStyle.boxShadow });
                     },
                     onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.color });
+                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
                     } })
             );
         }

@@ -71,7 +71,7 @@ var Table2 = function (_Component) {
             tableBorderBottom: props.tborderBottom,
             tableBorderLeft: props.tborderLeft,
             tableBorder: props.tborder || '1px solid black',
-            tableMargin: props.tmargin,
+            tableMargin: props.tmargin || '5px',
             tablePadding: props.tpadding,
             tableWidth: props.tableWidth,
             tableHeight: props.tableHeight,

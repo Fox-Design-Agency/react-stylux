@@ -50,8 +50,11 @@ var TallRoundedRectangleImage = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverShadow: props.hovShadow,
-            margin: props.margin || '1px'
+            margin: props.margin || '5px',
+            padding: props.padding,
+            boxShadow: props.shadow,
+            boxShadowRev: props.shadow,
+            hoverShadow: props.hovShadow || '1px 2px 3px black'
         };
         return _this;
     }
@@ -82,10 +85,12 @@ var TallRoundedRectangleImage = function (_Component) {
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode,
-                    margin: this.state.margin
+                    boxShadow: this.state.boxShadow,
+                    margin: this.state.margin,
+                    padding: this.state.padding
                 },
                 hoverStyle: {
-                    color: this.state.hoverShadow
+                    boxShadow: this.state.hoverShadow
                 },
                 '@media screen and (max-width: 440px)': {
                     tallroundedrectangleimg: {
@@ -103,10 +108,10 @@ var TallRoundedRectangleImage = function (_Component) {
                 null,
                 _react2.default.createElement('img', { style: TALLROUNDEDRECTANGLEIMG.tallroundedrectangleimg, id: this.state.id, className: 'tallrecimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
                     onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: TALLROUNDEDRECTANGLEIMG.hoverStyle.color });
+                        return _this2.setState({ boxShadow: TALLROUNDEDRECTANGLEIMG.hoverStyle.boxShadow });
                     },
                     onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.color });
+                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
                     } })
             );
         }

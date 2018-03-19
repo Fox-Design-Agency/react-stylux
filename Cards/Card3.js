@@ -34,7 +34,10 @@ var Card3 = function (_Component) {
             childs: '',
             boxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
             hovBoxShadow: props.hovShadow || '1px 8px 16px 0 rgba(0,0,0,0.2)',
-            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)'
+            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
+            borderRadius: props.corners,
+            height: props.height || '398px',
+            width: props.wdith || '250px'
 
         };
         return _this;
@@ -62,18 +65,19 @@ var Card3 = function (_Component) {
                 display: 'flex',
                 flexDirection: 'column',
                 boxShadow: this.state.boxShadow,
-                transition: '0.3s'
-            };
-            var IMGSTYLE = {
-                height: '300px',
-                width: '250px'
+                transition: '0.3s',
+                height: this.state.height,
+                width: this.state.width,
+                borderRadius: this.state.borderRadius
             };
             var CARDHEADING = {};
             var CARDBODY = {};
             var CARDCONTENT = {
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '2px 16px'
+                textAlign: 'center'
+            };
+            var ITEM = {
+                padding: '20px',
+                borderBottom: '1px solid #eee'
             };
             return _react2.default.createElement(
                 'div',
@@ -84,22 +88,43 @@ var Card3 = function (_Component) {
                     onMouseLeave: function onMouseLeave() {
                         return _this2.setState({ boxShadow: _this2.state.revBoxShadow });
                     } },
-                _react2.default.createElement('img', {
-                    src: this.state.childs[0],
-                    alt: this.state.childs[1],
-                    style: IMGSTYLE }),
                 _react2.default.createElement(
-                    'div',
+                    'ul',
                     { style: CARDCONTENT },
                     _react2.default.createElement(
-                        'h5',
-                        { style: CARDHEADING },
+                        'li',
+                        { style: ITEM },
+                        this.state.childs[0]
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { style: ITEM },
+                        this.state.childs[1]
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { style: ITEM },
                         this.state.childs[2]
                     ),
                     _react2.default.createElement(
-                        'p',
-                        { style: CARDBODY },
+                        'li',
+                        { style: ITEM },
                         this.state.childs[3]
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { style: ITEM },
+                        this.state.childs[4]
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { style: ITEM },
+                        this.state.childs[5]
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { style: ITEM },
+                        this.state.childs[6]
                     )
                 )
             );
