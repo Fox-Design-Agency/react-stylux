@@ -56,7 +56,7 @@ var TallRectangleImage = function (_Component) {
             padding: props.padding,
             boxShadow: props.shadow,
             boxShadowRev: props.shadow,
-            hoverShadow: props.hovShadow || '1px 2px 3px black'
+            hoverShadow: props.hovShadow
         };
         return _this;
     }

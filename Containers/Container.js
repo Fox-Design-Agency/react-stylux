@@ -1495,7 +1495,7 @@ var Container = function (_Component) {
             } else {
                 styledHolder = '';
             }
-            return this.setState({ childs: styledHolder, blocks: blocks });
+            return this.setState({ childs: styledHolder });
         }
         //below is not done and will most likely not render correctly
 
@@ -2926,7 +2926,7 @@ var Container = function (_Component) {
             } else {
                 styledHolder = '';
             }
-            return this.setState({ childs: styledHolder, blocks: blocks });
+            return this.setState({ childs: styledHolder });
         }
     }, {
         key: 'render',

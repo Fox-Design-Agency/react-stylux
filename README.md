@@ -3052,8 +3052,9 @@ This is licensed under MIT license. If used in any project, please give acknowle
 
 ## Changelog
 **0.4.3**
-* Updated containers and holder with new switch statement function calls. Might not help optimzie but makes it easier to manage for the time being
-* took away default borders on images
+* Updated containers and holders with new switch statement function calls. Might not help optimzie but makes it easier to manage for the time being
+* containers and holders now have componentwillrecieveprops
+* took away default hover borders on images
 
 **0.4.2**
 * added height props to container && Holder
