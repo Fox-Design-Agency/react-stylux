@@ -3048,8 +3048,13 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style object
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
+* Credit to Kaycee for the Switch statement update in 0.4.3
 
 ## Changelog
+**0.4.3**
+* Updated containers and holder with new switch statement function calls. Might not help optimzie but makes it easier to manage for the time being
+* took away default borders on images
+
 **0.4.2**
 * added height props to container && Holder
 * changed Holder from section to div
