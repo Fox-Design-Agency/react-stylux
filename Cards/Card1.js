@@ -70,12 +70,24 @@ var Card1 = function (_Component) {
                 height: '300px',
                 width: '250px'
             };
-            var CARDHEADING = {};
-            var CARDBODY = {};
+            var CARDHEADING = {
+                textAlign: "center",
+                fontWeight: "900",
+                margin: "2px",
+                maxWidth: "250px"
+            };
+            var CARDBODY = {
+                margin: "2px",
+                maxWidth: "250px",
+                maxHeight: "175px",
+                overflow: "hidden"
+            };
             var CARDCONTENT = {
                 display: 'flex',
                 flexDirection: 'column',
-                padding: '2px 16px'
+                padding: '2px 16px',
+                wordWrap: "break-word",
+                maxWidth: "250px"
             };
             return _react2.default.createElement(
                 'div',

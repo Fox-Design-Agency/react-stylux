@@ -50,8 +50,10 @@ var H15 = function (_Component) {
             textAlign: props.textAlign || 'center',
             padding: props.padding || '0 0 15px 0',
             margin: props.margin || '1px',
-            width: props.width || 'inherit',
+            width: props.width || "inherit",
             height: props.height,
+            maxWidth: props.maxW,
+            maxHeight: props.maxH,
             border: props.border,
             bLeft: props.bLeft,
             bRight: props.bRight,
@@ -68,7 +70,8 @@ var H15 = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverColor: props.hovColor
+            hoverColor: props.hovColor,
+            wordWrap: props.wordWrap || "break-word"
         };
         return _this;
     }
@@ -94,6 +97,8 @@ var H15 = function (_Component) {
                 heading: {
                     width: this.state.width,
                     height: this.state.height,
+                    maxWidth: this.state.maxWidth,
+                    maxHeight: this.state.maxHeight,
                     textShadow: this.state.textShadow,
                     borderLeft: this.state.bLeft,
                     borderRight: this.state.bRight,
@@ -105,7 +110,6 @@ var H15 = function (_Component) {
                     fontWeight: this.state.fontWeight,
                     fontVariant: this.state.fontVariant,
                     display: this.state.display,
-                    flexDirection: 'column',
                     alignItems: this.state.align,
                     textAlign: this.state.textAlign,
                     padding: this.state.padding,
@@ -121,7 +125,9 @@ var H15 = function (_Component) {
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeColor: this.state.color,
                     WebkitTextStrokeWidth: this.state.stroke,
-                    flex: 1
+                    flex: 1,
+                    flexWrap: "wrap",
+                    wordWrap: this.state.wordWrap
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -153,7 +159,7 @@ var H15 = function (_Component) {
                         onMouseLeave: function onMouseLeave() {
                             return _this2.setState({ color: _this2.state.colorRev });
                         } },
-                    this.state.childs[0]
+                    this.state.childs
                 )
             );
         }

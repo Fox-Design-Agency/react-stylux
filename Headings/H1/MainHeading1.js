@@ -51,6 +51,8 @@ var H11 = function (_Component) {
             margin: props.margin || '1px',
             width: props.width || 'inherit',
             height: props.height,
+            maxWidth: props.maxW,
+            maxHeight: props.maxH,
             bLeft: props.bLeft,
             bRight: props.bRight,
             bTop: props.bTop,
@@ -65,10 +67,11 @@ var H11 = function (_Component) {
             animationDuration: props.aniDur,
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
-            //theme: props.theme || 'inherit',   
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverColor: props.hovColor
+            hoverColor: props.hovColor,
+            wordWrap: props.wordWrap || "break-word"
+
         };
         return _this;
     }
@@ -77,11 +80,8 @@ var H11 = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount(nextProps) {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            //const theme = Themes(this.state.theme)
             this.setState({
                 childs: CHILDS
-                //color: theme.color,
-                //background: theme.background,
             });
         }
     }, {
@@ -99,6 +99,8 @@ var H11 = function (_Component) {
                 heading: {
                     width: this.state.width,
                     height: this.state.height,
+                    maxWidth: this.state.maxWidth,
+                    maxHeight: this.state.maxHeight,
                     color: this.state.color,
                     textShadow: this.state.textShadow,
                     borderLeft: this.state.bLeft,
@@ -111,7 +113,6 @@ var H11 = function (_Component) {
                     fontWeight: this.state.fontWeight,
                     fontVariant: this.state.fontVariant,
                     display: this.state.display,
-                    flexDirection: 'column',
                     alignItems: this.state.align,
                     textAlign: this.state.textAlign,
                     padding: this.state.padding,
@@ -124,7 +125,9 @@ var H11 = function (_Component) {
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode,
-                    flex: 1
+                    flex: 1,
+                    flexWrap: "wrap",
+                    wordWrap: this.state.wordWrap
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -156,7 +159,7 @@ var H11 = function (_Component) {
                         onMouseLeave: function onMouseLeave() {
                             return _this2.setState({ color: _this2.state.colorRev });
                         } },
-                    this.state.childs[0]
+                    this.state.childs
                 )
             );
         }

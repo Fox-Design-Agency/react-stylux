@@ -929,7 +929,7 @@ function holderSwitch11_15(num, props, state) {
                     }
                 }),
                 block12styles: _nestingstyles2.default.create({
-                    block11styles: {
+                    block12styles: {
                         display: 'flex',
                         flex: blocks.block12,
                         flexDirection: 'column',

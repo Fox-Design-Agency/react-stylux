@@ -72,12 +72,24 @@ var Card2 = function (_Component) {
                 height: '150px',
                 width: '250px'
             };
-            var CARDHEADING = {};
-            var CARDBODY = {};
-            var CARDCONTENT = {
+            var CARDHEADING = {
+                textAlign: "center",
+                fontWeight: "900",
+                margin: "2px",
+                maxWidth: "250px"
+            };
+            var CARDBODY = {
                 display: 'flex',
                 flexDirection: 'column',
                 padding: '2px 16px',
+                wordWrap: "break-word",
+                maxWidth: "250px",
+                maxHeight: "175px",
+                overflow: "hidden"
+            };
+            var CARDCONTENT = {
+                display: 'flex',
+                flexDirection: 'column',
                 height: '175px'
             };
             var BTNSTYLE = {

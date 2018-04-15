@@ -3052,11 +3052,13 @@ This is licensed under MIT license. If used in any project, please give acknowle
 
 ## Changelog
 **0.4.4**
-* Fixed typo in Holder for 12 children
-* Added MaxHeight as MaxH, MaxWidth as MaxW to all blocks
+* Fixed typo in Holder for 12 children && Container for 12 children
+* Added MaxHeight as MaxH, MaxWidth as MaxW to some blocks
 * FlexWrap && wordWrap added to headers && paragraphs
 * Adjusted Header && Paragraph Children to accept unlimmited children as flexDirection: row
- 
+* Added a hack of a fix to some headers and pargraphs, alignment will be weird until another update
+* Card 1 && 2 updated for max height and initial style implementation
+
 
 **0.4.3**
 * Updated containers and holders with new switch statement function calls. Might not help optimzie but makes it easier to manage for the time being

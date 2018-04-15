@@ -52,6 +52,8 @@ var P5 = function (_Component) {
             margin: props.margin || '1px',
             width: props.width || 'inherit',
             height: props.height,
+            maxWidth: props.maxW,
+            maxHeight: props.maxH,
             border: props.border,
             bLeft: props.bLeft,
             bRight: props.bRight,
@@ -68,7 +70,8 @@ var P5 = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            hoverColor: props.hovColor
+            hoverColor: props.hovColor,
+            wordWrap: props.wordWrap || "break-word"
         };
         return _this;
     }
@@ -94,6 +97,8 @@ var P5 = function (_Component) {
                 paragraph: {
                     width: this.state.width,
                     height: this.state.height,
+                    maxWidth: this.state.maxWidth,
+                    maxHeight: this.state.maxHeight,
                     color: this.state.color,
                     textShadow: this.state.textShadow,
                     borderLeft: this.state.bLeft,
@@ -107,7 +112,6 @@ var P5 = function (_Component) {
                     fontWeight: this.state.fontWeight,
                     fontVariant: this.state.fontVariant,
                     display: this.state.display,
-                    flexDirection: 'column',
                     alignItems: this.state.align,
                     textAlign: this.state.textAlign,
                     padding: this.state.padding,
@@ -118,7 +122,9 @@ var P5 = function (_Component) {
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode,
-                    flex: 1
+                    flex: 1,
+                    flexWrap: "wrap",
+                    wordWrap: this.state.wordWrap
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -150,7 +156,7 @@ var P5 = function (_Component) {
                         onMouseLeave: function onMouseLeave() {
                             return _this2.setState({ color: _this2.state.colorRev });
                         } },
-                    this.state.childs[0]
+                    this.state.childs
                 )
             );
         }
