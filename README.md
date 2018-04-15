@@ -3051,6 +3051,13 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to Kaycee for the Switch statement update in 0.4.3
 
 ## Changelog
+**0.4.4**
+* Fixed typo in Holder for 12 children
+* Added MaxHeight as MaxH, MaxWidth as MaxW to all blocks
+* FlexWrap && wordWrap added to headers && paragraphs
+* Adjusted Header && Paragraph Children to accept unlimmited children as flexDirection: row
+ 
+
 **0.4.3**
 * Updated containers and holders with new switch statement function calls. Might not help optimzie but makes it easier to manage for the time being
 * containers and holders now have componentwillrecieveprops
