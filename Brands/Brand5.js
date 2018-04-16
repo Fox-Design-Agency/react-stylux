@@ -40,7 +40,9 @@ var Brand5 = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            childs: []
+            childs: [],
+            id: props.id,
+            className: props.className
         };
         return _this;
     }
@@ -70,7 +72,13 @@ var Brand5 = function (_Component) {
                 transformOrigin: this.state.transformOrigin,
                 animationFillMode: this.state.animationFillMode
             };
-            return _react2.default.createElement('section', { style: BRAND });
+            return _react2.default.createElement(
+                'div',
+                { style: BRAND,
+                    id: this.state.id,
+                    className: this.state.className },
+                this.state.childs
+            );
         }
     }]);
 

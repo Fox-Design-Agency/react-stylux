@@ -36,8 +36,8 @@ var Brand1 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
-            size: props.size || 'tn',
             direction: props.direction || 'row',
+            size: props.size || 'tn',
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
@@ -46,7 +46,9 @@ var Brand1 = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            childs: []
+            childs: [],
+            id: props.id,
+            className: props.className
         };
         return _this;
     }
@@ -87,10 +89,13 @@ var Brand1 = function (_Component) {
                 animationDuration: this.state.animationDuration,
                 transformOrigin: this.state.transformOrigin,
                 animationFillMode: this.state.animationFillMode
+
             };
             return _react2.default.createElement(
                 'div',
-                { style: BRAND },
+                { style: BRAND,
+                    id: this.state.id,
+                    className: this.state.className },
                 _react2.default.createElement(
                     _SquareImage2.default,
                     {

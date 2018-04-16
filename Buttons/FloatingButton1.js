@@ -41,7 +41,9 @@ var FloatingButton1 = function (_Component) {
             onClick: '',
             boxShadow: props.boxShadow,
             revBoxShadow: props.boxShadow,
-            hovBoxShadow: props.hovBoxShadow || '0 5px 7px 0 black, 0 10px 20px 0 black'
+            hovBoxShadow: props.hovBoxShadow || '0 5px 7px 0 black, 0 10px 20px 0 black',
+            id: props.id,
+            className: props.className
 
         };
         return _this;
@@ -79,6 +81,8 @@ var FloatingButton1 = function (_Component) {
             return _react2.default.createElement(
                 'button',
                 { style: BUTTONSTYLE,
+                    id: this.state.id,
+                    className: this.state.className,
                     onClick: this.state.onClick,
                     onMouseEnter: function onMouseEnter() {
                         return _this2.setState({ boxShadow: _this2.state.hovBoxShadow });

@@ -45,7 +45,9 @@ var Brand4 = function (_Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            childs: []
+            childs: [],
+            id: props.id,
+            className: props.className
         };
         return _this;
     }
@@ -76,8 +78,10 @@ var Brand4 = function (_Component) {
                 animationFillMode: this.state.animationFillMode
             };
             return _react2.default.createElement(
-                'section',
-                { style: BRAND },
+                'div',
+                { style: BRAND,
+                    id: this.state.id,
+                    className: this.state.className },
                 _react2.default.createElement(
                     _RectangleImage2.default,
                     {

@@ -106,8 +106,7 @@ var Holder = function (_Component) {
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: use.holderstyles.holderstyles },
-                    styledChilds1,
-                    styledChilds2
+                    styledChilds1
                 )];
             } else if (num === 2) {
                 var _use = (0, _holderSwitch0_2.default)(2, props, state);

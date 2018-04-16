@@ -38,7 +38,9 @@ var RaisedButton1 = function (_Component) {
             color: props.color || 'black',
             frev: props.color || 'black',
             fontSize: props.fontSize,
-            onClick: ''
+            onClick: '',
+            id: props.id,
+            className: props.className
 
         };
         return _this;
@@ -75,6 +77,8 @@ var RaisedButton1 = function (_Component) {
             return _react2.default.createElement(
                 'button',
                 { style: BUTTONSTYLE,
+                    id: this.state.id,
+                    className: this.state.className,
                     onClick: this.state.onClick,
                     onMouseEnter: function onMouseEnter() {
                         return _this2.setState({ backgroundColor: _this2.state.hovColor });

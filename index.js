@@ -12,6 +12,10 @@ var _Holder = require('./Holders/Holder');
 
 var _Holder2 = _interopRequireDefault(_Holder);
 
+var _A = require('./Other/A');
+
+var _A2 = _interopRequireDefault(_A);
+
 var _HR = require('./Dividers/HR');
 
 var _HR2 = _interopRequireDefault(_HR);
@@ -339,6 +343,7 @@ var _Table4 = _interopRequireDefault(_Table3);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
+    A: _A2.default,
     Block2: _TestBlock2.default,
     Container: _Container2.default,
     Holder: _Holder2.default,

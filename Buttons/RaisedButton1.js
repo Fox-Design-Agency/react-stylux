@@ -44,7 +44,9 @@ var RaisedButton1 = function (_Component) {
             boxShadow: props.boxShadow || '0 9px #999',
             boxShadowRev: props.boxShadow || '0 9px #999',
             trandform: props.transform,
-            trandformrev: props.transform || 'translateY(-4px)'
+            trandformrev: props.transform || 'translateY(-4px)',
+            id: props.id,
+            classNAme: props.className
         };
         return _this;
     }
@@ -82,6 +84,8 @@ var RaisedButton1 = function (_Component) {
             return _react2.default.createElement(
                 'button',
                 { style: BUTTONSTYLE,
+                    id: this.state.id,
+                    className: this.state.className,
                     onClick: this.state.onClick,
                     onMouseEnter: function onMouseEnter() {
                         return _this2.setState({ backgroundColor: _this2.state.hovBackground, boxShadow: _this2.state.hovBoxShadow, transform: 'translateY(4px)' });

@@ -37,8 +37,9 @@ var Card3 = function (_Component) {
             revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
             borderRadius: props.corners,
             height: props.height || '398px',
-            width: props.wdith || '250px'
-
+            width: props.wdith || '250px',
+            id: props.id,
+            className: props.className
         };
         return _this;
     }
@@ -82,6 +83,8 @@ var Card3 = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 { style: CARDSTYLE,
+                    id: this.state.id,
+                    className: this.state.className,
                     onMouseEnter: function onMouseEnter() {
                         return _this2.setState({ boxShadow: _this2.state.hovBoxShadow });
                     },

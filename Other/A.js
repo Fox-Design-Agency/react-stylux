@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _RectangleImage = require('../Images/RectangleImage');
+var _nestingstyles = require('nestingstyles');
 
-var _RectangleImage2 = _interopRequireDefault(_RectangleImage);
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,37 +26,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Brand2 = function (_Component) {
-    _inherits(Brand2, _Component);
+var A = function (_Component) {
+    _inherits(A, _Component);
 
-    function Brand2(props) {
-        _classCallCheck(this, Brand2);
+    function A(props) {
+        _classCallCheck(this, A);
 
-        var _this = _possibleConstructorReturn(this, (Brand2.__proto__ || Object.getPrototypeOf(Brand2)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (A.__proto__ || Object.getPrototypeOf(A)).call(this, props));
 
         _this.state = {
-            display: props.display || 'flex',
-            size: props.size || 'exsm',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            childs: [],
-            id: props.id,
-            className: props.className
+            href: props.to || "#",
+            childs: '',
+            width: props.width,
+            height: props.height
         };
         return _this;
     }
 
-    _createClass(Brand2, [{
+    _createClass(A, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            return this.setState({ childs: CHILDS });
+            this.setState({
+                childs: CHILDS
+            });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -67,33 +60,22 @@ var Brand2 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var BRAND = {
-                display: 'flex',
-                alignItems: 'center',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
+            var ASTYLE = {
+                width: this.state.width,
+                height: this.state.height,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
             };
             return _react2.default.createElement(
-                'div',
-                { style: BRAND,
-                    id: this.state.id,
-                    className: this.state.className },
-                _react2.default.createElement(
-                    _RectangleImage2.default,
-                    {
-                        size: this.state.size },
-                    this.state.childs[0],
-                    'logo'
-                )
+                'a',
+                { style: ASTYLE, href: this.state.href },
+                this.state.childs
             );
         }
     }]);
 
-    return Brand2;
+    return A;
 }(_react.Component);
 
-exports.default = Brand2;
+exports.default = A;

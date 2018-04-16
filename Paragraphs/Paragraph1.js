@@ -114,6 +114,7 @@ var P1 = function (_Component) {
                     fontVariant: this.state.fontVariant,
                     display: this.state.display,
                     alignItems: this.state.align,
+                    justifyContent: this.state.align,
                     textAlign: this.state.textAlign,
                     padding: this.state.padding,
                     margin: this.state.margin,

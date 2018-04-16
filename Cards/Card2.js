@@ -37,7 +37,9 @@ var Card2 = function (_Component) {
             revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
             btnText: props.btnText || 'Contact',
             btnOnClick: props.btnClick,
-            borderRadius: props.corners
+            borderRadius: props.corners,
+            id: props.id,
+            className: props.className
 
         };
         return _this;
@@ -102,6 +104,8 @@ var Card2 = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 { style: CARDSTYLE,
+                    id: this.state.id,
+                    className: this.state.className,
                     onMouseEnter: function onMouseEnter() {
                         return _this2.setState({ boxShadow: _this2.state.hovBoxShadow });
                     },

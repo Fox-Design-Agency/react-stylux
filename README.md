@@ -3051,6 +3051,11 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to Kaycee for the Switch statement update in 0.4.3
 
 ## Changelog
+**0.4.5**
+* Added 'A' component for testing navigation stuff for personal project
+* Added a justifycontent prop to headers and paragraphs that may break alignment
+* id && className props added to all simple blocks, will add to complex blocks later, not verified for working
+
 **0.4.4**
 * Fixed typo in Holder for 12 children && Container for 12 children
 * Added MaxHeight as MaxH, MaxWidth as MaxW to some blocks
