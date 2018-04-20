@@ -10,7 +10,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../Components 1.0.0/reset.css');
+require('../css/reset.css');
 
 var _nestingstyles = require('nestingstyles');
 
