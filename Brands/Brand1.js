@@ -18,6 +18,10 @@ var _SquareImage = require('../Images/SquareImage');
 
 var _SquareImage2 = _interopRequireDefault(_SquareImage);
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -68,32 +72,57 @@ var Brand1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var BRAND = {
-                display: this.state.display,
-                flexDirection: this.state.direction,
-                //width: '15%',
-                alignItems: 'center',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
-            };
-            var BRAND_NAME = {
-                display: 'flex',
-                fontWeight: '900',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
+            var BRAND = _nestingstyles2.default.create({
+                brand: {
+                    display: this.state.display,
+                    flexDirection: this.state.direction,
+                    //width: '15%',
+                    alignItems: 'center',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
+                },
+                '@media screen and (max-width: 440px)': {
+                    brand: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    heading: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            //someting as a marker
+            var BRAND_NAME = _nestingstyles2.default.create({
+                brand_name: {
+                    display: 'flex',
+                    fontWeight: '900',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
 
-            };
+                },
+                '@media screen and (max-width: 440px)': {
+                    brand_name: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    brand_name: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: BRAND,
+                { style: BRAND.brand,
                     id: this.state.id,
                     className: this.state.className },
                 _react2.default.createElement(
@@ -105,7 +134,7 @@ var Brand1 = function (_Component) {
                 ),
                 _react2.default.createElement(
                     'p',
-                    { style: BRAND_NAME },
+                    { style: BRAND_NAME.brand_name },
                     this.state.childs[1]
                 )
             );

@@ -3051,6 +3051,16 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to Kaycee for the Switch statement update in 0.4.3
 
 ## Changelog
+**0.4.6**
+* Added font size to A tag
+* Added smDis && mdDis to A tag
+* Added className && id to holders && containers
+* Added margin && padding to holders && containers
+* Added width, maxWidth, maxHeight to holders && containers
+* Added smDis && mdDis to Brands
+* Added smDis && mdDis to Heros
+* Added smDis && mdDis to buttons
+
 **0.4.5**
 * Added 'A' component for testing navigation stuff for personal project
 * Added a justifycontent prop to headers and paragraphs that may break alignment

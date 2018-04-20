@@ -38,7 +38,12 @@ var A = function (_Component) {
             href: props.to || "#",
             childs: '',
             width: props.width,
-            height: props.height
+            height: props.height,
+            target: props.target,
+            rel: props.rel,
+            fontSize: props.fontSize,
+            smDis: props.smDis,
+            mdDis: props.mdDis
         };
         return _this;
     }
@@ -60,16 +65,29 @@ var A = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var ASTYLE = {
-                width: this.state.width,
-                height: this.state.height,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            };
+            var ASTYLE = _nestingstyles2.default.create({
+                astyle: {
+                    width: this.state.width,
+                    height: this.state.height,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: this.state.fontSize
+                },
+                '@media screen and (max-width: 440px)': {
+                    astyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    astyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'a',
-                { style: ASTYLE, href: this.state.href },
+                { style: ASTYLE.astyle, href: this.state.href, target: this.state.target, rel: this.state.rel },
                 this.state.childs
             );
         }

@@ -10,7 +10,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../css/reset.css');
+require('../Components 1.0.0/reset.css');
 
 var _nestingstyles = require('nestingstyles');
 
@@ -40,6 +40,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/* Start of Container Component */
 var Container = function (_Component) {
     _inherits(Container, _Component);
 
@@ -52,6 +53,9 @@ var Container = function (_Component) {
             display: props.display || 'flex',
             direction: props.direction || 'column',
             height: props.height,
+            maxHeight: props.maxHeight,
+            width: props.width || "100%",
+            maxWidth: props.maxWidth,
             borderLeft: props.bLeft,
             borderRight: props.bRight,
             borderTop: props.bTop,
@@ -63,7 +67,9 @@ var Container = function (_Component) {
             mddis: props.mdDis || 'flex',
             smflexDir: props.smflexDir || 'column',
             mdflexDir: props.mdflexDir || 'column',
-            childs: []
+            childs: [],
+            className: props.className,
+            id: props.id
         };
         return _this;
     }
@@ -100,7 +106,7 @@ var Container = function (_Component) {
                 var use = (0, _containerSwitch0_2.default)(1, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.block1styles.block1styles },
+                    { key: Math.random(), style: use.block1styles.block1styles, className: this.state.className, id: this.state.id },
                     CHILDS[0]
                 ), styledHolder = [_react2.default.createElement(
                     'section',
@@ -121,7 +127,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2
                 )];
@@ -144,7 +150,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use2.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use2.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3
@@ -174,7 +180,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use3.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use3.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -210,7 +216,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use4.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use4.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -252,7 +258,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use5.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use5.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -300,7 +306,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use6.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use6.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -354,7 +360,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use7.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use7.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -414,7 +420,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use8.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use8.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -480,7 +486,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use9.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use9.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -552,7 +558,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use10.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use10.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -630,7 +636,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use11.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use11.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -714,7 +720,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use12.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use12.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -804,7 +810,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use13.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use13.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -900,7 +906,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use14.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use14.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1002,7 +1008,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use15.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use15.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1110,7 +1116,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use16.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use16.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1224,7 +1230,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use17.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use17.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1344,7 +1350,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use18.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use18.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1470,7 +1476,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use19.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use19.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1535,7 +1541,7 @@ var Container = function (_Component) {
                     CHILDS[0]
                 ), styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: use.holderstyles.holderstyles },
+                    { key: Math.random(), style: use.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1
                 )];
             } else if (num === 2) {
@@ -1552,7 +1558,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use20.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use20.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2
                 )];
@@ -1575,7 +1581,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use21.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use21.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3
@@ -1605,7 +1611,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use22.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use22.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1641,7 +1647,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use23.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use23.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1683,7 +1689,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use24.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use24.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1731,7 +1737,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use25.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use25.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1785,7 +1791,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use26.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use26.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1845,7 +1851,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use27.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use27.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1911,7 +1917,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use28.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use28.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -1983,7 +1989,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use29.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use29.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2061,7 +2067,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use30.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use30.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2145,7 +2151,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use31.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use31.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2235,7 +2241,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use32.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use32.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2331,7 +2337,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use33.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use33.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2433,7 +2439,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use34.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use34.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2541,7 +2547,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use35.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use35.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2655,7 +2661,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use36.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use36.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2775,7 +2781,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use37.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use37.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -2901,7 +2907,7 @@ var Container = function (_Component) {
                 );
                 styledHolder = [_react2.default.createElement(
                     'section',
-                    { key: Math.random(), style: _use38.holderstyles.holderstyles },
+                    { key: Math.random(), style: _use38.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,

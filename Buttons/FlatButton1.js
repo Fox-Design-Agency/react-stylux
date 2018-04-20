@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34,9 +38,9 @@ var FlatButton1 = function (_Component) {
             onClick: props.onClick,
             id: props.id,
             className: props.className,
+            childs: '',
             width: props.width,
             height: props.height,
-            childs: '',
             fontSize: props.fontSize || '20px',
             color: props.color || '#000000',
             hoverColor: props.hover || 'white',
@@ -91,27 +95,39 @@ var FlatButton1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var BUTTONSTYLE = {
-                borderRadius: this.state.borderRadius,
-                color: this.state.color,
-                fontSize: this.state.fontSize,
-                background: this.state.background,
-                padding: this.state.padding,
-                border: this.state.border,
-                cursor: 'pointer',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode,
-                width: this.state.width,
-                height: this.state.height
-            };
+            var BUTTONSTYLE = _nestingstyles2.default.create({
+                buttonstyle: {
+                    borderRadius: this.state.borderRadius,
+                    color: this.state.color,
+                    fontSize: this.state.fontSize,
+                    background: this.state.background,
+                    padding: this.state.padding,
+                    border: this.state.border,
+                    cursor: 'pointer',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode,
+                    width: this.state.width,
+                    height: this.state.height
+                },
+                '@media screen and (max-width: 440px)': {
+                    buttonstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    buttonstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
 
             return _react2.default.createElement(
                 'button',
-                { style: BUTTONSTYLE, id: this.state.id, className: this.state.className,
+                { style: BUTTONSTYLE.buttonstyle, id: this.state.id, className: this.state.className,
                     onClick: this.state.onClick,
                     onMouseEnter: this.changeHover,
                     onMouseLeave: this.changeHoverBack

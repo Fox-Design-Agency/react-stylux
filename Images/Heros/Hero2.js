@@ -76,31 +76,55 @@ var Hero2 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var HEROSTYLE = {
-                background: this.state.background,
-                backgroundImage: this.state.backgroundImage,
-                backgroundRepeat: this.state.backgroundRepeat,
-                backgroundPosition: this.state.backgroundPosition,
-                backgroundSize: this.state.backgroundSize,
-                width: this.state.width,
-                height: this.state.height,
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center'
-            };
-            var BOTTOMBACKGROUND = {
-                backgroundColor: this.state.bottomBoxBackgroundColor,
-                width: this.state.bottomBoxWidth,
-                height: this.state.bottomBoxHeight,
-                padding: this.state.bottomBoxPadding,
-                overflow: 'hidden'
-            };
+            var HEROSTYLE = _nestingstyles2.default.create({
+                herostyle: {
+                    background: this.state.background,
+                    backgroundImage: this.state.backgroundImage,
+                    backgroundRepeat: this.state.backgroundRepeat,
+                    backgroundPosition: this.state.backgroundPosition,
+                    backgroundSize: this.state.backgroundSize,
+                    width: this.state.width,
+                    height: this.state.height,
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                },
+                '@media screen and (max-width: 440px)': {
+                    herostyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    herostyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var BOTTOMBACKGROUND = _nestingstyles2.default.create({
+                bottombackground: {
+                    backgroundColor: this.state.bottomBoxBackgroundColor,
+                    width: this.state.bottomBoxWidth,
+                    height: this.state.bottomBoxHeight,
+                    padding: this.state.bottomBoxPadding,
+                    overflow: 'hidden'
+                },
+                '@media screen and (max-width: 440px)': {
+                    bottombackground: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    bottombackground: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: HEROSTYLE, id: this.state.heroid, className: this.state.heroClassName },
+                { style: HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
                 _react2.default.createElement(
                     'div',
-                    { style: BOTTOMBACKGROUND, id: this.state.bottomid, className: this.state.bottomClassName },
+                    { style: BOTTOMBACKGROUND.bottombackground, id: this.state.bottomid, className: this.state.bottomClassName },
                     _react2.default.createElement(
                         _Holder2.default,
                         {

@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66,21 +70,33 @@ var FloatingButton1 = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var BUTTONSTYLE = {
-                width: this.state.width,
-                display: 'block',
-                border: 'none',
-                backgroundColor: this.state.backgroundColor,
-                padding: '14px 28px',
-                fontSize: this.state.fontSize,
-                cursor: 'pointer',
-                textAlign: 'center',
-                color: this.state.color,
-                boxShadow: this.state.boxShadow
-            };
+            var BUTTONSTYLE = _nestingstyles2.default.create({
+                buttonstyle: {
+                    width: this.state.width,
+                    display: 'block',
+                    border: 'none',
+                    backgroundColor: this.state.backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: this.state.fontSize,
+                    cursor: 'pointer',
+                    textAlign: 'center',
+                    color: this.state.color,
+                    boxShadow: this.state.boxShadow
+                },
+                '@media screen and (max-width: 440px)': {
+                    buttonstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    buttonstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'button',
-                { style: BUTTONSTYLE,
+                { style: BUTTONSTYLE.buttonstyle,
                     id: this.state.id,
                     className: this.state.className,
                     onClick: this.state.onClick,

@@ -70,21 +70,33 @@ var Hero4 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var HEROSTYLE = {
-                background: this.state.background,
-                backgroundImage: this.state.backgroundImage,
-                backgroundRepeat: this.state.backgroundRepeat,
-                backgroundPosition: this.state.backgroundPosition,
-                backgroundSize: this.state.backgroundSize,
-                width: this.state.width,
-                height: this.state.height,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            };
+            var HEROSTYLE = _nestingstyles2.default.create({
+                herostyle: {
+                    background: this.state.background,
+                    backgroundImage: this.state.backgroundImage,
+                    backgroundRepeat: this.state.backgroundRepeat,
+                    backgroundPosition: this.state.backgroundPosition,
+                    backgroundSize: this.state.backgroundSize,
+                    width: this.state.width,
+                    height: this.state.height,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                '@media screen and (max-width: 440px)': {
+                    herostyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    herostyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: HEROSTYLE, id: this.state.id, className: this.state.className },
+                { style: HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                 _react2.default.createElement(
                     _Holder2.default,
                     null,

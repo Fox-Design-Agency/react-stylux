@@ -161,8 +161,12 @@ function containerSwitch11_15(num, props, state) {
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
-                        width: '100%',
+                        width: state.width,
+                        maxWidth: state.width,
                         height: state.height,
+                        maxHeight: state.maxHeight,
+                        padding: state.padding,
+                        margin: state.margin,
                         display: state.display,
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
@@ -613,8 +617,12 @@ function containerSwitch11_15(num, props, state) {
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
-                        width: '100%',
+                        width: state.width,
+                        maxWidth: state.width,
                         height: state.height,
+                        maxHeight: state.maxHeight,
+                        padding: state.padding,
+                        margin: state.margin,
                         display: state.display,
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
@@ -1102,8 +1110,12 @@ function containerSwitch11_15(num, props, state) {
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
-                        width: '100%',
+                        width: state.width,
+                        maxWidth: state.width,
                         height: state.height,
+                        maxHeight: state.maxHeight,
+                        padding: state.padding,
+                        margin: state.margin,
                         display: state.display,
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
@@ -1628,8 +1640,12 @@ function containerSwitch11_15(num, props, state) {
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
-                        width: '100%',
+                        width: state.width,
+                        maxWidth: state.width,
                         height: state.height,
+                        maxHeight: state.maxHeight,
+                        padding: state.padding,
+                        margin: state.margin,
                         display: state.display,
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
@@ -2191,8 +2207,12 @@ function containerSwitch11_15(num, props, state) {
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
-                        width: '100%',
+                        width: state.width,
+                        maxWidth: state.width,
                         height: state.height,
+                        maxHeight: state.maxHeight,
+                        padding: state.padding,
+                        margin: state.margin,
                         display: state.display,
                         flexDirection: state.direction,
                         flexWrap: 'wrap',

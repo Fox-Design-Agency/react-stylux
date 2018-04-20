@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62,19 +66,31 @@ var Brand5 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var BRAND = {
-                display: 'flex',
-                alignItems: 'center',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
-            };
+            var BRAND = _nestingstyles2.default.create({
+                brand: {
+                    display: 'flex',
+                    alignItems: 'center',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
+                },
+                '@media screen and (max-width: 440px)': {
+                    brand: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    heading: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: BRAND,
+                { style: BRAND.brand,
                     id: this.state.id,
                     className: this.state.className },
                 this.state.childs
