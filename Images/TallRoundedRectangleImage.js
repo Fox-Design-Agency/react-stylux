@@ -106,7 +106,7 @@ var TallRoundedRectangleImage = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                Fragment,
+                _react2.default.Fragment,
                 null,
                 _react2.default.createElement('img', { style: TALLROUNDEDRECTANGLEIMG.tallroundedrectangleimg, id: this.state.id, className: 'tallrecimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
                     onMouseEnter: function onMouseEnter() {
