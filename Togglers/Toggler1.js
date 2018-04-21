@@ -105,6 +105,7 @@ var Toggler1 = function (_Component) {
                 display: this.state.show ? 'inline' : 'none',
                 width: this.state.width,
                 height: this.state.height,
+                boxShadow: this.state.boxShadow,
                 position: this.state.position,
                 background: this.state.background,
                 borderLeft: this.state.bLeft,
@@ -139,6 +140,7 @@ var Toggler1 = function (_Component) {
                 borderBottom: this.state.bBorderBottom,
                 border: this.state.bBorder
             };
+
             return _react2.default.createElement(
                 'div',
                 { id: this.state.mainid, className: this.state.mainClassName },

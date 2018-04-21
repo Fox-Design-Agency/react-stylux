@@ -47,6 +47,7 @@ var PLQ2 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transform: props.transform,
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',

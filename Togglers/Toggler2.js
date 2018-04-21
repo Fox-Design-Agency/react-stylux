@@ -16,8 +16,6 @@ require('../css/animations.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -45,9 +43,9 @@ var Toggler2 = function (_Component) {
             buttonText: props.buttonText || 'toggler2',
             bColor: props.bColor || 'black',
             bBackground: props.bBackground,
-            bFontSize: props.bFontSize || '1.333em',
             bWidth: props.bwidth,
             bheight: props.bHeight,
+            bFontSize: props.bFontSize || '1.333em',
             bFontVariant: props.bFontVariant,
             bFontWeight: props.bFontWeight,
             bTextShadow: props.bTextShadow,
@@ -111,6 +109,7 @@ var Toggler2 = function (_Component) {
             };
             var TOGGLERBOX = {
                 display: this.state.show ? 'flex' : 'none',
+                flexDirection: 'column-reverse',
                 position: this.state.position,
                 width: this.state.width,
                 height: this.state.height,
@@ -132,7 +131,7 @@ var Toggler2 = function (_Component) {
                 transformOrigin: this.state.transformOrigin,
                 animationFillMode: this.state.animationFillMode
             };
-            var CLICKBOX = _defineProperty({
+            var CLICKBOX = {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -152,7 +151,7 @@ var Toggler2 = function (_Component) {
                 borderTop: this.state.bBorderTop,
                 borderBottom: this.state.bBorderBottom,
                 border: this.state.bBorder
-            }, 'margin', '-30px 0 0 0');
+            };
             return _react2.default.createElement(
                 'div',
                 { id: this.state.mainid, style: FULLELEMENT, className: this.state.mainClassName },

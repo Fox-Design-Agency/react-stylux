@@ -48,6 +48,7 @@ var RectangleImage = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transform: props.transform,
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
@@ -86,6 +87,7 @@ var RectangleImage = function (_Component) {
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
+                    transform: this.state.transform,
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode,
                     boxShadow: this.state.boxShadow
@@ -105,7 +107,7 @@ var RectangleImage = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                _react2.default.Fragment,
+                Fragment,
                 null,
                 _react2.default.createElement('img', { style: IMAGE.rectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
                     onMouseEnter: function onMouseEnter() {

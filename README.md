@@ -3048,9 +3048,19 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style object
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
-* Credit to Kaycee for the Switch statement update in 0.4.3
 
 ## Changelog
+**0.5.0**
+* updated version to 0.5.0 due to breaking name changes, see below
+* Fixed onClick prop for buttons
+* Removed default sans-serif for Headers && default width: inherit
+* H44 hovColor default set to lightgray
+* transform prop added to Header, Paragraphs,  HR, A, Images, Buttons
+* Toggler3 fixed
+* Updated NavBar1 name to Navbar1
+* Updated SubNavBar1 to SubNavbar1
+* Updated SubNavBar1 to SubNavbar1
+
 **0.4.6**
 * Added font size to A tag
 * Added smDis && mdDis to A tag

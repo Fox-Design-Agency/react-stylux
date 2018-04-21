@@ -42,13 +42,14 @@ var RaisedButton1 = function (_Component) {
             color: props.color || 'black',
             frev: props.color || 'black',
             fontSize: props.fontSize,
-            onClick: '',
+            onClick: props.onClick,
             hovBackground: props.hovBackground || '#eee',
             hovBoxShadow: props.hovBoxShadow || '0 5px #666',
             boxShadow: props.boxShadow || '0 9px #999',
             boxShadowRev: props.boxShadow || '0 9px #999',
             trandform: props.transform,
             trandformrev: props.transform || 'translateY(-4px)',
+            transformOrigin: props.transformOrigin,
             id: props.id,
             classNAme: props.className
         };

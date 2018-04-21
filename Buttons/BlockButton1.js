@@ -42,10 +42,11 @@ var FloatingButton1 = function (_Component) {
             color: props.color || 'white',
             frev: props.color || 'white',
             fontSize: props.fontSize,
-            onClick: '',
+            onClick: props.onClick,
             id: props.id,
-            className: props.className
-
+            className: props.className,
+            transform: props.transform,
+            transformOrigin: props.transformOrigin
         };
         return _this;
     }
@@ -77,7 +78,9 @@ var FloatingButton1 = function (_Component) {
                     fontSize: this.state.fontSize,
                     cursor: 'pointer',
                     textAlign: 'center',
-                    color: this.state.color
+                    color: this.state.color,
+                    transform: this.state.transform,
+                    transformOrigin: this.state.transformOrigin
                 },
                 '@media screen and (max-width: 440px)': {
                     buttonstyle: {

@@ -43,7 +43,9 @@ var A = function (_Component) {
             rel: props.rel,
             fontSize: props.fontSize,
             smDis: props.smDis,
-            mdDis: props.mdDis
+            mdDis: props.mdDis,
+            transform: props.transform,
+            transformOrigin: props.transformOrigin
         };
         return _this;
     }
@@ -72,7 +74,9 @@ var A = function (_Component) {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    fontSize: this.state.fontSize
+                    fontSize: this.state.fontSize,
+                    transform: this.state.transform,
+                    transformOrigin: this.state.transformOrigin
                 },
                 '@media screen and (max-width: 440px)': {
                     astyle: {

@@ -71,7 +71,7 @@ var Toggler3 = function (_Component) {
     _createClass(Toggler3, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
             var labels = [];
             var text = [];
             for (var i = 0; i < CHILDS.length; i += 1) {
@@ -142,7 +142,9 @@ var Toggler3 = function (_Component) {
                 borderLeft: '1px solid black',
                 borderRight: '1px solid black',
                 margin: '3px',
-                padding: '5px'
+                padding: '5px',
+
+                trasition: '0.3s'
             };
             var CHECKS = this.state.labels.map(function (x, i, arr) {
                 return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: CHECKSSTYLE });

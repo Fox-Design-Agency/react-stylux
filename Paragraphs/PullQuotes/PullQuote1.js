@@ -35,6 +35,7 @@ var PLQ1 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (PLQ1.__proto__ || Object.getPrototypeOf(PLQ1)).call(this, props));
 
         _this.state = {
+
             blockid: props.blockid,
             textid: props.textid,
             citeid: props.citeid,
@@ -46,6 +47,7 @@ var PLQ1 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transform: props.transform,
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
