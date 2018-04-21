@@ -3028,4 +3028,4 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * A Huge thanks to www.w3schools.com and their awesome tutorials, many first draft items were created with those
 
 ## Changelog
-For a compelte listing of changes, please go to [Stylux Changelog]("https://foxdesignagency/react-stylux/changelog")
+For a complete listing of changes, please go to [Stylux Changelog](https://foxdesignagency.com/react-stylux/changelog)
