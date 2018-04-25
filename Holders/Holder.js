@@ -1641,7 +1641,7 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use20.block20styles.block20styles },
+                    { key: Math.random(), style: _use20.block21styles.block21styles },
                     CHILDS[20]
                 );
                 styledHolder = [_react2.default.createElement(
@@ -1773,12 +1773,12 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use21.block20styles.block20styles },
+                    { key: Math.random(), style: _use21.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use21.block20styles.block20styles },
+                    { key: Math.random(), style: _use21.block22styles.block22styles },
                     CHILDS[21]
                 );
                 styledHolder = [_react2.default.createElement(
@@ -1911,17 +1911,17 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use22.block20styles.block20styles },
+                    { key: Math.random(), style: _use22.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use22.block20styles.block20styles },
+                    { key: Math.random(), style: _use22.block22styles.block22styles },
                     CHILDS[21]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds23 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use22.block20styles.block20styles },
+                    { key: Math.random(), style: _use22.block23styles.block23styles },
                     CHILDS[22]
                 );
                 styledHolder = [_react2.default.createElement(
@@ -2055,22 +2055,22 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use23.block20styles.block20styles },
+                    { key: Math.random(), style: _use23.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use23.block20styles.block20styles },
+                    { key: Math.random(), style: _use23.block22styles.block22styles },
                     CHILDS[21]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds23 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use23.block20styles.block20styles },
+                    { key: Math.random(), style: _use23.block23styles.block23styles },
                     CHILDS[22]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds24 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use23.block20styles.block20styles },
+                    { key: Math.random(), style: _use23.block24styles.block24styles },
                     CHILDS[23]
                 );
                 styledHolder = [_react2.default.createElement(
@@ -2759,7 +2759,8 @@ var Holder = function (_Component) {
                     styledChilds25,
                     styledChilds26,
                     styledChilds27,
-                    styledChilds28
+                    styledChilds28,
+                    '}'
                 )];
             } else if (num === 29) {
                 var _use28 = (0, _holderSwitch4.default)(29, props, state);
@@ -4369,8 +4370,8 @@ var Holder = function (_Component) {
                     styledChilds35,
                     styledChilds36
                 )];
-            } else if (num === 36) {
-                var _use36 = (0, _holderSwitch8.default)(36, props, state);
+            } else if (num === 37) {
+                var _use36 = (0, _holderSwitch8.default)(37, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use36.block1styles.block1styles },
@@ -4597,8 +4598,8 @@ var Holder = function (_Component) {
                     styledChilds36,
                     styledChilds37
                 )];
-            } else if (num === 37) {
-                var _use37 = (0, _holderSwitch8.default)(37, props, state);
+            } else if (num === 38) {
+                var _use37 = (0, _holderSwitch8.default)(38, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use37.block1styles.block1styles },
@@ -4831,8 +4832,8 @@ var Holder = function (_Component) {
                     styledChilds37,
                     styledChilds38
                 )];
-            } else if (num === 38) {
-                var _use38 = (0, _holderSwitch8.default)(38, props, state);
+            } else if (num === 39) {
+                var _use38 = (0, _holderSwitch8.default)(39, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use38.block1styles.block1styles },
@@ -5071,8 +5072,8 @@ var Holder = function (_Component) {
                     styledChilds38,
                     styledChilds39
                 )];
-            } else if (num === 39) {
-                var _use39 = (0, _holderSwitch8.default)(39, props, state);
+            } else if (num === 40) {
+                var _use39 = (0, _holderSwitch8.default)(40, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use39.block1styles.block1styles },
@@ -5268,6 +5269,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use39.block39styles.block39styles },
                     CHILDS[38]
                 );
+                styledChilds40 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use39.block40styles.block40styles },
+                    CHILDS[39]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use39.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -5309,10 +5315,11 @@ var Holder = function (_Component) {
                     styledChilds36,
                     styledChilds37,
                     styledChilds38,
-                    styledChilds39
+                    styledChilds39,
+                    styledChilds40
                 )];
-            } else if (num === 40) {
-                var _use40 = (0, _holderSwitch8.default)(40, props, state);
+            } else if (num === 41) {
+                var _use40 = (0, _holderSwitch10.default)(41, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use40.block1styles.block1styles },
@@ -5513,6 +5520,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use40.block40styles.block40styles },
                     CHILDS[39]
                 );
+                styledChilds41 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use40.block41styles.block41styles },
+                    CHILDS[40]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use40.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -5555,10 +5567,11 @@ var Holder = function (_Component) {
                     styledChilds37,
                     styledChilds38,
                     styledChilds39,
-                    styledChilds40
+                    styledChilds40,
+                    styledChilds41
                 )];
-            } else if (num === 41) {
-                var _use41 = (0, _holderSwitch10.default)(41, props, state);
+            } else if (num === 42) {
+                var _use41 = (0, _holderSwitch10.default)(42, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use41.block1styles.block1styles },
@@ -5764,6 +5777,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use41.block41styles.block41styles },
                     CHILDS[40]
                 );
+                styledChilds42 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use41.block42styles.block42styles },
+                    CHILDS[41]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use41.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -5807,10 +5825,11 @@ var Holder = function (_Component) {
                     styledChilds38,
                     styledChilds39,
                     styledChilds40,
-                    styledChilds41
+                    styledChilds41,
+                    styledChilds42
                 )];
-            } else if (num === 42) {
-                var _use42 = (0, _holderSwitch10.default)(42, props, state);
+            } else if (num === 43) {
+                var _use42 = (0, _holderSwitch10.default)(43, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use42.block1styles.block1styles },
@@ -6021,6 +6040,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use42.block42styles.block42styles },
                     CHILDS[41]
                 );
+                styledChilds43 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use42.block43styles.block43styles },
+                    CHILDS[42]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use42.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -6065,10 +6089,11 @@ var Holder = function (_Component) {
                     styledChilds39,
                     styledChilds40,
                     styledChilds41,
-                    styledChilds42
+                    styledChilds42,
+                    styledChilds43
                 )];
-            } else if (num === 43) {
-                var _use43 = (0, _holderSwitch10.default)(43, props, state);
+            } else if (num === 44) {
+                var _use43 = (0, _holderSwitch10.default)(44, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use43.block1styles.block1styles },
@@ -6284,6 +6309,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use43.block43styles.block43styles },
                     CHILDS[42]
                 );
+                styledChilds44 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use43.block44styles.block44styles },
+                    CHILDS[43]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use43.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -6329,10 +6359,11 @@ var Holder = function (_Component) {
                     styledChilds40,
                     styledChilds41,
                     styledChilds42,
-                    styledChilds43
+                    styledChilds43,
+                    styledChilds44
                 )];
-            } else if (num === 44) {
-                var _use44 = (0, _holderSwitch10.default)(44, props, state);
+            } else if (num === 45) {
+                var _use44 = (0, _holderSwitch10.default)(45, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use44.block1styles.block1styles },
@@ -6553,6 +6584,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use44.block44styles.block44styles },
                     CHILDS[43]
                 );
+                styledChilds45 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use44.block45styles.block45styles },
+                    CHILDS[44]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use44.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -6599,10 +6635,11 @@ var Holder = function (_Component) {
                     styledChilds41,
                     styledChilds42,
                     styledChilds43,
-                    styledChilds44
+                    styledChilds44,
+                    styledChilds45
                 )];
-            } else if (num === 45) {
-                var _use45 = (0, _holderSwitch10.default)(45, props, state);
+            } else if (num === 46) {
+                var _use45 = (0, _holderSwitch12.default)(46, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use45.block1styles.block1styles },
@@ -6828,6 +6865,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use45.block45styles.block45styles },
                     CHILDS[44]
                 );
+                styledChilds46 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use45.block46styles.block46styles },
+                    CHILDS[45]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use45.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -6875,10 +6917,11 @@ var Holder = function (_Component) {
                     styledChilds42,
                     styledChilds43,
                     styledChilds44,
-                    styledChilds45
+                    styledChilds45,
+                    styledChilds46
                 )];
-            } else if (num === 46) {
-                var _use46 = (0, _holderSwitch12.default)(46, props, state);
+            } else if (num === 47) {
+                var _use46 = (0, _holderSwitch12.default)(47, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use46.block1styles.block1styles },
@@ -7109,6 +7152,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use46.block46styles.block46styles },
                     CHILDS[45]
                 );
+                styledChilds47 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use46.block47styles.block47styles },
+                    CHILDS[46]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use46.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -7157,10 +7205,11 @@ var Holder = function (_Component) {
                     styledChilds43,
                     styledChilds44,
                     styledChilds45,
-                    styledChilds46
+                    styledChilds46,
+                    styledChilds47
                 )];
-            } else if (num === 47) {
-                var _use47 = (0, _holderSwitch12.default)(47, props, state);
+            } else if (num === 48) {
+                var _use47 = (0, _holderSwitch12.default)(48, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use47.block1styles.block1styles },
@@ -7396,6 +7445,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use47.block47styles.block47styles },
                     CHILDS[46]
                 );
+                styledChilds48 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use47.block48styles.block48styles },
+                    CHILDS[47]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use47.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -7445,10 +7499,11 @@ var Holder = function (_Component) {
                     styledChilds44,
                     styledChilds45,
                     styledChilds46,
-                    styledChilds47
+                    styledChilds47,
+                    styledChilds48
                 )];
-            } else if (num === 48) {
-                var _use48 = (0, _holderSwitch12.default)(48, props, state);
+            } else if (num === 49) {
+                var _use48 = (0, _holderSwitch12.default)(49, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use48.block1styles.block1styles },
@@ -7689,6 +7744,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use48.block48styles.block48styles },
                     CHILDS[47]
                 );
+                styledChilds49 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use48.block49styles.block49styles },
+                    CHILDS[48]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use48.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -7739,10 +7799,11 @@ var Holder = function (_Component) {
                     styledChilds45,
                     styledChilds46,
                     styledChilds47,
-                    styledChilds48
+                    styledChilds48,
+                    styledChilds49
                 )];
-            } else if (num === 49) {
-                var _use49 = (0, _holderSwitch12.default)(49, props, state);
+            } else if (num === 50) {
+                var _use49 = (0, _holderSwitch12.default)(50, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use49.block1styles.block1styles },
@@ -7988,314 +8049,14 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use49.block49styles.block49styles },
                     CHILDS[48]
                 );
-                styledHolder = [_react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use49.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
-                    styledChilds1,
-                    styledChilds2,
-                    styledChilds3,
-                    styledChilds4,
-                    styledChilds5,
-                    styledChilds6,
-                    styledChilds7,
-                    styledChilds8,
-                    styledChilds9,
-                    styledChilds10,
-                    styledChilds11,
-                    styledChilds12,
-                    styledChilds13,
-                    styledChilds14,
-                    styledChilds15,
-                    styledChilds16,
-                    styledChilds17,
-                    styledChilds18,
-                    styledChilds19,
-                    styledChilds20,
-                    styledChilds21,
-                    styledChilds22,
-                    styledChilds23,
-                    styledChilds24,
-                    styledChilds25,
-                    styledChilds26,
-                    styledChilds27,
-                    styledChilds28,
-                    styledChilds29,
-                    styledChilds30,
-                    styledChilds31,
-                    styledChilds32,
-                    styledChilds33,
-                    styledChilds34,
-                    styledChilds35,
-                    styledChilds36,
-                    styledChilds37,
-                    styledChilds38,
-                    styledChilds39,
-                    styledChilds40,
-                    styledChilds41,
-                    styledChilds42,
-                    styledChilds43,
-                    styledChilds44,
-                    styledChilds45,
-                    styledChilds46,
-                    styledChilds47,
-                    styledChilds48,
-                    styledChilds49
-                )];
-            } else if (num === 50) {
-                var _use50 = (0, _holderSwitch12.default)(50, props, state);
-                styledChilds1 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block1styles.block1styles },
-                    CHILDS[0]
-                );
-                styledChilds2 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block2styles.block2styles },
-                    CHILDS[1]
-                );
-                styledChilds3 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block3styles.block3styles },
-                    CHILDS[2]
-                );
-                styledChilds4 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block4styles.block4styles },
-                    CHILDS[3]
-                );
-                styledChilds5 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block5styles.block5styles },
-                    CHILDS[4]
-                );
-                styledChilds6 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block6styles.block6styles },
-                    CHILDS[5]
-                );
-                styledChilds7 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block7styles.block7styles },
-                    CHILDS[6]
-                );
-                styledChilds8 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block8styles.block8styles },
-                    CHILDS[7]
-                );
-                styledChilds9 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block9styles.block9styles },
-                    CHILDS[8]
-                );
-                styledChilds10 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block10styles.block10styles },
-                    CHILDS[9]
-                );
-                styledChilds11 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block11styles.block11styles },
-                    CHILDS[10]
-                );
-                styledChilds12 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block12styles.block12styles },
-                    CHILDS[11]
-                );
-                styledChilds13 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block13styles.block13styles },
-                    CHILDS[12]
-                );
-                styledChilds14 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block14styles.block14styles },
-                    CHILDS[13]
-                );
-                styledChilds15 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block15styles.block15styles },
-                    CHILDS[14]
-                );
-                styledChilds16 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block16styles.block16styles },
-                    CHILDS[15]
-                );
-                styledChilds17 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block17styles.block17styles },
-                    CHILDS[16]
-                );
-                styledChilds18 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block18styles.block18styles },
-                    CHILDS[17]
-                );
-                styledChilds19 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block19styles.block19styles },
-                    CHILDS[18]
-                );
-                styledChilds20 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block20styles.block20styles },
-                    CHILDS[19]
-                );
-                styledChilds21 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block21styles.block21styles },
-                    CHILDS[20]
-                );
-                styledChilds22 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block22styles.block22styles },
-                    CHILDS[21]
-                );
-                styledChilds23 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block23styles.block23styles },
-                    CHILDS[22]
-                );
-                styledChilds24 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block24styles.block24styles },
-                    CHILDS[23]
-                );
-                styledChilds25 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block25styles.block25styles },
-                    CHILDS[24]
-                );
-                styledChilds26 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block26styles.block26styles },
-                    CHILDS[25]
-                );
-                styledChilds27 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block27styles.block27styles },
-                    CHILDS[26]
-                );
-                styledChilds28 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block28styles.block28styles },
-                    CHILDS[27]
-                );
-                styledChilds29 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block29styles.block29styles },
-                    CHILDS[28]
-                );
-                styledChilds30 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block30styles.block30styles },
-                    CHILDS[29]
-                );
-                styledChilds31 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block31styles.block31styles },
-                    CHILDS[30]
-                );
-                styledChilds32 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block32styles.block32styles },
-                    CHILDS[31]
-                );
-                styledChilds33 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block33styles.block33styles },
-                    CHILDS[32]
-                );
-                styledChilds34 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block34styles.block34styles },
-                    CHILDS[33]
-                );
-                styledChilds35 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block35styles.block35styles },
-                    CHILDS[34]
-                );
-                styledChilds36 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block36styles.block36styles },
-                    CHILDS[35]
-                );
-                styledChilds37 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block37styles.block37styles },
-                    CHILDS[36]
-                );
-                styledChilds38 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block38styles.block38styles },
-                    CHILDS[37]
-                );
-                styledChilds39 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block39styles.block39styles },
-                    CHILDS[38]
-                );
-                styledChilds40 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block40styles.block40styles },
-                    CHILDS[39]
-                );
-                styledChilds41 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block41styles.block41styles },
-                    CHILDS[40]
-                );
-                styledChilds42 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block42styles.block42styles },
-                    CHILDS[41]
-                );
-                styledChilds43 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block43styles.block43styles },
-                    CHILDS[42]
-                );
-                styledChilds44 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block44styles.block44styles },
-                    CHILDS[43]
-                );
-                styledChilds45 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block45styles.block45styles },
-                    CHILDS[44]
-                );
-                styledChilds46 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block46styles.block46styles },
-                    CHILDS[45]
-                );
-                styledChilds47 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block47styles.block47styles },
-                    CHILDS[46]
-                );
-                styledChilds48 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block48styles.block48styles },
-                    CHILDS[47]
-                );
-                styledChilds49 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use50.block49styles.block49styles },
-                    CHILDS[48]
-                );
                 styledChilds50 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use50.block50styles.block50styles },
+                    { key: Math.random(), style: _use49.block50styles.block50styles },
                     CHILDS[49]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use50.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
+                    { key: Math.random(), style: _use49.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -8379,7 +8140,37 @@ var Holder = function (_Component) {
                 styledChilds17 = void 0,
                 styledChilds18 = void 0,
                 styledChilds19 = void 0,
-                styledChilds20 = '';
+                styledChilds20 = void 0,
+                styledChilds21 = void 0,
+                styledChilds22 = void 0,
+                styledChilds23 = void 0,
+                styledChilds24 = void 0,
+                styledChilds25 = void 0,
+                styledChilds26 = void 0,
+                styledChilds27 = void 0,
+                styledChilds28 = void 0,
+                styledChilds29 = void 0,
+                styledChilds30 = void 0,
+                styledChilds31 = void 0,
+                styledChilds32 = void 0,
+                styledChilds33 = void 0,
+                styledChilds34 = void 0,
+                styledChilds35 = void 0,
+                styledChilds36 = void 0,
+                styledChilds37 = void 0,
+                styledChilds38 = void 0,
+                styledChilds39 = void 0,
+                styledChilds40 = void 0,
+                styledChilds41 = void 0,
+                styledChilds42 = void 0,
+                styledChilds43 = void 0,
+                styledChilds44 = void 0,
+                styledChilds45 = void 0,
+                styledChilds46 = void 0,
+                styledChilds47 = void 0,
+                styledChilds48 = void 0,
+                styledChilds49 = void 0,
+                styledChilds50 = '';
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             var num = CHILDS.length;
             if (num === 1) {
@@ -8395,7 +8186,25 @@ var Holder = function (_Component) {
                     styledChilds1
                 )];
             } else if (num === 2) {
-                var _use51 = (0, _holderSwitch0_2.default)(2, props, state);
+                var _use50 = (0, _holderSwitch0_2.default)(2, props, state);
+                styledChilds1 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use50.block1styles.block1styles },
+                    CHILDS[0]
+                );
+                styledChilds2 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use50.block2styles.block2styles },
+                    CHILDS[1]
+                );
+                styledHolder = [_react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use50.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
+                    styledChilds1,
+                    styledChilds2
+                )];
+            } else if (num === 3) {
+                var _use51 = (0, _holderSwitch0_2.default)(3, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use51.block1styles.block1styles },
@@ -8406,14 +8215,20 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use51.block2styles.block2styles },
                     CHILDS[1]
                 );
+                styledChilds3 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use51.block3styles.block3styles },
+                    CHILDS[2]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use51.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
-                    styledChilds2
+                    styledChilds2,
+                    styledChilds3
                 )];
-            } else if (num === 3) {
-                var _use52 = (0, _holderSwitch0_2.default)(3, props, state);
+            } else if (num === 4) {
+                var _use52 = (0, _holderSwitch0_2.default)(4, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use52.block1styles.block1styles },
@@ -8429,15 +8244,22 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use52.block3styles.block3styles },
                     CHILDS[2]
                 );
+                styledChilds4 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use52.block4styles.block4styles },
+                    CHILDS[3]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use52.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
-                    styledChilds3
+                    styledChilds3,
+                    styledChilds4
                 )];
-            } else if (num === 4) {
-                var _use53 = (0, _holderSwitch0_2.default)(4, props, state);
+            } else if (num === 5) {
+                var _use53 = (0, _holderSwitch0_2.default)(5, props, state);
+
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use53.block1styles.block1styles },
@@ -8458,17 +8280,22 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use53.block4styles.block4styles },
                     CHILDS[3]
                 );
+                styledChilds5 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use53.block5styles.block5styles },
+                    CHILDS[4]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use53.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
-                    styledChilds4
+                    styledChilds4,
+                    styledChilds5
                 )];
-            } else if (num === 5) {
-                var _use54 = (0, _holderSwitch0_2.default)(5, props, state);
-
+            } else if (num === 6) {
+                var _use54 = (0, _holderSwitch6_2.default)(6, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use54.block1styles.block1styles },
@@ -8494,6 +8321,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use54.block5styles.block5styles },
                     CHILDS[4]
                 );
+                styledChilds6 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use54.block6styles.block6styles },
+                    CHILDS[5]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use54.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8501,10 +8333,11 @@ var Holder = function (_Component) {
                     styledChilds2,
                     styledChilds3,
                     styledChilds4,
-                    styledChilds5
+                    styledChilds5,
+                    styledChilds6
                 )];
-            } else if (num === 6) {
-                var _use55 = (0, _holderSwitch6_2.default)(6, props, state);
+            } else if (num === 7) {
+                var _use55 = (0, _holderSwitch6_2.default)(7, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use55.block1styles.block1styles },
@@ -8535,6 +8368,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use55.block6styles.block6styles },
                     CHILDS[5]
                 );
+                styledChilds7 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use55.block7styles.block7styles },
+                    CHILDS[6]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use55.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8543,10 +8381,11 @@ var Holder = function (_Component) {
                     styledChilds3,
                     styledChilds4,
                     styledChilds5,
-                    styledChilds6
+                    styledChilds6,
+                    styledChilds7
                 )];
-            } else if (num === 7) {
-                var _use56 = (0, _holderSwitch6_2.default)(7, props, state);
+            } else if (num === 8) {
+                var _use56 = (0, _holderSwitch6_2.default)(8, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use56.block1styles.block1styles },
@@ -8582,6 +8421,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use56.block7styles.block7styles },
                     CHILDS[6]
                 );
+                styledChilds8 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use56.block8styles.block8styles },
+                    CHILDS[7]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use56.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8591,10 +8435,11 @@ var Holder = function (_Component) {
                     styledChilds4,
                     styledChilds5,
                     styledChilds6,
-                    styledChilds7
+                    styledChilds7,
+                    styledChilds8
                 )];
-            } else if (num === 8) {
-                var _use57 = (0, _holderSwitch6_2.default)(8, props, state);
+            } else if (num === 9) {
+                var _use57 = (0, _holderSwitch6_2.default)(9, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use57.block1styles.block1styles },
@@ -8635,6 +8480,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use57.block8styles.block8styles },
                     CHILDS[7]
                 );
+                styledChilds9 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use57.block9styles.block9styles },
+                    CHILDS[8]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use57.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8645,10 +8495,11 @@ var Holder = function (_Component) {
                     styledChilds5,
                     styledChilds6,
                     styledChilds7,
-                    styledChilds8
+                    styledChilds8,
+                    styledChilds9
                 )];
-            } else if (num === 9) {
-                var _use58 = (0, _holderSwitch6_2.default)(9, props, state);
+            } else if (num === 10) {
+                var _use58 = (0, _holderSwitch6_2.default)(10, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use58.block1styles.block1styles },
@@ -8694,6 +8545,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use58.block9styles.block9styles },
                     CHILDS[8]
                 );
+                styledChilds10 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use58.block10styles.block10styles },
+                    CHILDS[9]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use58.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8705,10 +8561,11 @@ var Holder = function (_Component) {
                     styledChilds6,
                     styledChilds7,
                     styledChilds8,
-                    styledChilds9
+                    styledChilds9,
+                    styledChilds10
                 )];
-            } else if (num === 10) {
-                var _use59 = (0, _holderSwitch6_2.default)(10, props, state);
+            } else if (num === 11) {
+                var _use59 = (0, _holderSwitch11_2.default)(11, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use59.block1styles.block1styles },
@@ -8759,6 +8616,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use59.block10styles.block10styles },
                     CHILDS[9]
                 );
+                styledChilds11 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use59.block11styles.block11styles },
+                    CHILDS[10]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use59.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8771,10 +8633,11 @@ var Holder = function (_Component) {
                     styledChilds7,
                     styledChilds8,
                     styledChilds9,
-                    styledChilds10
+                    styledChilds10,
+                    styledChilds11
                 )];
-            } else if (num === 11) {
-                var _use60 = (0, _holderSwitch11_2.default)(11, props, state);
+            } else if (num === 12) {
+                var _use60 = (0, _holderSwitch11_2.default)(12, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use60.block1styles.block1styles },
@@ -8830,6 +8693,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use60.block11styles.block11styles },
                     CHILDS[10]
                 );
+                styledChilds12 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use60.block12styles.block12styles },
+                    CHILDS[11]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use60.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8843,10 +8711,11 @@ var Holder = function (_Component) {
                     styledChilds8,
                     styledChilds9,
                     styledChilds10,
-                    styledChilds11
+                    styledChilds11,
+                    styledChilds12
                 )];
-            } else if (num === 12) {
-                var _use61 = (0, _holderSwitch11_2.default)(12, props, state);
+            } else if (num === 13) {
+                var _use61 = (0, _holderSwitch11_2.default)(13, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use61.block1styles.block1styles },
@@ -8907,6 +8776,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use61.block12styles.block12styles },
                     CHILDS[11]
                 );
+                styledChilds13 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use61.block13styles.block13styles },
+                    CHILDS[12]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use61.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -8921,10 +8795,11 @@ var Holder = function (_Component) {
                     styledChilds9,
                     styledChilds10,
                     styledChilds11,
-                    styledChilds12
+                    styledChilds12,
+                    styledChilds13
                 )];
-            } else if (num === 13) {
-                var _use62 = (0, _holderSwitch11_2.default)(13, props, state);
+            } else if (num === 14) {
+                var _use62 = (0, _holderSwitch11_2.default)(14, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use62.block1styles.block1styles },
@@ -8990,6 +8865,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use62.block13styles.block13styles },
                     CHILDS[12]
                 );
+                styledChilds14 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use62.block14styles.block14styles },
+                    CHILDS[13]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use62.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9005,10 +8885,11 @@ var Holder = function (_Component) {
                     styledChilds10,
                     styledChilds11,
                     styledChilds12,
-                    styledChilds13
+                    styledChilds13,
+                    styledChilds14
                 )];
-            } else if (num === 14) {
-                var _use63 = (0, _holderSwitch11_2.default)(14, props, state);
+            } else if (num === 15) {
+                var _use63 = (0, _holderSwitch11_2.default)(15, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use63.block1styles.block1styles },
@@ -9079,6 +8960,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use63.block14styles.block14styles },
                     CHILDS[13]
                 );
+                styledChilds15 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use63.block15styles.block15styles },
+                    CHILDS[14]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use63.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9095,10 +8981,11 @@ var Holder = function (_Component) {
                     styledChilds11,
                     styledChilds12,
                     styledChilds13,
-                    styledChilds14
+                    styledChilds14,
+                    styledChilds15
                 )];
-            } else if (num === 15) {
-                var _use64 = (0, _holderSwitch11_2.default)(15, props, state);
+            } else if (num === 16) {
+                var _use64 = (0, _holderSwitch16_2.default)(16, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use64.block1styles.block1styles },
@@ -9174,6 +9061,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use64.block15styles.block15styles },
                     CHILDS[14]
                 );
+                styledChilds16 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use64.block16styles.block16styles },
+                    CHILDS[15]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use64.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9191,10 +9083,11 @@ var Holder = function (_Component) {
                     styledChilds12,
                     styledChilds13,
                     styledChilds14,
-                    styledChilds15
+                    styledChilds15,
+                    styledChilds16
                 )];
-            } else if (num === 16) {
-                var _use65 = (0, _holderSwitch16_2.default)(16, props, state);
+            } else if (num === 17) {
+                var _use65 = (0, _holderSwitch16_2.default)(17, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use65.block1styles.block1styles },
@@ -9275,6 +9168,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use65.block16styles.block16styles },
                     CHILDS[15]
                 );
+                styledChilds17 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use65.block17styles.block17styles },
+                    CHILDS[16]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use65.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9293,10 +9191,11 @@ var Holder = function (_Component) {
                     styledChilds13,
                     styledChilds14,
                     styledChilds15,
-                    styledChilds16
+                    styledChilds16,
+                    styledChilds17
                 )];
-            } else if (num === 17) {
-                var _use66 = (0, _holderSwitch16_2.default)(17, props, state);
+            } else if (num === 18) {
+                var _use66 = (0, _holderSwitch16_2.default)(18, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use66.block1styles.block1styles },
@@ -9382,6 +9281,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use66.block17styles.block17styles },
                     CHILDS[16]
                 );
+                styledChilds18 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use66.block18styles.block18styles },
+                    CHILDS[17]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use66.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9401,10 +9305,11 @@ var Holder = function (_Component) {
                     styledChilds14,
                     styledChilds15,
                     styledChilds16,
-                    styledChilds17
+                    styledChilds17,
+                    styledChilds18
                 )];
-            } else if (num === 18) {
-                var _use67 = (0, _holderSwitch16_2.default)(18, props, state);
+            } else if (num === 19) {
+                var _use67 = (0, _holderSwitch16_2.default)(19, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use67.block1styles.block1styles },
@@ -9495,6 +9400,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use67.block18styles.block18styles },
                     CHILDS[17]
                 );
+                styledChilds19 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use67.block19styles.block19styles },
+                    CHILDS[18]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use67.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9515,10 +9425,11 @@ var Holder = function (_Component) {
                     styledChilds15,
                     styledChilds16,
                     styledChilds17,
-                    styledChilds18
+                    styledChilds18,
+                    styledChilds19
                 )];
-            } else if (num === 19) {
-                var _use68 = (0, _holderSwitch16_2.default)(19, props, state);
+            } else if (num === 20) {
+                var _use68 = (0, _holderSwitch16_2.default)(20, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use68.block1styles.block1styles },
@@ -9614,6 +9525,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use68.block19styles.block19styles },
                     CHILDS[18]
                 );
+                styledChilds20 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use68.block20styles.block20styles },
+                    CHILDS[19]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use68.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9635,10 +9551,11 @@ var Holder = function (_Component) {
                     styledChilds16,
                     styledChilds17,
                     styledChilds18,
-                    styledChilds19
+                    styledChilds19,
+                    styledChilds20
                 )];
-            } else if (num === 20) {
-                var _use69 = (0, _holderSwitch16_2.default)(20, props, state);
+            } else if (num === 21) {
+                var _use69 = (0, _holderSwitch2.default)(21, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use69.block1styles.block1styles },
@@ -9739,6 +9656,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use69.block20styles.block20styles },
                     CHILDS[19]
                 );
+                styledChilds21 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use69.block21styles.block21styles },
+                    CHILDS[20]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use69.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -9761,10 +9683,11 @@ var Holder = function (_Component) {
                     styledChilds17,
                     styledChilds18,
                     styledChilds19,
-                    styledChilds20
+                    styledChilds20,
+                    styledChilds21
                 )];
-            } else if (num === 21) {
-                var _use70 = (0, _holderSwitch2.default)(21, props, state);
+            } else if (num === 22) {
+                var _use70 = (0, _holderSwitch2.default)(22, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use70.block1styles.block1styles },
@@ -9867,8 +9790,13 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use70.block20styles.block20styles },
+                    { key: Math.random(), style: _use70.block21styles.block21styles },
                     CHILDS[20]
+                );
+                styledChilds22 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use70.block22styles.block22styles },
+                    CHILDS[21]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
@@ -9893,10 +9821,11 @@ var Holder = function (_Component) {
                     styledChilds18,
                     styledChilds19,
                     styledChilds20,
-                    styledChilds21
+                    styledChilds21,
+                    styledChilds22
                 )];
-            } else if (num === 22) {
-                var _use71 = (0, _holderSwitch2.default)(22, props, state);
+            } else if (num === 23) {
+                var _use71 = (0, _holderSwitch2.default)(23, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use71.block1styles.block1styles },
@@ -9999,13 +9928,18 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use71.block20styles.block20styles },
+                    { key: Math.random(), style: _use71.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use71.block20styles.block20styles },
+                    { key: Math.random(), style: _use71.block22styles.block22styles },
                     CHILDS[21]
+                );
+                styledChilds23 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use71.block23styles.block23styles },
+                    CHILDS[22]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
@@ -10031,10 +9965,11 @@ var Holder = function (_Component) {
                     styledChilds19,
                     styledChilds20,
                     styledChilds21,
-                    styledChilds22
+                    styledChilds22,
+                    styledChilds23
                 )];
-            } else if (num === 23) {
-                var _use72 = (0, _holderSwitch2.default)(23, props, state);
+            } else if (num === 24) {
+                var _use72 = (0, _holderSwitch2.default)(24, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use72.block1styles.block1styles },
@@ -10137,18 +10072,23 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use72.block20styles.block20styles },
+                    { key: Math.random(), style: _use72.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use72.block20styles.block20styles },
+                    { key: Math.random(), style: _use72.block22styles.block22styles },
                     CHILDS[21]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds23 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use72.block20styles.block20styles },
+                    { key: Math.random(), style: _use72.block23styles.block23styles },
                     CHILDS[22]
+                );
+                styledChilds24 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use72.block24styles.block24styles },
+                    CHILDS[23]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
@@ -10175,10 +10115,11 @@ var Holder = function (_Component) {
                     styledChilds20,
                     styledChilds21,
                     styledChilds22,
-                    styledChilds23
+                    styledChilds23,
+                    styledChilds24
                 )];
-            } else if (num === 24) {
-                var _use73 = (0, _holderSwitch2.default)(24, props, state);
+            } else if (num === 25) {
+                var _use73 = (0, _holderSwitch2.default)(25, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use73.block1styles.block1styles },
@@ -10281,23 +10222,28 @@ var Holder = function (_Component) {
                 );
                 styledChilds21 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use73.block20styles.block20styles },
+                    { key: Math.random(), style: _use73.block21styles.block21styles },
                     CHILDS[20]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds22 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use73.block20styles.block20styles },
+                    { key: Math.random(), style: _use73.block22styles.block22styles },
                     CHILDS[21]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds23 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use73.block20styles.block20styles },
+                    { key: Math.random(), style: _use73.block23styles.block23styles },
                     CHILDS[22]
                 );
-                styledChilds21 = _react2.default.createElement(
+                styledChilds24 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use73.block20styles.block20styles },
+                    { key: Math.random(), style: _use73.block24styles.block24styles },
                     CHILDS[23]
+                );
+                styledChilds25 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use73.block25styles.block25styles },
+                    CHILDS[24]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
@@ -10325,10 +10271,11 @@ var Holder = function (_Component) {
                     styledChilds21,
                     styledChilds22,
                     styledChilds23,
-                    styledChilds24
+                    styledChilds24,
+                    styledChilds25
                 )];
-            } else if (num === 25) {
-                var _use74 = (0, _holderSwitch2.default)(25, props, state);
+            } else if (num === 26) {
+                var _use74 = (0, _holderSwitch4.default)(26, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use74.block1styles.block1styles },
@@ -10454,6 +10401,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use74.block25styles.block25styles },
                     CHILDS[24]
                 );
+                styledChilds26 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use74.block26styles.block26styles },
+                    CHILDS[25]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use74.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -10481,10 +10433,11 @@ var Holder = function (_Component) {
                     styledChilds22,
                     styledChilds23,
                     styledChilds24,
-                    styledChilds25
+                    styledChilds25,
+                    styledChilds26
                 )];
-            } else if (num === 26) {
-                var _use75 = (0, _holderSwitch4.default)(26, props, state);
+            } else if (num === 27) {
+                var _use75 = (0, _holderSwitch4.default)(27, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use75.block1styles.block1styles },
@@ -10615,6 +10568,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use75.block26styles.block26styles },
                     CHILDS[25]
                 );
+                styledChilds27 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use75.block27styles.block27styles },
+                    CHILDS[26]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use75.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -10643,10 +10601,11 @@ var Holder = function (_Component) {
                     styledChilds23,
                     styledChilds24,
                     styledChilds25,
-                    styledChilds26
+                    styledChilds26,
+                    styledChilds27
                 )];
-            } else if (num === 27) {
-                var _use76 = (0, _holderSwitch4.default)(27, props, state);
+            } else if (num === 28) {
+                var _use76 = (0, _holderSwitch4.default)(28, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use76.block1styles.block1styles },
@@ -10782,6 +10741,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use76.block27styles.block27styles },
                     CHILDS[26]
                 );
+                styledChilds28 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use76.block28styles.block28styles },
+                    CHILDS[27]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use76.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -10811,10 +10775,12 @@ var Holder = function (_Component) {
                     styledChilds24,
                     styledChilds25,
                     styledChilds26,
-                    styledChilds27
+                    styledChilds27,
+                    styledChilds28,
+                    '}'
                 )];
-            } else if (num === 28) {
-                var _use77 = (0, _holderSwitch4.default)(28, props, state);
+            } else if (num === 29) {
+                var _use77 = (0, _holderSwitch4.default)(29, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use77.block1styles.block1styles },
@@ -10955,6 +10921,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use77.block28styles.block28styles },
                     CHILDS[27]
                 );
+                styledChilds29 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use77.block29styles.block29styles },
+                    CHILDS[28]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use77.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -10985,10 +10956,11 @@ var Holder = function (_Component) {
                     styledChilds25,
                     styledChilds26,
                     styledChilds27,
-                    styledChilds28
+                    styledChilds28,
+                    styledChilds29
                 )];
-            } else if (num === 29) {
-                var _use78 = (0, _holderSwitch4.default)(29, props, state);
+            } else if (num === 30) {
+                var _use78 = (0, _holderSwitch4.default)(30, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use78.block1styles.block1styles },
@@ -11134,6 +11106,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use78.block29styles.block29styles },
                     CHILDS[28]
                 );
+                styledChilds30 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use78.block30styles.block30styles },
+                    CHILDS[29]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use78.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -11165,10 +11142,11 @@ var Holder = function (_Component) {
                     styledChilds26,
                     styledChilds27,
                     styledChilds28,
-                    styledChilds29
+                    styledChilds29,
+                    styledChilds30
                 )];
-            } else if (num === 30) {
-                var _use79 = (0, _holderSwitch4.default)(30, props, state);
+            } else if (num === 31) {
+                var _use79 = (0, _holderSwitch6.default)(31, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use79.block1styles.block1styles },
@@ -11319,6 +11297,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use79.block30styles.block30styles },
                     CHILDS[29]
                 );
+                styledChilds31 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use79.block31styles.block31styles },
+                    CHILDS[30]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use79.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -11351,10 +11334,11 @@ var Holder = function (_Component) {
                     styledChilds27,
                     styledChilds28,
                     styledChilds29,
-                    styledChilds30
+                    styledChilds30,
+                    styledChilds31
                 )];
-            } else if (num === 31) {
-                var _use80 = (0, _holderSwitch6.default)(31, props, state);
+            } else if (num === 32) {
+                var _use80 = (0, _holderSwitch6.default)(32, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use80.block1styles.block1styles },
@@ -11510,6 +11494,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use80.block31styles.block31styles },
                     CHILDS[30]
                 );
+                styledChilds32 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use80.block32styles.block32styles },
+                    CHILDS[31]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use80.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -11543,10 +11532,11 @@ var Holder = function (_Component) {
                     styledChilds28,
                     styledChilds29,
                     styledChilds30,
-                    styledChilds31
+                    styledChilds31,
+                    styledChilds32
                 )];
-            } else if (num === 32) {
-                var _use81 = (0, _holderSwitch6.default)(32, props, state);
+            } else if (num === 33) {
+                var _use81 = (0, _holderSwitch6.default)(33, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use81.block1styles.block1styles },
@@ -11707,6 +11697,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use81.block32styles.block32styles },
                     CHILDS[31]
                 );
+                styledChilds33 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use81.block33styles.block33styles },
+                    CHILDS[32]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use81.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -11741,10 +11736,11 @@ var Holder = function (_Component) {
                     styledChilds29,
                     styledChilds30,
                     styledChilds31,
-                    styledChilds32
+                    styledChilds32,
+                    styledChilds33
                 )];
-            } else if (num === 33) {
-                var _use82 = (0, _holderSwitch6.default)(33, props, state);
+            } else if (num === 34) {
+                var _use82 = (0, _holderSwitch6.default)(34, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use82.block1styles.block1styles },
@@ -11910,6 +11906,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use82.block33styles.block33styles },
                     CHILDS[32]
                 );
+                styledChilds34 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use82.block34styles.block34styles },
+                    CHILDS[33]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use82.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -11945,10 +11946,11 @@ var Holder = function (_Component) {
                     styledChilds30,
                     styledChilds31,
                     styledChilds32,
-                    styledChilds33
+                    styledChilds33,
+                    styledChilds34
                 )];
-            } else if (num === 34) {
-                var _use83 = (0, _holderSwitch6.default)(34, props, state);
+            } else if (num === 35) {
+                var _use83 = (0, _holderSwitch6.default)(35, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use83.block1styles.block1styles },
@@ -12119,6 +12121,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use83.block34styles.block34styles },
                     CHILDS[33]
                 );
+                styledChilds35 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use83.block35styles.block35styles },
+                    CHILDS[34]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use83.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -12155,10 +12162,11 @@ var Holder = function (_Component) {
                     styledChilds31,
                     styledChilds32,
                     styledChilds33,
-                    styledChilds34
+                    styledChilds34,
+                    styledChilds35
                 )];
-            } else if (num === 35) {
-                var _use84 = (0, _holderSwitch6.default)(35, props, state);
+            } else if (num === 36) {
+                var _use84 = (0, _holderSwitch8.default)(36, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use84.block1styles.block1styles },
@@ -12334,6 +12342,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use84.block35styles.block35styles },
                     CHILDS[34]
                 );
+                styledChilds36 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use84.block36styles.block36styles },
+                    CHILDS[35]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use84.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -12371,10 +12384,11 @@ var Holder = function (_Component) {
                     styledChilds32,
                     styledChilds33,
                     styledChilds34,
-                    styledChilds35
+                    styledChilds35,
+                    styledChilds36
                 )];
-            } else if (num === 36) {
-                var _use85 = (0, _holderSwitch8.default)(36, props, state);
+            } else if (num === 37) {
+                var _use85 = (0, _holderSwitch8.default)(37, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use85.block1styles.block1styles },
@@ -12555,6 +12569,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use85.block36styles.block36styles },
                     CHILDS[35]
                 );
+                styledChilds37 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use85.block37styles.block37styles },
+                    CHILDS[36]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use85.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -12593,10 +12612,11 @@ var Holder = function (_Component) {
                     styledChilds33,
                     styledChilds34,
                     styledChilds35,
-                    styledChilds36
+                    styledChilds36,
+                    styledChilds37
                 )];
-            } else if (num === 36) {
-                var _use86 = (0, _holderSwitch8.default)(36, props, state);
+            } else if (num === 38) {
+                var _use86 = (0, _holderSwitch8.default)(38, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use86.block1styles.block1styles },
@@ -12782,6 +12802,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use86.block37styles.block37styles },
                     CHILDS[36]
                 );
+                styledChilds38 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use86.block38styles.block38styles },
+                    CHILDS[37]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use86.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -12821,10 +12846,11 @@ var Holder = function (_Component) {
                     styledChilds34,
                     styledChilds35,
                     styledChilds36,
-                    styledChilds37
+                    styledChilds37,
+                    styledChilds38
                 )];
-            } else if (num === 37) {
-                var _use87 = (0, _holderSwitch8.default)(37, props, state);
+            } else if (num === 39) {
+                var _use87 = (0, _holderSwitch8.default)(39, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use87.block1styles.block1styles },
@@ -13015,6 +13041,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use87.block38styles.block38styles },
                     CHILDS[37]
                 );
+                styledChilds39 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use87.block39styles.block39styles },
+                    CHILDS[38]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use87.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -13055,10 +13086,11 @@ var Holder = function (_Component) {
                     styledChilds35,
                     styledChilds36,
                     styledChilds37,
-                    styledChilds38
+                    styledChilds38,
+                    styledChilds39
                 )];
-            } else if (num === 38) {
-                var _use88 = (0, _holderSwitch8.default)(38, props, state);
+            } else if (num === 40) {
+                var _use88 = (0, _holderSwitch8.default)(40, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use88.block1styles.block1styles },
@@ -13254,6 +13286,11 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use88.block39styles.block39styles },
                     CHILDS[38]
                 );
+                styledChilds40 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use88.block40styles.block40styles },
+                    CHILDS[39]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use88.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -13295,10 +13332,11 @@ var Holder = function (_Component) {
                     styledChilds36,
                     styledChilds37,
                     styledChilds38,
-                    styledChilds39
+                    styledChilds39,
+                    styledChilds40
                 )];
-            } else if (num === 39) {
-                var _use89 = (0, _holderSwitch8.default)(39, props, state);
+            } else if (num === 41) {
+                var _use89 = (0, _holderSwitch10.default)(41, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use89.block1styles.block1styles },
@@ -13494,6 +13532,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use89.block39styles.block39styles },
                     CHILDS[38]
                 );
+                styledChilds40 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use89.block40styles.block40styles },
+                    CHILDS[39]
+                );
+                styledChilds41 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use89.block41styles.block41styles },
+                    CHILDS[40]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use89.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -13535,10 +13583,12 @@ var Holder = function (_Component) {
                     styledChilds36,
                     styledChilds37,
                     styledChilds38,
-                    styledChilds39
+                    styledChilds39,
+                    styledChilds40,
+                    styledChilds41
                 )];
-            } else if (num === 40) {
-                var _use90 = (0, _holderSwitch8.default)(40, props, state);
+            } else if (num === 42) {
+                var _use90 = (0, _holderSwitch10.default)(42, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use90.block1styles.block1styles },
@@ -13739,6 +13789,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use90.block40styles.block40styles },
                     CHILDS[39]
                 );
+                styledChilds41 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use90.block41styles.block41styles },
+                    CHILDS[40]
+                );
+                styledChilds42 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use90.block42styles.block42styles },
+                    CHILDS[41]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use90.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -13781,10 +13841,12 @@ var Holder = function (_Component) {
                     styledChilds37,
                     styledChilds38,
                     styledChilds39,
-                    styledChilds40
+                    styledChilds40,
+                    styledChilds41,
+                    styledChilds42
                 )];
-            } else if (num === 41) {
-                var _use91 = (0, _holderSwitch10.default)(41, props, state);
+            } else if (num === 43) {
+                var _use91 = (0, _holderSwitch10.default)(43, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use91.block1styles.block1styles },
@@ -13990,6 +14052,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use91.block41styles.block41styles },
                     CHILDS[40]
                 );
+                styledChilds42 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use91.block42styles.block42styles },
+                    CHILDS[41]
+                );
+                styledChilds43 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use91.block43styles.block43styles },
+                    CHILDS[42]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use91.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -14033,10 +14105,12 @@ var Holder = function (_Component) {
                     styledChilds38,
                     styledChilds39,
                     styledChilds40,
-                    styledChilds41
+                    styledChilds41,
+                    styledChilds42,
+                    styledChilds43
                 )];
-            } else if (num === 42) {
-                var _use92 = (0, _holderSwitch10.default)(42, props, state);
+            } else if (num === 44) {
+                var _use92 = (0, _holderSwitch10.default)(44, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use92.block1styles.block1styles },
@@ -14247,6 +14321,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use92.block42styles.block42styles },
                     CHILDS[41]
                 );
+                styledChilds43 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use92.block43styles.block43styles },
+                    CHILDS[42]
+                );
+                styledChilds44 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use92.block44styles.block44styles },
+                    CHILDS[43]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use92.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -14291,10 +14375,12 @@ var Holder = function (_Component) {
                     styledChilds39,
                     styledChilds40,
                     styledChilds41,
-                    styledChilds42
+                    styledChilds42,
+                    styledChilds43,
+                    styledChilds44
                 )];
-            } else if (num === 43) {
-                var _use93 = (0, _holderSwitch10.default)(43, props, state);
+            } else if (num === 45) {
+                var _use93 = (0, _holderSwitch10.default)(45, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use93.block1styles.block1styles },
@@ -14510,6 +14596,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use93.block43styles.block43styles },
                     CHILDS[42]
                 );
+                styledChilds44 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use93.block44styles.block44styles },
+                    CHILDS[43]
+                );
+                styledChilds45 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use93.block45styles.block45styles },
+                    CHILDS[44]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use93.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -14555,10 +14651,12 @@ var Holder = function (_Component) {
                     styledChilds40,
                     styledChilds41,
                     styledChilds42,
-                    styledChilds43
+                    styledChilds43,
+                    styledChilds44,
+                    styledChilds45
                 )];
-            } else if (num === 44) {
-                var _use94 = (0, _holderSwitch10.default)(44, props, state);
+            } else if (num === 46) {
+                var _use94 = (0, _holderSwitch12.default)(46, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use94.block1styles.block1styles },
@@ -14779,6 +14877,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use94.block44styles.block44styles },
                     CHILDS[43]
                 );
+                styledChilds45 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use94.block45styles.block45styles },
+                    CHILDS[44]
+                );
+                styledChilds46 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use94.block46styles.block46styles },
+                    CHILDS[45]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use94.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -14825,10 +14933,12 @@ var Holder = function (_Component) {
                     styledChilds41,
                     styledChilds42,
                     styledChilds43,
-                    styledChilds44
+                    styledChilds44,
+                    styledChilds45,
+                    styledChilds46
                 )];
-            } else if (num === 45) {
-                var _use95 = (0, _holderSwitch10.default)(45, props, state);
+            } else if (num === 47) {
+                var _use95 = (0, _holderSwitch12.default)(47, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use95.block1styles.block1styles },
@@ -15054,6 +15164,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use95.block45styles.block45styles },
                     CHILDS[44]
                 );
+                styledChilds46 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use95.block46styles.block46styles },
+                    CHILDS[45]
+                );
+                styledChilds47 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use95.block47styles.block47styles },
+                    CHILDS[46]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use95.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -15101,10 +15221,12 @@ var Holder = function (_Component) {
                     styledChilds42,
                     styledChilds43,
                     styledChilds44,
-                    styledChilds45
+                    styledChilds45,
+                    styledChilds46,
+                    styledChilds47
                 )];
-            } else if (num === 46) {
-                var _use96 = (0, _holderSwitch12.default)(46, props, state);
+            } else if (num === 48) {
+                var _use96 = (0, _holderSwitch12.default)(48, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use96.block1styles.block1styles },
@@ -15335,6 +15457,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use96.block46styles.block46styles },
                     CHILDS[45]
                 );
+                styledChilds47 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use96.block47styles.block47styles },
+                    CHILDS[46]
+                );
+                styledChilds48 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use96.block48styles.block48styles },
+                    CHILDS[47]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use96.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -15383,10 +15515,12 @@ var Holder = function (_Component) {
                     styledChilds43,
                     styledChilds44,
                     styledChilds45,
-                    styledChilds46
+                    styledChilds46,
+                    styledChilds47,
+                    styledChilds48
                 )];
-            } else if (num === 47) {
-                var _use97 = (0, _holderSwitch12.default)(47, props, state);
+            } else if (num === 49) {
+                var _use97 = (0, _holderSwitch12.default)(49, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use97.block1styles.block1styles },
@@ -15622,6 +15756,16 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use97.block47styles.block47styles },
                     CHILDS[46]
                 );
+                styledChilds48 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use97.block48styles.block48styles },
+                    CHILDS[47]
+                );
+                styledChilds49 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: _use97.block49styles.block49styles },
+                    CHILDS[48]
+                );
                 styledHolder = [_react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use97.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
@@ -15671,10 +15815,12 @@ var Holder = function (_Component) {
                     styledChilds44,
                     styledChilds45,
                     styledChilds46,
-                    styledChilds47
+                    styledChilds47,
+                    styledChilds48,
+                    styledChilds49
                 )];
-            } else if (num === 48) {
-                var _use98 = (0, _holderSwitch12.default)(48, props, state);
+            } else if (num === 50) {
+                var _use98 = (0, _holderSwitch12.default)(50, props, state);
                 styledChilds1 = _react2.default.createElement(
                     'div',
                     { key: Math.random(), style: _use98.block1styles.block1styles },
@@ -15915,613 +16061,19 @@ var Holder = function (_Component) {
                     { key: Math.random(), style: _use98.block48styles.block48styles },
                     CHILDS[47]
                 );
-                styledHolder = [_react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use98.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
-                    styledChilds1,
-                    styledChilds2,
-                    styledChilds3,
-                    styledChilds4,
-                    styledChilds5,
-                    styledChilds6,
-                    styledChilds7,
-                    styledChilds8,
-                    styledChilds9,
-                    styledChilds10,
-                    styledChilds11,
-                    styledChilds12,
-                    styledChilds13,
-                    styledChilds14,
-                    styledChilds15,
-                    styledChilds16,
-                    styledChilds17,
-                    styledChilds18,
-                    styledChilds19,
-                    styledChilds20,
-                    styledChilds21,
-                    styledChilds22,
-                    styledChilds23,
-                    styledChilds24,
-                    styledChilds25,
-                    styledChilds26,
-                    styledChilds27,
-                    styledChilds28,
-                    styledChilds29,
-                    styledChilds30,
-                    styledChilds31,
-                    styledChilds32,
-                    styledChilds33,
-                    styledChilds34,
-                    styledChilds35,
-                    styledChilds36,
-                    styledChilds37,
-                    styledChilds38,
-                    styledChilds39,
-                    styledChilds40,
-                    styledChilds41,
-                    styledChilds42,
-                    styledChilds43,
-                    styledChilds44,
-                    styledChilds45,
-                    styledChilds46,
-                    styledChilds47,
-                    styledChilds48
-                )];
-            } else if (num === 49) {
-                var _use99 = (0, _holderSwitch12.default)(49, props, state);
-                styledChilds1 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block1styles.block1styles },
-                    CHILDS[0]
-                );
-                styledChilds2 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block2styles.block2styles },
-                    CHILDS[1]
-                );
-                styledChilds3 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block3styles.block3styles },
-                    CHILDS[2]
-                );
-                styledChilds4 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block4styles.block4styles },
-                    CHILDS[3]
-                );
-                styledChilds5 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block5styles.block5styles },
-                    CHILDS[4]
-                );
-                styledChilds6 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block6styles.block6styles },
-                    CHILDS[5]
-                );
-                styledChilds7 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block7styles.block7styles },
-                    CHILDS[6]
-                );
-                styledChilds8 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block8styles.block8styles },
-                    CHILDS[7]
-                );
-                styledChilds9 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block9styles.block9styles },
-                    CHILDS[8]
-                );
-                styledChilds10 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block10styles.block10styles },
-                    CHILDS[9]
-                );
-                styledChilds11 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block11styles.block11styles },
-                    CHILDS[10]
-                );
-                styledChilds12 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block12styles.block12styles },
-                    CHILDS[11]
-                );
-                styledChilds13 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block13styles.block13styles },
-                    CHILDS[12]
-                );
-                styledChilds14 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block14styles.block14styles },
-                    CHILDS[13]
-                );
-                styledChilds15 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block15styles.block15styles },
-                    CHILDS[14]
-                );
-                styledChilds16 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block16styles.block16styles },
-                    CHILDS[15]
-                );
-                styledChilds17 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block17styles.block17styles },
-                    CHILDS[16]
-                );
-                styledChilds18 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block18styles.block18styles },
-                    CHILDS[17]
-                );
-                styledChilds19 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block19styles.block19styles },
-                    CHILDS[18]
-                );
-                styledChilds20 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block20styles.block20styles },
-                    CHILDS[19]
-                );
-                styledChilds21 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block21styles.block21styles },
-                    CHILDS[20]
-                );
-                styledChilds22 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block22styles.block22styles },
-                    CHILDS[21]
-                );
-                styledChilds23 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block23styles.block23styles },
-                    CHILDS[22]
-                );
-                styledChilds24 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block24styles.block24styles },
-                    CHILDS[23]
-                );
-                styledChilds25 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block25styles.block25styles },
-                    CHILDS[24]
-                );
-                styledChilds26 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block26styles.block26styles },
-                    CHILDS[25]
-                );
-                styledChilds27 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block27styles.block27styles },
-                    CHILDS[26]
-                );
-                styledChilds28 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block28styles.block28styles },
-                    CHILDS[27]
-                );
-                styledChilds29 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block29styles.block29styles },
-                    CHILDS[28]
-                );
-                styledChilds30 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block30styles.block30styles },
-                    CHILDS[29]
-                );
-                styledChilds31 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block31styles.block31styles },
-                    CHILDS[30]
-                );
-                styledChilds32 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block32styles.block32styles },
-                    CHILDS[31]
-                );
-                styledChilds33 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block33styles.block33styles },
-                    CHILDS[32]
-                );
-                styledChilds34 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block34styles.block34styles },
-                    CHILDS[33]
-                );
-                styledChilds35 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block35styles.block35styles },
-                    CHILDS[34]
-                );
-                styledChilds36 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block36styles.block36styles },
-                    CHILDS[35]
-                );
-                styledChilds37 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block37styles.block37styles },
-                    CHILDS[36]
-                );
-                styledChilds38 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block38styles.block38styles },
-                    CHILDS[37]
-                );
-                styledChilds39 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block39styles.block39styles },
-                    CHILDS[38]
-                );
-                styledChilds40 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block40styles.block40styles },
-                    CHILDS[39]
-                );
-                styledChilds41 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block41styles.block41styles },
-                    CHILDS[40]
-                );
-                styledChilds42 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block42styles.block42styles },
-                    CHILDS[41]
-                );
-                styledChilds43 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block43styles.block43styles },
-                    CHILDS[42]
-                );
-                styledChilds44 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block44styles.block44styles },
-                    CHILDS[43]
-                );
-                styledChilds45 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block45styles.block45styles },
-                    CHILDS[44]
-                );
-                styledChilds46 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block46styles.block46styles },
-                    CHILDS[45]
-                );
-                styledChilds47 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block47styles.block47styles },
-                    CHILDS[46]
-                );
-                styledChilds48 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.block48styles.block48styles },
-                    CHILDS[47]
-                );
                 styledChilds49 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use99.block49styles.block49styles },
-                    CHILDS[48]
-                );
-                styledHolder = [_react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use99.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
-                    styledChilds1,
-                    styledChilds2,
-                    styledChilds3,
-                    styledChilds4,
-                    styledChilds5,
-                    styledChilds6,
-                    styledChilds7,
-                    styledChilds8,
-                    styledChilds9,
-                    styledChilds10,
-                    styledChilds11,
-                    styledChilds12,
-                    styledChilds13,
-                    styledChilds14,
-                    styledChilds15,
-                    styledChilds16,
-                    styledChilds17,
-                    styledChilds18,
-                    styledChilds19,
-                    styledChilds20,
-                    styledChilds21,
-                    styledChilds22,
-                    styledChilds23,
-                    styledChilds24,
-                    styledChilds25,
-                    styledChilds26,
-                    styledChilds27,
-                    styledChilds28,
-                    styledChilds29,
-                    styledChilds30,
-                    styledChilds31,
-                    styledChilds32,
-                    styledChilds33,
-                    styledChilds34,
-                    styledChilds35,
-                    styledChilds36,
-                    styledChilds37,
-                    styledChilds38,
-                    styledChilds39,
-                    styledChilds40,
-                    styledChilds41,
-                    styledChilds42,
-                    styledChilds43,
-                    styledChilds44,
-                    styledChilds45,
-                    styledChilds46,
-                    styledChilds47,
-                    styledChilds48,
-                    styledChilds49
-                )];
-            } else if (num === 50) {
-                var _use100 = (0, _holderSwitch12.default)(50, props, state);
-                styledChilds1 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block1styles.block1styles },
-                    CHILDS[0]
-                );
-                styledChilds2 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block2styles.block2styles },
-                    CHILDS[1]
-                );
-                styledChilds3 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block3styles.block3styles },
-                    CHILDS[2]
-                );
-                styledChilds4 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block4styles.block4styles },
-                    CHILDS[3]
-                );
-                styledChilds5 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block5styles.block5styles },
-                    CHILDS[4]
-                );
-                styledChilds6 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block6styles.block6styles },
-                    CHILDS[5]
-                );
-                styledChilds7 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block7styles.block7styles },
-                    CHILDS[6]
-                );
-                styledChilds8 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block8styles.block8styles },
-                    CHILDS[7]
-                );
-                styledChilds9 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block9styles.block9styles },
-                    CHILDS[8]
-                );
-                styledChilds10 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block10styles.block10styles },
-                    CHILDS[9]
-                );
-                styledChilds11 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block11styles.block11styles },
-                    CHILDS[10]
-                );
-                styledChilds12 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block12styles.block12styles },
-                    CHILDS[11]
-                );
-                styledChilds13 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block13styles.block13styles },
-                    CHILDS[12]
-                );
-                styledChilds14 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block14styles.block14styles },
-                    CHILDS[13]
-                );
-                styledChilds15 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block15styles.block15styles },
-                    CHILDS[14]
-                );
-                styledChilds16 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block16styles.block16styles },
-                    CHILDS[15]
-                );
-                styledChilds17 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block17styles.block17styles },
-                    CHILDS[16]
-                );
-                styledChilds18 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block18styles.block18styles },
-                    CHILDS[17]
-                );
-                styledChilds19 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block19styles.block19styles },
-                    CHILDS[18]
-                );
-                styledChilds20 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block20styles.block20styles },
-                    CHILDS[19]
-                );
-                styledChilds21 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block21styles.block21styles },
-                    CHILDS[20]
-                );
-                styledChilds22 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block22styles.block22styles },
-                    CHILDS[21]
-                );
-                styledChilds23 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block23styles.block23styles },
-                    CHILDS[22]
-                );
-                styledChilds24 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block24styles.block24styles },
-                    CHILDS[23]
-                );
-                styledChilds25 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block25styles.block25styles },
-                    CHILDS[24]
-                );
-                styledChilds26 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block26styles.block26styles },
-                    CHILDS[25]
-                );
-                styledChilds27 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block27styles.block27styles },
-                    CHILDS[26]
-                );
-                styledChilds28 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block28styles.block28styles },
-                    CHILDS[27]
-                );
-                styledChilds29 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block29styles.block29styles },
-                    CHILDS[28]
-                );
-                styledChilds30 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block30styles.block30styles },
-                    CHILDS[29]
-                );
-                styledChilds31 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block31styles.block31styles },
-                    CHILDS[30]
-                );
-                styledChilds32 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block32styles.block32styles },
-                    CHILDS[31]
-                );
-                styledChilds33 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block33styles.block33styles },
-                    CHILDS[32]
-                );
-                styledChilds34 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block34styles.block34styles },
-                    CHILDS[33]
-                );
-                styledChilds35 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block35styles.block35styles },
-                    CHILDS[34]
-                );
-                styledChilds36 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block36styles.block36styles },
-                    CHILDS[35]
-                );
-                styledChilds37 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block37styles.block37styles },
-                    CHILDS[36]
-                );
-                styledChilds38 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block38styles.block38styles },
-                    CHILDS[37]
-                );
-                styledChilds39 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block39styles.block39styles },
-                    CHILDS[38]
-                );
-                styledChilds40 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block40styles.block40styles },
-                    CHILDS[39]
-                );
-                styledChilds41 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block41styles.block41styles },
-                    CHILDS[40]
-                );
-                styledChilds42 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block42styles.block42styles },
-                    CHILDS[41]
-                );
-                styledChilds43 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block43styles.block43styles },
-                    CHILDS[42]
-                );
-                styledChilds44 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block44styles.block44styles },
-                    CHILDS[43]
-                );
-                styledChilds45 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block45styles.block45styles },
-                    CHILDS[44]
-                );
-                styledChilds46 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block46styles.block46styles },
-                    CHILDS[45]
-                );
-                styledChilds47 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block47styles.block47styles },
-                    CHILDS[46]
-                );
-                styledChilds48 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block48styles.block48styles },
-                    CHILDS[47]
-                );
-                styledChilds49 = _react2.default.createElement(
-                    'div',
-                    { key: Math.random(), style: _use100.block49styles.block49styles },
+                    { key: Math.random(), style: _use98.block49styles.block49styles },
                     CHILDS[48]
                 );
                 styledChilds50 = _react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use100.block50styles.block50styles },
+                    { key: Math.random(), style: _use98.block50styles.block50styles },
                     CHILDS[49]
                 );
                 styledHolder = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: _use100.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
+                    { key: Math.random(), style: _use98.holderstyles.holderstyles, className: this.state.className, id: this.state.id },
                     styledChilds1,
                     styledChilds2,
                     styledChilds3,
@@ -16591,7 +16143,5 @@ var Holder = function (_Component) {
 
     return Holder;
 }(_react.Component);
-/* End of Holder Component */
-
 
 exports.default = Holder;
