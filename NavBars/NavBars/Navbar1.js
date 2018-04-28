@@ -111,12 +111,12 @@ var Navbar1 = function (_Component) {
                 hoverStyle: {
                     color: this.state.hoverColor
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     navbar_navbar_li: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     navbar_navbar_li: {
                         display: this.state.mddis
                     }
@@ -142,12 +142,12 @@ var Navbar1 = function (_Component) {
                 hoverStyle: {
                     color: this.state.hoverColor
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
@@ -213,12 +213,12 @@ var Navbar1 = function (_Component) {
                 hoverStyle: {
                     color: this.state.hoverColor
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     navbar_navbar_li: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     navbar_navbar_li: {
                         display: this.state.mddis
                     }
@@ -244,12 +244,12 @@ var Navbar1 = function (_Component) {
                 hoverStyle: {
                     color: this.state.hoverColor
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
@@ -310,12 +310,12 @@ var Navbar1 = function (_Component) {
                     color: this.state.color
 
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     navbar: {
                         display: 'flex'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     navbar: {
                         display: 'flex'
                     }
@@ -337,12 +337,12 @@ var Navbar1 = function (_Component) {
                     position: this.state.position,
                     zIndex: 200
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     navbar_navbar: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     navbar_navbar: {
                         display: this.state.mddis
                     }
@@ -357,14 +357,14 @@ var Navbar1 = function (_Component) {
                     flexDirection: 'column'
 
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     HAMNAV: {
                         width: '50px',
                         height: '50px',
                         display: this.state.hamSmDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     HAMNAV: {
                         width: '50px',
                         height: '50px',
@@ -390,12 +390,12 @@ var Navbar1 = function (_Component) {
                     background: this.state.hamBackground,
                     display: 'flex'
                 }, _defineProperty(_hamestnav, 'flexDirection', 'column'), _defineProperty(_hamestnav, 'alignItems', 'center'), _defineProperty(_hamestnav, 'boxShadow', this.state.hamShadow), _defineProperty(_hamestnav, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_hamestnav, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_hamestnav, 'animationName', this.state.animationName), _defineProperty(_hamestnav, 'animationDuration', this.state.animationDuration), _defineProperty(_hamestnav, 'transformOrigin', this.state.transformOrigin), _defineProperty(_hamestnav, 'animationFillMode', this.state.animationFillMode), _hamestnav),
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     hamestnav: {
                         visibility: this.state.hamShow ? 'visible' : 'hidden'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     hamestnav: {
                         visibility: this.state.hamShow ? 'visible' : 'hidden'
                     }

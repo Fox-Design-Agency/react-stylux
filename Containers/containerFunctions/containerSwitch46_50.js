@@ -485,13 +485,13 @@ function containerSwitch46_50(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -513,12 +513,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -539,12 +539,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -565,12 +565,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -591,12 +591,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -617,12 +617,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -644,12 +644,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -671,12 +671,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -697,12 +697,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -723,12 +723,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -749,12 +749,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -775,12 +775,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -801,12 +801,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -827,12 +827,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -853,12 +853,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -879,12 +879,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
@@ -905,12 +905,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock16
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block16styles: {
                             display: blocks.block16smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block16styles: {
                             display: blocks.block16mddis
                         }
@@ -931,12 +931,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock17
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block17styles: {
                             display: blocks.block17smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block17styles: {
                             display: blocks.block17mddis
                         }
@@ -957,12 +957,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock18
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block18styles: {
                             display: blocks.block18smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block18styles: {
                             display: blocks.block18mddis
                         }
@@ -983,12 +983,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock19
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block19styles: {
                             display: blocks.block19smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block19styles: {
                             display: blocks.block19mddis
                         }
@@ -1009,12 +1009,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock20
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block20styles: {
                             display: blocks.block20smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block20styles: {
                             display: blocks.block20mddis
                         }
@@ -1035,12 +1035,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock21
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block21styles: {
                             display: blocks.block21smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block21styles: {
                             display: blocks.block21mddis
                         }
@@ -1061,12 +1061,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock22
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block22styles: {
                             display: blocks.block22smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block22styles: {
                             display: blocks.block22mddis
                         }
@@ -1087,12 +1087,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock23
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block23styles: {
                             display: blocks.block23smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block23styles: {
                             display: blocks.block23mddis
                         }
@@ -1113,12 +1113,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock24
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block24styles: {
                             display: blocks.block24smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block24styles: {
                             display: blocks.block24mddis
                         }
@@ -1139,12 +1139,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock25
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block25styles: {
                             display: blocks.block25smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block25styles: {
                             display: blocks.block25mddis
                         }
@@ -1165,12 +1165,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock26
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block26styles: {
                             display: blocks.block26smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block26styles: {
                             display: blocks.block26mddis
                         }
@@ -1191,12 +1191,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock27
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block27styles: {
                             display: blocks.block27smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block27styles: {
                             display: blocks.block27mddis
                         }
@@ -1217,12 +1217,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock28
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block28styles: {
                             display: blocks.block28smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block28styles: {
                             display: blocks.block28mddis
                         }
@@ -1243,12 +1243,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock29
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block29styles: {
                             display: blocks.block29smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block29styles: {
                             display: blocks.block29mddis
                         }
@@ -1269,12 +1269,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock30
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block30styles: {
                             display: blocks.block30smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block30styles: {
                             display: blocks.block30mddis
                         }
@@ -1295,12 +1295,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock31
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block31styles: {
                             display: blocks.block31smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block31styles: {
                             display: blocks.block31mddis
                         }
@@ -1321,12 +1321,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock32
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block32styles: {
                             display: blocks.block32smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block32styles: {
                             display: blocks.block32mddis
                         }
@@ -1347,12 +1347,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock33
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block33styles: {
                             display: blocks.block33smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block33styles: {
                             display: blocks.block33mddis
                         }
@@ -1373,12 +1373,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock34
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block34styles: {
                             display: blocks.block34smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block34styles: {
                             display: blocks.block34mddis
                         }
@@ -1399,12 +1399,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock35
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block35styles: {
                             display: blocks.block35smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block35styles: {
                             display: blocks.block35mddis
                         }
@@ -1425,12 +1425,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock36
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block36styles: {
                             display: blocks.block36smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block36styles: {
                             display: blocks.block36mddis
                         }
@@ -1451,12 +1451,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock37
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block37styles: {
                             display: blocks.block37smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block37styles: {
                             display: blocks.block37mddis
                         }
@@ -1477,12 +1477,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock38
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block38styles: {
                             display: blocks.block38smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block38styles: {
                             display: blocks.block38mddis
                         }
@@ -1503,12 +1503,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock39
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block39styles: {
                             display: blocks.block39smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block39styles: {
                             display: blocks.block39mddis
                         }
@@ -1529,12 +1529,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock40
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block40styles: {
                             display: blocks.block40smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block40styles: {
                             display: blocks.block40mddis
                         }
@@ -1555,12 +1555,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock41
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block41styles: {
                             display: blocks.block41smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block41styles: {
                             display: blocks.block41mddis
                         }
@@ -1581,12 +1581,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock42
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block42styles: {
                             display: blocks.block42smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block42styles: {
                             display: blocks.block42mddis
                         }
@@ -1607,12 +1607,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock43
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block43styles: {
                             display: blocks.block43smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block43styles: {
                             display: blocks.block43mddis
                         }
@@ -1633,12 +1633,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock44
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block44styles: {
                             display: blocks.block44smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block44styles: {
                             display: blocks.block44mddis
                         }
@@ -1659,12 +1659,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock45
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block45styles: {
                             display: blocks.block45smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block45styles: {
                             display: blocks.block45mddis
                         }
@@ -1685,12 +1685,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock46
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block46styles: {
                             display: blocks.block46smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block46styles: {
                             display: blocks.block46mddis
                         }
@@ -2109,13 +2109,13 @@ function containerSwitch46_50(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -2137,12 +2137,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -2163,12 +2163,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -2189,12 +2189,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -2215,12 +2215,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -2241,12 +2241,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -2268,12 +2268,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -2295,12 +2295,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -2321,12 +2321,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -2347,12 +2347,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -2373,12 +2373,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -2399,12 +2399,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -2425,12 +2425,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -2451,12 +2451,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -2477,12 +2477,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -2503,12 +2503,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
@@ -2529,12 +2529,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock16
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block16styles: {
                             display: blocks.block16smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block16styles: {
                             display: blocks.block16mddis
                         }
@@ -2555,12 +2555,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock17
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block17styles: {
                             display: blocks.block17smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block17styles: {
                             display: blocks.block17mddis
                         }
@@ -2581,12 +2581,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock18
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block18styles: {
                             display: blocks.block18smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block18styles: {
                             display: blocks.block18mddis
                         }
@@ -2607,12 +2607,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock19
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block19styles: {
                             display: blocks.block19smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block19styles: {
                             display: blocks.block19mddis
                         }
@@ -2633,12 +2633,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock20
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block20styles: {
                             display: blocks.block20smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block20styles: {
                             display: blocks.block20mddis
                         }
@@ -2659,12 +2659,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock21
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block21styles: {
                             display: blocks.block21smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block21styles: {
                             display: blocks.block21mddis
                         }
@@ -2685,12 +2685,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock22
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block22styles: {
                             display: blocks.block22smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block22styles: {
                             display: blocks.block22mddis
                         }
@@ -2711,12 +2711,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock23
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block23styles: {
                             display: blocks.block23smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block23styles: {
                             display: blocks.block23mddis
                         }
@@ -2737,12 +2737,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock24
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block24styles: {
                             display: blocks.block24smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block24styles: {
                             display: blocks.block24mddis
                         }
@@ -2763,12 +2763,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock25
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block25styles: {
                             display: blocks.block25smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block25styles: {
                             display: blocks.block25mddis
                         }
@@ -2789,12 +2789,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock26
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block26styles: {
                             display: blocks.block26smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block26styles: {
                             display: blocks.block26mddis
                         }
@@ -2815,12 +2815,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock27
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block27styles: {
                             display: blocks.block27smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block27styles: {
                             display: blocks.block27mddis
                         }
@@ -2841,12 +2841,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock28
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block28styles: {
                             display: blocks.block28smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block28styles: {
                             display: blocks.block28mddis
                         }
@@ -2867,12 +2867,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock29
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block29styles: {
                             display: blocks.block29smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block29styles: {
                             display: blocks.block29mddis
                         }
@@ -2893,12 +2893,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock30
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block30styles: {
                             display: blocks.block30smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block30styles: {
                             display: blocks.block30mddis
                         }
@@ -2919,12 +2919,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock31
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block31styles: {
                             display: blocks.block31smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block31styles: {
                             display: blocks.block31mddis
                         }
@@ -2945,12 +2945,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock32
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block32styles: {
                             display: blocks.block32smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block32styles: {
                             display: blocks.block32mddis
                         }
@@ -2971,12 +2971,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock33
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block33styles: {
                             display: blocks.block33smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block33styles: {
                             display: blocks.block33mddis
                         }
@@ -2997,12 +2997,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock34
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block34styles: {
                             display: blocks.block34smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block34styles: {
                             display: blocks.block34mddis
                         }
@@ -3023,12 +3023,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock35
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block35styles: {
                             display: blocks.block35smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block35styles: {
                             display: blocks.block35mddis
                         }
@@ -3049,12 +3049,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock36
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block36styles: {
                             display: blocks.block36smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block36styles: {
                             display: blocks.block36mddis
                         }
@@ -3075,12 +3075,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock37
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block37styles: {
                             display: blocks.block37smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block37styles: {
                             display: blocks.block37mddis
                         }
@@ -3101,12 +3101,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock38
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block38styles: {
                             display: blocks.block38smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block38styles: {
                             display: blocks.block38mddis
                         }
@@ -3127,12 +3127,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock39
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block39styles: {
                             display: blocks.block39smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block39styles: {
                             display: blocks.block39mddis
                         }
@@ -3153,12 +3153,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock40
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block40styles: {
                             display: blocks.block40smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block40styles: {
                             display: blocks.block40mddis
                         }
@@ -3179,12 +3179,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock41
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block41styles: {
                             display: blocks.block41smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block41styles: {
                             display: blocks.block41mddis
                         }
@@ -3205,12 +3205,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock42
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block42styles: {
                             display: blocks.block42smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block42styles: {
                             display: blocks.block42mddis
                         }
@@ -3231,12 +3231,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock43
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block43styles: {
                             display: blocks.block43smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block43styles: {
                             display: blocks.block43mddis
                         }
@@ -3257,12 +3257,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock44
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block44styles: {
                             display: blocks.block44smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block44styles: {
                             display: blocks.block44mddis
                         }
@@ -3283,12 +3283,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock45
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block45styles: {
                             display: blocks.block45smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block45styles: {
                             display: blocks.block45mddis
                         }
@@ -3309,12 +3309,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock46
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block46styles: {
                             display: blocks.block46smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block46styles: {
                             display: blocks.block46mddis
                         }
@@ -3335,12 +3335,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock47
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block47styles: {
                             display: blocks.block47smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block47styles: {
                             display: blocks.block47mddis
                         }
@@ -3758,13 +3758,13 @@ function containerSwitch46_50(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -3786,12 +3786,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -3812,12 +3812,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -3838,12 +3838,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -3864,12 +3864,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -3890,12 +3890,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -3917,12 +3917,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -3944,12 +3944,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -3970,12 +3970,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -3996,12 +3996,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -4022,12 +4022,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -4048,12 +4048,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -4074,12 +4074,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -4100,12 +4100,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -4126,12 +4126,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -4152,12 +4152,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
@@ -4178,12 +4178,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock16
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block16styles: {
                             display: blocks.block16smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block16styles: {
                             display: blocks.block16mddis
                         }
@@ -4204,12 +4204,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock17
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block17styles: {
                             display: blocks.block17smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block17styles: {
                             display: blocks.block17mddis
                         }
@@ -4230,12 +4230,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock18
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block18styles: {
                             display: blocks.block18smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block18styles: {
                             display: blocks.block18mddis
                         }
@@ -4256,12 +4256,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock19
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block19styles: {
                             display: blocks.block19smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block19styles: {
                             display: blocks.block19mddis
                         }
@@ -4282,12 +4282,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock20
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block20styles: {
                             display: blocks.block20smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block20styles: {
                             display: blocks.block20mddis
                         }
@@ -4308,12 +4308,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock21
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block21styles: {
                             display: blocks.block21smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block21styles: {
                             display: blocks.block21mddis
                         }
@@ -4334,12 +4334,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock22
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block22styles: {
                             display: blocks.block22smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block22styles: {
                             display: blocks.block22mddis
                         }
@@ -4360,12 +4360,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock23
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block23styles: {
                             display: blocks.block23smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block23styles: {
                             display: blocks.block23mddis
                         }
@@ -4386,12 +4386,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock24
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block24styles: {
                             display: blocks.block24smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block24styles: {
                             display: blocks.block24mddis
                         }
@@ -4412,12 +4412,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock25
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block25styles: {
                             display: blocks.block25smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block25styles: {
                             display: blocks.block25mddis
                         }
@@ -4438,12 +4438,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock26
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block26styles: {
                             display: blocks.block26smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block26styles: {
                             display: blocks.block26mddis
                         }
@@ -4464,12 +4464,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock27
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block27styles: {
                             display: blocks.block27smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block27styles: {
                             display: blocks.block27mddis
                         }
@@ -4490,12 +4490,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock28
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block28styles: {
                             display: blocks.block28smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block28styles: {
                             display: blocks.block28mddis
                         }
@@ -4516,12 +4516,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock29
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block29styles: {
                             display: blocks.block29smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block29styles: {
                             display: blocks.block29mddis
                         }
@@ -4542,12 +4542,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock30
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block30styles: {
                             display: blocks.block30smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block30styles: {
                             display: blocks.block30mddis
                         }
@@ -4568,12 +4568,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock31
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block31styles: {
                             display: blocks.block31smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block31styles: {
                             display: blocks.block31mddis
                         }
@@ -4594,12 +4594,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock32
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block32styles: {
                             display: blocks.block32smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block32styles: {
                             display: blocks.block32mddis
                         }
@@ -4620,12 +4620,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock33
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block33styles: {
                             display: blocks.block33smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block33styles: {
                             display: blocks.block33mddis
                         }
@@ -4646,12 +4646,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock34
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block34styles: {
                             display: blocks.block34smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block34styles: {
                             display: blocks.block34mddis
                         }
@@ -4672,12 +4672,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock35
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block35styles: {
                             display: blocks.block35smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block35styles: {
                             display: blocks.block35mddis
                         }
@@ -4698,12 +4698,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock36
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block36styles: {
                             display: blocks.block36smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block36styles: {
                             display: blocks.block36mddis
                         }
@@ -4724,12 +4724,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock37
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block37styles: {
                             display: blocks.block37smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block37styles: {
                             display: blocks.block37mddis
                         }
@@ -4750,12 +4750,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock38
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block38styles: {
                             display: blocks.block38smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block38styles: {
                             display: blocks.block38mddis
                         }
@@ -4776,12 +4776,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock39
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block39styles: {
                             display: blocks.block39smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block39styles: {
                             display: blocks.block39mddis
                         }
@@ -4802,12 +4802,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock40
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block40styles: {
                             display: blocks.block40smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block40styles: {
                             display: blocks.block40mddis
                         }
@@ -4828,12 +4828,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock41
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block41styles: {
                             display: blocks.block41smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block41styles: {
                             display: blocks.block41mddis
                         }
@@ -4854,12 +4854,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock42
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block42styles: {
                             display: blocks.block42smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block42styles: {
                             display: blocks.block42mddis
                         }
@@ -4880,12 +4880,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock43
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block43styles: {
                             display: blocks.block43smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block43styles: {
                             display: blocks.block43mddis
                         }
@@ -4906,12 +4906,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock44
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block44styles: {
                             display: blocks.block44smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block44styles: {
                             display: blocks.block44mddis
                         }
@@ -4932,12 +4932,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock45
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block45styles: {
                             display: blocks.block45smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block45styles: {
                             display: blocks.block45mddis
                         }
@@ -4958,12 +4958,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock46
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block46styles: {
                             display: blocks.block46smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block46styles: {
                             display: blocks.block46mddis
                         }
@@ -4984,12 +4984,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock47
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block47styles: {
                             display: blocks.block47smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block47styles: {
                             display: blocks.block47mddis
                         }
@@ -5010,12 +5010,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock48
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block48styles: {
                             display: blocks.block48smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block48styles: {
                             display: blocks.block48mddis
                         }
@@ -5433,13 +5433,13 @@ function containerSwitch46_50(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -5461,12 +5461,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -5487,12 +5487,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -5513,12 +5513,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -5539,12 +5539,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -5565,12 +5565,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -5592,12 +5592,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -5619,12 +5619,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -5645,12 +5645,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -5671,12 +5671,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -5697,12 +5697,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -5723,12 +5723,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -5749,12 +5749,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -5775,12 +5775,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -5801,12 +5801,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -5827,12 +5827,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
@@ -5853,12 +5853,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock16
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block16styles: {
                             display: blocks.block16smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block16styles: {
                             display: blocks.block16mddis
                         }
@@ -5879,12 +5879,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock17
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block17styles: {
                             display: blocks.block17smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block17styles: {
                             display: blocks.block17mddis
                         }
@@ -5905,12 +5905,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock18
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block18styles: {
                             display: blocks.block18smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block18styles: {
                             display: blocks.block18mddis
                         }
@@ -5931,12 +5931,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock19
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block19styles: {
                             display: blocks.block19smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block19styles: {
                             display: blocks.block19mddis
                         }
@@ -5957,12 +5957,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock20
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block20styles: {
                             display: blocks.block20smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block20styles: {
                             display: blocks.block20mddis
                         }
@@ -5983,12 +5983,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock21
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block21styles: {
                             display: blocks.block21smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block21styles: {
                             display: blocks.block21mddis
                         }
@@ -6009,12 +6009,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock22
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block22styles: {
                             display: blocks.block22smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block22styles: {
                             display: blocks.block22mddis
                         }
@@ -6035,12 +6035,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock23
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block23styles: {
                             display: blocks.block23smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block23styles: {
                             display: blocks.block23mddis
                         }
@@ -6061,12 +6061,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock24
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block24styles: {
                             display: blocks.block24smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block24styles: {
                             display: blocks.block24mddis
                         }
@@ -6087,12 +6087,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock25
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block25styles: {
                             display: blocks.block25smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block25styles: {
                             display: blocks.block25mddis
                         }
@@ -6113,12 +6113,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock26
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block26styles: {
                             display: blocks.block26smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block26styles: {
                             display: blocks.block26mddis
                         }
@@ -6139,12 +6139,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock27
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block27styles: {
                             display: blocks.block27smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block27styles: {
                             display: blocks.block27mddis
                         }
@@ -6165,12 +6165,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock28
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block28styles: {
                             display: blocks.block28smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block28styles: {
                             display: blocks.block28mddis
                         }
@@ -6191,12 +6191,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock29
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block29styles: {
                             display: blocks.block29smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block29styles: {
                             display: blocks.block29mddis
                         }
@@ -6217,12 +6217,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock30
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block30styles: {
                             display: blocks.block30smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block30styles: {
                             display: blocks.block30mddis
                         }
@@ -6243,12 +6243,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock31
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block31styles: {
                             display: blocks.block31smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block31styles: {
                             display: blocks.block31mddis
                         }
@@ -6269,12 +6269,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock32
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block32styles: {
                             display: blocks.block32smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block32styles: {
                             display: blocks.block32mddis
                         }
@@ -6295,12 +6295,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock33
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block33styles: {
                             display: blocks.block33smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block33styles: {
                             display: blocks.block33mddis
                         }
@@ -6321,12 +6321,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock34
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block34styles: {
                             display: blocks.block34smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block34styles: {
                             display: blocks.block34mddis
                         }
@@ -6347,12 +6347,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock35
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block35styles: {
                             display: blocks.block35smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block35styles: {
                             display: blocks.block35mddis
                         }
@@ -6373,12 +6373,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock36
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block36styles: {
                             display: blocks.block36smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block36styles: {
                             display: blocks.block36mddis
                         }
@@ -6399,12 +6399,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock37
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block37styles: {
                             display: blocks.block37smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block37styles: {
                             display: blocks.block37mddis
                         }
@@ -6425,12 +6425,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock38
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block38styles: {
                             display: blocks.block38smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block38styles: {
                             display: blocks.block38mddis
                         }
@@ -6451,12 +6451,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock39
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block39styles: {
                             display: blocks.block39smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block39styles: {
                             display: blocks.block39mddis
                         }
@@ -6477,12 +6477,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock40
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block40styles: {
                             display: blocks.block40smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block40styles: {
                             display: blocks.block40mddis
                         }
@@ -6503,12 +6503,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock41
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block41styles: {
                             display: blocks.block41smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block41styles: {
                             display: blocks.block41mddis
                         }
@@ -6529,12 +6529,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock42
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block42styles: {
                             display: blocks.block42smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block42styles: {
                             display: blocks.block42mddis
                         }
@@ -6555,12 +6555,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock43
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block43styles: {
                             display: blocks.block43smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block43styles: {
                             display: blocks.block43mddis
                         }
@@ -6581,12 +6581,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock44
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block44styles: {
                             display: blocks.block44smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block44styles: {
                             display: blocks.block44mddis
                         }
@@ -6607,12 +6607,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock45
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block45styles: {
                             display: blocks.block45smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block45styles: {
                             display: blocks.block45mddis
                         }
@@ -6633,12 +6633,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock46
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block46styles: {
                             display: blocks.block46smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block46styles: {
                             display: blocks.block46mddis
                         }
@@ -6659,12 +6659,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock47
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block47styles: {
                             display: blocks.block47smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block47styles: {
                             display: blocks.block47mddis
                         }
@@ -6685,12 +6685,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock48
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block48styles: {
                             display: blocks.block48smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block48styles: {
                             display: blocks.block48mddis
                         }
@@ -6711,12 +6711,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock49
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block49styles: {
                             display: blocks.block49smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block49styles: {
                             display: blocks.block49mddis
                         }
@@ -7134,13 +7134,13 @@ function containerSwitch46_50(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -7162,12 +7162,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -7188,12 +7188,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -7214,12 +7214,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -7240,12 +7240,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -7266,12 +7266,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -7293,12 +7293,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -7320,12 +7320,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -7346,12 +7346,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -7372,12 +7372,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -7398,12 +7398,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -7424,12 +7424,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -7450,12 +7450,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -7476,12 +7476,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -7502,12 +7502,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -7528,12 +7528,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
@@ -7554,12 +7554,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock16
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block16styles: {
                             display: blocks.block16smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block16styles: {
                             display: blocks.block16mddis
                         }
@@ -7580,12 +7580,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock17
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block17styles: {
                             display: blocks.block17smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block17styles: {
                             display: blocks.block17mddis
                         }
@@ -7606,12 +7606,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock18
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block18styles: {
                             display: blocks.block18smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block18styles: {
                             display: blocks.block18mddis
                         }
@@ -7632,12 +7632,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock19
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block19styles: {
                             display: blocks.block19smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block19styles: {
                             display: blocks.block19mddis
                         }
@@ -7658,12 +7658,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock20
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block20styles: {
                             display: blocks.block20smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block20styles: {
                             display: blocks.block20mddis
                         }
@@ -7684,12 +7684,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock21
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block21styles: {
                             display: blocks.block21smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block21styles: {
                             display: blocks.block21mddis
                         }
@@ -7710,12 +7710,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock22
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block22styles: {
                             display: blocks.block22smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block22styles: {
                             display: blocks.block22mddis
                         }
@@ -7736,12 +7736,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock23
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block23styles: {
                             display: blocks.block23smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block23styles: {
                             display: blocks.block23mddis
                         }
@@ -7762,12 +7762,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock24
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block24styles: {
                             display: blocks.block24smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block24styles: {
                             display: blocks.block24mddis
                         }
@@ -7788,12 +7788,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock25
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block25styles: {
                             display: blocks.block25smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block25styles: {
                             display: blocks.block25mddis
                         }
@@ -7814,12 +7814,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock26
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block26styles: {
                             display: blocks.block26smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block26styles: {
                             display: blocks.block26mddis
                         }
@@ -7840,12 +7840,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock27
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block27styles: {
                             display: blocks.block27smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block27styles: {
                             display: blocks.block27mddis
                         }
@@ -7866,12 +7866,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock28
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block28styles: {
                             display: blocks.block28smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block28styles: {
                             display: blocks.block28mddis
                         }
@@ -7892,12 +7892,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock29
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block29styles: {
                             display: blocks.block29smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block29styles: {
                             display: blocks.block29mddis
                         }
@@ -7918,12 +7918,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock30
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block30styles: {
                             display: blocks.block30smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block30styles: {
                             display: blocks.block30mddis
                         }
@@ -7944,12 +7944,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock31
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block31styles: {
                             display: blocks.block31smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block31styles: {
                             display: blocks.block31mddis
                         }
@@ -7970,12 +7970,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock32
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block32styles: {
                             display: blocks.block32smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block32styles: {
                             display: blocks.block32mddis
                         }
@@ -7996,12 +7996,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock33
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block33styles: {
                             display: blocks.block33smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block33styles: {
                             display: blocks.block33mddis
                         }
@@ -8022,12 +8022,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock34
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block34styles: {
                             display: blocks.block34smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block34styles: {
                             display: blocks.block34mddis
                         }
@@ -8048,12 +8048,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock35
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block35styles: {
                             display: blocks.block35smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block35styles: {
                             display: blocks.block35mddis
                         }
@@ -8074,12 +8074,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock36
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block36styles: {
                             display: blocks.block36smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block36styles: {
                             display: blocks.block36mddis
                         }
@@ -8100,12 +8100,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock37
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block37styles: {
                             display: blocks.block37smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block37styles: {
                             display: blocks.block37mddis
                         }
@@ -8126,12 +8126,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock38
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block38styles: {
                             display: blocks.block38smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block38styles: {
                             display: blocks.block38mddis
                         }
@@ -8152,12 +8152,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock39
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block39styles: {
                             display: blocks.block39smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block39styles: {
                             display: blocks.block39mddis
                         }
@@ -8178,12 +8178,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock40
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block40styles: {
                             display: blocks.block40smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block40styles: {
                             display: blocks.block40mddis
                         }
@@ -8204,12 +8204,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock41
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block41styles: {
                             display: blocks.block41smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block41styles: {
                             display: blocks.block41mddis
                         }
@@ -8230,12 +8230,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock42
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block42styles: {
                             display: blocks.block42smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block42styles: {
                             display: blocks.block42mddis
                         }
@@ -8256,12 +8256,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock43
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block43styles: {
                             display: blocks.block43smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block43styles: {
                             display: blocks.block43mddis
                         }
@@ -8282,12 +8282,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock44
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block44styles: {
                             display: blocks.block44smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block44styles: {
                             display: blocks.block44mddis
                         }
@@ -8308,12 +8308,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock45
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block45styles: {
                             display: blocks.block45smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block45styles: {
                             display: blocks.block45mddis
                         }
@@ -8334,12 +8334,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock46
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block46styles: {
                             display: blocks.block46smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block46styles: {
                             display: blocks.block46mddis
                         }
@@ -8360,12 +8360,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock47
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block47styles: {
                             display: blocks.block47smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block47styles: {
                             display: blocks.block47mddis
                         }
@@ -8386,12 +8386,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock48
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block48styles: {
                             display: blocks.block48smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block48styles: {
                             display: blocks.block48mddis
                         }
@@ -8412,12 +8412,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock49
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block49styles: {
                             display: blocks.block49smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block49styles: {
                             display: blocks.block49mddis
                         }
@@ -8438,12 +8438,12 @@ function containerSwitch46_50(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock50
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block50styles: {
                             display: blocks.block50smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block50styles: {
                             display: blocks.block50mddis
                         }

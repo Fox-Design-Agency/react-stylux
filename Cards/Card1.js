@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37,7 +41,9 @@ var Card1 = function (_Component) {
             revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
             borderRadius: props.corners,
             id: props.id,
-            className: props.className
+            className: props.className,
+            smDis: props.smDis,
+            mdDis: props.mdDis
 
         };
         return _this;
@@ -60,40 +66,100 @@ var Card1 = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var CARDSTYLE = {
-                margin: '10px',
-                display: 'flex',
-                flexDirection: 'column',
-                boxShadow: this.state.boxShadow,
-                transition: '0.3s',
-                borderRadius: this.state.borderRadius
-            };
-            var IMGSTYLE = {
-                height: '300px',
-                width: '250px'
-            };
-            var CARDHEADING = {
-                textAlign: "center",
-                fontWeight: "900",
-                margin: "2px",
-                maxWidth: "250px"
-            };
-            var CARDBODY = {
-                margin: "2px",
-                maxWidth: "250px",
-                maxHeight: "175px",
-                overflow: "hidden"
-            };
-            var CARDCONTENT = {
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '2px 16px',
-                wordWrap: "break-word",
-                maxWidth: "250px"
-            };
+            var CARDSTYLE = _nestingstyles2.default.create({
+                cardstyle: {
+                    margin: '10px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxShadow: this.state.boxShadow,
+                    transition: '0.3s',
+                    borderRadius: this.state.borderRadius
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var IMGSTYLE = _nestingstyles2.default.create({
+                imgstyle: {
+                    height: '300px',
+                    width: '250px'
+                },
+                '@media screen and (max-width: 768px)': {
+                    imgstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    imgstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDHEADING = _nestingstyles2.default.create({
+                cardheading: {
+                    textAlign: "center",
+                    fontWeight: "900",
+                    margin: "2px",
+                    maxWidth: "250px"
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardheading: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardheading: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDBODY = _nestingstyles2.default.create({
+                cardbody: {
+                    margin: "2px",
+                    maxWidth: "250px",
+                    maxHeight: "175px",
+                    overflow: "hidden"
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardbody: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardbody: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDCONTENT = _nestingstyles2.default.create({
+                cardcontent: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: '2px 16px',
+                    wordWrap: "break-word",
+                    maxWidth: "250px"
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardcontent: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardcontent: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: CARDSTYLE,
+                { style: CARDSTYLE.cardstyle,
                     id: this.state.id,
                     className: this.state.className,
                     onMouseEnter: function onMouseEnter() {
@@ -105,18 +171,18 @@ var Card1 = function (_Component) {
                 _react2.default.createElement('img', {
                     src: this.state.childs[0],
                     alt: this.state.childs[1],
-                    style: IMGSTYLE }),
+                    style: IMGSTYLE.imgstyle }),
                 _react2.default.createElement(
                     'div',
-                    { style: CARDCONTENT },
+                    { style: CARDCONTENT.cardcontent },
                     _react2.default.createElement(
                         'h5',
-                        { style: CARDHEADING },
+                        { style: CARDHEADING.cardheading },
                         this.state.childs[2]
                     ),
                     _react2.default.createElement(
                         'p',
-                        { style: CARDBODY },
+                        { style: CARDBODY.cardbody },
                         this.state.childs[3]
                     )
                 )

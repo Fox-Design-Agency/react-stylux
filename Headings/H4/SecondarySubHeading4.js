@@ -132,14 +132,14 @@ var H44 = function (_Component) {
                 hoverStyle: {
                     color: this.state.hoverColor
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     heading: {
                         display: this.state.smDis,
                         color: this.state.color,
                         fontSize: this.state.smFontSize
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     heading: {
                         display: this.state.mdDis,
                         color: this.state.color,

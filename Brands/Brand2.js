@@ -82,12 +82,12 @@ var Brand2 = function (_Component) {
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     brand: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     heading: {
                         display: this.state.mdDis
                     }

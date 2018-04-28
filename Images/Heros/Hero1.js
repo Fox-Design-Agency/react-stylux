@@ -83,12 +83,12 @@ var Hero1 = function (_Component) {
                     alignItems: 'center',
                     justifyContent: 'center'
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     herostyle: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     herostyle: {
                         display: this.state.mdDis
                     }

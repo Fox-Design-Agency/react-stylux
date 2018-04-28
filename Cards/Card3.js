@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39,7 +43,9 @@ var Card3 = function (_Component) {
             height: props.height || '398px',
             width: props.wdith || '250px',
             id: props.id,
-            className: props.className
+            className: props.className,
+            smDis: props.smDis,
+            mdDis: props.mdDis
         };
         return _this;
     }
@@ -61,28 +67,88 @@ var Card3 = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var CARDSTYLE = {
-                margin: '10px',
-                display: 'flex',
-                flexDirection: 'column',
-                boxShadow: this.state.boxShadow,
-                transition: '0.3s',
-                height: this.state.height,
-                width: this.state.width,
-                borderRadius: this.state.borderRadius
-            };
-            var CARDHEADING = {};
-            var CARDBODY = {};
-            var CARDCONTENT = {
-                textAlign: 'center'
-            };
-            var ITEM = {
-                padding: '20px',
-                borderBottom: '1px solid #eee'
-            };
+            var CARDSTYLE = _nestingstyles2.default.create({
+                cardstyle: {
+                    margin: '10px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxShadow: this.state.boxShadow,
+                    transition: '0.3s',
+                    height: this.state.height,
+                    width: this.state.width,
+                    borderRadius: this.state.borderRadius
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDHEADING = _nestingstyles2.default.create({
+                cardheading: {},
+                '@media screen and (max-width: 768px)': {
+                    cardheading: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardheading: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDBODY = _nestingstyles2.default.create({
+                cardbody: {},
+                '@media screen and (max-width: 768px)': {
+                    cardbody: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardbody: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var CARDCONTENT = _nestingstyles2.default.create({
+                cardcontent: {
+                    textAlign: 'center'
+                },
+                '@media screen and (max-width: 768px)': {
+                    cardcontent: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    cardcontent: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var ITEM = _nestingstyles2.default.create({
+                item: {
+                    padding: '20px',
+                    borderBottom: '1px solid #eee'
+                },
+                '@media screen and (max-width: 768px)': {
+                    item: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    item: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'div',
-                { style: CARDSTYLE,
+                { style: CARDSTYLE.cardstyle,
                     id: this.state.id,
                     className: this.state.className,
                     onMouseEnter: function onMouseEnter() {
@@ -93,40 +159,40 @@ var Card3 = function (_Component) {
                     } },
                 _react2.default.createElement(
                     'ul',
-                    { style: CARDCONTENT },
+                    { style: CARDCONTENT.cardcontent },
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[0]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[1]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[2]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[3]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[4]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[5]
                     ),
                     _react2.default.createElement(
                         'li',
-                        { style: ITEM },
+                        { style: ITEM.item },
                         this.state.childs[6]
                     )
                 )

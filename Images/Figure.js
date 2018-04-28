@@ -76,13 +76,13 @@ var Figure = function (_Component) {
                     color: 'gray',
                     textAlign: 'center'
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     caption: {
                         display: this.state.smDis,
                         fontSize: '6em'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     caption: {
                         display: this.state.mdDis,
                         fontSize: '6em'

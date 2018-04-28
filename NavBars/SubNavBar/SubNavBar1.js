@@ -87,12 +87,12 @@ var SubNavbar1 = function (_Component) {
                     background: this.state.itemBackground,
                     fontVariant: this.state.fontVariant
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     subnavbar_navbar_li: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     subnavbar_navbar_li: {
                         display: this.state.mddis
                     }
@@ -124,12 +124,12 @@ var SubNavbar1 = function (_Component) {
                     background: this.state.itemBackground,
                     fontVariant: this.state.fontVariant
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     subnavbar_navbar_li: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     subnavbar_navbar_li: {
                         display: this.state.mddis
                     }
@@ -166,12 +166,12 @@ var SubNavbar1 = function (_Component) {
                     position: this.state.position,
                     zIndex: this.state.zIndex
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     subnavbar: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     subnavbar: {
                         display: this.state.mddis,
                         alignItems: 'center'
@@ -189,12 +189,12 @@ var SubNavbar1 = function (_Component) {
                     fontFamily: this.state.fontFamily,
                     flexDirection: this.state.direction
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     subnavbar_navbar: {
                         display: this.state.smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     subnavbar_navbar: {
                         display: this.state.mddis,
                         width: '90%'

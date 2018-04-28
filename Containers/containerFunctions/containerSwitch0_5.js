@@ -59,13 +59,13 @@ function containerSwitch0_5(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -87,12 +87,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -145,13 +145,13 @@ function containerSwitch0_5(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -173,12 +173,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -199,12 +199,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -268,13 +268,13 @@ function containerSwitch0_5(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -296,12 +296,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -322,12 +322,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -348,12 +348,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -428,13 +428,13 @@ function containerSwitch0_5(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -456,12 +456,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -482,12 +482,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -508,12 +508,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -534,12 +534,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -625,13 +625,13 @@ function containerSwitch0_5(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -653,12 +653,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -679,12 +679,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -705,12 +705,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -731,12 +731,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -757,12 +757,12 @@ function containerSwitch0_5(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block4mddis
                         }

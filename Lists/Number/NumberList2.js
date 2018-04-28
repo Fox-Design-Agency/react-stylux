@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 require('../../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,7 +44,8 @@ var NumberList2 = function (_Component) {
             animationName: props.aniName,
             animationDuration: props.aniDur,
             transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode
+            animationFillMode: props.aniFillMode,
+            width: props.width || "100%"
         };
         return _this;
     }
@@ -86,31 +91,56 @@ var NumberList2 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var LISTSTYLE = {
-                color: this.state.color,
-                fontFamily: this.state.fontFamily,
-                fontSize: this.state.fontSize,
-                lineHeight: this.state.lineHeight,
-                fontWeight: this.state.fontWeight,
-                paddingLeft: this.state.paddingLeft,
-                position: 'relative'
+            var LISTSTYLE = _nestingstyles2.default.create({
+                liststyle: {
+                    color: this.state.color,
+                    fontFamily: this.state.fontFamily,
+                    fontSize: this.state.fontSize,
+                    lineHeight: this.state.lineHeight,
+                    fontWeight: this.state.fontWeight,
+                    paddingLeft: this.state.paddingLeft,
+                    position: 'relative',
+                    width: this.state.width
 
-            };
-            var LISTITEMSTYLE = {
-                paddingLeft: '70px',
-                counterIncrement: 'aCounter'
+                },
+                '@media screen and (max-width: 768px)': {
+                    liststyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    liststyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var LISTITEMSTYLE = _nestingstyles2.default.create({
+                listitemstyle: {
+                    paddingLeft: '70px',
+                    counterIncrement: 'aCounter'
 
-            };
+                },
+                '@media screen and (max-width: 768px)': {
+                    listitemstyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    listitemstyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             var LIST = this.state.listItem.map(function (x, i) {
                 return _react2.default.createElement(
                     'li',
-                    { key: i, style: LISTITEMSTYLE },
+                    { key: i, style: LISTITEMSTYLE.listitemstyle },
                     x
                 );
             });
             return _react2.default.createElement(
                 'ol',
-                { style: LISTSTYLE, id: this.state.id, className: 'bigList ' + this.state.className },
+                { style: LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
                 LIST
             );
         }

@@ -82,12 +82,12 @@ var RaisedButton1 = function (_Component) {
                     transform: this.state.transform,
                     transformOrigin: this.state.transformOrigin
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     buttonstyle: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     buttonstyle: {
                         display: this.state.mdDis
                     }

@@ -93,12 +93,12 @@ var SquareImage = function (_Component) {
                 hoverStyle: {
                     boxShadow: this.state.hoverShadow
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     squareimg: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     squareimg: {
                         display: this.state.mdDis
                     }

@@ -14,6 +14,10 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -81,34 +85,56 @@ var Table1 = function (_Component) {
                 HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
+            var TABLEHEAD = _nestingstyles2.default.create({
+                tablehead: {
+                    borderTop: this.state.headBorderTop,
+                    borderRight: this.state.headBorderRight,
+                    borderBottom: this.state.headBorderBottom,
+                    borderLeft: this.state.headBorderLeft,
+                    border: this.state.headBorder,
+                    margin: this.state.headMargin,
+                    padding: this.state.headPadding,
+                    textAlign: 'center',
+                    width: this.state.headWidth,
+                    height: this.state.headHeight
 
-            var TABLEHEAD = {
-                borderTop: this.state.headBorderTop,
-                borderRight: this.state.headBorderRight,
-                borderBottom: this.state.headBorderBottom,
-                borderLeft: this.state.headBorderLeft,
-                border: this.state.headBorder,
-                margin: this.state.headMargin,
-                padding: this.state.headPadding,
-                textAlign: 'center',
-                width: this.state.headWidth,
-                height: this.state.headHeight
+                },
+                '@media screen and (max-width: 768px)': {
+                    tablehead: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tablehead: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var TABLEBODY = _nestingstyles2.default.create({
+                tablebody: {
+                    borderTop: this.state.dBorderTop,
+                    borderRight: this.state.dBorderRight,
+                    borderBottom: this.state.dBorderBottom,
+                    borderLeft: this.state.dBorderLeft,
+                    border: this.state.dBorder,
+                    margin: this.state.dMargin,
+                    padding: this.state.dPadding,
+                    textAlign: 'center',
+                    width: this.state.dWidth,
+                    height: this.state.dHeight
 
-            };
-
-            var TABLEBODY = {
-                borderTop: this.state.dBorderTop,
-                borderRight: this.state.dBorderRight,
-                borderBottom: this.state.dBorderBottom,
-                borderLeft: this.state.dBorderLeft,
-                border: this.state.dBorder,
-                margin: this.state.dMargin,
-                padding: this.state.dPadding,
-                textAlign: 'center',
-                width: this.state.dWidth,
-                height: this.state.dHeight
-
-            };
+                },
+                '@media screen and (max-width: 768px)': {
+                    tablebody: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tablebody: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
 
             var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children);
             if (CHILDS !== '') {
@@ -128,7 +154,7 @@ var Table1 = function (_Component) {
                         HEAD = tempHead.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'th',
-                                { key: i, style: TABLEHEAD },
+                                { key: i, style: TABLEHEAD.tablehead },
                                 x
                             );
                         });
@@ -142,7 +168,7 @@ var Table1 = function (_Component) {
                         BODY = temperBody.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'td',
-                                { key: i, style: TABLEBODY },
+                                { key: i, style: TABLEBODY.tablebody },
                                 x
                             );
                         });
@@ -168,33 +194,57 @@ var Table1 = function (_Component) {
                 HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
-            var TABLEHEAD = {
-                borderTop: this.state.headBorderTop,
-                borderRight: this.state.headBorderRight,
-                borderBottom: this.state.headBorderBottom,
-                borderLeft: this.state.headBorderLeft,
-                border: this.state.headBorder,
-                margin: this.state.headMargin,
-                padding: this.state.headPadding,
-                textAlign: 'center',
-                width: this.state.headWidth,
-                height: this.state.headHeight
+            var TABLEHEAD = _nestingstyles2.default.create({
+                tablehead: {
+                    borderTop: this.state.headBorderTop,
+                    borderRight: this.state.headBorderRight,
+                    borderBottom: this.state.headBorderBottom,
+                    borderLeft: this.state.headBorderLeft,
+                    border: this.state.headBorder,
+                    margin: this.state.headMargin,
+                    padding: this.state.headPadding,
+                    textAlign: 'center',
+                    width: this.state.headWidth,
+                    height: this.state.headHeight
 
-            };
+                },
+                '@media screen and (max-width: 768px)': {
+                    tablehead: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tablehead: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
 
-            var TABLEBODY = {
-                borderTop: this.state.dBorderTop,
-                borderRight: this.state.dBorderRight,
-                borderBottom: this.state.dBorderBottom,
-                borderLeft: this.state.dBorderLeft,
-                border: this.state.dBorder,
-                margin: this.state.dMargin,
-                padding: this.state.dPadding,
-                textAlign: 'center',
-                width: this.state.dWidth,
-                height: this.state.dHeight
+            var TABLEBODY = _nestingstyles2.default.create({
+                tablebody: {
+                    borderTop: this.state.dBorderTop,
+                    borderRight: this.state.dBorderRight,
+                    borderBottom: this.state.dBorderBottom,
+                    borderLeft: this.state.dBorderLeft,
+                    border: this.state.dBorder,
+                    margin: this.state.dMargin,
+                    padding: this.state.dPadding,
+                    textAlign: 'center',
+                    width: this.state.dWidth,
+                    height: this.state.dHeight
 
-            };
+                },
+                '@media screen and (max-width: 768px)': {
+                    tablebody: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tablebody: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
             var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children);
             if (CHILDS !== '') {
                 childs = CHILDS.map(function (x, i, arr) {
@@ -213,7 +263,7 @@ var Table1 = function (_Component) {
                         HEAD = tempHead.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'th',
-                                { key: i, style: TABLEHEAD },
+                                { key: i, style: TABLEHEAD.tablehead },
                                 x
                             );
                         });
@@ -227,7 +277,7 @@ var Table1 = function (_Component) {
                         BODY = temperBody.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'td',
-                                { key: i, style: TABLEBODY },
+                                { key: i, style: TABLEBODY.tablebody },
                                 x
                             );
                         });
@@ -245,31 +295,54 @@ var Table1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var TABLESTYLE = {
-                borderTop: this.state.tableBorderTop,
-                borderRight: this.state.tableBorderRight,
-                borderBottom: this.state.tableBorderBottom,
-                borderLeft: this.state.tableBorderLeft,
-                border: this.state.tableBorder,
-                margin: this.state.tableMargin,
-                padding: this.state.tablePadding,
-                textAlign: 'center',
-                width: this.state.tableWidth,
-                height: this.state.tableHeight,
-                borderCollapse: this.state.tableBorderCollapse,
-                cursor: 'default'
-            };
-
-            var TABLERES = {
-                overflowX: 'auto'
-            };
+            var TABLESTYLE = _nestingstyles2.default.create({
+                tablestyle: {
+                    borderTop: this.state.tableBorderTop,
+                    borderRight: this.state.tableBorderRight,
+                    borderBottom: this.state.tableBorderBottom,
+                    borderLeft: this.state.tableBorderLeft,
+                    border: this.state.tableBorder,
+                    margin: this.state.tableMargin,
+                    padding: this.state.tablePadding,
+                    textAlign: 'center',
+                    width: this.state.tableWidth,
+                    height: this.state.tableHeight,
+                    borderCollapse: this.state.tableBorderCollapse,
+                    cursor: 'default'
+                },
+                '@media screen and (max-width: 768px)': {
+                    tablestyle: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tablestyle: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            var TABLERES = _nestingstyles2.default.create({
+                tableres: {
+                    overflowX: 'auto'
+                },
+                '@media screen and (max-width: 768px)': {
+                    tableres: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
+                    tableres: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
 
             return _react2.default.createElement(
                 'div',
-                { style: TABLERES, id: this.state.mainId, className: this.state.mainClassName },
+                { style: TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
                 _react2.default.createElement(
                     'table',
-                    { style: TABLESTYLE, id: this.state.tableId, className: '' + this.state.tableClassName },
+                    { style: TABLESTYLE.tablestyle, id: this.state.tableId, className: '' + this.state.tableClassName },
                     _react2.default.createElement(
                         'thead',
                         null,

@@ -89,12 +89,12 @@ var Hero2 = function (_Component) {
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     herostyle: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     herostyle: {
                         display: this.state.mdDis
                     }
@@ -108,12 +108,12 @@ var Hero2 = function (_Component) {
                     padding: this.state.bottomBoxPadding,
                     overflow: 'hidden'
                 },
-                '@media screen and (max-width: 440px)': {
+                '@media screen and (max-width: 768px)': {
                     bottombackground: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                     bottombackground: {
                         display: this.state.mdDis
                     }

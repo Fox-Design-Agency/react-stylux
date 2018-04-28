@@ -180,13 +180,13 @@ function holderSwitch11_15(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -208,12 +208,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -234,12 +234,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -260,12 +260,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -286,12 +286,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -312,12 +312,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -338,12 +338,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -364,12 +364,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -390,12 +390,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -416,12 +416,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -442,12 +442,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -468,12 +468,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -637,13 +637,13 @@ function holderSwitch11_15(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -665,12 +665,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -691,12 +691,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -717,12 +717,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -743,12 +743,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -769,12 +769,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -795,12 +795,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -821,12 +821,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -847,12 +847,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -873,12 +873,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -899,12 +899,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -925,12 +925,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -951,12 +951,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -1131,13 +1131,13 @@ function holderSwitch11_15(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -1159,12 +1159,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -1185,12 +1185,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -1211,12 +1211,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -1237,12 +1237,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -1263,12 +1263,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -1289,12 +1289,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -1315,12 +1315,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -1341,12 +1341,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -1367,12 +1367,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -1393,12 +1393,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -1419,12 +1419,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -1445,12 +1445,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -1471,12 +1471,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -1662,13 +1662,13 @@ function holderSwitch11_15(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -1690,12 +1690,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -1716,12 +1716,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -1742,12 +1742,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -1768,12 +1768,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -1794,12 +1794,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -1820,12 +1820,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -1846,12 +1846,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -1872,12 +1872,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -1898,12 +1898,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -1924,12 +1924,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -1950,12 +1950,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -1976,12 +1976,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -2002,12 +2002,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -2028,12 +2028,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -2230,13 +2230,13 @@ function holderSwitch11_15(num, props, state) {
                         borderBottom: state.borderBottom,
                         border: state.border
                     },
-                    '@media (max-width: 440px)': {
+                    '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
                             flexDirection: state.smflexDir
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         holderstyles: {
                             display: state.mddis,
                             flexDirection: state.mdflexDir
@@ -2258,12 +2258,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock1
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block1styles: {
                             display: blocks.block1smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block1styles: {
                             display: blocks.block1mddis
                         }
@@ -2284,12 +2284,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock2
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block2styles: {
                             display: blocks.block2smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block2styles: {
                             display: blocks.block2mddis
                         }
@@ -2310,12 +2310,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock3
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block3styles: {
                             display: blocks.block3smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block3styles: {
                             display: blocks.block3mddis
                         }
@@ -2336,12 +2336,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock4
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block4styles: {
                             display: blocks.block4smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block4styles: {
                             display: blocks.block4mddis
                         }
@@ -2362,12 +2362,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock5
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block5styles: {
                             display: blocks.block5smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
                             display: blocks.block5mddis
                         }
@@ -2388,12 +2388,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock6
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block6styles: {
                             display: blocks.block6smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block6styles: {
                             display: blocks.block6mddis
                         }
@@ -2414,12 +2414,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock7
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block7styles: {
                             display: blocks.block7smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block7styles: {
                             display: blocks.block7mddis
                         }
@@ -2440,12 +2440,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock8
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block8styles: {
                             display: blocks.block8smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block8styles: {
                             display: blocks.block8mddis
                         }
@@ -2466,12 +2466,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock9
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block9styles: {
                             display: blocks.block9smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block9styles: {
                             display: blocks.block9mddis
                         }
@@ -2492,12 +2492,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock10
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block10styles: {
                             display: blocks.block10smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block10styles: {
                             display: blocks.block10mddis
                         }
@@ -2518,12 +2518,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock11
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block11styles: {
                             display: blocks.block11smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block11styles: {
                             display: blocks.block11mddis
                         }
@@ -2544,12 +2544,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock12
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block12styles: {
                             display: blocks.block12smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block12styles: {
                             display: blocks.block12mddis
                         }
@@ -2570,12 +2570,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock13
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block13styles: {
                             display: blocks.block13smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block13styles: {
                             display: blocks.block13mddis
                         }
@@ -2596,12 +2596,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock14
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block14styles: {
                             display: blocks.block14smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block14styles: {
                             display: blocks.block14mddis
                         }
@@ -2622,12 +2622,12 @@ function holderSwitch11_15(num, props, state) {
                         margin: blocks.margin,
                         justifyContent: blocks.justifyBlock15
                     },
-                    '@media screen and (max-width: 440px)': {
+                    '@media screen and (max-width: 768px)': {
                         block15styles: {
                             display: blocks.block15smdis
                         }
                     },
-                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block15styles: {
                             display: blocks.block15mddis
                         }
