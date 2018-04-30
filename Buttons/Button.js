@@ -21,9 +21,9 @@ var _nestingstyles = require('nestingstyles');
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
-var _imageFunction = require('./imageFunction/imageFunction');
+var _buttonFunctions = require('./buttonFunctions/buttonFunctions');
 
-var _imageFunction2 = _interopRequireDefault(_imageFunction);
+var _buttonFunctions2 = _interopRequireDefault(_buttonFunctions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -92,7 +92,7 @@ var Button = exports.Button = function (_React$Component) {
             var styledButton = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = buttonFunction("flat", props, state, self);
+                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -105,7 +105,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use = buttonFunction("raised", props, state, self);
+                var _use = (0, _buttonFunctions2.default)("raised", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -118,7 +118,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use2 = buttonFunction("floating", props, state, self);
+                var _use2 = (0, _buttonFunctions2.default)("floating", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -131,7 +131,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use3 = buttonFunction("block", props, state, self);
+                var _use3 = (0, _buttonFunctions2.default)("block", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { style: _use3.BUTTONSTYLES.buttonStyles,
@@ -143,7 +143,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "text") {
-                var _use4 = buttonFunction("text", props, state, self);
+                var _use4 = (0, _buttonFunctions2.default)("text", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -168,7 +168,7 @@ var Button = exports.Button = function (_React$Component) {
             var styledButton = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = buttonFunction("flat", props, state, self);
+                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -181,7 +181,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use5 = buttonFunction("raised", props, state, self);
+                var _use5 = (0, _buttonFunctions2.default)("raised", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -194,7 +194,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use6 = buttonFunction("floating", props, state, self);
+                var _use6 = (0, _buttonFunctions2.default)("floating", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -207,7 +207,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use7 = buttonFunction("block", props, state, self);
+                var _use7 = (0, _buttonFunctions2.default)("block", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { style: _use7.BUTTONSTYLES.buttonStyles,
@@ -219,7 +219,7 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "text") {
-                var _use8 = buttonFunction("text", props, state, self);
+                var _use8 = (0, _buttonFunctions2.default)("text", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -242,7 +242,7 @@ var Button = exports.Button = function (_React$Component) {
             var styledButton = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = buttonFunction("flat", props, state, self);
+                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -255,7 +255,7 @@ var Button = exports.Button = function (_React$Component) {
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use9 = buttonFunction("raised", props, state, self);
+                var _use9 = (0, _buttonFunctions2.default)("raised", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -268,7 +268,7 @@ var Button = exports.Button = function (_React$Component) {
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use10 = buttonFunction("floating", props, state, self);
+                var _use10 = (0, _buttonFunctions2.default)("floating", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -281,7 +281,7 @@ var Button = exports.Button = function (_React$Component) {
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use11 = buttonFunction("block", props, state, self);
+                var _use11 = (0, _buttonFunctions2.default)("block", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { style: _use11.BUTTONSTYLES.buttonStyles,
@@ -293,7 +293,7 @@ var Button = exports.Button = function (_React$Component) {
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "text") {
-                var _use12 = buttonFunction("text", props, state, self);
+                var _use12 = (0, _buttonFunctions2.default)("text", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
