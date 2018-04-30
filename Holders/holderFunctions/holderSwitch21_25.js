@@ -16,33 +16,7 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function holderSwitch21_25(num, props, state) {
-    var blocks = void 0,
-        holderstyles = void 0,
-        block1styles = void 0,
-        block2styles = void 0,
-        block3styles = void 0,
-        block4styles = void 0,
-        block5styles = void 0,
-        block6styles = void 0,
-        block7styles = void 0,
-        block8styles = void 0,
-        block9styles = void 0,
-        block10styles = void 0,
-        block11styles = void 0,
-        block12styles = void 0,
-        block13styles = void 0,
-        block14styles = void 0,
-        block15styles = void 0,
-        block16styles = void 0,
-        block17styles = void 0,
-        block18styles = void 0,
-        block19styles = void 0,
-        block20styles = void 0,
-        block21styles = void 0,
-        block22styles = void 0,
-        block23styles = void 0,
-        block24styles = void 0,
-        block25styles = '';
+    var blocks = '';
 
     switch (num) {
         case num = 21:

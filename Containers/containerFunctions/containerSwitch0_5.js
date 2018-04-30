@@ -16,13 +16,7 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function containerSwitch0_5(num, props, state) {
-    var blocks = void 0,
-        holderstyles = void 0,
-        block1styles = void 0,
-        block2styles = void 0,
-        block3styles = void 0,
-        block4styles = void 0,
-        block5styles = '';
+    var blocks = '';
     switch (num) {
         case num = 1:
             blocks = {

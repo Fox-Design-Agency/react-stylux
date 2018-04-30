@@ -83,7 +83,7 @@ var Brand5 = function (_Component) {
                     }
                 },
                 '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    heading: {
+                    brand: {
                         display: this.state.mdDis
                     }
                 }

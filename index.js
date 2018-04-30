@@ -148,41 +148,13 @@ var _TextButton = require('./Buttons/TextButton1');
 
 var _TextButton2 = _interopRequireDefault(_TextButton);
 
-var _CircleImage = require('./Images/CircleImage');
+var _Image = require('./Images/Image');
 
-var _CircleImage2 = _interopRequireDefault(_CircleImage);
-
-var _OvalImage = require('./Images/OvalImage');
-
-var _OvalImage2 = _interopRequireDefault(_OvalImage);
+var _Image2 = _interopRequireDefault(_Image);
 
 var _Figure = require('./Images/Figure');
 
 var _Figure2 = _interopRequireDefault(_Figure);
-
-var _RectangleImage = require('./Images/RectangleImage');
-
-var _RectangleImage2 = _interopRequireDefault(_RectangleImage);
-
-var _RoundedImage = require('./Images/RoundedImage');
-
-var _RoundedImage2 = _interopRequireDefault(_RoundedImage);
-
-var _RoundedRectangleImage = require('./Images/RoundedRectangleImage');
-
-var _RoundedRectangleImage2 = _interopRequireDefault(_RoundedRectangleImage);
-
-var _SquareImage = require('./Images/SquareImage');
-
-var _SquareImage2 = _interopRequireDefault(_SquareImage);
-
-var _TallRectangleImage = require('./Images/TallRectangleImage');
-
-var _TallRectangleImage2 = _interopRequireDefault(_TallRectangleImage);
-
-var _TallRoundedRectangleImage = require('./Images/TallRoundedRectangleImage');
-
-var _TallRoundedRectangleImage2 = _interopRequireDefault(_TallRoundedRectangleImage);
 
 var _Hero = require('./Images/Heros/Hero1');
 
@@ -388,15 +360,8 @@ module.exports = {
     FloatingButton1: _FloatingButton2.default,
     BlockButton1: _BlockButton2.default,
     TextButton1: _TextButton2.default,
-    CircleImage: _CircleImage2.default,
+    Image: _Image2.default,
     Figure: _Figure2.default,
-    OvalImage: _OvalImage2.default,
-    RectangleImage: _RectangleImage2.default,
-    RoundedImage: _RoundedImage2.default,
-    RoundedRectangleImage: _RoundedRectangleImage2.default,
-    SquareImage: _SquareImage2.default,
-    TallRectangleImage: _TallRectangleImage2.default,
-    TallRoundedRectangleImage: _TallRoundedRectangleImage2.default,
     Hero1: _Hero2.default,
     Hero2: _Hero4.default,
     Hero3: _Hero6.default,

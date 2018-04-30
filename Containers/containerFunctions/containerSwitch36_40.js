@@ -15,53 +15,8 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function containerSwitch36_40(num, props, state) {
-    var _blocks, _blocks2, _blocks3, _blocks4;
-
-    var blocks = void 0,
-        holderstyles = void 0,
-        block1styles = void 0,
-        block2styles = void 0,
-        block3styles = void 0,
-        block4styles = void 0,
-        block5styles = void 0,
-        block6styles = void 0,
-        block7styles = void 0,
-        block8styles = void 0,
-        block9styles = void 0,
-        block10styles = void 0,
-        block11styles = void 0,
-        block12styles = void 0,
-        block13styles = void 0,
-        block14styles = void 0,
-        block15styles = void 0,
-        block16styles = void 0,
-        block17styles = void 0,
-        block18styles = void 0,
-        block19styles = void 0,
-        block20styles = void 0,
-        block21styles = void 0,
-        block22styles = void 0,
-        block23styles = void 0,
-        block24styles = void 0,
-        block25styles = void 0,
-        block26styles = void 0,
-        block27styles = void 0,
-        block28styles = void 0,
-        block29styles = void 0,
-        block30styles = void 0,
-        block31styles = void 0,
-        block32styles = void 0,
-        block33styles = void 0,
-        block34styles = void 0,
-        block35styles = void 0,
-        block36styles = void 0,
-        block37styles = void 0,
-        block38styles = void 0,
-        block39styles = void 0,
-        block40styles = '';
+    var blocks = '';
 
     switch (num) {
         case num = 36:
@@ -1438,7 +1393,7 @@ function containerSwitch36_40(num, props, state) {
             };
 
         case num = 37:
-            blocks = (_blocks = {
+            blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1',
                 block1BorderLeft: props.b1BLeft,
@@ -1824,9 +1779,29 @@ function containerSwitch36_40(num, props, state) {
                 justifyBlock35: props.justifyBlock35 || 'center',
                 block35smdis: props.block35smdis || 'flex',
                 block35mddis: props.block35mddis || 'flex',
-                block36Direction: props.block35direction || 'column',
-                block36: props.block35 || '1'
-            }, _defineProperty(_blocks, 'block35BorderLeft', props.b35BLeft), _defineProperty(_blocks, 'block35BorderRight', props.b35BRight), _defineProperty(_blocks, 'block35BorderTop', props.b35BTop), _defineProperty(_blocks, 'block35BorderBottom', props.b35BBottom), _defineProperty(_blocks, 'block35Border', props.b35Border), _defineProperty(_blocks, 'alignBlock35', props.alignBlock35 || 'center'), _defineProperty(_blocks, 'justifyBlock35', props.justifyBlock35 || 'center'), _defineProperty(_blocks, 'block35smdis', props.block35smdis || 'flex'), _defineProperty(_blocks, 'block35mddis', props.block35mddis || 'flex'), _defineProperty(_blocks, 'block36Direction', props.block36direction || 'column'), _defineProperty(_blocks, 'block36', props.block36 || '1'), _defineProperty(_blocks, 'block36BorderLeft', props.b36BLeft), _defineProperty(_blocks, 'block36BorderRight', props.b36BRight), _defineProperty(_blocks, 'block36BorderTop', props.b36BTop), _defineProperty(_blocks, 'block36BorderBottom', props.b36BBottom), _defineProperty(_blocks, 'block36Border', props.b36Border), _defineProperty(_blocks, 'alignBlock36', props.alignBlock36 || 'center'), _defineProperty(_blocks, 'justifyBlock36', props.justifyBlock36 || 'center'), _defineProperty(_blocks, 'block36smdis', props.block36smdis || 'flex'), _defineProperty(_blocks, 'block36mddis', props.block36mddis || 'flex'), _defineProperty(_blocks, 'block37Direction', props.block37direction || 'column'), _defineProperty(_blocks, 'block37', props.block37 || '1'), _defineProperty(_blocks, 'block37BorderLeft', props.b37BLeft), _defineProperty(_blocks, 'block37BorderRight', props.b37BRight), _defineProperty(_blocks, 'block37BorderTop', props.b37BTop), _defineProperty(_blocks, 'block37BorderBottom', props.b37BBottom), _defineProperty(_blocks, 'block37Border', props.b37Border), _defineProperty(_blocks, 'alignBlock37', props.alignBlock37 || 'center'), _defineProperty(_blocks, 'justifyBlock37', props.justifyBlock37 || 'center'), _defineProperty(_blocks, 'block37smdis', props.block37smdis || 'flex'), _defineProperty(_blocks, 'block37mddis', props.block37mddis || 'flex'), _blocks);
+                block36Direction: props.block36direction || 'column',
+                block36: props.block36 || '1',
+                block36BorderLeft: props.b36BLeft,
+                block36BorderRight: props.b36BRight,
+                block36BorderTop: props.b36BTop,
+                block36BorderBottom: props.b36BBottom,
+                block36Border: props.b36Border,
+                alignBlock36: props.alignBlock36 || 'center',
+                justifyBlock36: props.justifyBlock36 || 'center',
+                block36smdis: props.block36smdis || 'flex',
+                block36mddis: props.block36mddis || 'flex',
+                block37Direction: props.block37direction || 'column',
+                block37: props.block37 || '1',
+                block37BorderLeft: props.b37BLeft,
+                block37BorderRight: props.b37BRight,
+                block37BorderTop: props.b37BTop,
+                block37BorderBottom: props.b37BBottom,
+                block37Border: props.b37Border,
+                alignBlock37: props.alignBlock37 || 'center',
+                justifyBlock37: props.justifyBlock37 || 'center',
+                block37smdis: props.block37smdis || 'flex',
+                block37mddis: props.block37mddis || 'flex'
+            };
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
@@ -2827,7 +2802,7 @@ function containerSwitch36_40(num, props, state) {
                 })
             };
         case num = 38:
-            blocks = (_blocks2 = {
+            blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1',
                 block1BorderLeft: props.b1BLeft,
@@ -3213,9 +3188,40 @@ function containerSwitch36_40(num, props, state) {
                 justifyBlock35: props.justifyBlock35 || 'center',
                 block35smdis: props.block35smdis || 'flex',
                 block35mddis: props.block35mddis || 'flex',
-                block36Direction: props.block35direction || 'column',
-                block36: props.block35 || '1'
-            }, _defineProperty(_blocks2, 'block35BorderLeft', props.b35BLeft), _defineProperty(_blocks2, 'block35BorderRight', props.b35BRight), _defineProperty(_blocks2, 'block35BorderTop', props.b35BTop), _defineProperty(_blocks2, 'block35BorderBottom', props.b35BBottom), _defineProperty(_blocks2, 'block35Border', props.b35Border), _defineProperty(_blocks2, 'alignBlock35', props.alignBlock35 || 'center'), _defineProperty(_blocks2, 'justifyBlock35', props.justifyBlock35 || 'center'), _defineProperty(_blocks2, 'block35smdis', props.block35smdis || 'flex'), _defineProperty(_blocks2, 'block35mddis', props.block35mddis || 'flex'), _defineProperty(_blocks2, 'block36Direction', props.block36direction || 'column'), _defineProperty(_blocks2, 'block36', props.block36 || '1'), _defineProperty(_blocks2, 'block36BorderLeft', props.b36BLeft), _defineProperty(_blocks2, 'block36BorderRight', props.b36BRight), _defineProperty(_blocks2, 'block36BorderTop', props.b36BTop), _defineProperty(_blocks2, 'block36BorderBottom', props.b36BBottom), _defineProperty(_blocks2, 'block36Border', props.b36Border), _defineProperty(_blocks2, 'alignBlock36', props.alignBlock36 || 'center'), _defineProperty(_blocks2, 'justifyBlock36', props.justifyBlock36 || 'center'), _defineProperty(_blocks2, 'block36smdis', props.block36smdis || 'flex'), _defineProperty(_blocks2, 'block36mddis', props.block36mddis || 'flex'), _defineProperty(_blocks2, 'block37Direction', props.block37direction || 'column'), _defineProperty(_blocks2, 'block37', props.block37 || '1'), _defineProperty(_blocks2, 'block37BorderLeft', props.b37BLeft), _defineProperty(_blocks2, 'block37BorderRight', props.b37BRight), _defineProperty(_blocks2, 'block37BorderTop', props.b37BTop), _defineProperty(_blocks2, 'block37BorderBottom', props.b37BBottom), _defineProperty(_blocks2, 'block37Border', props.b37Border), _defineProperty(_blocks2, 'alignBlock37', props.alignBlock37 || 'center'), _defineProperty(_blocks2, 'justifyBlock37', props.justifyBlock37 || 'center'), _defineProperty(_blocks2, 'block37smdis', props.block37smdis || 'flex'), _defineProperty(_blocks2, 'block37mddis', props.block37mddis || 'flex'), _defineProperty(_blocks2, 'block38Direction', props.block38direction || 'column'), _defineProperty(_blocks2, 'block38', props.block38 || '1'), _defineProperty(_blocks2, 'block38BorderLeft', props.b38BLeft), _defineProperty(_blocks2, 'block38BorderRight', props.b38BRight), _defineProperty(_blocks2, 'block38BorderTop', props.b38BTop), _defineProperty(_blocks2, 'block38BorderBottom', props.b38BBottom), _defineProperty(_blocks2, 'block38Border', props.b38Border), _defineProperty(_blocks2, 'alignBlock38', props.alignBlock38 || 'center'), _defineProperty(_blocks2, 'justifyBlock38', props.justifyBlock38 || 'center'), _defineProperty(_blocks2, 'block38smdis', props.block38smdis || 'flex'), _defineProperty(_blocks2, 'block38mddis', props.block38mddis || 'flex'), _blocks2);
+                block36Direction: props.block36direction || 'column',
+                block36: props.block36 || '1',
+                block36BorderLeft: props.b36BLeft,
+                block36BorderRight: props.b36BRight,
+                block36BorderTop: props.b36BTop,
+                block36BorderBottom: props.b36BBottom,
+                block36Border: props.b36Border,
+                alignBlock36: props.alignBlock36 || 'center',
+                justifyBlock36: props.justifyBlock36 || 'center',
+                block36smdis: props.block36smdis || 'flex',
+                block36mddis: props.block36mddis || 'flex',
+                block37Direction: props.block37direction || 'column',
+                block37: props.block37 || '1',
+                block37BorderLeft: props.b37BLeft,
+                block37BorderRight: props.b37BRight,
+                block37BorderTop: props.b37BTop,
+                block37BorderBottom: props.b37BBottom,
+                block37Border: props.b37Border,
+                alignBlock37: props.alignBlock37 || 'center',
+                justifyBlock37: props.justifyBlock37 || 'center',
+                block37smdis: props.block37smdis || 'flex',
+                block37mddis: props.block37mddis || 'flex',
+                block38Direction: props.block38direction || 'column',
+                block38: props.block38 || '1',
+                block38BorderLeft: props.b38BLeft,
+                block38BorderRight: props.b38BRight,
+                block38BorderTop: props.b38BTop,
+                block38BorderBottom: props.b38BBottom,
+                block38Border: props.b38Border,
+                alignBlock38: props.alignBlock38 || 'center',
+                justifyBlock38: props.justifyBlock38 || 'center',
+                block38smdis: props.block38smdis || 'flex',
+                block38mddis: props.block38mddis || 'flex'
+            };
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
@@ -4242,7 +4248,7 @@ function containerSwitch36_40(num, props, state) {
                 })
             };
         case num = 39:
-            blocks = (_blocks3 = {
+            blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1',
                 block1BorderLeft: props.b1BLeft,
@@ -4628,9 +4634,51 @@ function containerSwitch36_40(num, props, state) {
                 justifyBlock35: props.justifyBlock35 || 'center',
                 block35smdis: props.block35smdis || 'flex',
                 block35mddis: props.block35mddis || 'flex',
-                block36Direction: props.block35direction || 'column',
-                block36: props.block35 || '1'
-            }, _defineProperty(_blocks3, 'block35BorderLeft', props.b35BLeft), _defineProperty(_blocks3, 'block35BorderRight', props.b35BRight), _defineProperty(_blocks3, 'block35BorderTop', props.b35BTop), _defineProperty(_blocks3, 'block35BorderBottom', props.b35BBottom), _defineProperty(_blocks3, 'block35Border', props.b35Border), _defineProperty(_blocks3, 'alignBlock35', props.alignBlock35 || 'center'), _defineProperty(_blocks3, 'justifyBlock35', props.justifyBlock35 || 'center'), _defineProperty(_blocks3, 'block35smdis', props.block35smdis || 'flex'), _defineProperty(_blocks3, 'block35mddis', props.block35mddis || 'flex'), _defineProperty(_blocks3, 'block36Direction', props.block36direction || 'column'), _defineProperty(_blocks3, 'block36', props.block36 || '1'), _defineProperty(_blocks3, 'block36BorderLeft', props.b36BLeft), _defineProperty(_blocks3, 'block36BorderRight', props.b36BRight), _defineProperty(_blocks3, 'block36BorderTop', props.b36BTop), _defineProperty(_blocks3, 'block36BorderBottom', props.b36BBottom), _defineProperty(_blocks3, 'block36Border', props.b36Border), _defineProperty(_blocks3, 'alignBlock36', props.alignBlock36 || 'center'), _defineProperty(_blocks3, 'justifyBlock36', props.justifyBlock36 || 'center'), _defineProperty(_blocks3, 'block36smdis', props.block36smdis || 'flex'), _defineProperty(_blocks3, 'block36mddis', props.block36mddis || 'flex'), _defineProperty(_blocks3, 'block37Direction', props.block37direction || 'column'), _defineProperty(_blocks3, 'block37', props.block37 || '1'), _defineProperty(_blocks3, 'block37BorderLeft', props.b37BLeft), _defineProperty(_blocks3, 'block37BorderRight', props.b37BRight), _defineProperty(_blocks3, 'block37BorderTop', props.b37BTop), _defineProperty(_blocks3, 'block37BorderBottom', props.b37BBottom), _defineProperty(_blocks3, 'block37Border', props.b37Border), _defineProperty(_blocks3, 'alignBlock37', props.alignBlock37 || 'center'), _defineProperty(_blocks3, 'justifyBlock37', props.justifyBlock37 || 'center'), _defineProperty(_blocks3, 'block37smdis', props.block37smdis || 'flex'), _defineProperty(_blocks3, 'block37mddis', props.block37mddis || 'flex'), _defineProperty(_blocks3, 'block38Direction', props.block38direction || 'column'), _defineProperty(_blocks3, 'block38', props.block38 || '1'), _defineProperty(_blocks3, 'block38BorderLeft', props.b38BLeft), _defineProperty(_blocks3, 'block38BorderRight', props.b38BRight), _defineProperty(_blocks3, 'block38BorderTop', props.b38BTop), _defineProperty(_blocks3, 'block38BorderBottom', props.b38BBottom), _defineProperty(_blocks3, 'block38Border', props.b38Border), _defineProperty(_blocks3, 'alignBlock38', props.alignBlock38 || 'center'), _defineProperty(_blocks3, 'justifyBlock38', props.justifyBlock38 || 'center'), _defineProperty(_blocks3, 'block38smdis', props.block38smdis || 'flex'), _defineProperty(_blocks3, 'block38mddis', props.block38mddis || 'flex'), _defineProperty(_blocks3, 'block39Direction', props.block39direction || 'column'), _defineProperty(_blocks3, 'block39', props.block39 || '1'), _defineProperty(_blocks3, 'block39BorderLeft', props.b39BLeft), _defineProperty(_blocks3, 'block39BorderRight', props.b39BRight), _defineProperty(_blocks3, 'block39BorderTop', props.b39BTop), _defineProperty(_blocks3, 'block39BorderBottom', props.b39BBottom), _defineProperty(_blocks3, 'block39Border', props.b39Border), _defineProperty(_blocks3, 'alignBlock39', props.alignBlock39 || 'center'), _defineProperty(_blocks3, 'justifyBlock39', props.justifyBlock39 || 'center'), _defineProperty(_blocks3, 'block39smdis', props.block39smdis || 'flex'), _defineProperty(_blocks3, 'block39mddis', props.block39mddis || 'flex'), _blocks3);
+                block36Direction: props.block36direction || 'column',
+                block36: props.block36 || '1',
+                block36BorderLeft: props.b36BLeft,
+                block36BorderRight: props.b36BRight,
+                block36BorderTop: props.b36BTop,
+                block36BorderBottom: props.b36BBottom,
+                block36Border: props.b36Border,
+                alignBlock36: props.alignBlock36 || 'center',
+                justifyBlock36: props.justifyBlock36 || 'center',
+                block36smdis: props.block36smdis || 'flex',
+                block36mddis: props.block36mddis || 'flex',
+                block37Direction: props.block37direction || 'column',
+                block37: props.block37 || '1',
+                block37BorderLeft: props.b37BLeft,
+                block37BorderRight: props.b37BRight,
+                block37BorderTop: props.b37BTop,
+                block37BorderBottom: props.b37BBottom,
+                block37Border: props.b37Border,
+                alignBlock37: props.alignBlock37 || 'center',
+                justifyBlock37: props.justifyBlock37 || 'center',
+                block37smdis: props.block37smdis || 'flex',
+                block37mddis: props.block37mddis || 'flex',
+                block38Direction: props.block38direction || 'column',
+                block38: props.block38 || '1',
+                block38BorderLeft: props.b38BLeft,
+                block38BorderRight: props.b38BRight,
+                block38BorderTop: props.b38BTop,
+                block38BorderBottom: props.b38BBottom,
+                block38Border: props.b38Border,
+                alignBlock38: props.alignBlock38 || 'center',
+                justifyBlock38: props.justifyBlock38 || 'center',
+                block38smdis: props.block38smdis || 'flex',
+                block38mddis: props.block38mddis || 'flex',
+                block39Direction: props.block39direction || 'column',
+                block39: props.block39 || '1',
+                block39BorderLeft: props.b39BLeft,
+                block39BorderRight: props.b39BRight,
+                block39BorderTop: props.b39BTop,
+                block39BorderBottom: props.b39BBottom,
+                block39Border: props.b39Border,
+                alignBlock39: props.alignBlock39 || 'center',
+                justifyBlock39: props.justifyBlock39 || 'center',
+                block39smdis: props.block39smdis || 'flex',
+                block39mddis: props.block39mddis || 'flex'
+            };
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
@@ -5683,7 +5731,7 @@ function containerSwitch36_40(num, props, state) {
                 })
             };
         case num = 40:
-            blocks = (_blocks4 = {
+            blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1',
                 block1BorderLeft: props.b1BLeft,
@@ -6069,9 +6117,62 @@ function containerSwitch36_40(num, props, state) {
                 justifyBlock35: props.justifyBlock35 || 'center',
                 block35smdis: props.block35smdis || 'flex',
                 block35mddis: props.block35mddis || 'flex',
-                block36Direction: props.block35direction || 'column',
-                block36: props.block35 || '1'
-            }, _defineProperty(_blocks4, 'block35BorderLeft', props.b35BLeft), _defineProperty(_blocks4, 'block35BorderRight', props.b35BRight), _defineProperty(_blocks4, 'block35BorderTop', props.b35BTop), _defineProperty(_blocks4, 'block35BorderBottom', props.b35BBottom), _defineProperty(_blocks4, 'block35Border', props.b35Border), _defineProperty(_blocks4, 'alignBlock35', props.alignBlock35 || 'center'), _defineProperty(_blocks4, 'justifyBlock35', props.justifyBlock35 || 'center'), _defineProperty(_blocks4, 'block35smdis', props.block35smdis || 'flex'), _defineProperty(_blocks4, 'block35mddis', props.block35mddis || 'flex'), _defineProperty(_blocks4, 'block36Direction', props.block36direction || 'column'), _defineProperty(_blocks4, 'block36', props.block36 || '1'), _defineProperty(_blocks4, 'block36BorderLeft', props.b36BLeft), _defineProperty(_blocks4, 'block36BorderRight', props.b36BRight), _defineProperty(_blocks4, 'block36BorderTop', props.b36BTop), _defineProperty(_blocks4, 'block36BorderBottom', props.b36BBottom), _defineProperty(_blocks4, 'block36Border', props.b36Border), _defineProperty(_blocks4, 'alignBlock36', props.alignBlock36 || 'center'), _defineProperty(_blocks4, 'justifyBlock36', props.justifyBlock36 || 'center'), _defineProperty(_blocks4, 'block36smdis', props.block36smdis || 'flex'), _defineProperty(_blocks4, 'block36mddis', props.block36mddis || 'flex'), _defineProperty(_blocks4, 'block37Direction', props.block37direction || 'column'), _defineProperty(_blocks4, 'block37', props.block37 || '1'), _defineProperty(_blocks4, 'block37BorderLeft', props.b37BLeft), _defineProperty(_blocks4, 'block37BorderRight', props.b37BRight), _defineProperty(_blocks4, 'block37BorderTop', props.b37BTop), _defineProperty(_blocks4, 'block37BorderBottom', props.b37BBottom), _defineProperty(_blocks4, 'block37Border', props.b37Border), _defineProperty(_blocks4, 'alignBlock37', props.alignBlock37 || 'center'), _defineProperty(_blocks4, 'justifyBlock37', props.justifyBlock37 || 'center'), _defineProperty(_blocks4, 'block37smdis', props.block37smdis || 'flex'), _defineProperty(_blocks4, 'block37mddis', props.block37mddis || 'flex'), _defineProperty(_blocks4, 'block38Direction', props.block38direction || 'column'), _defineProperty(_blocks4, 'block38', props.block38 || '1'), _defineProperty(_blocks4, 'block38BorderLeft', props.b38BLeft), _defineProperty(_blocks4, 'block38BorderRight', props.b38BRight), _defineProperty(_blocks4, 'block38BorderTop', props.b38BTop), _defineProperty(_blocks4, 'block38BorderBottom', props.b38BBottom), _defineProperty(_blocks4, 'block38Border', props.b38Border), _defineProperty(_blocks4, 'alignBlock38', props.alignBlock38 || 'center'), _defineProperty(_blocks4, 'justifyBlock38', props.justifyBlock38 || 'center'), _defineProperty(_blocks4, 'block38smdis', props.block38smdis || 'flex'), _defineProperty(_blocks4, 'block38mddis', props.block38mddis || 'flex'), _defineProperty(_blocks4, 'block39Direction', props.block39direction || 'column'), _defineProperty(_blocks4, 'block39', props.block39 || '1'), _defineProperty(_blocks4, 'block39BorderLeft', props.b39BLeft), _defineProperty(_blocks4, 'block39BorderRight', props.b39BRight), _defineProperty(_blocks4, 'block39BorderTop', props.b39BTop), _defineProperty(_blocks4, 'block39BorderBottom', props.b39BBottom), _defineProperty(_blocks4, 'block39Border', props.b39Border), _defineProperty(_blocks4, 'alignBlock39', props.alignBlock39 || 'center'), _defineProperty(_blocks4, 'justifyBlock39', props.justifyBlock39 || 'center'), _defineProperty(_blocks4, 'block39smdis', props.block39smdis || 'flex'), _defineProperty(_blocks4, 'block39mddis', props.block39mddis || 'flex'), _defineProperty(_blocks4, 'block40Direction', props.block40direction || 'column'), _defineProperty(_blocks4, 'block40', props.block40 || '1'), _defineProperty(_blocks4, 'block40BorderLeft', props.b40BLeft), _defineProperty(_blocks4, 'block40BorderRight', props.b40BRight), _defineProperty(_blocks4, 'block40BorderTop', props.b40BTop), _defineProperty(_blocks4, 'block40BorderBottom', props.b40BBottom), _defineProperty(_blocks4, 'block40Border', props.b40Border), _defineProperty(_blocks4, 'alignBlock40', props.alignBlock40 || 'center'), _defineProperty(_blocks4, 'justifyBlock40', props.justifyBlock40 || 'center'), _defineProperty(_blocks4, 'block40smdis', props.block40smdis || 'flex'), _defineProperty(_blocks4, 'block40mddis', props.block40mddis || 'flex'), _blocks4);
+                block36Direction: props.block36direction || 'column',
+                block36: props.block36 || '1',
+                block36BorderLeft: props.b36BLeft,
+                block36BorderRight: props.b36BRight,
+                block36BorderTop: props.b36BTop,
+                block36BorderBottom: props.b36BBottom,
+                block36Border: props.b36Border,
+                alignBlock36: props.alignBlock36 || 'center',
+                justifyBlock36: props.justifyBlock36 || 'center',
+                block36smdis: props.block36smdis || 'flex',
+                block36mddis: props.block36mddis || 'flex',
+                block37Direction: props.block37direction || 'column',
+                block37: props.block37 || '1',
+                block37BorderLeft: props.b37BLeft,
+                block37BorderRight: props.b37BRight,
+                block37BorderTop: props.b37BTop,
+                block37BorderBottom: props.b37BBottom,
+                block37Border: props.b37Border,
+                alignBlock37: props.alignBlock37 || 'center',
+                justifyBlock37: props.justifyBlock37 || 'center',
+                block37smdis: props.block37smdis || 'flex',
+                block37mddis: props.block37mddis || 'flex',
+                block38Direction: props.block38direction || 'column',
+                block38: props.block38 || '1',
+                block38BorderLeft: props.b38BLeft,
+                block38BorderRight: props.b38BRight,
+                block38BorderTop: props.b38BTop,
+                block38BorderBottom: props.b38BBottom,
+                block38Border: props.b38Border,
+                alignBlock38: props.alignBlock38 || 'center',
+                justifyBlock38: props.justifyBlock38 || 'center',
+                block38smdis: props.block38smdis || 'flex',
+                block38mddis: props.block38mddis || 'flex',
+                block39Direction: props.block39direction || 'column',
+                block39: props.block39 || '1',
+                block39BorderLeft: props.b39BLeft,
+                block39BorderRight: props.b39BRight,
+                block39BorderTop: props.b39BTop,
+                block39BorderBottom: props.b39BBottom,
+                block39Border: props.b39Border,
+                alignBlock39: props.alignBlock39 || 'center',
+                justifyBlock39: props.justifyBlock39 || 'center',
+                block39smdis: props.block39smdis || 'flex',
+                block39mddis: props.block39mddis || 'flex',
+                block40Direction: props.block40direction || 'column',
+                block40: props.block40 || '1',
+                block40BorderLeft: props.b40BLeft,
+                block40BorderRight: props.b40BRight,
+                block40BorderTop: props.b40BTop,
+                block40BorderBottom: props.b40BBottom,
+                block40Border: props.b40Border,
+                alignBlock40: props.alignBlock40 || 'center',
+                justifyBlock40: props.justifyBlock40 || 'center',
+                block40smdis: props.block40smdis || 'flex',
+                block40mddis: props.block40mddis || 'flex'
+            };
             return {
                 holderstyles: _nestingstyles2.default.create({
                     holderstyles: {
