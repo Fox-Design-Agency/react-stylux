@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _SquareImage = require('../Images/SquareImage');
+var _Image = require('../Images/Image');
 
-var _SquareImage2 = _interopRequireDefault(_SquareImage);
+var _Image2 = _interopRequireDefault(_Image);
 
 var _nestingstyles = require('nestingstyles');
 
@@ -126,8 +126,9 @@ var Brand1 = function (_Component) {
                     id: this.state.id,
                     className: this.state.className },
                 _react2.default.createElement(
-                    _SquareImage2.default,
+                    _Image2.default,
                     {
+                        type: 'square',
                         size: this.state.size },
                     this.state.childs[0],
                     'logo'

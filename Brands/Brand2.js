@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _RectangleImage = require('../Images/RectangleImage');
+var _Image = require('../Images/Image');
 
-var _RectangleImage2 = _interopRequireDefault(_RectangleImage);
+var _Image2 = _interopRequireDefault(_Image);
 
 var _nestingstyles = require('nestingstyles');
 
@@ -99,8 +99,9 @@ var Brand2 = function (_Component) {
                     id: this.state.id,
                     className: this.state.className },
                 _react2.default.createElement(
-                    _RectangleImage2.default,
+                    _Image2.default,
                     {
+                        type: 'rectangle',
                         size: this.state.size },
                     this.state.childs[0],
                     'logo'
