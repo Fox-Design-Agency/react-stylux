@@ -128,6 +128,10 @@ var _PullQuote3 = require('./Paragraphs/PullQuotes/PullQuote2');
 
 var _PullQuote4 = _interopRequireDefault(_PullQuote3);
 
+var _Button = require('./Buttons/Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
 var _FlatButton = require('./Buttons/FlatButton1');
 
 var _FlatButton2 = _interopRequireDefault(_FlatButton);
@@ -355,6 +359,7 @@ module.exports = {
     P5: _Paragraph10.default,
     PLQ1: _PullQuote2.default,
     PLQ2: _PullQuote4.default,
+    Button: _Button2.default,
     FlatButton1: _FlatButton2.default,
     RaisedButton1: _RaisedButton2.default,
     FloatingButton1: _FloatingButton2.default,
