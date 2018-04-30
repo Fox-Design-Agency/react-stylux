@@ -162,9 +162,9 @@ var Button = exports.Button = function (_React$Component) {
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps() {
-            var props = this.newProps;
+            var props = newProps;
             var state = this.state;
-            var CHILDS = _react2.default.Children.toArray(this.newProps.children);
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
             var styledButton = '';
             var self = this;
             if (this.state.type === "flat") {

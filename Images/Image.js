@@ -221,9 +221,9 @@ var Image = function (_React$Component) {
         value: function componentWillReceiveProps(newProps) {
             var _this3 = this;
 
-            var props = this.newProps;
+            var props = newProps;
             var state = this.state;
-            var CHILDS = _react2.default.Children.toArray(this.newProps.children);
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
             var styledImage = '';
             if (this.state.type === "circle") {
                 var use = (0, _imageFunction2.default)("circle", this.state.size, props, state);
