@@ -20,26 +20,26 @@ function buttonFunction(type, props, state, self) {
         cursor = "";
     switch (type) {
         case type = 'flat':
+            backgroundColor = arguments[4] || state.background;
+            color = arguments[5] || state.color;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
                     var background = self.state.hoverBackground;
                     var color = self.state.hoverColor;
-                    self.setState({ color: color, background: background });
-                    self.renderStuff();
+                    self.renderStuff(background, color);
                 },
                 changeHoverBack: function changeHoverBack() {
                     var revbackground = self.state.revBackground;
                     var revcolor = self.state.revColor;
-                    self.setState({ color: revcolor, background: revbackground });
-                    self.renderStuff();
+                    self.renderStuff(revbackground, revcolor);
                 },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         borderRadius: state.borderRadius,
-                        color: state.color,
+                        color: color,
                         fontSize: state.fontSize,
-                        background: state.background,
+                        background: backgroundColor,
                         padding: state.padding,
                         border: state.border,
                         cursor: cursor,
@@ -66,15 +66,22 @@ function buttonFunction(type, props, state, self) {
                 })
             };
         case type = 'raised':
+            backgroundColor = arguments[4] || state.backgroundColor;
+            boxxShadow = arguments[5] || state.boxShadow;
+            var transform = arguments[6] || state.transform;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
-                    self.setState({ backgroundColor: state.backgroundRev, boxShadow: state.boxShadowRev, transform: state.transformrev });
-                    self.renderStuff();
+                    var backgroundCol = state.hovBackground;
+                    var boxShadow = state.hovBoxShadow;
+                    var transform = 'translateY(4px)';
+                    self.renderStuff(backgroundCol, boxShadow, transform);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    self.setState({ backgroundColor: state.hovBackground, boxShadow: state.hovBoxShadow, transform: 'translateY(4px)' });
-                    self.renderStuff();
+                    var backgroundCol = state.backgroundRev;
+                    var boxShadow = state.boxShadowRev;
+                    var transform = state.transformrev;
+                    self.renderStuff(backgroundCol, boxShadow, transform);
                 },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
@@ -85,10 +92,10 @@ function buttonFunction(type, props, state, self) {
                         textAlign: 'center',
                         outline: 'none',
                         color: state.color,
-                        backgroundColor: state.backgroundColor,
+                        backgroundColor: backgroundColor,
                         borderRadius: '15px',
-                        boxShadow: state.boxShadow,
-                        transform: state.transform,
+                        boxShadow: boxxShadow,
+                        transform: transform,
                         margin: state.margin
                     },
 
@@ -106,17 +113,16 @@ function buttonFunction(type, props, state, self) {
 
             };
         case type = 'floating':
-            var revBoxShadow = state.floatBoxShadow;
-            var hovBoxShadow = '0 5px 7px 0 black, 0 10px 20px 0';
+            var boxxShadow = arguments[4] || state.floatBoxShadow;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
-                    self.setState({ floatBoxShadow: hovBoxShadow });
-                    self.renderStuff();
+                    var hovBoxShadow = '0 5px 7px 0 black, 0 10px 20px 0';
+                    self.renderStuff(hovBoxShadow);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    self.setState({ floatBoxShadow: revBoxShadow });
-                    self.renderStuff();
+                    var revBoxShadow = state.floatBoxShadow;
+                    self.renderStuff(revBoxShadow);
                 },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
@@ -129,7 +135,7 @@ function buttonFunction(type, props, state, self) {
                         cursor: cursor,
                         textAlign: 'center',
                         color: state.color,
-                        boxShadow: state.floatBoxShadow,
+                        boxShadow: boxxShadow,
                         transform: state.transform,
                         transformOrigin: state.transformOrigin,
                         margin: state.margin
@@ -148,28 +154,31 @@ function buttonFunction(type, props, state, self) {
 
             };
         case type = 'block':
-
+            backgroundColor = arguments[4] || state.blockBackground;
+            color = arguments[5] || state.frev;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
-                    self.setState({ backgroundColor: state.hovColor, color: state.colorRev });
-                    self.renderStuff();
+                    var backgroundCol = state.hovBackground;
+                    var col = state.revColor;
+                    self.renderStuff(backgroundCol, col);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    self.setState({ backgroundColor: state.colorRev, color: state.frev });
-                    self.renderStuff();
+                    var backgroundCol = state.colorRev;
+                    var col = state.frev;
+                    self.renderStuff(backgroundCol, col);
                 },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         width: '100%',
                         display: 'block',
                         border: 'none',
-                        backgroundColor: state.backgroundColor,
+                        backgroundColor: backgroundColor,
                         padding: '14px 28px',
                         fontSize: state.fontSize,
                         cursor: cursor,
                         textAlign: 'center',
-                        color: state.color,
+                        color: color,
                         transform: state.transform,
                         transformOrigin: state.transformOrigin
                     },
@@ -187,22 +196,23 @@ function buttonFunction(type, props, state, self) {
 
             };
         case type = 'text':
+            backgroundColor = arguments[4] || state.backgroundColor;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
-                    self.setState({ backgroundColor: state.hoverColor });
-                    self.renderStuff();
+                    var backgroundCol = state.hovBackground;
+                    self.renderStuff(backgroundCol);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    self.setState({ backgroundColor: state.colorRev });
-                    self.renderStuff();
+                    var backgroundCol = state.colorRev;
+                    self.renderStuff(backgroundCol);
                 },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         width: state.width,
                         display: 'block',
                         border: 'none',
-                        backgroundColor: state.backgroundColor,
+                        backgroundColor: backgroundColor,
                         padding: '14px 28px',
                         fontSize: state.fontSize,
                         cursor: 'pointer',
@@ -225,15 +235,27 @@ function buttonFunction(type, props, state, self) {
 
             };
         case type = 'custom':
-
+            var background = arguments[4] || self.state.background;
+            var color = arguments[5] || self.state.color;
             cursor = "pointer";
             return {
+                changeHover: function changeHover() {
+                    var background = self.state.hoverBackground;
+                    var color = self.state.hoverColor;
+                    self.renderStuff(background, color);
+                },
+                changeHoverBack: function changeHoverBack() {
+                    var revbackground = self.state.revBackground;
+                    var revcolor = self.state.revColor;
+                    self.setState({ color: revcolor, background: revbackground });
+                    self.renderStuff(revbackground, revcolor);
+                },
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         borderRadius: state.borderRadius,
-                        color: state.color,
+                        color: color,
                         fontSize: state.fontSize,
-                        background: state.background,
+                        background: background,
                         padding: state.padding,
                         border: state.border,
                         cursor: cursor,

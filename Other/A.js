@@ -45,7 +45,9 @@ var A = function (_Component) {
             smDis: props.smDis,
             mdDis: props.mdDis,
             transform: props.transform,
-            transformOrigin: props.transformOrigin
+            transformOrigin: props.transformOrigin,
+            id: props.id,
+            className: props.className
         };
         return _this;
     }
@@ -91,7 +93,9 @@ var A = function (_Component) {
             });
             return _react2.default.createElement(
                 'a',
-                { style: ASTYLE.astyle, href: this.state.href, target: this.state.target, rel: this.state.rel },
+                { style: ASTYLE.astyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                    id: this.state.id,
+                    className: this.state.className },
                 this.state.childs
             );
         }

@@ -46,6 +46,7 @@ var HR = function (_Component) {
             bBottom: props.bBottom,
             border: props.border,
             id: props.id,
+            className: props.className,
             transform: props.transform,
             transformOrigin: props.transformOrigin
 
@@ -69,7 +70,7 @@ var HR = function (_Component) {
                 transformOrigin: this.state.transformOrigin
             };
 
-            return _react2.default.createElement('hr', { style: STYLES, id: this.state.id });
+            return _react2.default.createElement('hr', { style: STYLES, id: this.state.id, className: this.state.className });
         }
     }]);
 

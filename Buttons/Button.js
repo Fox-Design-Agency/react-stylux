@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Button = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -33,7 +32,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Button = exports.Button = function (_React$Component) {
+var Button = function (_React$Component) {
     _inherits(Button, _React$Component);
 
     function Button(props) {
@@ -56,6 +55,7 @@ var Button = exports.Button = function (_React$Component) {
             frev: props.color || 'white',
             background: props.background || '#ffffff',
             backgroundColor: props.background || 'white',
+            blockBackground: props.background || "black",
             revBackground: props.background || '#ffffff',
             borderRadius: props.borderRadius || '28px',
             border: props.border || 'solid #000000 2px',
@@ -89,86 +89,96 @@ var Button = exports.Button = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var styledButton = '';
+            var styledButton = void 0,
+                use = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
+                use = (0, _buttonFunctions2.default)("flat", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id, className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: use.changeHoverBack,
-                        onMouseOut: use.changeHover
+                        onMouseEnter: use.changeHover,
+                        onMouseOut: use.changeHoverBack
                     },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use = (0, _buttonFunctions2.default)("raised", props, state, self);
+                use = (0, _buttonFunctions2.default)("raised", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use.changeHoverBack,
-                        onMouseLeave: _use.changeHover },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use2 = (0, _buttonFunctions2.default)("floating", props, state, self);
+                use = (0, _buttonFunctions2.default)("floating", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use2.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use2.changeHoverBack,
-                        onMouseLeave: _use2.changeHover },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use3 = (0, _buttonFunctions2.default)("block", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { style: _use3.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: _use3.changeHover,
-                        onMouseLeave: _use3.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.type === "text") {
-                var _use4 = (0, _buttonFunctions2.default)("text", props, state, self);
+                use = (0, _buttonFunctions2.default)("block", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use4.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use4.changeHover,
-                        onMouseLeave: _use4.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else {}
+            } else if (this.state.type === "text") {
+                use = (0, _buttonFunctions2.default)("text", props, state, self);
+                styledButton = [_react2.default.createElement(
+                    'button',
+                    { key: Math.random(),
+                        style: use.BUTTONSTYLES.buttonStyles,
+                        id: this.state.id,
+                        className: this.state.className,
+                        onClick: this.state.onClick,
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
+                    CHILDS[0]
+                )];
+            } else {
+                use = (0, _buttonFunctions2.default)("custom", props, state, self);
+                styledButton = [_react2.default.createElement(
+                    'button',
+                    { key: Math.random(), style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
+                    CHILDS[0]
+                )];
+            }
 
-            this.setState({ buttonStyle: styledButton, childs: CHILDS });
+            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use });
         }
     }, {
         key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps() {
+        value: function componentWillReceiveProps(newProps) {
             var props = newProps;
             var state = this.state;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            var styledButton = '';
+            var styledButton = void 0,
+                use = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
+                use = (0, _buttonFunctions2.default)("flat", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -181,131 +191,153 @@ var Button = exports.Button = function (_React$Component) {
                     CHILDS[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use5 = (0, _buttonFunctions2.default)("raised", props, state, self);
+                use = (0, _buttonFunctions2.default)("raised", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use5.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use5.changeHover,
-                        onMouseLeave: _use5.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use6 = (0, _buttonFunctions2.default)("floating", props, state, self);
+                use = (0, _buttonFunctions2.default)("floating", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use6.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use6.changeHover,
-                        onMouseLeave: _use6.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use7 = (0, _buttonFunctions2.default)("block", props, state, self);
+                use = (0, _buttonFunctions2.default)("block", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { style: _use7.BUTTONSTYLES.buttonStyles,
+                    { style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use7.changeHoverBack,
-                        onMouseLeave: _use7.changeHover },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             } else if (this.state.type === "text") {
-                var _use8 = (0, _buttonFunctions2.default)("text", props, state, self);
+                use = (0, _buttonFunctions2.default)("text", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use8.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use8.changeHover,
-                        onMouseLeave: _use8.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else {}
-            this.setState({ buttonStyle: styledButton, childs: CHILDS });
+            } else {
+                use = (0, _buttonFunctions2.default)("custom", props, state, self);
+                styledButton = [_react2.default.createElement(
+                    'button',
+                    { key: Math.random(), style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
+                    CHILDS[0]
+                )];
+            }
+            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use });
         }
     }, {
         key: 'renderStuff',
         value: function renderStuff() {
             var props = this.newProps;
             var state = this.state;
-            var styledButton = '';
+            var styledButton = void 0,
+                use = '';
             var self = this;
             if (this.state.type === "flat") {
-                var use = (0, _buttonFunctions2.default)("flat", props, state, self);
+                use = (0, _buttonFunctions2.default)("flat", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id, className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: use.changeHoverBack,
-                        onMouseOut: use.changeHover
+                        onMouseEnter: use.changeHover,
+                        onMouseOut: use.changeHoverBack
                     },
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "raised") {
-                var _use9 = (0, _buttonFunctions2.default)("raised", props, state, self);
+                use = (0, _buttonFunctions2.default)("raised", props, state, self, arguments[0], arguments[1], arguments[2]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use9.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use9.changeHover,
-                        onMouseLeave: _use9.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "floating") {
-                var _use10 = (0, _buttonFunctions2.default)("floating", props, state, self);
+                use = (0, _buttonFunctions2.default)("floating", props, state, self, arguments[0]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use10.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use10.changeHoverBack,
-                        onMouseLeave: _use10.changeHover },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
             } else if (this.state.type === "block") {
-                var _use11 = (0, _buttonFunctions2.default)("block", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { style: _use11.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: _use11.changeHover,
-                        onMouseLeave: _use11.changeHoverBack },
-                    this.state.childs[0]
-                )];
-            } else if (this.state.type === "text") {
-                var _use12 = (0, _buttonFunctions2.default)("text", props, state, self);
+                use = (0, _buttonFunctions2.default)("block", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
-                        style: _use12.BUTTONSTYLES.buttonStyles,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
-                        onMouseEnter: _use12.changeHover,
-                        onMouseLeave: _use12.changeHoverBack },
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
-            } else {}
+            } else if (this.state.type === "text") {
+                use = (0, _buttonFunctions2.default)("text", props, state, self, arguments[0]);
+                styledButton = [_react2.default.createElement(
+                    'button',
+                    { key: Math.random(),
+                        style: use.BUTTONSTYLES.buttonStyles,
+                        id: this.state.id,
+                        className: this.state.className,
+                        onClick: this.state.onClick,
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
+                    this.state.childs[0]
+                )];
+            } else {
+                use = (0, _buttonFunctions2.default)("custom", props, state, self, arguments[0], arguments[1]);
+                styledButton = [_react2.default.createElement(
+                    'button',
+                    { key: Math.random(),
+                        style: use.BUTTONSTYLES.buttonStyles,
+                        id: this.state.id,
+                        className: this.state.className,
+                        onClick: this.state.onClick,
+                        onMouseEnter: use.changeHover,
+                        onMouseLeave: use.changeHoverBack },
+                    this.state.childs[0]
+                )];
+            }
             this.setState({ buttonStyle: styledButton });
         }
     }, {
@@ -321,3 +353,5 @@ var Button = exports.Button = function (_React$Component) {
 
     return Button;
 }(_react2.default.Component);
+
+exports.default = Button;

@@ -100,25 +100,29 @@ var _SecondarySubHeading9 = require('./Headings/SecondarySubHeadings/SecondarySu
 
 var _SecondarySubHeading10 = _interopRequireDefault(_SecondarySubHeading9);
 
-var _Paragraph = require('./Paragraphs/Paragraph1');
+var _Paragraph = require('./Paragraphs/Paragraph');
 
 var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
-var _Paragraph3 = require('./Paragraphs/Paragraph2');
+var _Paragraph3 = require('./Paragraphs/Paragraph1');
 
 var _Paragraph4 = _interopRequireDefault(_Paragraph3);
 
-var _Paragraph5 = require('./Paragraphs/Paragraph3');
+var _Paragraph5 = require('./Paragraphs/Paragraph2');
 
 var _Paragraph6 = _interopRequireDefault(_Paragraph5);
 
-var _Paragraph7 = require('./Paragraphs/Paragraph4');
+var _Paragraph7 = require('./Paragraphs/Paragraph3');
 
 var _Paragraph8 = _interopRequireDefault(_Paragraph7);
 
-var _Paragraph9 = require('./Paragraphs/Paragraph5');
+var _Paragraph9 = require('./Paragraphs/Paragraph4');
 
 var _Paragraph10 = _interopRequireDefault(_Paragraph9);
+
+var _Paragraph11 = require('./Paragraphs/Paragraph5');
+
+var _Paragraph12 = _interopRequireDefault(_Paragraph11);
 
 var _PullQuote = require('./Paragraphs/PullQuotes/PullQuote1');
 
@@ -326,6 +330,9 @@ var _Table4 = _interopRequireDefault(_Table3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+l;
+
+
 module.exports = {
     A: _A2.default,
     Block2: _TestBlock2.default,
@@ -352,11 +359,12 @@ module.exports = {
     H43: _SecondarySubHeading6.default,
     H44: _SecondarySubHeading8.default,
     H45: _SecondarySubHeading10.default,
-    P1: _Paragraph2.default,
-    P2: _Paragraph4.default,
-    P3: _Paragraph6.default,
-    P4: _Paragraph8.default,
-    P5: _Paragraph10.default,
+    P: _Paragraph2.default,
+    P1: _Paragraph4.default,
+    P2: _Paragraph6.default,
+    P3: _Paragraph8.default,
+    P4: _Paragraph10.default,
+    P5: _Paragraph12.default,
     PLQ1: _PullQuote2.default,
     PLQ2: _PullQuote4.default,
     Button: _Button2.default,

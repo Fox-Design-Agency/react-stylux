@@ -72,7 +72,8 @@ var H15 = function (_Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             hoverColor: props.hovColor,
-            wordWrap: props.wordWrap || "break-word"
+            wordWrap: props.wordWrap || "break-word",
+            cursor: props.cursor
         };
         return _this;
     }
@@ -81,12 +82,22 @@ var H15 = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var curs = '';
+            if (this.state.hoverColor) {
+                curs = "pointer";
+                this.setState({ cursor: curs });
+            }
             this.setState({ childs: CHILDS });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var curs = '';
+            if (this.state.hoverColor) {
+                curs = "pointer";
+                this.setState({ cursor: curs });
+            }
             return this.setState({ childs: CHILDS });
         }
     }, {
@@ -130,7 +141,8 @@ var H15 = function (_Component) {
                     WebkitTextStrokeWidth: this.state.stroke,
                     flex: 1,
                     flexWrap: "wrap",
-                    wordWrap: this.state.wordWrap
+                    wordWrap: this.state.wordWrap,
+                    cursor: this.state.cursor
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
