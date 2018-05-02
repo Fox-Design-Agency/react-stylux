@@ -17,11 +17,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function buttonFunction(type, props, state, self) {
     var buttonStyles = void 0,
-        cursor = "";
+        cursor = void 0,
+        backgroundColor = void 0,
+        color = "";
     switch (type) {
         case type = 'flat':
             backgroundColor = arguments[4] || state.background;
-            color = arguments[5] || state.color;
+            _color = arguments[5] || state.color;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
@@ -37,7 +39,7 @@ function buttonFunction(type, props, state, self) {
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         borderRadius: state.borderRadius,
-                        color: color,
+                        color: _color,
                         fontSize: state.fontSize,
                         background: backgroundColor,
                         padding: state.padding,
@@ -155,7 +157,7 @@ function buttonFunction(type, props, state, self) {
             };
         case type = 'block':
             backgroundColor = arguments[4] || state.blockBackground;
-            color = arguments[5] || state.frev;
+            _color = arguments[5] || state.frev;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
@@ -178,7 +180,7 @@ function buttonFunction(type, props, state, self) {
                         fontSize: state.fontSize,
                         cursor: cursor,
                         textAlign: 'center',
-                        color: color,
+                        color: _color,
                         transform: state.transform,
                         transformOrigin: state.transformOrigin
                     },
@@ -236,7 +238,7 @@ function buttonFunction(type, props, state, self) {
             };
         case type = 'custom':
             var background = arguments[4] || self.state.background;
-            var color = arguments[5] || self.state.color;
+            var _color = arguments[5] || self.state.color;
             cursor = "pointer";
             return {
                 changeHover: function changeHover() {
@@ -253,7 +255,7 @@ function buttonFunction(type, props, state, self) {
                 BUTTONSTYLES: _nestingstyles2.default.create({
                     buttonStyles: {
                         borderRadius: state.borderRadius,
-                        color: color,
+                        color: _color,
                         fontSize: state.fontSize,
                         background: background,
                         padding: state.padding,
