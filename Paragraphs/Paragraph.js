@@ -18,6 +18,10 @@ var _nestingstyles = require('nestingstyles');
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
+var _paragraphFunctions = require('./paragraphFunctions/paragraphFunctions');
+
+var _paragraphFunctions2 = _interopRequireDefault(_paragraphFunctions);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -89,7 +93,7 @@ var P = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             if (this.state.type === "1") {
-                use = paragraphFunction("1", props, state, self);
+                use = (0, _paragraphFunctions2.default)("1", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -98,7 +102,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "2") {
-                use = paragraphFunction("2", props, state, self);
+                use = (0, _paragraphFunctions2.default)("2", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -107,7 +111,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "3") {
-                use = paragraphFunction("3", props, state, self);
+                use = (0, _paragraphFunctions2.default)("3", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -116,7 +120,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "4") {
-                use = paragraphFunction("4", props, state, self);
+                use = (0, _paragraphFunctions2.default)("4", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -125,7 +129,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "5") {
-                use = paragraphFunction("5", props, state, self);
+                use = (0, _paragraphFunctions2.default)("5", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -134,7 +138,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = paragraphFunction("custom", props, state, self);
+                use = (0, _paragraphFunctions2.default)("custom", props, state, self);
 
                 styledParagraph = [_react2.default.createElement(
                     'p',
@@ -156,7 +160,7 @@ var P = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             if (this.state.type === "1") {
-                use = paragraphFunction("1", props, state, self);
+                use = (0, _paragraphFunctions2.default)("1", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -165,7 +169,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "2") {
-                use = paragraphFunction("2", props, state, self);
+                use = (0, _paragraphFunctions2.default)("2", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -174,7 +178,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "3") {
-                use = paragraphFunction("3", props, state, self);
+                use = (0, _paragraphFunctions2.default)("3", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -183,7 +187,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "4") {
-                use = paragraphFunction("4", props, state, self);
+                use = (0, _paragraphFunctions2.default)("4", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -192,7 +196,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else if (this.state.type === "5") {
-                use = paragraphFunction("5", props, state, self);
+                use = (0, _paragraphFunctions2.default)("5", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),
@@ -201,7 +205,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = paragraphFunction("custom", props, state, self);
+                use = (0, _paragraphFunctions2.default)("custom", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: Math.random(),

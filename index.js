@@ -124,6 +124,10 @@ var _Paragraph11 = require('./Paragraphs/Paragraph5');
 
 var _Paragraph12 = _interopRequireDefault(_Paragraph11);
 
+var _PLQ = require('./Paragraphs/PullQuotes/PLQ');
+
+var _PLQ2 = _interopRequireDefault(_PLQ);
+
 var _PullQuote = require('./Paragraphs/PullQuotes/PullQuote1');
 
 var _PullQuote2 = _interopRequireDefault(_PullQuote);
@@ -164,25 +168,29 @@ var _Figure = require('./Images/Figure');
 
 var _Figure2 = _interopRequireDefault(_Figure);
 
-var _Hero = require('./Images/Heros/Hero1');
+var _Hero = require('./Images/Heros/Hero');
 
 var _Hero2 = _interopRequireDefault(_Hero);
 
-var _Hero3 = require('./Images/Heros/Hero2');
+var _Hero3 = require('./Images/Heros/Hero1');
 
 var _Hero4 = _interopRequireDefault(_Hero3);
 
-var _Hero5 = require('./Images/Heros/Hero3');
+var _Hero5 = require('./Images/Heros/Hero2');
 
 var _Hero6 = _interopRequireDefault(_Hero5);
 
-var _Hero7 = require('./Images/Heros/Hero4');
+var _Hero7 = require('./Images/Heros/Hero3');
 
 var _Hero8 = _interopRequireDefault(_Hero7);
 
-var _Hero9 = require('./Images/Heros/Hero5');
+var _Hero9 = require('./Images/Heros/Hero4');
 
 var _Hero10 = _interopRequireDefault(_Hero9);
+
+var _Hero11 = require('./Images/Heros/Hero5');
+
+var _Hero12 = _interopRequireDefault(_Hero11);
 
 var _Navbar = require('./NavBars/NavBars/Navbar1');
 
@@ -212,25 +220,29 @@ var _DropDownNav5 = require('./NavBars/DropDowns/DropDownNav5');
 
 var _DropDownNav6 = _interopRequireDefault(_DropDownNav5);
 
-var _Brand = require('./Brands/Brand1');
+var _Brand = require('./Brands/Brand');
 
 var _Brand2 = _interopRequireDefault(_Brand);
 
-var _Brand3 = require('./Brands/Brand2');
+var _Brand3 = require('./Brands/Brand1');
 
 var _Brand4 = _interopRequireDefault(_Brand3);
 
-var _Brand5 = require('./Brands/Brand3');
+var _Brand5 = require('./Brands/Brand2');
 
 var _Brand6 = _interopRequireDefault(_Brand5);
 
-var _Brand7 = require('./Brands/Brand4');
+var _Brand7 = require('./Brands/Brand3');
 
 var _Brand8 = _interopRequireDefault(_Brand7);
 
-var _Brand9 = require('./Brands/Brand5');
+var _Brand9 = require('./Brands/Brand4');
 
 var _Brand10 = _interopRequireDefault(_Brand9);
+
+var _Brand11 = require('./Brands/Brand5');
+
+var _Brand12 = _interopRequireDefault(_Brand11);
 
 var _Carousel = require('./Carousels/Carousel1');
 
@@ -288,17 +300,25 @@ var _Popup3 = require('./Togglers/Popups/Popup2');
 
 var _Popup4 = _interopRequireDefault(_Popup3);
 
-var _Card = require('./Cards/Card1');
+var _Card = require('./Cards/Card');
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _Card3 = require('./Cards/Card2');
+var _Card3 = require('./Cards/Card1');
 
 var _Card4 = _interopRequireDefault(_Card3);
 
-var _Card5 = require('./Cards/Card3');
+var _Card5 = require('./Cards/Card2');
 
 var _Card6 = _interopRequireDefault(_Card5);
+
+var _Card7 = require('./Cards/Card3');
+
+var _Card8 = _interopRequireDefault(_Card7);
+
+var _List = require('./Lists/List');
+
+var _List2 = _interopRequireDefault(_List);
 
 var _BulletList = require('./Lists/Bullet/BulletList1');
 
@@ -362,6 +382,7 @@ module.exports = {
     P3: _Paragraph8.default,
     P4: _Paragraph10.default,
     P5: _Paragraph12.default,
+    PLQ: _PLQ2.default,
     PLQ1: _PullQuote2.default,
     PLQ2: _PullQuote4.default,
     Button: _Button2.default,
@@ -372,11 +393,12 @@ module.exports = {
     TextButton1: _TextButton2.default,
     Image: _Image2.default,
     Figure: _Figure2.default,
-    Hero1: _Hero2.default,
-    Hero2: _Hero4.default,
-    Hero3: _Hero6.default,
-    Hero4: _Hero8.default,
-    Hero5: _Hero10.default,
+    Hero: _Hero2.default,
+    Hero1: _Hero4.default,
+    Hero2: _Hero6.default,
+    Hero3: _Hero8.default,
+    Hero4: _Hero10.default,
+    Hero5: _Hero12.default,
     Navbar1: _Navbar2.default,
     Navbar2: _Navbar4.default,
     SubNavbar1: _SubNavBar2.default,
@@ -384,11 +406,12 @@ module.exports = {
     DropDownNav1: _DropDownNav2.default,
     DropDownNav3: _DropDownNav4.default,
     DropDownNav5: _DropDownNav6.default,
-    Brand1: _Brand2.default,
-    Brand2: _Brand4.default,
-    Brand3: _Brand6.default,
-    Brand4: _Brand8.default,
-    Brand5: _Brand10.default,
+    Brand: _Brand2.default,
+    Brand1: _Brand4.default,
+    Brand2: _Brand6.default,
+    Brand3: _Brand8.default,
+    Brand4: _Brand10.default,
+    Brand5: _Brand12.default,
     Carousel1: _Carousel2.default,
     Carousel2: _Carousel4.default,
     Carousel3: _Carousel6.default,
@@ -403,9 +426,11 @@ module.exports = {
     Modal3: _Modal6.default,
     Popup1: _Popup2.default,
     Popup2: _Popup4.default,
-    Card1: _Card2.default,
-    Card2: _Card4.default,
-    Card3: _Card6.default,
+    Card: _Card2.default,
+    Card1: _Card4.default,
+    Card2: _Card6.default,
+    Card3: _Card8.default,
+    List: _List2.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
     NumberList1: _NumberList2.default,
