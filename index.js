@@ -4,9 +4,9 @@ var _TestBlock = require('./TestBlock');
 
 var _TestBlock2 = _interopRequireDefault(_TestBlock);
 
-var _Container = require('./Containers/Container');
+var _Wrapper = require('./Wrappers/Wrapper');
 
-var _Container2 = _interopRequireDefault(_Container);
+var _Wrapper2 = _interopRequireDefault(_Wrapper);
 
 var _Holder = require('./Holders/Holder');
 
@@ -104,61 +104,13 @@ var _Paragraph = require('./Paragraphs/Paragraph');
 
 var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
-var _Paragraph3 = require('./Paragraphs/Paragraph1');
-
-var _Paragraph4 = _interopRequireDefault(_Paragraph3);
-
-var _Paragraph5 = require('./Paragraphs/Paragraph2');
-
-var _Paragraph6 = _interopRequireDefault(_Paragraph5);
-
-var _Paragraph7 = require('./Paragraphs/Paragraph3');
-
-var _Paragraph8 = _interopRequireDefault(_Paragraph7);
-
-var _Paragraph9 = require('./Paragraphs/Paragraph4');
-
-var _Paragraph10 = _interopRequireDefault(_Paragraph9);
-
-var _Paragraph11 = require('./Paragraphs/Paragraph5');
-
-var _Paragraph12 = _interopRequireDefault(_Paragraph11);
-
 var _PLQ = require('./Paragraphs/PullQuotes/PLQ');
 
 var _PLQ2 = _interopRequireDefault(_PLQ);
 
-var _PullQuote = require('./Paragraphs/PullQuotes/PullQuote1');
-
-var _PullQuote2 = _interopRequireDefault(_PullQuote);
-
-var _PullQuote3 = require('./Paragraphs/PullQuotes/PullQuote2');
-
-var _PullQuote4 = _interopRequireDefault(_PullQuote3);
-
 var _Button = require('./Buttons/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
-
-var _FlatButton = require('./Buttons/FlatButton1');
-
-var _FlatButton2 = _interopRequireDefault(_FlatButton);
-
-var _RaisedButton = require('./Buttons/RaisedButton1');
-
-var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
-
-var _FloatingButton = require('./Buttons/FloatingButton1');
-
-var _FloatingButton2 = _interopRequireDefault(_FloatingButton);
-
-var _BlockButton = require('./Buttons/BlockButton1');
-
-var _BlockButton2 = _interopRequireDefault(_BlockButton);
-
-var _TextButton = require('./Buttons/TextButton1');
-
-var _TextButton2 = _interopRequireDefault(_TextButton);
 
 var _Image = require('./Images/Image');
 
@@ -171,26 +123,6 @@ var _Figure2 = _interopRequireDefault(_Figure);
 var _Hero = require('./Images/Heros/Hero');
 
 var _Hero2 = _interopRequireDefault(_Hero);
-
-var _Hero3 = require('./Images/Heros/Hero1');
-
-var _Hero4 = _interopRequireDefault(_Hero3);
-
-var _Hero5 = require('./Images/Heros/Hero2');
-
-var _Hero6 = _interopRequireDefault(_Hero5);
-
-var _Hero7 = require('./Images/Heros/Hero3');
-
-var _Hero8 = _interopRequireDefault(_Hero7);
-
-var _Hero9 = require('./Images/Heros/Hero4');
-
-var _Hero10 = _interopRequireDefault(_Hero9);
-
-var _Hero11 = require('./Images/Heros/Hero5');
-
-var _Hero12 = _interopRequireDefault(_Hero11);
 
 var _Navbar = require('./NavBars/NavBars/Navbar1');
 
@@ -223,26 +155,6 @@ var _DropDownNav6 = _interopRequireDefault(_DropDownNav5);
 var _Brand = require('./Brands/Brand');
 
 var _Brand2 = _interopRequireDefault(_Brand);
-
-var _Brand3 = require('./Brands/Brand1');
-
-var _Brand4 = _interopRequireDefault(_Brand3);
-
-var _Brand5 = require('./Brands/Brand2');
-
-var _Brand6 = _interopRequireDefault(_Brand5);
-
-var _Brand7 = require('./Brands/Brand3');
-
-var _Brand8 = _interopRequireDefault(_Brand7);
-
-var _Brand9 = require('./Brands/Brand4');
-
-var _Brand10 = _interopRequireDefault(_Brand9);
-
-var _Brand11 = require('./Brands/Brand5');
-
-var _Brand12 = _interopRequireDefault(_Brand11);
 
 var _Carousel = require('./Carousels/Carousel1');
 
@@ -304,41 +216,9 @@ var _Card = require('./Cards/Card');
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _Card3 = require('./Cards/Card1');
-
-var _Card4 = _interopRequireDefault(_Card3);
-
-var _Card5 = require('./Cards/Card2');
-
-var _Card6 = _interopRequireDefault(_Card5);
-
-var _Card7 = require('./Cards/Card3');
-
-var _Card8 = _interopRequireDefault(_Card7);
-
 var _List = require('./Lists/List');
 
 var _List2 = _interopRequireDefault(_List);
-
-var _BulletList = require('./Lists/Bullet/BulletList1');
-
-var _BulletList2 = _interopRequireDefault(_BulletList);
-
-var _BulletList3 = require('./Lists/Bullet/BulletList2');
-
-var _BulletList4 = _interopRequireDefault(_BulletList3);
-
-var _NumberList = require('./Lists/Number/NumberList1');
-
-var _NumberList2 = _interopRequireDefault(_NumberList);
-
-var _NumberList3 = require('./Lists/Number/NumberList2');
-
-var _NumberList4 = _interopRequireDefault(_NumberList3);
-
-var _NumberList5 = require('./Lists/Number/NumberList3');
-
-var _NumberList6 = _interopRequireDefault(_NumberList5);
 
 var _Table = require('./Tables/Table1');
 
@@ -353,7 +233,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
     A: _A2.default,
     Block2: _TestBlock2.default,
-    Container: _Container2.default,
+    Wrapper: _Wrapper2.default,
     Holder: _Holder2.default,
     HR: _HR2.default,
     H11: _MainHeading2.default,
@@ -377,28 +257,11 @@ module.exports = {
     H44: _SecondarySubHeading8.default,
     H45: _SecondarySubHeading10.default,
     P: _Paragraph2.default,
-    P1: _Paragraph4.default,
-    P2: _Paragraph6.default,
-    P3: _Paragraph8.default,
-    P4: _Paragraph10.default,
-    P5: _Paragraph12.default,
     PLQ: _PLQ2.default,
-    PLQ1: _PullQuote2.default,
-    PLQ2: _PullQuote4.default,
     Button: _Button2.default,
-    FlatButton1: _FlatButton2.default,
-    RaisedButton1: _RaisedButton2.default,
-    FloatingButton1: _FloatingButton2.default,
-    BlockButton1: _BlockButton2.default,
-    TextButton1: _TextButton2.default,
     Image: _Image2.default,
     Figure: _Figure2.default,
     Hero: _Hero2.default,
-    Hero1: _Hero4.default,
-    Hero2: _Hero6.default,
-    Hero3: _Hero8.default,
-    Hero4: _Hero10.default,
-    Hero5: _Hero12.default,
     Navbar1: _Navbar2.default,
     Navbar2: _Navbar4.default,
     SubNavbar1: _SubNavBar2.default,
@@ -407,11 +270,6 @@ module.exports = {
     DropDownNav3: _DropDownNav4.default,
     DropDownNav5: _DropDownNav6.default,
     Brand: _Brand2.default,
-    Brand1: _Brand4.default,
-    Brand2: _Brand6.default,
-    Brand3: _Brand8.default,
-    Brand4: _Brand10.default,
-    Brand5: _Brand12.default,
     Carousel1: _Carousel2.default,
     Carousel2: _Carousel4.default,
     Carousel3: _Carousel6.default,
@@ -427,15 +285,7 @@ module.exports = {
     Popup1: _Popup2.default,
     Popup2: _Popup4.default,
     Card: _Card2.default,
-    Card1: _Card4.default,
-    Card2: _Card6.default,
-    Card3: _Card8.default,
     List: _List2.default,
-    BulletList1: _BulletList2.default,
-    BulletList2: _BulletList4.default,
-    NumberList1: _NumberList2.default,
-    NumberList2: _NumberList4.default,
-    NumberList3: _NumberList6.default,
     Table1: _Table2.default,
     Table2: _Table4.default
 };

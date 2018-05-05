@@ -59,7 +59,7 @@ var List = function (_React$Component) {
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             width: props.width || "100%",
-            type: props.type,
+            box: props.box,
             styledList: ''
 
         };
@@ -78,7 +78,7 @@ var List = function (_React$Component) {
             var listItems = [];
             var CHILDS = _react2.default.Children.toArray(this.props.children);
 
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -95,7 +95,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     LIST
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 var nestedItems = [];
                 var tempItems = CHILDS.map(function (x) {
                     return x;
@@ -121,7 +121,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
                     _LIST
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -138,7 +138,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST2
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -155,7 +155,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST3
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -202,7 +202,7 @@ var List = function (_React$Component) {
             listItems = CHILDS.map(function (x) {
                 return x;
             });
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -219,7 +219,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     LIST
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 var nestedItems = [];
                 var tempItems = CHILDS.map(function (x) {
                     return x;
@@ -245,7 +245,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
                     _LIST6
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -262,7 +262,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST7
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
@@ -279,7 +279,7 @@ var List = function (_React$Component) {
                     { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST8
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });

@@ -56,7 +56,7 @@ var PLQ = function (_React$Component) {
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            type: props.type,
+            box: props.box,
             styledPullQuote: ''
         };
         return _this;
@@ -71,7 +71,7 @@ var PLQ = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
@@ -87,7 +87,7 @@ var PLQ = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
@@ -131,7 +131,7 @@ var PLQ = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
@@ -147,7 +147,7 @@ var PLQ = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',

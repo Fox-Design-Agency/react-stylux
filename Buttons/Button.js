@@ -42,7 +42,7 @@ var Button = function (_React$Component) {
 
         _this.state = {
             onClick: props.onClick,
-            type: props.type,
+            box: props.box,
             id: props.id,
             className: props.className,
             width: props.width,
@@ -88,12 +88,12 @@ var Button = function (_React$Component) {
         value: function componentDidMount() {
             var props = this.props;
             var state = this.state;
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             var styledButton = void 0,
                 use = '';
             var self = this;
-            if (this.state.type === "flat") {
-                use = (0, _buttonFunctions2.default)("flat", props, state, self);
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            if (this.state.box === "1") {
+                use = (0, _buttonFunctions2.default)("1", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -105,8 +105,8 @@ var Button = function (_React$Component) {
                     },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "raised") {
-                use = (0, _buttonFunctions2.default)("raised", props, state, self);
+            } else if (this.state.box === "2") {
+                use = (0, _buttonFunctions2.default)("2", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -118,8 +118,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "floating") {
-                use = (0, _buttonFunctions2.default)("floating", props, state, self);
+            } else if (this.state.box === "3") {
+                use = (0, _buttonFunctions2.default)("3", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -131,8 +131,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "block") {
-                use = (0, _buttonFunctions2.default)("block", props, state, self);
+            } else if (this.state.box === "4") {
+                use = (0, _buttonFunctions2.default)("4", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -144,8 +144,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "text") {
-                use = (0, _buttonFunctions2.default)("text", props, state, self);
+            } else if (this.state.box === "5") {
+                use = (0, _buttonFunctions2.default)("5", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -173,12 +173,12 @@ var Button = function (_React$Component) {
         value: function componentWillReceiveProps(newProps) {
             var props = newProps;
             var state = this.state;
-            var CHILDS = _react2.default.Children.toArray(newProps.children);
             var styledButton = void 0,
                 use = '';
             var self = this;
-            if (this.state.type === "flat") {
-                use = (0, _buttonFunctions2.default)("flat", props, state, self);
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            if (this.state.box === "1") {
+                use = (0, _buttonFunctions2.default)("1", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -190,8 +190,8 @@ var Button = function (_React$Component) {
                     },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "raised") {
-                use = (0, _buttonFunctions2.default)("raised", props, state, self);
+            } else if (this.state.box === "2") {
+                use = (0, _buttonFunctions2.default)("2", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -203,8 +203,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "floating") {
-                use = (0, _buttonFunctions2.default)("floating", props, state, self);
+            } else if (this.state.box === "3") {
+                use = (0, _buttonFunctions2.default)("3", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -216,8 +216,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "block") {
-                use = (0, _buttonFunctions2.default)("block", props, state, self);
+            } else if (this.state.box === "4") {
+                use = (0, _buttonFunctions2.default)("4", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { style: use.BUTTONSTYLES.buttonStyles,
@@ -228,8 +228,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
-            } else if (this.state.type === "text") {
-                use = (0, _buttonFunctions2.default)("text", props, state, self);
+            } else if (this.state.box === "5") {
+                use = (0, _buttonFunctions2.default)("5", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -254,13 +254,13 @@ var Button = function (_React$Component) {
     }, {
         key: 'renderStuff',
         value: function renderStuff() {
-            var props = this.newProps;
+            var props = this.props;
             var state = this.state;
             var styledButton = void 0,
                 use = '';
             var self = this;
-            if (this.state.type === "flat") {
-                use = (0, _buttonFunctions2.default)("flat", props, state, self, arguments[0], arguments[1]);
+            if (this.state.box === "1") {
+                use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -272,8 +272,8 @@ var Button = function (_React$Component) {
                     },
                     this.state.childs[0]
                 )];
-            } else if (this.state.type === "raised") {
-                use = (0, _buttonFunctions2.default)("raised", props, state, self, arguments[0], arguments[1], arguments[2]);
+            } else if (this.state.box === "2") {
+                use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -285,8 +285,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
-            } else if (this.state.type === "floating") {
-                use = (0, _buttonFunctions2.default)("floating", props, state, self, arguments[0]);
+            } else if (this.state.box === "3") {
+                use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -298,8 +298,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
-            } else if (this.state.type === "block") {
-                use = (0, _buttonFunctions2.default)("block", props, state, self, arguments[0], arguments[1]);
+            } else if (this.state.box === "4") {
+                use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),
@@ -311,8 +311,8 @@ var Button = function (_React$Component) {
                         onMouseLeave: use.changeHoverBack },
                     this.state.childs[0]
                 )];
-            } else if (this.state.type === "text") {
-                use = (0, _buttonFunctions2.default)("text", props, state, self, arguments[0]);
+            } else if (this.state.box === "5") {
+                use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
                 styledButton = [_react2.default.createElement(
                     'button',
                     { key: Math.random(),

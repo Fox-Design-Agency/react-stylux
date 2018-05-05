@@ -21,7 +21,7 @@ function buttonFunction(type, props, state, self) {
         backgroundColor = void 0,
         color = "";
     switch (type) {
-        case type = 'flat':
+        case type = '1':
             backgroundColor = arguments[4] || state.background;
             _color = arguments[5] || state.color;
             cursor = "pointer";
@@ -67,7 +67,7 @@ function buttonFunction(type, props, state, self) {
                     }
                 })
             };
-        case type = 'raised':
+        case type = '2':
             backgroundColor = arguments[4] || state.backgroundColor;
             boxxShadow = arguments[5] || state.boxShadow;
             var transform = arguments[6] || state.transform;
@@ -114,7 +114,7 @@ function buttonFunction(type, props, state, self) {
                 })
 
             };
-        case type = 'floating':
+        case type = '3':
             var boxxShadow = arguments[4] || state.floatBoxShadow;
             cursor = "pointer";
             return {
@@ -155,7 +155,7 @@ function buttonFunction(type, props, state, self) {
                 })
 
             };
-        case type = 'block':
+        case type = '4':
             backgroundColor = arguments[4] || state.blockBackground;
             _color = arguments[5] || state.frev;
             cursor = "pointer";
@@ -197,7 +197,7 @@ function buttonFunction(type, props, state, self) {
                 })
 
             };
-        case type = 'text':
+        case type = '5':
             backgroundColor = arguments[4] || state.backgroundColor;
             cursor = "pointer";
             return {

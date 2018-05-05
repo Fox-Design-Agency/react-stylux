@@ -57,7 +57,7 @@ var Brand = function (_React$Component) {
             childs: [],
             id: props.id,
             className: props.className,
-            type: props.type,
+            box: props.box,
             styledBrand: ''
         };
         return _this;
@@ -72,7 +72,7 @@ var Brand = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 use = (0, _brandFunctions2.default)("1", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -82,7 +82,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -93,7 +93,7 @@ var Brand = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -103,13 +103,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'rectangle',
+                            box: 'rectangle',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 use = (0, _brandFunctions2.default)("3", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -119,13 +119,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 use = (0, _brandFunctions2.default)("4", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -135,13 +135,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 use = (0, _brandFunctions2.default)("5", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -160,7 +160,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -183,7 +183,7 @@ var Brand = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 use = (0, _brandFunctions2.default)("1", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -193,7 +193,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -204,7 +204,7 @@ var Brand = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -214,13 +214,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'rectangle',
+                            box: 'rectangle',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 use = (0, _brandFunctions2.default)("3", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -230,13 +230,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 use = (0, _brandFunctions2.default)("4", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -246,13 +246,13 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
                     )
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 use = (0, _brandFunctions2.default)("5", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
@@ -271,7 +271,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            type: 'square',
+                            box: 'square',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'

@@ -59,7 +59,7 @@ var Hero = function (_React$Component) {
             childs: '',
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            type: props.type,
+            box: props.box,
             styledHero: ''
         };
         return _this;
@@ -74,7 +74,7 @@ var Hero = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            if (this.state.type === "1") {
+            if (this.state.box === "1") {
                 use = (0, _heroFunctions2.default)("1", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -88,7 +88,7 @@ var Hero = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _heroFunctions2.default)("2", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -104,7 +104,7 @@ var Hero = function (_React$Component) {
                         )
                     )
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 use = (0, _heroFunctions2.default)("3", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -115,7 +115,7 @@ var Hero = function (_React$Component) {
                         CHILDS[0]
                     )
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 use = (0, _heroFunctions2.default)("4", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -127,7 +127,7 @@ var Hero = function (_React$Component) {
                         CHILDS[0]
                     )
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 use = (0, _heroFunctions2.default)("5", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -193,7 +193,7 @@ var Hero = function (_React$Component) {
                         CHILDS[1]
                     )
                 )];
-            } else if (this.state.type === "2") {
+            } else if (this.state.box === "2") {
                 use = (0, _heroFunctions2.default)("2", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -209,7 +209,7 @@ var Hero = function (_React$Component) {
                         )
                     )
                 )];
-            } else if (this.state.type === "3") {
+            } else if (this.state.box === "3") {
                 use = (0, _heroFunctions2.default)("3", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -220,7 +220,7 @@ var Hero = function (_React$Component) {
                         CHILDS[0]
                     )
                 )];
-            } else if (this.state.type === "4") {
+            } else if (this.state.box === "4") {
                 use = (0, _heroFunctions2.default)("4", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
@@ -232,7 +232,7 @@ var Hero = function (_React$Component) {
                         CHILDS[0]
                     )
                 )];
-            } else if (this.state.type === "5") {
+            } else if (this.state.box === "5") {
                 use = (0, _heroFunctions2.default)("5", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',

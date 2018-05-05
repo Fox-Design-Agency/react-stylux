@@ -25,7 +25,7 @@ function imageFunction(type, size, props, state) {
         smimgWidth = "";
 
     switch (type) {
-        case type = 'circle':
+        case type = '1':
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -109,7 +109,7 @@ function imageFunction(type, size, props, state) {
                 })
             };
 
-        case type = "rounded":
+        case type = "2":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -193,7 +193,7 @@ function imageFunction(type, size, props, state) {
                 })
             };
 
-        case type = "oval":
+        case type = "3":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -277,7 +277,7 @@ function imageFunction(type, size, props, state) {
                 })
             };
 
-        case type = "square":
+        case type = "4":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -360,7 +360,7 @@ function imageFunction(type, size, props, state) {
                     }
                 })
             };
-        case type = "rectangle":
+        case type = "5":
             if (size === "tn") {
                 imgWidth = "81px";
                 imgHeight = "50px";
@@ -442,7 +442,7 @@ function imageFunction(type, size, props, state) {
                     }
                 })
             };
-        case type = "roundedRectangle":
+        case type = "6":
             if (size === "tn") {
                 imgWidth = "81px";
                 imgHeight = "50px";
@@ -525,7 +525,7 @@ function imageFunction(type, size, props, state) {
                     }
                 })
             };
-        case type = "tallRoundedRectangle":
+        case type = "7":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "81px";
@@ -609,7 +609,7 @@ function imageFunction(type, size, props, state) {
                 })
             };
 
-        case type = "tallRectangle":
+        case type = "8":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "81px";

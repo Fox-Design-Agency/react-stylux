@@ -110,48 +110,6 @@ function listFunction(type, props, state, self) {
                         lineHeight: state.lineHeight,
                         fontWeight: state.fontWeight,
                         paddingLeft: state.paddingLeft,
-                        listStyleType: state.listStyleType,
-                        listStyleImage: state.listStyleImage,
-                        listStylePosition: state.listStylePosition,
-                        width: state.width
-
-                    },
-                    listitemstyle: {
-                        paddingLeft: state.itemPadding,
-                        backgroundImage: state.itemBGImage,
-                        backgroundPosition: state.itemBGPosition,
-                        backgroundSize: state.itemBGSize,
-                        backgroundRepeat: 'no-repeat'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        liststyle: {
-                            display: state.smDis
-                        },
-                        listitemstyle: {
-                            display: state.smDis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        liststyle: {
-                            display: state.mdDis
-                        },
-                        listitemstyle: {
-                            display: state.mdDis
-                        }
-                    }
-                })
-            };
-        case type = '4':
-            cursor = "pointer";
-            return {
-                LISTSTYLE: _nestingstyles2.default.create({
-                    liststyle: {
-                        color: state.color,
-                        fontFamily: state.fontFamily,
-                        fontSize: state.fontSize,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        paddingLeft: state.paddingLeft,
                         listStyleType: state.bulletStyleType,
                         listStyleImage: state.listStyleImage,
                         listStylePosition: state.listStylePosition,
@@ -182,7 +140,7 @@ function listFunction(type, props, state, self) {
                     }
                 })
             };
-        case type = '5':
+        case type = '4':
             cursor = "pointer";
             return {
                 LISTSTYLE: _nestingstyles2.default.create({
