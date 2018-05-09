@@ -57,7 +57,8 @@ var PLQ = function (_React$Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             box: props.box,
-            styledPullQuote: ''
+            styledPullQuote: '',
+            keys: ''
         };
         return _this;
     }
@@ -71,11 +72,12 @@ var PLQ = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
@@ -91,7 +93,7 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote2-text ' + this.state.textClassName },
@@ -107,7 +109,7 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
@@ -120,7 +122,7 @@ var PLQ = function (_React$Component) {
                     )
                 )];
             }
-            this.setState({ childs: CHILDS, styledPullQuote: styledPullQuote });
+            this.setState({ childs: CHILDS, styledPullQuote: styledPullQuote, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -135,7 +137,7 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
@@ -151,7 +153,7 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote2-text ' + this.state.textClassName },
@@ -167,7 +169,7 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: Math.random(), style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
                     _react2.default.createElement(
                         'p',
                         { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },

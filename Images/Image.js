@@ -67,7 +67,8 @@ var Image = function (_React$Component) {
             smheight: props.smheight,
             mdwidth: props.mdwidth,
             mdheight: props.mdheight,
-            borderRadius: props.borderRadius
+            borderRadius: props.borderRadius,
+            keys: ''
         };
         return _this;
     }
@@ -80,10 +81,11 @@ var Image = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             var styledImage = '';
             if (this.state.box === "1") {
                 var use = (0, _imageFunction2.default)("1", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: use.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -97,7 +99,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "2") {
                 var _use = (0, _imageFunction2.default)("2", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -111,7 +113,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "3") {
                 var _use2 = (0, _imageFunction2.default)("3", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use2.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -125,7 +127,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "4") {
                 var _use3 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use3.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -140,7 +142,7 @@ var Image = function (_React$Component) {
             } else if (this.state.box === "5") {
 
                 var _use4 = (0, _imageFunction2.default)("5", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use4.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -156,7 +158,7 @@ var Image = function (_React$Component) {
 
                 var _use5 = (0, _imageFunction2.default)("6", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use5.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -172,7 +174,7 @@ var Image = function (_React$Component) {
 
                 var _use6 = (0, _imageFunction2.default)("7", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use6.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -187,7 +189,7 @@ var Image = function (_React$Component) {
             } else if (this.state.box === "8") {
                 var _use7 = (0, _imageFunction2.default)("8", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use7.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -201,7 +203,7 @@ var Image = function (_React$Component) {
                     } })];
             } else {
                 var _use8 = (0, _imageFunction2.default)("custom", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use8.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -214,7 +216,7 @@ var Image = function (_React$Component) {
                         return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
                     } })];
             }
-            return this.setState({ childs: styledImage });
+            return this.setState({ childs: styledImage, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -227,7 +229,7 @@ var Image = function (_React$Component) {
             var styledImage = '';
             if (this.state.box === "1") {
                 var use = (0, _imageFunction2.default)("1", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: use.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -241,7 +243,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "2") {
                 var _use9 = (0, _imageFunction2.default)("2", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use9.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -255,7 +257,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "3") {
                 var _use10 = (0, _imageFunction2.default)("3", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use10.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -269,7 +271,7 @@ var Image = function (_React$Component) {
                     } })];
             } else if (this.state.box === "4") {
                 var _use11 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use11.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -284,7 +286,7 @@ var Image = function (_React$Component) {
             } else if (this.state.box === "5") {
 
                 var _use12 = (0, _imageFunction2.default)("5", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use12.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -300,7 +302,7 @@ var Image = function (_React$Component) {
 
                 var _use13 = (0, _imageFunction2.default)("6", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use13.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -316,7 +318,7 @@ var Image = function (_React$Component) {
 
                 var _use14 = (0, _imageFunction2.default)("7", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use14.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -331,7 +333,7 @@ var Image = function (_React$Component) {
             } else if (this.state.box === "8") {
                 var _use15 = (0, _imageFunction2.default)("8", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use15.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,
@@ -345,7 +347,7 @@ var Image = function (_React$Component) {
                     } })];
             } else {
                 var _use16 = (0, _imageFunction2.default)("custom", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: Math.random(),
+                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use16.IMAGESTYLES.imageStyles,
                     id: this.state.id,
                     className: this.state.className,

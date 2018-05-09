@@ -60,7 +60,8 @@ var List = function (_React$Component) {
             animationFillMode: props.aniFillMode,
             width: props.width || "100%",
             box: props.box,
-            styledList: ''
+            styledList: '',
+            keys: ''
 
         };
         return _this;
@@ -77,22 +78,27 @@ var List = function (_React$Component) {
             var slides = [];
             var listItems = [];
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-
+            var num = CHILDS.length;
+            var tempkeys = [];
+            for (var i = 0; i <= num; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
+            }
             if (this.state.box === "1") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
                 use = (0, _listFunctions2.default)("1", props, state, self);
                 var LIST = listItems.map(function (x, i) {
+
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     LIST
                 )];
             } else if (this.state.box === "2") {
@@ -112,13 +118,13 @@ var List = function (_React$Component) {
                 var _LIST = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ol',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
                     _LIST
                 )];
             } else if (this.state.box === "3") {
@@ -129,13 +135,13 @@ var List = function (_React$Component) {
                 var _LIST2 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ol',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST2
                 )];
             } else if (this.state.box === "4") {
@@ -146,13 +152,13 @@ var List = function (_React$Component) {
                 var _LIST3 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST3
                 )];
             } else if (this.state.box === "5") {
@@ -163,13 +169,13 @@ var List = function (_React$Component) {
                 var _LIST4 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST4
                 )];
             } else {
@@ -177,21 +183,23 @@ var List = function (_React$Component) {
                 var _LIST5 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST5
                 )];
             }
-            this.setState({ listItem: listItems, styledList: styledList });
+            this.setState({ listItem: listItems, styledList: styledList, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
+            var _this2 = this;
+
             var props = newProps;
             var state = this.state;
             var styledList = void 0,
@@ -199,6 +207,7 @@ var List = function (_React$Component) {
             var self = this;
             var listItems = [];
             var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var num = CHILDS.length;
             listItems = CHILDS.map(function (x) {
                 return x;
             });
@@ -210,13 +219,13 @@ var List = function (_React$Component) {
                 var LIST = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     LIST
                 )];
             } else if (this.state.box === "2") {
@@ -236,13 +245,13 @@ var List = function (_React$Component) {
                 var _LIST6 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ol',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
                     _LIST6
                 )];
             } else if (this.state.box === "3") {
@@ -253,13 +262,13 @@ var List = function (_React$Component) {
                 var _LIST7 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ol',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST7
                 )];
             } else if (this.state.box === "4") {
@@ -270,13 +279,13 @@ var List = function (_React$Component) {
                 var _LIST8 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST8
                 )];
             } else if (this.state.box === "5") {
@@ -287,13 +296,13 @@ var List = function (_React$Component) {
                 var _LIST9 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST9
                 )];
             } else {
@@ -301,13 +310,13 @@ var List = function (_React$Component) {
                 var _LIST10 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
-                        { key: i, style: use.LISTSTYLE.listitemstyle },
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
                         x
                     );
                 });
                 styledList = [_react2.default.createElement(
                     'ul',
-                    { style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST10
                 )];
             }

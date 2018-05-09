@@ -78,7 +78,8 @@ var P = function (_React$Component) {
             hoverColor: props.hovColor,
             wordWrap: props.wordWrap || "break-word",
             paragraphStyle: '',
-            box: props.box
+            box: props.box,
+            keys: ''
         };
         return _this;
     }
@@ -92,11 +93,12 @@ var P = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _paragraphFunctions2.default)("1", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -105,7 +107,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("2", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -114,7 +116,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("3", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -123,7 +125,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("4", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -132,7 +134,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("5", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -142,13 +144,13 @@ var P = function (_React$Component) {
 
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
                 )];
             }
-            this.setState({ childs: CHILDS, paragraphStyle: styledParagraph });
+            this.setState({ childs: CHILDS, paragraphStyle: styledParagraph, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -163,7 +165,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("1", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -172,7 +174,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("2", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -181,7 +183,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("3", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -190,7 +192,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("4", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -199,7 +201,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("5", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS
@@ -208,7 +210,7 @@ var P = function (_React$Component) {
                 use = (0, _paragraphFunctions2.default)("custom", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
                     },
                     CHILDS

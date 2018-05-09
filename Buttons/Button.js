@@ -77,7 +77,8 @@ var Button = function (_React$Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             buttonStyle: '',
-            childs: ''
+            childs: '',
+            keys: ''
         };
         _this.renderStuff = _this.renderStuff.bind(_this);
         return _this;
@@ -92,11 +93,12 @@ var Button = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _buttonFunctions2.default)("1", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id, className: this.state.className,
                         onClick: this.state.onClick,
@@ -109,7 +111,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("2", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -122,7 +124,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("3", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -135,7 +137,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("4", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -148,7 +150,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("5", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -161,12 +163,12 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("custom", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(), style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
+                    { key: tempkey, style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             }
 
-            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use });
+            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -181,7 +183,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("1", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id, className: this.state.className,
                         onClick: this.state.onClick,
@@ -194,7 +196,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("2", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -207,7 +209,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("3", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -220,7 +222,8 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("4", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { style: use.BUTTONSTYLES.buttonStyles,
+                    { key: this.state.keys,
+                        style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
                         onClick: this.state.onClick,
@@ -232,7 +235,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("5", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -245,7 +248,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("custom", props, state, self);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(), style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
+                    { key: this.state.keys, style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
                     CHILDS[0]
                 )];
             }
@@ -263,7 +266,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id, className: this.state.className,
                         onClick: this.state.onClick,
@@ -276,7 +279,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -289,7 +292,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -302,7 +305,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -315,7 +318,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,
@@ -328,7 +331,7 @@ var Button = function (_React$Component) {
                 use = (0, _buttonFunctions2.default)("custom", props, state, self, arguments[0], arguments[1]);
                 styledButton = [_react2.default.createElement(
                     'button',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.BUTTONSTYLES.buttonStyles,
                         id: this.state.id,
                         className: this.state.className,

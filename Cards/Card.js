@@ -49,7 +49,8 @@ var Card = function (_Component) {
             smDis: props.smDis,
             mdDis: props.mdDis,
             box: props.box,
-            styledCard: ''
+            styledCard: '',
+            keys: ''
 
         };
         _this.renderStuff = _this.renderStuff.bind(_this);
@@ -65,11 +66,12 @@ var Card = function (_Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _cardFunctions2.default)("1", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -98,7 +100,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("2", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -132,7 +134,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("3", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -182,7 +184,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("custom", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: tempkey,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -208,7 +210,7 @@ var Card = function (_Component) {
                     )
                 )];
             }
-            this.setState({ childs: CHILDS, styledCard: styledCard });
+            this.setState({ childs: CHILDS, styledCard: styledCard, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -223,7 +225,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("1", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.key,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -252,7 +254,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("2", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.key,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -286,7 +288,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("3", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.key,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -336,7 +338,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("custom", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.key,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -377,7 +379,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -406,7 +408,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -440,7 +442,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,
@@ -490,7 +492,7 @@ var Card = function (_Component) {
                 use = (0, _cardFunctions2.default)("custom", props, state, self, arguments[0]);
                 styledCard = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(),
+                    { key: this.state.keys,
                         style: use.CARDSTYLE.cardstyle,
                         id: this.state.id,
                         className: this.state.className,

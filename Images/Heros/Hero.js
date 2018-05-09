@@ -60,7 +60,8 @@ var Hero = function (_React$Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             box: props.box,
-            styledHero: ''
+            styledHero: '',
+            keys: ''
         };
         return _this;
     }
@@ -74,11 +75,12 @@ var Hero = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _heroFunctions2.default)("1", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {
@@ -92,7 +94,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("2", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
                     _react2.default.createElement(
                         'div',
                         { style: use.HEROSTYLE.bottombackground },
@@ -108,7 +110,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("3", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         null,
@@ -119,7 +121,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("4", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         null,
@@ -131,7 +133,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("5", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {
@@ -157,7 +159,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("custom", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {
@@ -168,7 +170,7 @@ var Hero = function (_React$Component) {
                     )
                 )];
             }
-            this.setState({ childs: CHILDS, styledHero: styledHero });
+            this.setState({ childs: CHILDS, styledHero: styledHero, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -183,7 +185,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("1", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {
@@ -197,7 +199,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("2", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
                     _react2.default.createElement(
                         'div',
                         { style: use.HEROSTYLE.bottombackground, id: this.state.bottomid, className: this.state.bottomClassName },
@@ -213,7 +215,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("3", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         null,
@@ -224,7 +226,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("4", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         null,
@@ -236,7 +238,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("5", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {
@@ -262,7 +264,7 @@ var Hero = function (_React$Component) {
                 use = (0, _heroFunctions2.default)("custom", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
+                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         _Holder2.default,
                         {

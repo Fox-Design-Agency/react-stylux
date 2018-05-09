@@ -58,7 +58,8 @@ var Brand = function (_React$Component) {
             id: props.id,
             className: props.className,
             box: props.box,
-            styledBrand: ''
+            styledBrand: '',
+            keys: ''
         };
         return _this;
     }
@@ -72,11 +73,12 @@ var Brand = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkey = Math.random();
             if (this.state.box === "1") {
                 use = (0, _brandFunctions2.default)("1", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -97,7 +99,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -113,7 +115,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("3", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -129,7 +131,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("4", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -145,7 +147,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("5", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     CHILDS
@@ -154,7 +156,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("custom", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: tempkey, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -172,7 +174,7 @@ var Brand = function (_React$Component) {
                     )
                 )];
             }
-            return this.setState({ childs: CHILDS, styledBrand: styledBrand });
+            return this.setState({ childs: CHILDS, styledBrand: styledBrand, keys: tempkey });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -187,7 +189,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("1", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -208,7 +210,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -224,7 +226,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("3", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -240,7 +242,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("4", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
@@ -256,7 +258,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("5", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     CHILDS
@@ -265,7 +267,7 @@ var Brand = function (_React$Component) {
                 use = (0, _brandFunctions2.default)("custom", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
-                    { key: Math.random(), style: use.BRAND.brand,
+                    { key: this.state.keys, style: use.BRAND.brand,
                         id: this.state.id,
                         className: this.state.className },
                     _react2.default.createElement(
