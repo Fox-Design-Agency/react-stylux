@@ -160,21 +160,9 @@ var _Carousel = require('./Carousels/Carousel');
 
 var _Carousel2 = _interopRequireDefault(_Carousel);
 
-var _Toggler = require('./Togglers/Toggler1');
+var _Toggler = require('./Togglers/Toggler');
 
 var _Toggler2 = _interopRequireDefault(_Toggler);
-
-var _Toggler3 = require('./Togglers/Toggler2');
-
-var _Toggler4 = _interopRequireDefault(_Toggler3);
-
-var _Toggler5 = require('./Togglers/Toggler3');
-
-var _Toggler6 = _interopRequireDefault(_Toggler5);
-
-var _Toggler7 = require('./Togglers/Toggler4');
-
-var _Toggler8 = _interopRequireDefault(_Toggler7);
 
 var _Modal = require('./Togglers/Modals/Modal1');
 
@@ -251,10 +239,7 @@ module.exports = {
     DropDownNav5: _DropDownNav6.default,
     Brand: _Brand2.default,
     Carousel: _Carousel2.default,
-    Toggler1: _Toggler2.default,
-    Toggler2: _Toggler4.default,
-    Toggler3: _Toggler6.default,
-    Toggler4: _Toggler8.default,
+    Toggler: _Toggler2.default,
     Modal1: _Modal2.default,
     Modal2: _Modal4.default,
     Modal3: _Modal6.default,
