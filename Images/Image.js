@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Figure = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -376,83 +375,3 @@ var Image = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Image;
-
-var Figure = exports.Figure = function (_Component) {
-    _inherits(Figure, _Component);
-
-    function Figure(props) {
-        _classCallCheck(this, Figure);
-
-        var _this4 = _possibleConstructorReturn(this, (Figure.__proto__ || Object.getPrototypeOf(Figure)).call(this, props));
-
-        _this4.state = {
-            size: props.size || 'sm',
-            figid: props.figid,
-            figCapid: props.figCapid,
-            figClassName: props.figClassName,
-            figCapClassName: props.figCapClassName,
-            childs: '',
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            margin: props.margin || '5px',
-            padding: props.padding,
-            boxShadow: props.shadow,
-            boxShadowRev: props.shadow,
-            hoverShadow: props.hovShadow
-        };
-        return _this4;
-    }
-
-    _createClass(Figure, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            this.setState({ childs: CHILDS });
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(newProps) {
-            var CHILDS = _react2.default.Children.toArray(newProps.children);
-            return this.setState({ childs: CHILDS });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var CAPTION = _nestingstyles2.default.create({
-                caption: {
-                    padding: '10px',
-                    color: 'gray',
-                    textAlign: 'center'
-                },
-                '@media screen and (max-width: 768px)': {
-                    caption: {
-                        display: this.state.smDis,
-                        fontSize: '6em'
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    caption: {
-                        display: this.state.mdDis,
-                        fontSize: '6em'
-                    }
-                }
-            });
-            return _react2.default.createElement(
-                _react2.default.Fragment,
-                null,
-                _react2.default.createElement(
-                    'figure',
-                    { id: this.state.figid, className: this.state.figClassName },
-                    this.state.childs[0],
-                    _react2.default.createElement(
-                        'figcaption',
-                        { style: CAPTION.caption, id: this.state.figCapid, className: this.state.figCapClassName },
-                        this.state.childs[1]
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Figure;
-}(Component);
