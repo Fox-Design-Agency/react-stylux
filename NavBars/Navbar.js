@@ -105,7 +105,7 @@ var Navbar = function (_React$Component) {
 
                 var smdis = "none";
                 var show = !this.state.hamShow;
-                use = navbarFunction("1", props, state, self, smdis, show);
+                use = (0, _navbarFunctions2.default)("1", props, state, self, smdis, show);
                 if (this.state.box === "1") {
                     styledNavbar = [_react2.default.createElement(
                         'nav',
@@ -157,7 +157,7 @@ var Navbar = function (_React$Component) {
             } else {
                 var _smdis = "none";
                 var _show = !this.state.hamShow;
-                use = navbarFunction("1", props, state, self, _smdis, _show);
+                use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis, _show);
                 styledNavbar = [_react2.default.createElement(
                     'nav',
                     { key: this.state.keys[0],
@@ -282,7 +282,7 @@ var Navbar = function (_React$Component) {
                     });
                     if (this.state.box === "1") {
                         var smdis = "none";
-                        use = navbarFunction("1", props, state, self, smdis);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -307,7 +307,7 @@ var Navbar = function (_React$Component) {
                         )];
                     } else if (this.state.box === "2") {
                         var _smdis2 = "none";
-                        use = navbarFunction("1", props, state, self, _smdis2);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis2);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -341,7 +341,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     if (this.state.box === "1") {
-                        use = navbarFunction("1", props, state, self);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -353,7 +353,7 @@ var Navbar = function (_React$Component) {
                             )
                         )];
                     } else if (this.state.box === "2") {
-                        use = navbarFunction("1", props, state, self);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -456,7 +456,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     var _smdis3 = "none";
-                    use = navbarFunction("1", props, state, self, _smdis3);
+                    use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis3);
                     styledNavbar = [_react2.default.createElement(
                         'nav',
                         { key: tempKeys[0],
@@ -490,7 +490,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     var _smdis4 = "flex";
-                    use = navbarFunction("1", props, state, self, _smdis4);
+                    use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis4);
                     styledNavbar = [_react2.default.createElement(
                         'nav',
                         { key: tempKeys[0],
@@ -611,7 +611,7 @@ var Navbar = function (_React$Component) {
                     });
                     if (this.state.box === "1") {
                         var smdis = "none";
-                        use = navbarFunction("1", props, state, self, smdis);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -636,7 +636,7 @@ var Navbar = function (_React$Component) {
                         )];
                     } else if (this.state.box === "2") {
                         var _smdis5 = "none";
-                        use = navbarFunction("1", props, state, self, _smdis5);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis5);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -670,7 +670,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     if (this.state.box === "1") {
-                        use = navbarFunction("1", props, state, self);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -682,7 +682,7 @@ var Navbar = function (_React$Component) {
                             )
                         )];
                     } else if (this.state.box === "2") {
-                        use = navbarFunction("1", props, state, self);
+                        use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
                             'nav',
                             { key: tempKeys[0],
@@ -785,7 +785,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     var _smdis6 = "none";
-                    use = navbarFunction("1", props, state, self, _smdis6);
+                    use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis6);
                     styledNavbar = [_react2.default.createElement(
                         'nav',
                         { key: tempKeys[0],
@@ -819,7 +819,7 @@ var Navbar = function (_React$Component) {
                         );
                     });
                     var _smdis7 = "flex";
-                    use = navbarFunction("1", props, state, self, _smdis7);
+                    use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis7);
                     styledNavbar = [_react2.default.createElement(
                         'nav',
                         { key: tempKeys[0],
