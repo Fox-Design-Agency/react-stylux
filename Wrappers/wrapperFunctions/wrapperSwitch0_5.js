@@ -758,7 +758,7 @@ function wrapperSwitch0_5(num, props, state) {
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         block5styles: {
-                            display: blocks.block4mddis
+                            display: blocks.block5mddis
                         }
                     }
                 })
