@@ -156,25 +156,9 @@ var _Brand = require('./Brands/Brand');
 
 var _Brand2 = _interopRequireDefault(_Brand);
 
-var _Carousel = require('./Carousels/Carousel1');
+var _Carousel = require('./Carousels/Carousel');
 
 var _Carousel2 = _interopRequireDefault(_Carousel);
-
-var _Carousel3 = require('./Carousels/Carousel2');
-
-var _Carousel4 = _interopRequireDefault(_Carousel3);
-
-var _Carousel5 = require('./Carousels/Carousel3');
-
-var _Carousel6 = _interopRequireDefault(_Carousel5);
-
-var _Carousel7 = require('./Carousels/Carousel4');
-
-var _Carousel8 = _interopRequireDefault(_Carousel7);
-
-var _Carousel9 = require('./Carousels/Carousel5');
-
-var _Carousel10 = _interopRequireDefault(_Carousel9);
 
 var _Toggler = require('./Togglers/Toggler1');
 
@@ -220,13 +204,9 @@ var _List = require('./Lists/List');
 
 var _List2 = _interopRequireDefault(_List);
 
-var _Table = require('./Tables/Table1');
+var _Table = require('./Tables/Table');
 
 var _Table2 = _interopRequireDefault(_Table);
-
-var _Table3 = require('./Tables/Table2');
-
-var _Table4 = _interopRequireDefault(_Table3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -270,11 +250,7 @@ module.exports = {
     DropDownNav3: _DropDownNav4.default,
     DropDownNav5: _DropDownNav6.default,
     Brand: _Brand2.default,
-    Carousel1: _Carousel2.default,
-    Carousel2: _Carousel4.default,
-    Carousel3: _Carousel6.default,
-    Carousel4: _Carousel8.default,
-    Carousel5: _Carousel10.default,
+    Carousel: _Carousel2.default,
     Toggler1: _Toggler2.default,
     Toggler2: _Toggler4.default,
     Toggler3: _Toggler6.default,
@@ -286,6 +262,5 @@ module.exports = {
     Popup2: _Popup4.default,
     Card: _Card2.default,
     List: _List2.default,
-    Table1: _Table2.default,
-    Table2: _Table4.default
+    Table: _Table2.default
 };

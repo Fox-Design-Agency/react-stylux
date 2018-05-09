@@ -18,9 +18,11 @@ var _nestingstyles = require('nestingstyles');
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _tableFunctions = require('./tableFunctions/tableFunctions');
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var _tableFunctions2 = _interopRequireDefault(_tableFunctions);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -28,17 +30,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Table1 = function (_Component) {
-    _inherits(Table1, _Component);
+var Table = function (_Component) {
+    _inherits(Table, _Component);
 
-    function Table1(props) {
-        var _this$state;
+    function Table(props) {
+        _classCallCheck(this, Table);
 
-        _classCallCheck(this, Table1);
+        var _this = _possibleConstructorReturn(this, (Table.__proto__ || Object.getPrototypeOf(Table)).call(this, props));
 
-        var _this = _possibleConstructorReturn(this, (Table1.__proto__ || Object.getPrototypeOf(Table1)).call(this, props));
-
-        _this.state = (_this$state = {
+        _this.state = {
             columns: props.columns || 3,
             rows: props.rows || 3,
             head: props.head,
@@ -69,14 +69,39 @@ var Table1 = function (_Component) {
             dBorderRight: props.dborderRight,
             dBorderBottom: props.dborderBottom,
             dBorderLeft: props.dborderLeft,
-            dBorder: props.dborder || '1px solid black'
-        }, _defineProperty(_this$state, 'headVertical', props.headVertical || 'center'), _defineProperty(_this$state, 'dwidth', props.dwidth), _defineProperty(_this$state, 'dheight', props.dheight), _defineProperty(_this$state, 'dmargin', props.dmargin), _defineProperty(_this$state, 'dpadding', props.dpadding || '5px'), _defineProperty(_this$state, 'tableBorderTop', props.tbordertop), _defineProperty(_this$state, 'tableBorderRight', props.tborderRight), _defineProperty(_this$state, 'tableBorderBottom', props.tborderBottom), _defineProperty(_this$state, 'tableBorderLeft', props.tborderLeft), _defineProperty(_this$state, 'tableBorder', props.tborder || '1px solid black'), _defineProperty(_this$state, 'tableMargin', props.tmargin || '5px'), _defineProperty(_this$state, 'tablePadding', props.tpadding), _defineProperty(_this$state, 'tableWidth', props.tableWidth), _defineProperty(_this$state, 'tableHeight', props.tableHeight), _defineProperty(_this$state, 'tableBorderCollapse', props.borderCollaspe || 'collapse'), _this$state);
+            dBorder: props.dborder || '1px solid black',
+            dVertical: props.dVertical || 'center',
+            dwidth: props.dwidth,
+            dheight: props.dheight,
+            dmargin: props.dmargin,
+            dpadding: props.dpadding || '5px',
+            tableBorderTop: props.tbordertop,
+            tableBorderRight: props.tborderRight,
+            tableBorderBottom: props.tborderBottom,
+            tableBorderLeft: props.tborderLeft,
+            tableBorder: props.tborder || '1px solid black',
+            tableMargin: props.tmargin || '5px',
+            tablePadding: props.tpadding,
+            tableWidth: props.tableWidth,
+            tableHeight: props.tableHeight,
+            tableBorderCollapse: props.borderCollaspe || 'collapse',
+            box: props.box,
+            keys: '',
+            styledTable: ''
+
+        };
         return _this;
     }
 
-    _createClass(Table1, [{
+    _createClass(Table, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
+            var props = this.props;
+            var state = this.state;
+            var styledTable = void 0,
+                use = '';
+            var self = this;
+            var slides = [];
             var tempHead = [];
             var tempBody = [];
             var childs = [];
@@ -137,6 +162,8 @@ var Table1 = function (_Component) {
             });
 
             var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children);
+            var tempKeys = [0.23154];
+
             if (CHILDS !== '') {
                 childs = CHILDS.map(function (x, i, arr) {
                     return x;
@@ -180,12 +207,58 @@ var Table1 = function (_Component) {
                     }
                     rows -= 1;
                 }
-                this.setState({ head: HEADROW, body: BODYROW });
             }
+            if (this.state.box === '1') {
+                use = (0, _tableFunctions2.default)("1", props, state, self);
+                styledTable = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys[0], style: use.TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
+                    _react2.default.createElement(
+                        'table',
+                        { style: use.TABLESTYLE.tablestyle, id: this.state.tableId, className: this.state.tableClassName },
+                        _react2.default.createElement(
+                            'thead',
+                            null,
+                            HEADROW
+                        ),
+                        _react2.default.createElement(
+                            'tbody',
+                            null,
+                            BODYROW
+                        )
+                    )
+                )];
+            } else {
+                use = (0, _tableFunctions2.default)("1", props, state, self);
+                styledTable = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys[0], style: use.TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
+                    _react2.default.createElement(
+                        'table',
+                        { style: use.TABLESTYLE.tablestyle, id: this.state.tableId, className: '' + this.state.tableClassName },
+                        _react2.default.createElement(
+                            'thead',
+                            null,
+                            HEADROW
+                        ),
+                        _react2.default.createElement(
+                            'tbody',
+                            null,
+                            BODYROW
+                        )
+                    )
+                )];
+            }
+            this.setState({ head: HEADROW, body: BODYROW, styledTable: styledTable, keys: tempKeys });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
+            var props = newProps;
+            var state = this.state;
+            var styledTable = void 0,
+                use = '';
+            var self = this;
             var tempHead = [];
             var tempBody = [];
             var childs = [];
@@ -289,76 +362,62 @@ var Table1 = function (_Component) {
                     }
                     rows -= 1;
                 }
-                this.setState({ head: HEADROW, body: BODYROW });
             }
+            if (this.state.box === '1') {
+                use = (0, _tableFunctions2.default)("1", props, state, self);
+                styledTable = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys[0], style: use.TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
+                    _react2.default.createElement(
+                        'table',
+                        { style: use.TABLESTYLE.tablestyle, id: this.state.tableId, className: this.state.tableClassName },
+                        _react2.default.createElement(
+                            'thead',
+                            null,
+                            HEADROW
+                        ),
+                        _react2.default.createElement(
+                            'tbody',
+                            null,
+                            BODYROW
+                        )
+                    )
+                )];
+            } else {
+                use = (0, _tableFunctions2.default)("1", props, state, self);
+                styledTable = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys[0], style: use.TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
+                    _react2.default.createElement(
+                        'table',
+                        { style: use.TABLESTYLE.tablestyle, id: this.state.tableId, className: '' + this.state.tableClassName },
+                        _react2.default.createElement(
+                            'thead',
+                            null,
+                            HEADROW
+                        ),
+                        _react2.default.createElement(
+                            'tbody',
+                            null,
+                            BODYROW
+                        )
+                    )
+                )];
+            }
+            this.setState({ head: HEADROW, body: BODYROW, styledTable: styledTable });
         }
     }, {
         key: 'render',
         value: function render() {
-            var TABLESTYLE = _nestingstyles2.default.create({
-                tablestyle: {
-                    borderTop: this.state.tableBorderTop,
-                    borderRight: this.state.tableBorderRight,
-                    borderBottom: this.state.tableBorderBottom,
-                    borderLeft: this.state.tableBorderLeft,
-                    border: this.state.tableBorder,
-                    margin: this.state.tableMargin,
-                    padding: this.state.tablePadding,
-                    textAlign: 'center',
-                    width: this.state.tableWidth,
-                    height: this.state.tableHeight,
-                    borderCollapse: this.state.tableBorderCollapse,
-                    cursor: 'default'
-                },
-                '@media screen and (max-width: 768px)': {
-                    tablestyle: {
-                        display: this.state.smDis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tablestyle: {
-                        display: this.state.mdDis
-                    }
-                }
-            });
-            var TABLERES = _nestingstyles2.default.create({
-                tableres: {
-                    overflowX: 'auto'
-                },
-                '@media screen and (max-width: 768px)': {
-                    tableres: {
-                        display: this.state.smDis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tableres: {
-                        display: this.state.mdDis
-                    }
-                }
-            });
-
             return _react2.default.createElement(
-                'div',
-                { style: TABLERES.tableres, id: this.state.mainId, className: this.state.mainClassName },
-                _react2.default.createElement(
-                    'table',
-                    { style: TABLESTYLE.tablestyle, id: this.state.tableId, className: '' + this.state.tableClassName },
-                    _react2.default.createElement(
-                        'thead',
-                        null,
-                        this.state.head
-                    ),
-                    _react2.default.createElement(
-                        'tbody',
-                        null,
-                        this.state.body
-                    )
-                )
+                _react2.default.Fragment,
+                null,
+                this.state.styledTable
             );
         }
     }]);
 
-    return Table1;
+    return Table;
 }(_react.Component);
 
-exports.default = Table1;
+exports.default = Table;
