@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.Modal = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -26,13 +27,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Modal1 = function (_Component) {
-    _inherits(Modal1, _Component);
+var Modal = exports.Modal = function (_React$Component) {
+    _inherits(Modal, _React$Component);
 
-    function Modal1(props) {
-        _classCallCheck(this, Modal1);
+    function Modal(props) {
+        _classCallCheck(this, Modal);
 
-        var _this = _possibleConstructorReturn(this, (Modal1.__proto__ || Object.getPrototypeOf(Modal1)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, props));
 
         _this.state = {
             show: false,
@@ -75,105 +76,289 @@ var Modal1 = function (_Component) {
             animationFillMode: props.aniFillMode,
             childs: [],
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            keys: '',
+            styledModal: '',
+            box: props.box
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
 
-    _createClass(Modal1, [{
+    _createClass(Modal, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
+            var props = this.props;
+            var state = this.state;
+            var styledModal = void 0,
+                use = '';
+            var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            this.setState({ childs: CHILDS });
+            var tempKeys = [];
+            for (var i = 0; i <= CHILDS; i++) {
+                tempKeys.push(tempKeys[i] = Math.random());
+            }
+            if (this.state.box === "1") {
+                use = (0, _modalFunctions2.default)("1", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.BOXSTYLES, id: this.state.boxId, className: this.state.boxClassName },
+                        _react2.default.createElement(
+                            'button',
+                            { style: use.BTNSTYLE, id: this.state.btnId, className: this.state.btnClassName, onClick: this.toggle },
+                            'X'
+                        ),
+                        CHILDS
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _modalFunctions2.default)("2", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            CHILDS
+                        )
+                    )
+                )];
+            } else if (this.state.box === "3") {
+                use = (0, _modalFunctions2.default)("3", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALHEADER },
+                                _react2.default.createElement(
+                                    'span',
+                                    { style: use.CLOSEBTN, onClick: this.toggle },
+                                    '\xD7'
+                                ),
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALBODY },
+                                CHILDS[1]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALFOOTER },
+                                CHILDS[2]
+                            )
+                        )
+                    )
+                )];
+            } else {
+                use = (0, _modalFunctions2.default)("2", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            CHILDS
+                        )
+                    )
+                )];
+            }
+
+            this.setState({ childs: CHILDS, styledModal: styledModal, keys: tempKeys });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
+            var props = newProps;
+            var state = this.state;
+            var styledModal = void 0,
+                use = '';
+            var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            return this.setState({ childs: CHILDS });
+
+            return this.setState({ childs: CHILDS, styledModal: styledModal });
         }
     }, {
         key: 'toggle',
         value: function toggle() {
+            var props = this.props;
+            var state = this.state;
+            var styledModal = void 0,
+                use = '';
+            var self = this;
+            var show = !this.state.show;
+            if (this.state.box === "1") {
+                use = (0, _modalFunctions2.default)("1", props, state, self, show);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.BOXSTYLES, id: this.state.boxId, className: this.state.boxClassName },
+                        _react2.default.createElement(
+                            'button',
+                            { style: use.BTNSTYLE, id: this.state.btnId, className: this.state.btnClassName, onClick: this.toggle },
+                            'X'
+                        ),
+                        this.state.childs
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _modalFunctions2.default)("2", props, state, self, show);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            this.state.childs
+                        )
+                    )
+                )];
+            } else if (this.state.box === "3") {
+                use = (0, _modalFunctions2.default)("3", props, state, self, show);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALHEADER },
+                                _react2.default.createElement(
+                                    'span',
+                                    { style: use.CLOSEBTN, onClick: this.toggle },
+                                    '\xD7'
+                                ),
+                                this.state.childs[0]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALBODY },
+                                this.state.childs[1]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALFOOTER },
+                                this.state.childs[2]
+                            )
+                        )
+                    )
+                )];
+            } else {
+                use = (0, _modalFunctions2.default)("2", props, state, self, show);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        this.state.buttonText
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            this.state.childs
+                        )
+                    )
+                )];
+            }
             this.setState({
-                show: !this.state.show
+                show: !this.state.show,
+                styledModal: styledModal
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            var BOXSTYLES = {
-                width: this.state.boxWidth,
-                height: this.state.boxHeight,
-                background: this.state.boxBackground,
-                position: this.state.boxPosition,
-                top: this.state.boxTop,
-                left: this.state.boxLeft,
-                right: this.state.boxRight,
-                bottom: this.state.boxBottom,
-                display: this.state.show ? 'flex' : 'none',
-                alignItems: this.state.boxAlign,
-                justifyContent: this.state.boxJustify,
-                boxShadow: this.state.boxShadow,
-                zIndex: '2000',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration,
-                transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
-            };
-            var CLICKBOX = {
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                color: this.state.bColor,
-                background: this.state.bBackground,
-                fontSize: this.state.bFontSize,
-                fontVariant: this.state.bFontVariant,
-                fontWeight: this.state.bFontWeight,
-                textShadow: this.state.bTextShadow,
-                margin: this.state.bMargin,
-                padding: this.state.bPadding,
-                borderLeft: this.state.bBorderLeft,
-                borderRight: this.state.bBorderRight,
-                borderTop: this.state.bBorderTop,
-                borderBottom: this.state.bBorderBottom,
-                border: this.state.bBorder
-            };
-            var BTNSTYLE = {
-                borderRadius: '100%',
-                cursor: 'pointer',
-                position: 'absolute',
-                left: this.state.boxWidth,
-                bottom: this.state.boxHeight,
-                background: this.state.btnBackground
-            };
             return _react2.default.createElement(
-                'div',
+                _react2.default.Fragment,
                 null,
-                _react2.default.createElement(
-                    'div',
-                    { style: CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                    this.state.buttonText
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { style: BOXSTYLES, id: this.state.boxId, className: this.state.boxClassName },
-                    _react2.default.createElement(
-                        'button',
-                        { style: BTNSTYLE, id: this.state.btnId, className: this.state.btnClassName, onClick: this.toggle },
-                        'X'
-                    ),
-                    this.state.childs
-                )
+                this.state.styledModal
             );
         }
     }]);
 
-    return Modal1;
-}(_react.Component);
-
-exports.default = Modal1;
+    return Modal;
+}(_react2.default.Component);
