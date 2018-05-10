@@ -102,6 +102,6 @@ var A = function (_Component) {
     }]);
 
     return A;
-}(_react.Component);
+}(Component);
 
 exports.default = A;

@@ -16180,6 +16180,6 @@ var Holder = function (_Component) {
     }]);
 
     return Holder;
-}(_react.Component);
+}(Component);
 
 exports.default = Holder;

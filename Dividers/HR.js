@@ -75,6 +75,6 @@ var HR = function (_Component) {
     }]);
 
     return HR;
-}(_react.Component);
+}(Component);
 
 exports.default = HR;

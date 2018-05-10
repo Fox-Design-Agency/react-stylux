@@ -1044,6 +1044,6 @@ var Carousel = function (_Component) {
     }]);
 
     return Carousel;
-}(_react.Component);
+}(Component);
 
 exports.default = Carousel;

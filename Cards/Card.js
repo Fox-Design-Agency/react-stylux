@@ -532,6 +532,6 @@ var Card = function (_Component) {
     }]);
 
     return Card;
-}(_react.Component);
+}(Component);
 
 exports.default = Card;
