@@ -16,8 +16,18 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function brandFunction(type, props, state, self) {
-    var cursor = void 0,
-        BRAND = "";
+    var cursor = "";
+
+    var display = props.display || 'flex';
+    var direction = props.direction || 'row';
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
 
     switch (type) {
         case type = '1':
@@ -25,42 +35,42 @@ function brandFunction(type, props, state, self) {
             return {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
-                        display: state.display,
-                        flexDirection: state.direction,
+                        display: display,
+                        flexDirection: direction,
                         //width: '15%',
                         alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
                     },
                     brand_name: {
                         display: 'flex',
                         fontWeight: '900',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
 
                     },
                     '@media screen and (max-width: 768px)': {
                         brand: {
-                            display: state.smDis
+                            display: smdis
                         },
                         brand_name: {
-                            display: state.smDis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         brand: {
-                            display: state.mdDis
+                            display: mddis
                         },
                         brand_name: {
-                            display: state.mdDis
+                            display: mddis
                         }
                     }
                 })
@@ -72,21 +82,21 @@ function brandFunction(type, props, state, self) {
                     brand: {
                         display: 'flex',
                         alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
                     },
                     '@media screen and (max-width: 768px)': {
                         brand: {
-                            display: state.smDis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         brand: {
-                            display: state.mdDis
+                            display: mddis
                         }
                     }
                 })
@@ -98,21 +108,21 @@ function brandFunction(type, props, state, self) {
                     brand: {
                         display: 'flex',
                         alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
                     },
                     '@media screen and (max-width: 768px)': {
                         brand: {
-                            display: state.smDis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         brand: {
-                            display: state.mdDis
+                            display: mddis
                         }
                     }
                 })
@@ -124,21 +134,21 @@ function brandFunction(type, props, state, self) {
                     brand: {
                         display: 'flex',
                         alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
                     },
                     '@media screen and (max-width: 768px)': {
                         brand: {
-                            display: state.smDis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         brand: {
-                            display: state.mdDis
+                            display: mddis
                         }
                     }
                 })
@@ -150,66 +160,21 @@ function brandFunction(type, props, state, self) {
                     brand: {
                         display: 'flex',
                         alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode
                     },
                     '@media screen and (max-width: 768px)': {
                         brand: {
-                            display: state.smDis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         brand: {
-                            display: state.mdDis
-                        }
-                    }
-                })
-            };
-        case type = 'custom':
-            cursor = "pointer";
-            return {
-                BRAND: _nestingstyles2.default.create({
-                    brand: {
-                        display: state.display,
-                        flexDirection: state.direction,
-                        //width: '15%',
-                        alignItems: 'center',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
-                    },
-                    brand_name: {
-                        display: 'flex',
-                        fontWeight: '900',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode
-
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        brand: {
-                            display: state.smDis
-                        },
-                        brand_name: {
-                            display: state.smDis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        brand: {
-                            display: state.mdDis
-                        },
-                        brand_name: {
-                            display: state.mdDis
+                            display: mddis
                         }
                     }
                 })

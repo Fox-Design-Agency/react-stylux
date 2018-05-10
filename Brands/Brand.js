@@ -43,17 +43,7 @@ var Brand = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Brand.__proto__ || Object.getPrototypeOf(Brand)).call(this, props));
 
         _this.state = {
-            display: props.display || 'flex',
-            direction: props.direction || 'row',
             size: props.size || 'tn',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             childs: [],
             id: props.id,
             className: props.className,
@@ -84,7 +74,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -121,7 +111,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -137,7 +127,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -153,7 +143,7 @@ var Brand = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = (0, _brandFunctions2.default)("custom", props, state, self);
+                use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
                     { key: tempkey, style: use.BRAND.brand,
@@ -162,7 +152,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -195,7 +185,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -232,7 +222,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -248,7 +238,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -264,7 +254,7 @@ var Brand = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = (0, _brandFunctions2.default)("custom", props, state, self);
+                use = (0, _brandFunctions2.default)("2", props, state, self);
                 styledBrand = [_react2.default.createElement(
                     'div',
                     { key: this.state.keys, style: use.BRAND.brand,
@@ -273,7 +263,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: '2',
+                            box: '4',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
