@@ -16,354 +16,337 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function paragraphFunction(type, props, state, self) {
-    var paragraphStyles = void 0,
-        cursor = void 0,
-        size = "";
+    var size = "";
+
+    var color = props.color;
+    var colorRev = props.color;
+    var textShadow = props.shadow;
+    var fontFamily = props.font;
+    var fontSize = props.size;
+    var smFontSize = props.smSize || '1.3em';
+    var mdFontSize = props.mdSize || '1.3em';
+    var lineHeight = props.lineHeight || '1.5em';
+    var fontWeight = props.weight || '400';
+    var fontVariant = props.variant;
+    var display = props.display || 'flex';
+    var align = props.align || 'center';
+    var textAlign = props.textAlign || 'center';
+    var padding = props.padding || '5px';
+    var margin = props.margin || '1px';
+    var width = props.width;
+    var height = props.height;
+    var maxWidth = props.maxW;
+    var maxHeight = props.maxH;
+    var border = props.border;
+    var bLeft = props.bLeft;
+    var bRight = props.bRight;
+    var bTop = props.bTop;
+    var bBottom = props.bBottom;
+    var id = props.id;
+    var className = props.className;
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transform = props.transform;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+    var hoverColor = props.hovColor;
+    var wordWrap = props.wordWrap || "break-word";
+
     switch (type) {
         case type = "1":
-            size = state.fontSize || '1.333em';
-            cursor = "pointer";
+            size = fontSize || '1.333em';
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
                         flex: 1,
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
+                        width: width,
+                        height: height,
+                        maxWidth: maxWidth,
+                        maxHeight: maxHeight,
+                        color: color,
+                        textShadow: textShadow,
+                        borderLeft: bLeft,
+                        borderRight: bRight,
+                        borderTop: bTop,
+                        borderBottom: bBottom,
+                        border: border,
+                        fontFamily: fontFamily,
                         fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
+                        lineHeight: lineHeight,
+                        fontWeight: fontWeight,
+                        fontVariant: fontVariant,
+                        display: display,
+                        alignItems: align,
+                        justifyContent: align,
+                        textAlign: textAlign,
+                        padding: padding,
+                        margin: margin,
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
                         flexWrap: "wrap",
-                        wordWrap: state.wordWrap
+                        wordWrap: wordWrap
                     },
                     hoverStyle: {
-                        color: state.hoverColor
+                        color: hoverColor
                     },
                     '@media screen and (max-width: 768px)': {
                         paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
+                            display: smdis,
+                            color: color,
+                            fontSize: smFontSize
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
+                            display: mddis,
+                            color: color,
+                            fontSize: mdFontSize
                         }
                     }
                 })
             };
         case type = '2':
             size = state.fontSize || '0.95em';
-            cursor = "pointer";
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
+                        width: width,
+                        height: height,
+                        maxWidth: maxWidth,
+                        maxHeight: maxHeight,
+                        color: color,
+                        textShadow: textShadow,
+                        borderLeft: bLeft,
+                        borderRight: bRight,
+                        borderTop: bTop,
+                        borderBottom: bBottom,
+                        border: border,
+                        fontFamily: fontFamily,
                         fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
+                        lineHeight: lineHeight,
+                        fontWeight: fontWeight,
+                        fontVariant: fontVariant,
+                        display: display,
+                        alignItems: align,
+                        justifyContent: align,
+                        textAlign: textAlign,
+                        padding: padding,
+                        margin: margin,
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
                         flex: 1,
                         flexWrap: "wrap",
-                        wordWrap: state.wordWrap
+                        wordWrap: wordWrap
                     },
                     hoverStyle: {
                         color: state.hoverColor
                     },
                     '@media screen and (max-width: 768px)': {
                         paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
+                            display: smdis,
+                            color: color,
+                            fontSize: smFontSize
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
+                            display: mddis,
+                            color: color,
+                            fontSize: mdFontSize
                         }
                     }
                 })
             };
         case type = "3":
-            size = state.fontSize || '1.6em';
-            cursor = "pointer";
+            size = fontSize || '1.6em';
+            smFontSize = props.smSize || '1.5em';
+            mdFontSize = props.mdSize || '1.6em';
+            lineHeight = props.lineHeight || '1.8em';
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
+                        width: width,
+                        height: height,
+                        maxWidth: maxWidth,
+                        maxHeight: maxHeight,
+                        color: color,
+                        textShadow: textShadow,
+                        borderLeft: bLeft,
+                        borderRight: bRight,
+                        borderTop: bTop,
+                        borderBottom: bBottom,
+                        border: border,
+                        fontFamily: fontFamily,
                         fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
+                        lineHeight: lineHeight,
+                        fontWeight: fontWeight,
+                        fontVariant: fontVariant,
+                        display: display,
+                        alignItems: align,
+                        justifyContent: align,
+                        textAlign: textAlign,
+                        padding: padding,
+                        margin: margin,
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
                         flex: 1,
                         flexWrap: "wrap",
-                        wordWrap: state.wordWrap
+                        wordWrap: wordWrap
                     },
                     hoverStyle: {
-                        color: state.hoverColor
+                        color: hoverColor
                     },
                     '@media screen and (max-width: 768px)': {
                         paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
+                            display: smdis,
+                            color: color,
+                            fontSize: smFontSize
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
+                            display: mddis,
+                            color: color,
+                            fontSize: mdFontSize
                         }
                     }
                 })
             };
         case type = '4':
-            size = state.fontSize || '1.6em';
-            cursor = "pointer";
+            size = props.size || '1.6em';
+            smFontSize = props.smSize || '1.5em';
+            mdFontSize = props.mdSize || '1.6em';
+            lineHeight = props.lineHeight || '1.8em';
+            color = props.color || 'lightgray';
+            colorRev = props.color || 'lightgray';
+            hoverColor = props.hovColor || 'lightgray';
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
+                        width: width,
+                        height: height,
+                        maxWidth: maxWidth,
+                        maxHeight: maxHeight,
+                        color: color,
+                        textShadow: textShadow,
+                        borderLeft: bLeft,
+                        borderRight: bRight,
+                        borderTop: bTop,
+                        borderBottom: bBottom,
+                        border: border,
+                        fontFamily: fontFamily,
                         fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
+                        lineHeight: lineHeight,
+                        fontWeight: fontWeight,
+                        fontVariant: fontVariant,
+                        display: display,
+                        alignItems: align,
+                        justifyContent: align,
+                        textAlign: textAlign,
+                        padding: padding,
+                        margin: margin,
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
                         flex: 1,
                         flexWrap: "wrap",
-                        wordWrap: state.wordWrap
+                        wordWrap: wordWrap
                     },
                     hoverStyle: {
-                        color: state.hoverColor
+                        color: hoverColor
                     },
                     '@media screen and (max-width: 768px)': {
                         paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
+                            display: smdis,
+                            color: color,
+                            fontSize: smFontSize
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
+                            display: mddis,
+                            color: color,
+                            fontSize: mdFontSize
                         }
                     }
                 })
             };
         case type = '5':
-            size = '1.333em' || state.fontSize;
-            cursor = "pointer";
+            size = '1.333em' || fontSize;
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
+                        width: width,
+                        height: height,
+                        maxWidth: maxWidth,
+                        maxHeight: maxHeight,
+                        color: color,
+                        textShadow: textShadow,
+                        borderLeft: bLeft,
+                        borderRight: bRight,
+                        borderTop: bTop,
+                        borderBottom: bBottom,
+                        border: border,
+                        fontFamily: fontFamily,
                         fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
+                        lineHeight: lineHeight,
+                        fontWeight: fontWeight,
+                        fontVariant: fontVariant,
+                        display: display,
+                        alignItems: align,
+                        justifyContent: align,
+                        textAlign: textAlign,
+                        padding: padding,
+                        margin: margin,
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
                         flex: 1,
                         flexWrap: "wrap",
-                        wordWrap: state.wordWrap
+                        wordWrap: wordWrap
                     },
                     hoverStyle: {
-                        color: state.hoverColor
+                        color: hoverColor
                     },
                     '@media screen and (max-width: 768px)': {
                         paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
+                            display: smdis,
+                            color: color,
+                            fontSize: smFontSize
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
-                        }
-                    }
-                })
-            };
-        case type = 'custom':
-            size = '1.0em' || state.fontSize;
-            cursor = "pointer";
-            return {
-                PARAGRAPHSTYLES: _nestingstyles2.default.create({
-                    paragraph: {
-                        width: state.width,
-                        height: state.height,
-                        maxWidth: state.maxWidth,
-                        maxHeight: state.maxHeight,
-                        color: state.color,
-                        textShadow: state.textShadow,
-                        borderLeft: state.bLeft,
-                        borderRight: state.bRight,
-                        borderTop: state.bTop,
-                        borderBottom: state.bBottom,
-                        border: state.border,
-                        fontFamily: state.fontFamily,
-                        fontSize: size,
-                        lineHeight: state.lineHeight,
-                        fontWeight: state.fontWeight,
-                        fontVariant: state.fontVariant,
-                        display: state.display,
-                        alignItems: state.align,
-                        justifyContent: state.align,
-                        textAlign: state.textAlign,
-                        padding: state.padding,
-                        margin: state.margin,
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        flex: 1,
-                        flexWrap: "wrap",
-                        wordWrap: state.wordWrap
-                    },
-                    hoverStyle: {
-                        color: state.hoverColor
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        paragraph: {
-                            display: state.smDis,
-                            color: state.color,
-                            fontSize: state.smFontSize
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        paragraph: {
-                            display: state.mdDis,
-                            color: state.color,
-                            fontSize: state.mdFontSize
+                            display: mddis,
+                            color: color,
+                            fontSize: mdFontSize
                         }
                     }
                 })

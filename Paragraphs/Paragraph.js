@@ -39,44 +39,7 @@ var P = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (P.__proto__ || Object.getPrototypeOf(P)).call(this, props));
 
         _this.state = {
-            color: props.color,
-            colorRev: props.color,
-            textShadow: props.shadow,
-            fontFamily: props.font,
-            fontSize: props.size,
-            smFontSize: props.smSize || '1.3em',
-            mdFontSize: props.mdSize || '1.3em',
-            lineHeight: props.lineHeight || '1.5em',
-            fontWeight: props.weight || '400',
-            fontVariant: props.variant,
-            display: props.display || 'flex',
-            align: props.align || 'center',
-            textAlign: props.textAlign || 'center',
-            padding: props.padding || '5px',
-            margin: props.margin || '1px',
-            width: props.width,
-            height: props.height,
-            maxWidth: props.maxW,
-            maxHeight: props.maxH,
-            border: props.border,
-            bLeft: props.bLeft,
-            bRight: props.bRight,
-            bTop: props.bTop,
-            bBottom: props.bBottom,
-            id: props.id,
-            className: props.className,
             childs: '',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transform: props.transform,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            hoverColor: props.hovColor,
-            wordWrap: props.wordWrap || "break-word",
             paragraphStyle: '',
             box: props.box,
             keys: ''
@@ -140,7 +103,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = (0, _paragraphFunctions2.default)("custom", props, state, self);
+                use = (0, _paragraphFunctions2.default)("1", props, state, self);
 
                 styledParagraph = [_react2.default.createElement(
                     'p',
@@ -207,7 +170,7 @@ var P = function (_React$Component) {
                     CHILDS
                 )];
             } else {
-                use = (0, _paragraphFunctions2.default)("custom", props, state, self);
+                use = (0, _paragraphFunctions2.default)("1", props, state, self);
                 styledParagraph = [_react2.default.createElement(
                     'p',
                     { key: this.state.keys,
