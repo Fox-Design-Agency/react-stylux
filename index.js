@@ -52,13 +52,13 @@ var _Navbar = require('./NavBars/Navbar');
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _SubNavBar = require('./NavBars/SubNavBar');
+var _Subnavbar = require('./NavBars/Subnavbar');
 
-var _SubNavBar2 = _interopRequireDefault(_SubNavBar);
+var _Subnavbar2 = _interopRequireDefault(_Subnavbar);
 
-var _DropDownnav = require('./NavBars/DropDownnav');
+var _Dropdownnav = require('./NavBars/Dropdownnav');
 
-var _DropDownnav2 = _interopRequireDefault(_DropDownnav);
+var _Dropdownnav2 = _interopRequireDefault(_Dropdownnav);
 
 var _Brand = require('./Brands/Brand');
 
@@ -108,8 +108,8 @@ module.exports = {
     Figure: _Figure2.default,
     Hero: _Hero2.default,
     Navbar: _Navbar2.default,
-    SubNavbar: _SubNavBar2.default,
-    DropDownNav: _DropDownnav2.default,
+    SubNavbar: _Subnavbar2.default,
+    DropDownNav: _Dropdownnav2.default,
     Brand: _Brand2.default,
     Carousel: _Carousel2.default,
     Toggler: _Toggler2.default,
