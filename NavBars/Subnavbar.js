@@ -16,8 +16,6 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 require('../css/reset.css');
 
-require('../css/animations.css');
-
 var _subnavbarFunctions = require('./navbarFunctions/subnavbarFunctions');
 
 var _subnavbarFunctions2 = _interopRequireDefault(_subnavbarFunctions);

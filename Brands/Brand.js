@@ -84,7 +84,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -105,7 +105,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'rectangle',
+                            box: '5',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -121,7 +121,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -137,7 +137,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -162,7 +162,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -195,7 +195,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -216,7 +216,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'rectangle',
+                            box: '5',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -232,7 +232,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -248,7 +248,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
@@ -273,7 +273,7 @@ var Brand = function (_React$Component) {
                     _react2.default.createElement(
                         _Image2.default,
                         {
-                            box: 'square',
+                            box: '2',
                             size: this.state.size },
                         CHILDS[0],
                         'logo'
