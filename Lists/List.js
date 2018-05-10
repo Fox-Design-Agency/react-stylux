@@ -37,32 +37,11 @@ var List = function (_React$Component) {
         _this.state = {
             listAmount: props.listAmount || '1',
             listItem: [],
-            color: props.color || 'black',
-            fontFamily: props.font || 'serif',
-            fontSize: props.size || '1.333em',
-            lineHeight: props.lineHeight || '1.5em',
-            fontWeight: props.weight || '400',
-            paddingLeft: props.paddingLeft,
-            listStyleType: props.listStyleType || 'decimal',
-            bulletStyleType: props.listStyleType || 'disc',
-            squareStyleType: props.listStyleType || 'square',
-            listStyleImage: props.listStyleImage || 'none',
-            listStylePosition: props.listStylePosition || 'inside',
             id: props.id,
             className: props.className,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            width: props.width || "100%",
             box: props.box,
             styledList: '',
             keys: ''
-
         };
         return _this;
     }
@@ -89,7 +68,6 @@ var List = function (_React$Component) {
                 });
                 use = (0, _listFunctions2.default)("1", props, state, self);
                 var LIST = listItems.map(function (x, i) {
-
                     return _react2.default.createElement(
                         'li',
                         { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
@@ -161,11 +139,11 @@ var List = function (_React$Component) {
                     { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST3
                 )];
-            } else if (this.state.box === "5") {
+            } else {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
-                use = (0, _listFunctions2.default)("5", props, state, self);
+                use = (0, _listFunctions2.default)("3", props, state, self);
                 var _LIST4 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
@@ -174,23 +152,9 @@ var List = function (_React$Component) {
                     );
                 });
                 styledList = [_react2.default.createElement(
-                    'ul',
+                    'ol',
                     { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST4
-                )];
-            } else {
-                use = (0, _listFunctions2.default)("custom", props, state, self);
-                var _LIST5 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST5
                 )];
             }
             this.setState({ listItem: listItems, styledList: styledList, keys: tempkeys });
@@ -242,7 +206,7 @@ var List = function (_React$Component) {
                     tempItems.splice(0, this.state.listAmount);
                 }
                 use = (0, _listFunctions2.default)("2", props, state, self);
-                var _LIST6 = listItems.map(function (x, i) {
+                var _LIST5 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
                         { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
@@ -252,14 +216,14 @@ var List = function (_React$Component) {
                 styledList = [_react2.default.createElement(
                     'ol',
                     { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
-                    _LIST6
+                    _LIST5
                 )];
             } else if (this.state.box === "3") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
                 use = (0, _listFunctions2.default)("3", props, state, self);
-                var _LIST7 = listItems.map(function (x, i) {
+                var _LIST6 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
                         { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
@@ -269,13 +233,30 @@ var List = function (_React$Component) {
                 styledList = [_react2.default.createElement(
                     'ol',
                     { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST7
+                    _LIST6
                 )];
             } else if (this.state.box === "4") {
                 listItems = CHILDS.map(function (x) {
                     return x;
                 });
                 use = (0, _listFunctions2.default)("4", props, state, self);
+                var _LIST7 = listItems.map(function (x, i) {
+                    return _react2.default.createElement(
+                        'li',
+                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
+                        x
+                    );
+                });
+                styledList = [_react2.default.createElement(
+                    'ul',
+                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
+                    _LIST7
+                )];
+            } else {
+                listItems = CHILDS.map(function (x) {
+                    return x;
+                });
+                use = (0, _listFunctions2.default)("3", props, state, self);
                 var _LIST8 = listItems.map(function (x, i) {
                     return _react2.default.createElement(
                         'li',
@@ -284,40 +265,9 @@ var List = function (_React$Component) {
                     );
                 });
                 styledList = [_react2.default.createElement(
-                    'ul',
+                    'ol',
                     { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
                     _LIST8
-                )];
-            } else if (this.state.box === "5") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("5", props, state, self);
-                var _LIST9 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST9
-                )];
-            } else {
-                use = (0, _listFunctions2.default)("custom", props, state, self);
-                var _LIST10 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST10
                 )];
             }
 
