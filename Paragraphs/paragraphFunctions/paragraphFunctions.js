@@ -42,8 +42,6 @@ function paragraphFunction(type, props, state, self) {
     var bRight = props.bRight;
     var bTop = props.bTop;
     var bBottom = props.bBottom;
-    var id = props.id;
-    var className = props.className;
     var animationIterationCount = props.aniCount;
     var animationTimingFunction = props.aniTime;
     var animationName = props.aniName;

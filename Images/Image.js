@@ -41,6 +41,8 @@ var Image = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, props));
 
         _this.state = {
+            id: props.id,
+            className: props.className,
             size: props.size || "sm",
             box: props.box,
             childs: '',

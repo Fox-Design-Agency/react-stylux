@@ -39,6 +39,8 @@ var P = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (P.__proto__ || Object.getPrototypeOf(P)).call(this, props));
 
         _this.state = {
+            id: props.id,
+            className: props.className,
             childs: '',
             paragraphStyle: '',
             box: props.box,

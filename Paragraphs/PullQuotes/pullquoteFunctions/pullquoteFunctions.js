@@ -16,9 +16,16 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function pullQuoteFunction(type, props, state, self) {
-    var cursor = void 0,
-        PULLQUOTESTYLES = "";
-
+    var cursor = "";
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transform = props.transform;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
     switch (type) {
         case type = '1':
             cursor = "pointer";
@@ -39,18 +46,18 @@ function pullQuoteFunction(type, props, state, self) {
                     },
                     '@media (max-width: 768px)': {
                         pullquotestyles: {
-                            display: state.smdis
+                            display: smdis
                         },
                         cite: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         pullquotestyles: {
-                            display: state.mddis
+                            display: mddis
                         },
                         cite: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -77,24 +84,24 @@ function pullQuoteFunction(type, props, state, self) {
                     },
                     '@media (max-width: 768px)': {
                         pullquotestyles: {
-                            display: state.smdis
+                            display: smdis
                         },
                         text: {
-                            display: state.smdis
+                            display: smdis
                         },
                         cite: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         pullquotestyles: {
-                            display: state.mddis
+                            display: mddis
                         },
                         text: {
-                            display: state.mddis
+                            display: mddis
                         },
                         cite: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -118,18 +125,18 @@ function pullQuoteFunction(type, props, state, self) {
                     },
                     '@media (max-width: 768px)': {
                         pullquotestyles: {
-                            display: state.smdis
+                            display: smdis
                         },
                         cite: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         pullquotestyles: {
-                            display: state.mddis
+                            display: mddis
                         },
                         cite: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })

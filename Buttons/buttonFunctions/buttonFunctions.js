@@ -19,8 +19,6 @@ function buttonFunction(type, props, state, self) {
     var buttonStyles = void 0,
         cursor = "";
 
-    var id = props.id;
-    var className = props.className;
     var width = props.width;
     var height = props.height;
     var fontSize = props.fontSize || '20px';

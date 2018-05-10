@@ -22,9 +22,6 @@ function imageFunction(type, size, props, state) {
         mdimgWidth = void 0,
         imgHeight = void 0,
         imgWidth = "";
-    var id = props.id;
-    var className = props.className;
-    var childs = '';
     var animationIterationCount = props.aniCount;
     var animationTimingFunction = props.aniTime;
     var animationName = props.aniName;

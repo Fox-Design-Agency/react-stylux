@@ -41,6 +41,8 @@ var Button = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
 
         _this.state = {
+            id: props.id,
+            className: props.className,
             onClick: props.onClick,
             box: props.box,
             buttonStyle: '',

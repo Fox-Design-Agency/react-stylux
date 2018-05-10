@@ -40,22 +40,9 @@ var PLQ = function (_React$Component) {
 
         _this.state = {
 
-            blockid: props.blockid,
-            textid: props.textid,
-            citeid: props.citeid,
-            blockClassName: props.blockClassName,
-            textClassName: props.textClassName,
-            citeClassName: props.citeClassName,
+            id: props.id,
+            className: props.className,
             childs: '',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transform: props.transform,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             box: props.box,
             styledPullQuote: '',
             keys: ''
@@ -77,15 +64,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
@@ -93,15 +80,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote2-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote2-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
@@ -109,15 +96,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
@@ -137,15 +124,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
@@ -153,15 +140,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote2-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote2-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
@@ -169,15 +156,15 @@ var PLQ = function (_React$Component) {
                 use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
                 styledPullQuote = [_react2.default.createElement(
                     'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.blockid, className: 'pullQuote1 ' + this.state.blockClassName },
+                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
                     _react2.default.createElement(
                         'p',
-                        { style: use.PULLQUOTESTYLES.text, id: this.state.textid, className: 'pullQuote1-text ' + this.state.textClassName },
+                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
                         CHILDS[0]
                     ),
                     _react2.default.createElement(
                         'cite',
-                        { style: use.PULLQUOTESTYLES.cite, id: this.state.citeid, className: this.state.citeClassName },
+                        { style: use.PULLQUOTESTYLES.cite },
                         CHILDS[1]
                     )
                 )];
