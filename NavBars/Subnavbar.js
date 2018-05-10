@@ -123,7 +123,7 @@ var Subnavbar = function (_React$Component) {
                         x
                     );
                 });
-                use = subnavbarFuntion("1", props, state, self);
+                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
                     'nav',
                     { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
@@ -163,7 +163,7 @@ var Subnavbar = function (_React$Component) {
                         x
                     );
                 });
-                use = subnavbarFuntion("1", props, state, self);
+                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
                     'nav',
                     { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
@@ -219,7 +219,7 @@ var Subnavbar = function (_React$Component) {
                         x
                     );
                 });
-                use = subnavbarFuntion("1", props, state, self);
+                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
                     'nav',
                     { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
@@ -259,7 +259,7 @@ var Subnavbar = function (_React$Component) {
                         x
                     );
                 });
-                use = subnavbarFuntion("1", props, state, self);
+                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
                     'nav',
                     { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
