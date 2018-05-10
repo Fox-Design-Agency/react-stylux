@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 require('../css/reset.css');
 
 require('../css/animations.css');
@@ -92,7 +96,7 @@ var Subnavbar = function (_React$Component) {
                 tempKeys.push(tempKeys[i] = Math.random());
             }
             if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+                var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: 1,
@@ -132,7 +136,7 @@ var Subnavbar = function (_React$Component) {
                     )
                 )];
             } else {
-                var _SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+                var _SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: 1,
@@ -188,7 +192,7 @@ var Subnavbar = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+                var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: 1,
@@ -228,7 +232,7 @@ var Subnavbar = function (_React$Component) {
                     )
                 )];
             } else {
-                var _SUBNAVBAR_NAVBAR_LI2 = StyleSheet.create({
+                var _SUBNAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: 1,

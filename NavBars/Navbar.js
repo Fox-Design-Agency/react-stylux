@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 require('../css/reset.css');
 
 require('../css/animations.css');
@@ -201,7 +205,7 @@ var Navbar = function (_React$Component) {
                 tempKeys.push(tempKeys[_i] = Math.random());
             }
             if (this.state.box === "1" || this.state.box === "2") {
-                var NAVBAR_NAVBAR_LI = StyleSheet.create({
+                var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: 1,
@@ -226,7 +230,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var HAM_NAVBAR_LI = StyleSheet.create({
+                var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: 1,
@@ -376,7 +380,7 @@ var Navbar = function (_React$Component) {
                     styledNavbar: styledNavbar
                 });
             } else {
-                var _NAVBAR_NAVBAR_LI = StyleSheet.create({
+                var _NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: 1,
@@ -401,7 +405,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var _HAM_NAVBAR_LI = StyleSheet.create({
+                var _HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: 1,
@@ -530,7 +534,7 @@ var Navbar = function (_React$Component) {
                 tempKeys.push(tempKeys[_i2] = Math.random());
             }
             if (this.state.box === "1" || this.state.box === "2") {
-                var NAVBAR_NAVBAR_LI = StyleSheet.create({
+                var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: 1,
@@ -555,7 +559,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var HAM_NAVBAR_LI = StyleSheet.create({
+                var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: 1,
@@ -705,7 +709,7 @@ var Navbar = function (_React$Component) {
                     styledNavbar: styledNavbar
                 });
             } else {
-                var _NAVBAR_NAVBAR_LI2 = StyleSheet.create({
+                var _NAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: 1,
@@ -730,7 +734,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var _HAM_NAVBAR_LI2 = StyleSheet.create({
+                var _HAM_NAVBAR_LI2 = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: 1,

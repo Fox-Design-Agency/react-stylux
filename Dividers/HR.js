@@ -10,13 +10,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../css/reset.css');
-
-require('../css/animations.css');
-
 var _nestingstyles = require('nestingstyles');
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
+require('../css/reset.css');
+
+require('../css/animations.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
