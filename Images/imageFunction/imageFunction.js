@@ -16,13 +16,30 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function imageFunction(type, size, props, state) {
-    var imageStyles = void 0,
-        imgWidth = void 0,
-        imgHeight = void 0,
-        mdimgWidth = void 0,
+    var smimgHeight = void 0,
+        smimgWidth = void 0,
         mdimgHeight = void 0,
-        smimgHeight = void 0,
-        smimgWidth = "";
+        mdimgWidth = void 0,
+        imgHeight = void 0,
+        imgWidth = "";
+    var id = props.id;
+    var className = props.className;
+    var childs = '';
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transform = props.transform;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+    var margin = props.margin || '5px';
+    var padding = props.padding;
+    var boxShadow = props.shadow;
+    var boxShadowRev = props.shadow;
+    var hoverShadow = props.hovShadow;
+    var display = props.display || "flex";
 
     switch (type) {
         case type = '1':
@@ -77,31 +94,31 @@ function imageFunction(type, size, props, state) {
                         borderRadius: "100%",
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
                         boxShadow: state.hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -161,31 +178,31 @@ function imageFunction(type, size, props, state) {
                         borderRadius: "30%",
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -245,31 +262,31 @@ function imageFunction(type, size, props, state) {
                         borderRadius: "100%",
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -329,31 +346,31 @@ function imageFunction(type, size, props, state) {
                         height: imgHeight,
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -411,31 +428,31 @@ function imageFunction(type, size, props, state) {
                         height: imgHeight,
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -494,31 +511,31 @@ function imageFunction(type, size, props, state) {
                         borderRadius: "30%",
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
                         boxShadow: state.hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -577,31 +594,31 @@ function imageFunction(type, size, props, state) {
                         borderRadius: "30%",
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
                         }
@@ -660,75 +677,33 @@ function imageFunction(type, size, props, state) {
                         height: imgHeight,
                         overflowX: 'hidden',
                         overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
+                        animationIterationCount: animationIterationCount,
+                        animationTimingFunction: animationTimingFunction,
+                        animationName: animationName,
+                        animationDuration: animationDuration,
+                        transform: transform,
+                        transformOrigin: transformOrigin,
+                        animationFillMode: animationFillMode,
+                        boxShadow: boxShadow,
+                        margin: margin,
+                        padding: padding,
+                        display: display
                     },
                     hoverStyle: {
-                        boxShadow: state.hoverShadow
+                        boxShadow: hoverShadow
                     },
                     '@media (max-width: 768px)': {
                         imageStyles: {
-                            display: state.smdis,
+                            display: smdis,
                             width: smimgWidth,
                             height: smimgHeight
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         imageStyles: {
-                            display: state.mddis,
+                            display: mddis,
                             width: mdimgWidth,
                             height: mdimgHeight
-                        }
-                    }
-                })
-            };
-        case type = "custom":
-            imgWidth = "50px";
-            imgHeight = "50px";
-            return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: state.width || imgWidth,
-                        height: state.height || imgHeight,
-                        borderRadius: state.borderRadius,
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: state.animationIterationCount,
-                        animationTimingFunction: state.animationTimingFunction,
-                        animationName: state.animationName,
-                        animationDuration: state.animationDuration,
-                        transform: state.transform,
-                        transformOrigin: state.transformOrigin,
-                        animationFillMode: state.animationFillMode,
-                        boxShadow: state.boxShadow,
-                        margin: state.margin,
-                        padding: state.padding,
-                        display: state.display
-                    },
-                    hoverStyle: {
-                        boxShadow: state.hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: state.smdis,
-                            width: state.smimgWidth,
-                            height: state.smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: state.mddis,
-                            width: state.mdimgWidth,
-                            height: state.mdimgHeight
                         }
                     }
                 })

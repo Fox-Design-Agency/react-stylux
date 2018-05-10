@@ -41,34 +41,11 @@ var Image = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, props));
 
         _this.state = {
-            size: props.size || 'sm',
+            size: props.size || "sm",
             box: props.box,
-            id: props.id,
-            className: props.className,
             childs: '',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transform: props.transform,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            display: props.display,
-            margin: props.margin || '5px',
-            padding: props.padding,
-            boxShadow: props.shadow,
-            boxShadowRev: props.shadow,
-            hoverShadow: props.hovShadow,
-            width: props.width,
-            height: props.height,
-            smwidth: props.smwidth,
-            smheight: props.smheight,
-            mdwidth: props.mdwidth,
-            mdheight: props.mdheight,
-            borderRadius: props.borderRadius,
-            keys: ''
+            keys: '',
+            styledImage: ''
         };
         return _this;
     }
@@ -202,7 +179,7 @@ var Image = function (_React$Component) {
                         return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
                     } })];
             } else {
-                var _use8 = (0, _imageFunction2.default)("custom", this.state.size, props, state);
+                var _use8 = (0, _imageFunction2.default)("4", this.state.size, props, state);
                 styledImage = [_react2.default.createElement('img', { key: tempkey,
                     style: _use8.IMAGESTYLES.imageStyles,
                     id: this.state.id,
@@ -216,7 +193,7 @@ var Image = function (_React$Component) {
                         return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
                     } })];
             }
-            return this.setState({ childs: styledImage, keys: tempkey });
+            return this.setState({ childs: CHILDS, keys: tempkey, styledImage: styledImage });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -346,7 +323,7 @@ var Image = function (_React$Component) {
                         return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
                     } })];
             } else {
-                var _use16 = (0, _imageFunction2.default)("custom", this.state.size, props, state);
+                var _use16 = (0, _imageFunction2.default)("4", this.state.size, props, state);
                 styledImage = [_react2.default.createElement('img', { key: this.state.keys,
                     style: _use16.IMAGESTYLES.imageStyles,
                     id: this.state.id,
@@ -360,7 +337,7 @@ var Image = function (_React$Component) {
                         return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
                     } })];
             }
-            return this.setState({ childs: styledImage });
+            return this.setState({ childs: CHILDS, styledImage: styledImage });
         }
     }, {
         key: 'render',
@@ -368,7 +345,7 @@ var Image = function (_React$Component) {
             return _react2.default.createElement(
                 _react2.default.Fragment,
                 null,
-                this.state.childs
+                this.state.styledImage
             );
         }
     }]);
