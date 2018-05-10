@@ -26,77 +26,205 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Popup1 = function (_Component) {
-    _inherits(Popup1, _Component);
+var Popup = function (_React$Component) {
+    _inherits(Popup, _React$Component);
 
-    function Popup1(props) {
-        _classCallCheck(this, Popup1);
+    function Popup(props) {
+        _classCallCheck(this, Popup);
 
-        var _this = _possibleConstructorReturn(this, (Popup1.__proto__ || Object.getPrototypeOf(Popup1)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
 
         _this.state = {
-            visibility: 'hidden',
-            childs: ''
+            visibility: "hidden",
+            childs: '',
+            keys: '',
+            styledPopup: '',
+            show: false,
+            box: props.box
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
 
-    _createClass(Popup1, [{
+    _createClass(Popup, [{
         key: 'toggle',
         value: function toggle() {
             var _this2 = this;
 
-            setTimeout(function () {
-                return _this2.setState({ visibility: 'hidden' });
-            }, 3000);
-            return this.setState({ visibility: 'visible' });
+            var props = this.props;
+            var state = this.state;
+            var styledPopup = void 0,
+                use = '';
+            var self = this;
+            var show = !this.state.show;
+            if (this.state.box === "1") {
+                if (!this.state.show) {
+                    setTimeout(function () {
+                        return _this2.toggle();
+                    }, 3000);
+                }
+
+                use = (0, _popupFunctions2.default)("1", props, state, self, show);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _popupFunctions2.default)("2", props, state, self, show);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK,
+                        onMouseEnter: this.toggle,
+                        onMouseLeave: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            } else {
+                if (!this.state.show) {
+                    setTimeout(function () {
+                        return _this2.toggle();
+                    }, 3000);
+                }
+                use = (0, _popupFunctions2.default)("1", props, state, self, show);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            }
+            return this.setState({ visibility: 'visible', styledPopup: styledPopup, show: !this.state.show });
         }
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
+            var props = this.props;
+            var state = this.state;
+            var styledPopup = void 0,
+                use = '';
+            var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            this.setState({ childs: CHILDS });
+            var tempKeys = Math.random();
+            if (this.state.box === "1") {
+                use = (0, _popupFunctions2.default)("1", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys, style: use.POPUPCLICK, onClick: this.toggle },
+                    CHILDS[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        CHILDS[0]
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _popupFunctions2.default)("2", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys, style: use.POPUPCLICK,
+                        onMouseEnter: this.toggle,
+                        onMouseLeave: this.toggle },
+                    CHILDS[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        CHILDS[0]
+                    )
+                )];
+            } else {
+                use = (0, _popupFunctions2.default)("1", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: tempKeys, style: use.POPUPCLICK, onClick: this.toggle },
+                    CHILDS[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        CHILDS[0]
+                    )
+                )];
+            }
+
+            this.setState({ childs: CHILDS, keys: tempKeys, styledPopup: styledPopup });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
+            var props = newProps;
+            var state = this.state;
+            var styledPopup = void 0,
+                use = '';
+            var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            return this.setState({ childs: CHILDS });
+
+            if (this.state.box === "1") {
+                use = (0, _popupFunctions2.default)("1", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _popupFunctions2.default)("2", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK,
+                        onMouseEnter: this.toggle,
+                        onMouseLeave: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            } else {
+                use = (0, _popupFunctions2.default)("1", props, state, self);
+                styledPopup = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
+                    this.state.childs[1],
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.POPUPSTYLE },
+                        this.state.childs[0]
+                    )
+                )];
+            }
+
+            return this.setState({ childs: CHILDS, styledPopup: styledPopup });
         }
     }, {
         key: 'render',
         value: function render() {
-            var POPUPCLICK = {
-                cursor: 'pointer'
-            };
-            var POPUPSTYLE = {
-                visibility: this.state.visibility,
-                backgroundColor: '#333',
-                minWidth: '250px',
-                color: '#fff',
-                textAlign: 'center',
-                borderRadius: '2px',
-                padding: '16px',
-                position: 'fixed',
-                // zIndex: '1',
-                // left: '50%',
-                bottom: '30px'
-            };
             return _react2.default.createElement(
-                'div',
-                { style: POPUPCLICK, onClick: this.toggle },
-                this.state.childs[1],
-                _react2.default.createElement(
-                    'div',
-                    { style: POPUPSTYLE },
-                    this.state.childs[0]
-                )
+                _react2.default.Fragment,
+                null,
+                this.state.styledPopup
             );
         }
     }]);
 
-    return Popup1;
-}(_react.Component);
+    return Popup;
+}(_react2.default.Component);
 
-exports.default = Popup1;
+exports.default = Popup;
