@@ -16,21 +16,25 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function cardFunction(type, props, state, self) {
-    var cursor = void 0,
-        CARDSTYLE = void 0,
-        boxShadow = "";
+    var cursor = "";
+    var boxShadow = props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)';
+    var hovBoxShadow = props.hovShadow || '1px 8px 16px 0 rgba(0,0,0,0.2)';
+    var revBoxShadow = props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)';
+    var borderRadius = props.corners;
+    var smDis = props.smDis;
+    var mdDis = props.mdDis;
 
     switch (type) {
         case type = '1':
             cursor = "pointer";
-            boxShadow = arguments[4] || state.boxShadow;
+            boxShadow = arguments[4] || boxShadow;
             return {
                 changeHover: function changeHover() {
-                    var boxShadow = state.hovBoxShadow;
+                    var boxShadow = hovBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    var boxShadow = state.revBoxShadow;
+                    var boxShadow = revBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 CARDSTYLE: _nestingstyles2.default.create({
@@ -40,7 +44,7 @@ function cardFunction(type, props, state, self) {
                         flexDirection: 'column',
                         boxShadow: boxShadow,
                         transition: '0.3s',
-                        borderRadius: state.borderRadius
+                        borderRadius: borderRadius
                     },
                     imgstyle: {
                         height: '300px',
@@ -68,50 +72,50 @@ function cardFunction(type, props, state, self) {
 
                     '@media screen and (max-width: 768px)': {
                         cardstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         imgstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardheading: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardbody: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardcontent: {
-                            display: state.smDis
+                            display: smDis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         cardstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         imgstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardheading: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardbody: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardcontent: {
-                            display: state.mdDis
+                            display: mdDis
                         }
                     }
                 })
             };
         case type = '2':
             cursor = "pointer";
-            boxShadow = arguments[4] || state.boxShadow;
+            boxShadow = arguments[4] || boxShadow;
             return {
                 changeHover: function changeHover() {
-                    var boxShadow = state.hovBoxShadow;
+                    var boxShadow = hovBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    var boxShadow = state.revBoxShadow;
+                    var boxShadow = revBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 CARDSTYLE: _nestingstyles2.default.create({
@@ -121,7 +125,7 @@ function cardFunction(type, props, state, self) {
                         flexDirection: 'column',
                         boxShadow: boxShadow,
                         transition: '0.3s',
-                        borderRadius: state.borderRadius
+                        borderRadius: borderRadius
                     },
                     imgstyle: {
                         height: '300px',
@@ -156,58 +160,58 @@ function cardFunction(type, props, state, self) {
 
                     '@media screen and (max-width: 768px)': {
                         cardstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         imgstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardheading: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardbody: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardcontent: {
-                            display: state.smDis
+                            display: smDis
                         },
                         btnstyle: {
-                            display: state.smDis
+                            display: smDis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         cardstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         imgstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardheading: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardbody: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardcontent: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         btnstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         }
                     }
                 })
             };
         case type = '3':
             cursor = "pointer";
-            var height = state.height || '398px';
-            var width = state.width || '250px';
-            boxShadow = arguments[4] || state.boxShadow;
+            var height = height || '398px';
+            var width = width || '250px';
+            boxShadow = arguments[4] || boxShadow;
             return {
                 changeHover: function changeHover() {
-                    var boxShadow = state.hovBoxShadow;
+                    var boxShadow = hovBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 changeHoverBack: function changeHoverBack() {
-                    var boxShadow = state.revBoxShadow;
+                    var boxShadow = revBoxShadow;
                     self.renderStuff(boxShadow);
                 },
                 CARDSTYLE: _nestingstyles2.default.create({
@@ -219,7 +223,7 @@ function cardFunction(type, props, state, self) {
                         transition: '0.3s',
                         height: height,
                         width: width,
-                        borderRadius: state.borderRadius
+                        borderRadius: borderRadius
                     },
                     cardheading: {
                         textAlign: "center",
@@ -247,123 +251,42 @@ function cardFunction(type, props, state, self) {
 
                     '@media screen and (max-width: 768px)': {
                         cardstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         imgstyle: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardheading: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardbody: {
-                            display: state.smDis
+                            display: smDis
                         },
                         cardcontent: {
-                            display: state.smDis
+                            display: smDis
                         },
                         item: {
-                            display: state.smDis
+                            display: smDis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         cardstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         imgstyle: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardheading: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardbody: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         cardcontent: {
-                            display: state.mdDis
+                            display: mdDis
                         },
                         item: {
-                            display: state.mdDis
-                        }
-                    }
-                })
-            };
-        case type = 'custom':
-            cursor = "pointer";
-            boxShadow = arguments[4] || state.boxShadow;
-            return {
-                changeHover: function changeHover() {
-                    var boxShadow = state.hovBoxShadow;
-                    self.renderStuff(boxShadow);
-                },
-                changeHoverBack: function changeHoverBack() {
-                    var boxShadow = state.revBoxShadow;
-                    self.renderStuff(boxShadow);
-                },
-                CARDSTYLE: _nestingstyles2.default.create({
-                    cardstyle: {
-                        margin: '10px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        boxShadow: boxShadow,
-                        transition: '0.3s',
-                        borderRadius: state.borderRadius
-                    },
-                    imgstyle: {
-                        height: '300px',
-                        width: '250px'
-                    },
-                    cardheading: {
-                        textAlign: "center",
-                        fontWeight: "900",
-                        margin: "2px",
-                        maxWidth: "250px"
-                    },
-                    cardbody: {
-                        margin: "2px",
-                        maxWidth: "250px",
-                        maxHeight: "175px",
-                        overflow: "hidden"
-                    },
-                    cardcontent: {
-                        display: 'flex',
-                        flexDirection: 'column',
-                        padding: '2px 16px',
-                        wordWrap: "break-word",
-                        maxWidth: "250px"
-                    },
-
-                    '@media screen and (max-width: 768px)': {
-                        cardstyle: {
-                            display: state.smDis
-                        },
-                        imgstyle: {
-                            display: state.smDis
-                        },
-                        cardheading: {
-                            display: state.smDis
-                        },
-                        cardbody: {
-                            display: state.smDis
-                        },
-                        cardcontent: {
-                            display: state.smDis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        cardstyle: {
-                            display: state.mdDis
-                        },
-                        imgstyle: {
-                            display: state.mdDis
-                        },
-                        cardheading: {
-                            display: state.mdDis
-                        },
-                        cardbody: {
-                            display: state.mdDis
-                        },
-                        cardcontent: {
-                            display: state.mdDis
+                            display: mdDis
                         }
                     }
                 })

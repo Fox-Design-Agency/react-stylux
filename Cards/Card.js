@@ -40,18 +40,11 @@ var Card = function (_React$Component) {
 
         _this.state = {
             childs: '',
-            boxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
-            hovBoxShadow: props.hovShadow || '1px 8px 16px 0 rgba(0,0,0,0.2)',
-            revBoxShadow: props.shadow || '1px 4px 8px 0 rgba(0,0,0,0.2)',
-            borderRadius: props.corners,
             id: props.id,
             className: props.className,
-            smDis: props.smDis,
-            mdDis: props.mdDis,
             box: props.box,
             styledCard: '',
             keys: ''
-
         };
         _this.renderStuff = _this.renderStuff.bind(_this);
         return _this;
@@ -181,7 +174,7 @@ var Card = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _cardFunctions2.default)("custom", props, state, self);
+                use = (0, _cardFunctions2.default)("1", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
                     { key: tempkey,
@@ -335,7 +328,7 @@ var Card = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _cardFunctions2.default)("custom", props, state, self);
+                use = (0, _cardFunctions2.default)("1", props, state, self);
                 styledCard = [_react2.default.createElement(
                     'div',
                     { key: this.state.key,
@@ -489,7 +482,7 @@ var Card = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _cardFunctions2.default)("custom", props, state, self, arguments[0]);
+                use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
                 styledCard = [_react2.default.createElement(
                     'div',
                     { key: this.state.keys,
