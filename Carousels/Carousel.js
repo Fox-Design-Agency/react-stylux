@@ -43,27 +43,13 @@ var Carousel = function (_React$Component) {
         _this.state = {
             sliderImages: [],
             cur: 0,
-            arrowColor: props.arrowColor || 'white',
-            background: props.background || 'black',
-            padding: props.padding,
-            height: props.height || '450px',
             slideTimer: props.slideTimer || '5000',
-            mainid: props.mainid,
+            id: props.id,
             leftArrowid: props.leftArrowid,
             rightArrowid: props.rightArrowid,
-            sliderid: props.sliderid,
-            mainClassName: props.mainClassName,
+            className: props.className,
             leftArrowClassName: props.leftArrowClassName,
             rightArrowClassName: props.rightArrowClassName,
-            sliderClassName: props.sliderClassName,
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             intervalTime: '',
             box: props.box,
             styledCarousel: '',
@@ -111,7 +97,7 @@ var Carousel = function (_React$Component) {
                 });
                 styledCarousel = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                     },
                     _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                             return _this2.slideLeft();
@@ -148,10 +134,10 @@ var Carousel = function (_React$Component) {
                     { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             RENDERSLIDES[this.state.cur]
                         )
                     ),
@@ -184,13 +170,13 @@ var Carousel = function (_React$Component) {
                     { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this2.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             RENDERSLIDES[this.state.cur]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -221,13 +207,13 @@ var Carousel = function (_React$Component) {
                 });
                 styledCarousel = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                     _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                             return _this2.slideLeft();
                         } }),
                     _react2.default.createElement(
                         'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                        { style: use.SLIDER },
                         RENDERSLIDES[this.state.cur]
                     ),
                     _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -249,15 +235,15 @@ var Carousel = function (_React$Component) {
                 });
                 styledCarousel = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                        { style: use.SLIDER },
                         RENDERSLIDES[this.state.cur]
                     )
                 )];
             } else {
-                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                use = (0, _carouselFunctions2.default)("2", props, state, self);
                 RENDERSLIDES = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
                         'div',
@@ -269,13 +255,27 @@ var Carousel = function (_React$Component) {
                         )
                     );
                 });
+                DOTS = CHILDS.map(function (x, i) {
+                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                            return _this2.currentSlide(i);
+                        } });
+                });
                 styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    _react2.default.Fragment,
+                    { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                        RENDERSLIDES[this.state.cur]
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.SLIDER },
+                            RENDERSLIDES[this.state.cur]
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CIRCLESDIV },
+                        DOTS
                     )
                 )];
             }
@@ -320,7 +320,7 @@ var Carousel = function (_React$Component) {
                 });
                 styledCarousel = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                     },
                     _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                             return _this3.slideLeft();
@@ -357,10 +357,10 @@ var Carousel = function (_React$Component) {
                     { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             RENDERSLIDES[this.state.cur]
                         )
                     ),
@@ -393,13 +393,13 @@ var Carousel = function (_React$Component) {
                     { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this3.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             RENDERSLIDES[this.state.cur]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -430,13 +430,13 @@ var Carousel = function (_React$Component) {
                 });
                 styledCarousel = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                     _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                             return _this3.slideLeft();
                         } }),
                     _react2.default.createElement(
                         'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                        { style: use.SLIDER },
                         RENDERSLIDES[this.state.cur]
                     ),
                     _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -466,7 +466,7 @@ var Carousel = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                use = (0, _carouselFunctions2.default)("2", props, state, self);
                 RENDERSLIDES = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
                         'div',
@@ -478,13 +478,27 @@ var Carousel = function (_React$Component) {
                         )
                     );
                 });
+                DOTS = CHILDS.map(function (x, i) {
+                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                            return _this3.currentSlide(i);
+                        } });
+                });
                 styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    _react2.default.Fragment,
+                    { key: tempKeys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                        RENDERSLIDES[this.state.cur]
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.SLIDER },
+                            RENDERSLIDES[this.state.cur]
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CIRCLESDIV },
+                        DOTS
                     )
                 )];
             }
@@ -516,7 +530,7 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("1", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                         },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this4.slideLeft();
@@ -537,10 +551,10 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             )
                         ),
@@ -557,13 +571,13 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                     return _this4.slideLeft();
                                 } }),
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             ),
                             _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -580,13 +594,13 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("4", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this4.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -597,22 +611,31 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("5", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         )
                     )];
                 } else {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
                     styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        _react2.default.Fragment,
+                        { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
                         )
                     )];
                 }
@@ -629,7 +652,7 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("1", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                         },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this4.slideLeft();
@@ -670,13 +693,13 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                     return _this4.slideLeft();
                                 } }),
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             ),
                             _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -710,22 +733,31 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("5", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         )
                     )];
                 } else {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
                     styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        _react2.default.Fragment,
+                        { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
+                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                this.state.sliderImages[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
                         )
                     )];
                 }
@@ -754,7 +786,7 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("1", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                         },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this5.slideLeft();
@@ -775,10 +807,10 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             )
                         ),
@@ -795,13 +827,13 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                     return _this5.slideLeft();
                                 } }),
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             ),
                             _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -818,13 +850,13 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("4", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this5.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -835,7 +867,7 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("5", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
                             { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
@@ -843,14 +875,23 @@ var Carousel = function (_React$Component) {
                         )
                     )];
                 } else {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
                     styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        _react2.default.Fragment,
+                        { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
                         )
                     )];
                 }
@@ -867,7 +908,7 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("1", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
                         },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this5.slideLeft();
@@ -888,10 +929,10 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             )
                         ),
@@ -908,13 +949,13 @@ var Carousel = function (_React$Component) {
                         { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                     return _this5.slideLeft();
                                 } }),
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                                { style: use.SLIDER },
                                 this.state.sliderImages[this.state.cur]
                             ),
                             _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -931,13 +972,13 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("4", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this5.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
@@ -948,22 +989,31 @@ var Carousel = function (_React$Component) {
                     use = (0, _carouselFunctions2.default)("5", props, state, self);
                     styledCarousel = [_react2.default.createElement(
                         'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[this.state.cur]
                         )
                     )];
                 } else {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
                     styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        _react2.default.Fragment,
+                        { key: this.state.keys[0] },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
                         )
                     )];
                 }
@@ -994,10 +1044,10 @@ var Carousel = function (_React$Component) {
                     { key: this.state.keys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[x]
                         )
                     ),
@@ -1014,18 +1064,38 @@ var Carousel = function (_React$Component) {
                     { key: this.state.keys[0] },
                     _react2.default.createElement(
                         'div',
-                        { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                                 return _this6.slideLeft();
                             } }),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                            { style: use.SLIDER },
                             this.state.sliderImages[x]
                         ),
                         _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
                                 return _this6.slideRight();
                             } })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CIRCLESDIV },
+                        this.state.dots
+                    )
+                )];
+            } else {
+                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                styledCarousel = [_react2.default.createElement(
+                    _react2.default.Fragment,
+                    { key: this.state.keys[0] },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.SLIDER },
+                            this.state.sliderImages[x]
+                        )
                     ),
                     _react2.default.createElement(
                         'div',

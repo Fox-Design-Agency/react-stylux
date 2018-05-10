@@ -18,6 +18,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function carouselFunction(type, props, state, self) {
     var cursor = "";
 
+    var arrowColor = props.arrowColor || 'white';
+    var background = props.background || 'black';
+    var padding = props.padding;
+    var height = props.height || '450px';
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+
     switch (type) {
         case type = '1':
             cursor = "pointer";
@@ -25,49 +38,49 @@ function carouselFunction(type, props, state, self) {
 
                 WRAP: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
-                    background: state.background,
+                    background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    padding: state.padding
+                    padding: padding
                 },
                 LEFT_ARROW: {
                     borderWidth: '30px 40px 30px 0',
-                    borderColor: 'transparent ' + state.arrowColor + ' transparent transparent',
+                    borderColor: 'transparent ' + arrowColor + ' transparent transparent',
                     left: '0',
                     marginLeft: '30px'
                 },
                 RIGHT_ARROW: {
                     borderWidth: '30px 0 30px 40px',
-                    borderColor: 'transparent transparent transparent ' + state.arrowColor,
+                    borderColor: 'transparent transparent transparent ' + arrowColor,
                     right: '0',
                     marginRight: '30px'
                 },
                 SLIDER: {
                     width: '100%',
                     overflowX: 'hidden',
-                    height: state.height
+                    height: height
                 },
                 SLIDE: {
-                    height: state.height
+                    height: height
 
                 },
                 SLIDE_CONTENT: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 }
             };
         case type = '2':
@@ -75,39 +88,39 @@ function carouselFunction(type, props, state, self) {
             return {
                 WRAP: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
-                    background: state.background,
+                    background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    padding: state.padding
+                    padding: padding
                 },
                 SLIDER: {
                     width: '100%',
                     overflowX: 'hidden',
-                    height: state.height
+                    height: height
                 },
                 SLIDE: {
                     // backgroundSize: 'cover',
                     // backgroundPosition: 'center',
-                    height: state.height
+                    height: height
                     // display:'block'
                 },
                 SLIDE_CONTENT: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 },
                 CIRCLES: {
                     cursor: 'pointer',
@@ -130,51 +143,51 @@ function carouselFunction(type, props, state, self) {
             return {
                 LEFT_ARROW: {
                     borderWidth: '30px 40px 30px 0',
-                    borderColor: 'transparent ' + state.arrowColor + ' transparent transparent',
+                    borderColor: 'transparent ' + arrowColor + ' transparent transparent',
                     left: '0',
                     marginLeft: '30px'
                 },
                 RIGHT_ARROW: {
                     borderWidth: '30px 0 30px 40px',
-                    borderColor: 'transparent transparent transparent ' + state.arrowColor,
+                    borderColor: 'transparent transparent transparent ' + arrowColor,
                     right: '0',
                     marginRight: '30px'
                 },
                 WRAP: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
-                    background: state.background,
+                    background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    padding: state.padding
+                    padding: padding
                 },
                 SLIDER: {
                     width: '100%',
                     overflowX: 'hidden',
-                    height: state.height
+                    height: height
                 },
                 SLIDE: {
                     // backgroundSize: 'cover',
                     // backgroundPosition: 'center',
-                    height: state.height
+                    height: height
                     // display:'block'
                 },
                 SLIDE_CONTENT: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 },
                 CIRCLES: {
                     cursor: 'pointer',
@@ -197,50 +210,50 @@ function carouselFunction(type, props, state, self) {
             return {
                 LEFT_ARROW: {
                     borderWidth: '30px 40px 30px 0',
-                    borderColor: 'transparent ' + state.arrowColor + ' transparent transparent',
+                    borderColor: 'transparent ' + arrowColor + ' transparent transparent',
                     left: '0',
                     marginLeft: '30px'
                 },
                 RIGHT_ARROW: {
                     borderWidth: '30px 0 30px 40px',
-                    borderColor: 'transparent transparent transparent ' + state.arrowColor,
+                    borderColor: 'transparent transparent transparent ' + arrowColor,
                     right: '0',
                     marginRight: '30px'
                 },
                 WRAP: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
-                    background: state.background,
+                    background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    padding: state.padding
+                    padding: padding
                 },
                 SLIDER: {
                     width: '100%',
                     overflowX: 'hidden',
-                    height: state.height
+                    height: height
                 },
                 SLIDE: {
                     // backgroundSize: 'cover',
                     // backgroundPosition: 'center',
-                    height: state.height
+                    height: height
                     // display:'block'
                 },
                 SLIDE_CONTENT: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 }
             };
         case type = '5':
@@ -248,39 +261,39 @@ function carouselFunction(type, props, state, self) {
             return {
                 WRAP: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
-                    background: state.background,
+                    background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    padding: state.padding
+                    padding: padding
                 },
                 SLIDER: {
                     width: '100%',
                     overflowX: 'hidden',
-                    height: state.height
+                    height: height
                 },
                 SLIDE: {
                     // backgroundSize: 'cover',
                     // backgroundPosition: 'center',
-                    height: state.height
+                    height: height
                     // display:'block'
                 },
                 SLIDE_CONTENT: {
                     width: '100%',
-                    height: state.height,
+                    height: height,
                     overflowX: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 }
             };
         default:
