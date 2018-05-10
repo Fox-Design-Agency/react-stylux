@@ -43,22 +43,9 @@ var Hero = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).call(this, props));
 
         _this.state = {
-            background: props.background,
-            backgroundImage: props.image,
-            backgroundRepeat: props.imageRepeat || 'no-repeat',
-            backgroundPosition: props.backgroundPosition || 'center',
-            backgroundSize: props.imageSize || 'cover',
-            width: props.width || '100%',
-            height: props.height,
-            bottomBoxWidth: props.bottomBoxWidth || '100%',
-            bottomBoxHeight: props.bottomBoxHeight || '25%',
-            bottomBoxPadding: props.bottomBoxPadding,
-            bottomBoxBackgroundColor: props.bottomBoxBC || 'rgba(0, 0, 0, 0.5)',
             id: props.id,
             className: props.className,
             childs: '',
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             box: props.box,
             styledHero: '',
             keys: ''
@@ -156,7 +143,7 @@ var Hero = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _heroFunctions2.default)("custom", props, state, self);
+                use = (0, _heroFunctions2.default)("1", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
                     { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },

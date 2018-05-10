@@ -16,9 +16,21 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function heroFunction(type, props, state, self) {
-    var cursor = void 0,
-        HEROSTYLE = void 0,
-        BOTTOMBACKGROUND = "";
+    var cursor = "";
+
+    var background = props.background;
+    var backgroundImage = props.image;
+    var backgroundRepeat = props.imageRepeat || 'no-repeat';
+    var backgroundPosition = props.backgroundPosition || 'center';
+    var backgroundSize = props.imageSize || 'cover';
+    var width = props.width || '100%';
+    var height = props.height;
+    var bottomBoxWidth = props.bottomBoxWidth || '100%';
+    var bottomBoxHeight = props.bottomBoxHeight || '25%';
+    var bottomBoxPadding = props.bottomBoxPadding;
+    var bottomBoxBackgroundColor = props.bottomBoxBC || 'rgba(0, 0, 0, 0.5)';
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
 
     switch (type) {
         case type = '1':
@@ -26,25 +38,25 @@ function heroFunction(type, props, state, self) {
             return {
                 HEROSTYLE: _nestingstyles2.default.create({
                     herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
+                        background: background,
+                        backgroundImage: backgroundImage,
+                        backgroundRepeat: backgroundRepeat,
+                        backgroundPosition: backgroundPosition,
+                        backgroundSize: backgroundSize,
+                        width: width,
+                        height: height,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
                     '@media screen and (max-width: 768px)': {
                         herostyle: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         herostyle: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -54,38 +66,38 @@ function heroFunction(type, props, state, self) {
             return {
                 HEROSTYLE: _nestingstyles2.default.create({
                     herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
+                        background: background,
+                        backgroundImage: backgroundImage,
+                        backgroundRepeat: backgroundRepeat,
+                        backgroundPosition: backgroundPosition,
+                        backgroundSize: backgroundSize,
+                        width: width,
+                        height: height,
                         display: 'flex',
                         alignItems: 'flex-end',
                         justifyContent: 'center'
                     },
                     bottombackground: {
-                        backgroundColor: state.bottomBoxBackgroundColor,
-                        width: state.bottomBoxWidth,
-                        height: state.bottomBoxHeight,
-                        padding: state.bottomBoxPadding,
+                        backgroundColor: bottomBoxBackgroundColor,
+                        width: bottomBoxWidth,
+                        height: bottomBoxHeight,
+                        padding: bottomBoxPadding,
                         overflow: 'hidden'
                     },
                     '@media screen and (max-width: 768px)': {
                         herostyle: {
-                            display: state.smdis
+                            display: smdis
                         },
                         bottombackground: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         herostyle: {
-                            display: state.mddis
+                            display: mddis
                         },
                         bottombackground: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -95,25 +107,25 @@ function heroFunction(type, props, state, self) {
             return {
                 HEROSTYLE: _nestingstyles2.default.create({
                     herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
+                        background: background,
+                        backgroundImage: backgroundImage,
+                        backgroundRepeat: backgroundRepeat,
+                        backgroundPosition: backgroundPosition,
+                        backgroundSize: backgroundSize,
+                        width: width,
+                        height: height,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
                     '@media screen and (max-width: 768px)': {
                         herostyle: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         herostyle: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -123,25 +135,25 @@ function heroFunction(type, props, state, self) {
             return {
                 HEROSTYLE: _nestingstyles2.default.create({
                     herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
+                        background: background,
+                        backgroundImage: backgroundImage,
+                        backgroundRepeat: backgroundRepeat,
+                        backgroundPosition: backgroundPosition,
+                        backgroundSize: backgroundSize,
+                        width: width,
+                        height: height,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
                     '@media screen and (max-width: 768px)': {
                         herostyle: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         herostyle: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
@@ -151,53 +163,25 @@ function heroFunction(type, props, state, self) {
             return {
                 HEROSTYLE: _nestingstyles2.default.create({
                     herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
+                        background: background,
+                        backgroundImage: backgroundImage,
+                        backgroundRepeat: backgroundRepeat,
+                        backgroundPosition: backgroundPosition,
+                        backgroundSize: backgroundSize,
+                        width: width,
+                        height: height,
                         display: 'flex',
                         alignItems: 'flex-end',
                         justifyContent: 'center'
                     },
                     '@media screen and (max-width: 768px)': {
                         herostyle: {
-                            display: state.smdis
+                            display: smdis
                         }
                     },
                     '@media screen and (min-width: 769px) and (max-width: 1200px)': {
                         herostyle: {
-                            display: state.mddis
-                        }
-                    }
-                })
-            };
-        case type = 'custom':
-            cursor = "pointer";
-            return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: state.background,
-                        backgroundImage: state.backgroundImage,
-                        backgroundRepeat: state.backgroundRepeat,
-                        backgroundPosition: state.backgroundPosition,
-                        backgroundSize: state.backgroundSize,
-                        width: state.width,
-                        height: state.height,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: state.smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: state.mddis
+                            display: mddis
                         }
                     }
                 })
