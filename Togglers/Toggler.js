@@ -40,51 +40,15 @@ var Toggler = function (_React$Component) {
 
         _this.state = {
             show: false,
-            position: props.position || 'fixed',
-            width: props.width,
-            height: props.height,
-            top: props.top,
-            background: props.background || 'white',
-            buttonText: props.buttonText || 'toggler1',
-            bColor: props.bColor || 'black',
-            bBackground: props.bBackground,
-            bFontSize: props.bFontSize || '1.333em',
-            bFontVariant: props.bFontVariant,
-            bFontWeight: props.bFontWeight,
-            bTextShadow: props.bTextShadow,
-            bMargin: props.bMargin,
-            bPadding: props.bPadding,
-            bBorderLeft: props.bBorderLeft,
-            bBorderRight: props.bBorderRight,
-            bBorderTop: props.bBorderTop,
-            bBorderBottom: props.bBorderBottom,
-            bBorder: props.bBorder,
-            border: props.border,
-            bLEft: props.bLeft,
-            bRight: props.bRight,
-            bTop: props.bTop,
-            bBottom: props.bBottom,
-            left: props.left,
-            right: props.right,
-            mainid: props.mainid,
-            toggleid: props.toggleid,
-            titleid: props.titleid,
-            titleClassName: props.titleClassName,
-            mainClassName: props.mainClassName,
+            id: props.id,
+            className: props.className,
+            panelClassName: props.panelClassName,
             toggleClassName: props.toggleClassName,
-            boxShadow: props.shadow || '1px 2px 2px black',
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
             childs: [],
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             box: props.box,
             keys: '',
-            styledToggler: ''
+            styledToggler: '',
+            first: ''
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
@@ -101,39 +65,42 @@ var Toggler = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var first = '';
             var tempKeys = [];
             for (var _i = 0; _i <= CHILDS.length; _i++) {
                 tempKeys.push(tempKeys[_i] = Math.random());
             }
             if (this.state.box === "1") {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("1", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], id: this.state.mainid, className: this.state.mainClassName },
+                    { key: tempKeys[0], id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         CHILDS
                     )
                 )];
             } else if (this.state.box === "2") {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("2", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], id: this.state.mainid, style: use.FULLELEMENT, className: this.state.mainClassName },
+                    { key: tempKeys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         CHILDS
                     )
                 )];
@@ -224,23 +191,24 @@ var Toggler = function (_React$Component) {
                     _TEXT
                 )];
             } else {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("1", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: tempKeys[0], id: this.state.mainid, className: this.state.mainClassName },
+                    { key: tempKeys[0], id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         CHILDS
                     )
                 )];
             }
-            this.setState({ childs: CHILDS, keys: tempKeys, styledToggler: styledToggler });
+            this.setState({ first: first, childs: CHILDS, keys: tempKeys, styledToggler: styledToggler });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -253,35 +221,38 @@ var Toggler = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var first = '';
             if (this.state.box === "1") {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("1", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                    { key: this.state.keys[0], id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         CHILDS
                     )
                 )];
             } else if (this.state.box === "2") {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("2", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: this.state.keys[0], id: this.state.mainid, style: use.FULLELEMENT, className: this.state.mainClassName },
+                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         CHILDS
                     )
                 )];
@@ -372,6 +343,7 @@ var Toggler = function (_React$Component) {
                     _TEXT2
                 )];
             } else {
+                first = CHILDS.shift();
                 use = (0, _togglerFunctions2.default)("1", props, state, self);
                 styledToggler = [_react2.default.createElement(
                     'div',
@@ -379,7 +351,7 @@ var Toggler = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -388,7 +360,7 @@ var Toggler = function (_React$Component) {
                     )
                 )];
             }
-            this.setState({ childs: CHILDS, styledToggler: styledToggler });
+            this.setState({ first: first, childs: CHILDS, styledToggler: styledToggler });
         }
     }, {
         key: 'toggle',
@@ -407,7 +379,7 @@ var Toggler = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -419,15 +391,15 @@ var Toggler = function (_React$Component) {
                 use = (0, _togglerFunctions2.default)("2", props, state, self, show);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: this.state.keys[0], id: this.state.mainid, style: use.FULLELEMENT, className: this.state.mainClassName },
+                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         this.state.childs
                     )
                 )];
@@ -435,15 +407,15 @@ var Toggler = function (_React$Component) {
                 use = (0, _togglerFunctions2.default)("1", props, state, self, show);
                 styledToggler = [_react2.default.createElement(
                     'div',
-                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                    { key: this.state.keys[0], id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                        { style: use.TOGGLERBOX },
                         this.state.childs
                     )
                 )];
