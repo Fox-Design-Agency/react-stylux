@@ -20,58 +20,92 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function modalFunction(type, props, state, self) {
     var cursor = void 0,
         show = "";
+    var boxTop = props.boxTop || '40%';
+    var boxRight = props.boxRight || '45%';
+    var boxLeft = props.boxLeft;
+    var boxBottom = props.boxBottom;
+    var boxPosition = props.boxPosition || 'fixed';
+    var boxBackground = props.boxBackground || 'white';
+    var boxHeight = props.boxHeight || '200px';
+    var boxWidth = props.boxWidth || '200px';
+    var boxAlign = props.boxAlign || 'center';
+    var boxJustify = props.boxJustify || 'center';
+    var boxShadow = props.boxShadow || '1px 2px 2px black';
+    var btnBackground = props.btnBackground || 'white';
+    var bColor = props.bColor || 'black';
+    var bBackground = props.bBackground;
+    var bFontSize = props.bFontSize || '1.333em';
+    var bFontVariant = props.bFontVariant;
+    var bFontWeight = props.bFontWeight;
+    var bTextShadow = props.bTextShadow;
+    var bMargin = props.bMargin;
+    var bPadding = props.bPadding;
+    var bBorderLeft = props.bBorderLeft;
+    var bBorderRight = props.bBorderRight;
+    var bBorderTop = props.bBorderTop;
+    var bBorderBottom = props.bBorderBottom;
+    var bBorder = props.bBorder;
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+
     switch (type) {
         case type = '1':
             cursor = "pointer";
             show = arguments[4];
             return {
                 BOXSTYLES: {
-                    width: state.boxWidth,
-                    height: state.boxHeight,
-                    background: state.boxBackground,
-                    position: state.boxPosition,
-                    top: state.boxTop,
-                    left: state.boxLeft,
-                    right: state.boxRight,
-                    bottom: state.boxBottom,
+                    width: boxWidth,
+                    height: boxHeight,
+                    background: boxBackground,
+                    position: boxPosition,
+                    top: boxTop,
+                    left: boxLeft,
+                    right: boxRight,
+                    bottom: boxBottom,
                     display: show ? 'flex' : 'none',
-                    alignItems: state.boxAlign,
-                    justifyContent: state.boxJustify,
-                    boxShadow: state.boxShadow,
+                    alignItems: boxAlign,
+                    justifyContent: boxJustify,
+                    boxShadow: boxShadow,
                     zIndex: '2000',
-                    animationIterationCount: state.animationIterationCount,
-                    animationTimingFunction: state.animationTimingFunction,
-                    animationName: state.animationName,
-                    animationDuration: state.animationDuration,
-                    transformOrigin: state.transformOrigin,
-                    animationFillMode: state.animationFillMode
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode
                 },
                 CLICKBOX: {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     cursor: 'pointer',
-                    color: state.bColor,
-                    background: state.bBackground,
-                    fontSize: state.bFontSize,
-                    fontVariant: state.bFontVariant,
-                    fontWeight: state.bFontWeight,
-                    textShadow: state.bTextShadow,
-                    margin: state.bMargin,
-                    padding: state.bPadding,
-                    borderLeft: state.bBorderLeft,
-                    borderRight: state.bBorderRight,
-                    borderTop: state.bBorderTop,
-                    borderBottom: state.bBorderBottom,
-                    border: state.bBorder
+                    color: bColor,
+                    background: bBackground,
+                    fontSize: bFontSize,
+                    fontVariant: bFontVariant,
+                    fontWeight: bFontWeight,
+                    textShadow: bTextShadow,
+                    margin: bMargin,
+                    padding: bPadding,
+                    borderLeft: bBorderLeft,
+                    borderRight: bBorderRight,
+                    borderTop: bBorderTop,
+                    borderBottom: bBorderBottom,
+                    border: bBorder
                 },
                 BTNSTYLE: {
                     borderRadius: '100%',
                     cursor: 'pointer',
                     position: 'absolute',
-                    left: state.boxWidth,
-                    bottom: state.boxHeight,
-                    background: state.btnBackground
+                    left: boxWidth,
+                    bottom: boxHeight,
+                    background: btnBackground
                 }
 
             };

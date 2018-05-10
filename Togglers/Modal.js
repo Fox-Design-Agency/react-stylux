@@ -40,46 +40,10 @@ var Modal = function (_React$Component) {
 
         _this.state = {
             show: false,
-            boxTop: props.boxTop || '40%',
-            boxRight: props.boxRight || '45%',
-            boxLeft: props.boxLeft,
-            boxBottom: props.boxBottom,
-            boxPosition: props.boxPosition || 'fixed',
-            boxBackground: props.boxBackground || 'white',
-            boxHeight: props.boxHeight || '200px',
-            boxWidth: props.boxWidth || '200px',
-            boxAlign: props.boxAlign || 'center',
-            boxJustify: props.boxJustify || 'center',
-            buttonText: props.buttonText || 'Modal 1',
-            boxShadow: props.boxShadow || '1px 2px 2px black',
-            btnBackground: props.btnBackground || 'white',
-            bColor: props.bColor || 'black',
-            bBackground: props.bBackground,
-            bFontSize: props.bFontSize || '1.333em',
-            bFontVariant: props.bFontVariant,
-            bFontWeight: props.bFontWeight,
-            bTextShadow: props.bTextShadow,
-            bMargin: props.bMargin,
-            bPadding: props.bPadding,
-            bBorderLeft: props.bBorderLeft,
-            bBorderRight: props.bBorderRight,
-            bBorderTop: props.bBorderTop,
-            bBorderBottom: props.bBorderBottom,
-            boxId: props.boxId,
-            titleId: props.titleId,
-            backId: props.backId,
-            titleClassName: props.titleClassName,
-            boxClassName: props.boxClassName,
-            backClassName: props.backClassName,
-            animationIterationCount: props.aniCount,
-            animationTimingFunction: props.aniTime,
-            animationName: props.aniName,
-            animationDuration: props.aniDur,
-            transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode,
+            id: props.id,
+            className: props.className,
+            first: '',
             childs: [],
-            smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
             keys: '',
             styledModal: '',
             box: props.box
@@ -97,6 +61,7 @@ var Modal = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var first = CHILDS.shift();
             var tempKeys = [];
             for (var i = 0; i <= CHILDS; i++) {
                 tempKeys.push(tempKeys[i] = Math.random());
@@ -105,18 +70,18 @@ var Modal = function (_React$Component) {
                 use = (0, _modalFunctions2.default)("1", props, state, self);
                 styledModal = [_react2.default.createElement(
                     'div',
-                    { key: this.state.keys },
+                    { key: this.state.keys, id: this.state.id, className: this.state.className },
                     _react2.default.createElement(
                         'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: use.BOXSTYLES, id: this.state.boxId, className: this.state.boxClassName },
+                        { style: use.BOXSTYLES },
                         _react2.default.createElement(
                             'button',
-                            { style: use.BTNSTYLE, id: this.state.btnId, className: this.state.btnClassName, onClick: this.toggle },
+                            { style: use.BTNSTYLE, onClick: this.toggle },
                             'X'
                         ),
                         CHILDS
@@ -130,7 +95,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -155,7 +120,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -194,7 +159,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -213,19 +178,131 @@ var Modal = function (_React$Component) {
                 )];
             }
 
-            this.setState({ childs: CHILDS, styledModal: styledModal, keys: tempKeys });
+            this.setState({ first: first, childs: CHILDS, styledModal: styledModal, keys: tempKeys });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
-            var props = newProps;
+            var props = this.props;
             var state = this.state;
             var styledModal = void 0,
                 use = '';
             var self = this;
-            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var first = CHILDS.shift();
+            if (this.state.box === "1") {
+                use = (0, _modalFunctions2.default)("1", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys, id: this.state.id, className: this.state.className },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.CLICKBOX, onClick: this.toggle },
+                        first
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.BOXSTYLES },
+                        _react2.default.createElement(
+                            'button',
+                            { style: use.BTNSTYLE, onClick: this.toggle },
+                            'X'
+                        ),
+                        CHILDS
+                    )
+                )];
+            } else if (this.state.box === "2") {
+                use = (0, _modalFunctions2.default)("2", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        first
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            CHILDS
+                        )
+                    )
+                )];
+            } else if (this.state.box === "3") {
+                use = (0, _modalFunctions2.default)("3", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        first
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALHEADER },
+                                _react2.default.createElement(
+                                    'span',
+                                    { style: use.CLOSEBTN, onClick: this.toggle },
+                                    '\xD7'
+                                ),
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALBODY },
+                                CHILDS[1]
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.MODALFOOTER },
+                                CHILDS[2]
+                            )
+                        )
+                    )
+                )];
+            } else {
+                use = (0, _modalFunctions2.default)("2", props, state, self);
+                styledModal = [_react2.default.createElement(
+                    'div',
+                    { key: this.state.keys },
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.OPENERBTN, onClick: this.toggle },
+                        first
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: use.MODAL, onClick: this.toggle },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.MODALCONTENT },
+                            _react2.default.createElement(
+                                'span',
+                                { style: use.CLOSEBTN, onClick: this.toggle },
+                                '\xD7'
+                            ),
+                            CHILDS
+                        )
+                    )
+                )];
+            }
 
-            return this.setState({ childs: CHILDS, styledModal: styledModal });
+            return this.setState({ first: first, childs: CHILDS, styledModal: styledModal });
         }
     }, {
         key: 'toggle',
@@ -244,7 +321,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.buttonText
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -265,7 +342,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -290,7 +367,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
@@ -329,7 +406,7 @@ var Modal = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { style: use.OPENERBTN, onClick: this.toggle },
-                        this.state.buttonText
+                        this.state.first
                     ),
                     _react2.default.createElement(
                         'div',
