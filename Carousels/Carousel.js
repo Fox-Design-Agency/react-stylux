@@ -28,8 +28,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Carousel = function (_Component) {
-    _inherits(Carousel, _Component);
+var Carousel = function (_React$Component) {
+    _inherits(Carousel, _React$Component);
 
     function Carousel(props) {
         _classCallCheck(this, Carousel);
@@ -1044,6 +1044,6 @@ var Carousel = function (_Component) {
     }]);
 
     return Carousel;
-}(Component);
+}(_react2.default.Component);
 
 exports.default = Carousel;

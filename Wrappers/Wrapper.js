@@ -65,8 +65,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /* Start of Container Component */
-var Wrapper = function (_Component) {
-    _inherits(Wrapper, _Component);
+var Wrapper = function (_React$Component) {
+    _inherits(Wrapper, _React$Component);
 
     function Wrapper(props) {
         _classCallCheck(this, Wrapper);
@@ -16179,6 +16179,6 @@ var Wrapper = function (_Component) {
     }]);
 
     return Wrapper;
-}(_react.Component);
+}(_react2.default.Component);
 
 exports.default = Wrapper;

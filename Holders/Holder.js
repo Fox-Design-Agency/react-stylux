@@ -65,8 +65,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /* Start of Holder 1 Component */
-var Holder = function (_Component) {
-    _inherits(Holder, _Component);
+var Holder = function (_React$Component) {
+    _inherits(Holder, _React$Component);
 
     function Holder(props) {
         _classCallCheck(this, Holder);
@@ -16180,6 +16180,6 @@ var Holder = function (_Component) {
     }]);
 
     return Holder;
-}(Component);
+}(_react2.default.Component);
 
 exports.default = Holder;
