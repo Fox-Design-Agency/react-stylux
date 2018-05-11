@@ -72,7 +72,7 @@ var H = function (_React$Component) {
 
     _createClass(H, [{
         key: 'componentDidMount',
-        value: function componentDidMount(nextProps) {
+        value: function componentDidMount() {
             var _this2 = this;
 
             var props = this.props;

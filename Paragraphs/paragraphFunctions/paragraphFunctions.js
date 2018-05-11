@@ -17,7 +17,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function paragraphFunction(type, props, state, self) {
     var size = "";
-
     var color = props.color || "black";
     var colorRev = props.color;
     var textShadow = props.shadow;
