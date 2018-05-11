@@ -120,7 +120,7 @@ var P = function (_React$Component) {
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
-            var props = this.newProps;
+            var props = newProps;
             var state = this.state;
             var styledParagraph = void 0,
                 use = '';
