@@ -39,9 +39,6 @@ function heading1Function(type, props, state, self) {
     var bTop = props.bTop;
     var bBottom = props.bBottom;
     var border = props.border;
-    var id = props.id;
-    var className = props.className;
-    var childs = '';
     var animationIterationCount = props.aniCount;
     var animationTimingFunction = props.aniTime;
     var animationName = props.aniName;
