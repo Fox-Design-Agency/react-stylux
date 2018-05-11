@@ -248,7 +248,7 @@ var Hero = function (_React$Component) {
                     )
                 )];
             } else {
-                use = (0, _heroFunctions2.default)("custom", props, state, self);
+                use = (0, _heroFunctions2.default)("1", props, state, self);
                 styledHero = [_react2.default.createElement(
                     'div',
                     { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
