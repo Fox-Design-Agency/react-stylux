@@ -81,6 +81,7 @@ function togglerFunction(type, props, state, self) {
             return {
                 TOGGLERBOX: {
                     display: display,
+                    flex: "1 0 auto",
                     width: width,
                     height: height,
                     boxShadow: boxShadow,
@@ -138,6 +139,7 @@ function togglerFunction(type, props, state, self) {
                 },
                 TOGGLERBOX: {
                     display: display,
+                    flex: "1 0 auto",
                     flexDirection: 'column-reverse',
                     alignItems: "center",
 
@@ -164,6 +166,7 @@ function togglerFunction(type, props, state, self) {
                 },
                 CLICKBOX: {
                     display: 'flex',
+                    flex: "1 0 auto",
                     alignItems: 'center',
                     justifyContent: 'center',
                     cursor: 'pointer',
@@ -195,6 +198,7 @@ function togglerFunction(type, props, state, self) {
                 },
                 PANELS: {
                     display: 'flex',
+                    flex: "1 0 auto",
                     flexDirection: 'column',
                     alignItems: 'center',
                     position: position,
@@ -208,6 +212,7 @@ function togglerFunction(type, props, state, self) {
                     height: textheight,
                     width: textwidth,
                     display: 'flex',
+                    flex: "1 0 auto",
                     flexDirection: 'column',
                     alignItems: texthorizontal,
                     justifyContent: textvertical,
@@ -238,7 +243,7 @@ function togglerFunction(type, props, state, self) {
                 },
                 PANELS: {
                     display: 'flex',
-                    flex: 1,
+                    flex: "1 0 auto",
                     justifyContent: 'center',
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -253,6 +258,7 @@ function togglerFunction(type, props, state, self) {
                     height: textheight,
                     width: textwidth,
                     display: 'flex',
+                    flex: "1 0 auto",
                     flexDirection: 'column',
                     alignItems: texthorizontal,
                     justifyContent: textvertical,
@@ -274,6 +280,7 @@ function togglerFunction(type, props, state, self) {
                 },
                 LABELTITLES: {
                     display: 'flex',
+                    flex: "1 0 auto",
                     flexDirection: 'column'
 
                 }

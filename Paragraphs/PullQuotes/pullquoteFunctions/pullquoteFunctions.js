@@ -13,6 +13,8 @@ var _nestingstyles = require("nestingstyles");
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
+require("../../Components 1.0.0/SuperStyleSheet.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function pullQuoteFunction(type, props, state, self) {
@@ -24,8 +26,8 @@ function pullQuoteFunction(type, props, state, self) {
     var transform = props.transform;
     var transformOrigin = props.transformOrigin;
     var animationFillMode = props.aniFillMode;
-    var smdis = props.smDis || 'flex';
-    var mddis = props.mdDis || 'flex';
+    var smdis = props.smDis;
+    var mddis = props.mdDis;
     switch (type) {
         case type = '1':
             cursor = "pointer";

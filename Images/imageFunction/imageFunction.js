@@ -15,7 +15,7 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function imageFunction(type, size, props, state) {
+function imageFunction(type, size, props, state, self) {
     var smimgHeight = void 0,
         smimgWidth = void 0,
         mdimgHeight = void 0,
@@ -101,7 +101,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: state.hoverShadow
@@ -185,7 +186,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow
@@ -269,7 +271,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow
@@ -353,7 +356,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow
@@ -435,7 +439,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow
@@ -518,7 +523,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: state.hoverShadow
@@ -601,7 +607,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow
@@ -684,7 +691,8 @@ function imageFunction(type, size, props, state) {
                         boxShadow: boxShadow,
                         margin: margin,
                         padding: padding,
-                        display: display
+                        display: display,
+                        flex: "1 0 auto"
                     },
                     hoverStyle: {
                         boxShadow: hoverShadow

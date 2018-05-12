@@ -13,11 +13,13 @@ var _nestingstyles = require("nestingstyles");
 
 var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
+require("../../Components 1.0.0/SuperStyleSheet.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function paragraphFunction(type, props, state, self) {
     var size = "";
-    var color = props.color || "black";
+    var color = props.color;
     var colorRev = props.color;
     var textShadow = props.shadow;
     var fontFamily = props.font;
@@ -52,14 +54,13 @@ function paragraphFunction(type, props, state, self) {
     var mddis = props.mdDis || 'flex';
     var hoverColor = props.hovColor;
     var wordWrap = props.wordWrap || "break-word";
-
     switch (type) {
         case type = "1":
             size = fontSize || '1.333em';
             return {
                 PARAGRAPHSTYLES: _nestingstyles2.default.create({
                     paragraph: {
-                        flex: 1,
+                        flex: "1 0 auto",
                         width: width,
                         height: height,
                         maxWidth: maxWidth,
@@ -145,7 +146,7 @@ function paragraphFunction(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap
                     },
@@ -205,7 +206,7 @@ function paragraphFunction(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap
                     },
@@ -268,7 +269,7 @@ function paragraphFunction(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap
                     },
@@ -325,7 +326,7 @@ function paragraphFunction(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap
                     },

@@ -36,6 +36,7 @@ function brandFunction(type, props, state, self) {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
                         display: display,
+                        flex: "1 0 auto",
                         flexDirection: direction,
                         //width: '15%',
                         alignItems: 'center',
@@ -81,6 +82,7 @@ function brandFunction(type, props, state, self) {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         animationIterationCount: animationIterationCount,
                         animationTimingFunction: animationTimingFunction,
@@ -107,6 +109,7 @@ function brandFunction(type, props, state, self) {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         animationIterationCount: animationIterationCount,
                         animationTimingFunction: animationTimingFunction,
@@ -133,6 +136,7 @@ function brandFunction(type, props, state, self) {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         animationIterationCount: animationIterationCount,
                         animationTimingFunction: animationTimingFunction,
@@ -159,6 +163,7 @@ function brandFunction(type, props, state, self) {
                 BRAND: _nestingstyles2.default.create({
                     brand: {
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         animationIterationCount: animationIterationCount,
                         animationTimingFunction: animationTimingFunction,

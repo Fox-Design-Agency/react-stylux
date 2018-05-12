@@ -36,6 +36,7 @@ function navbarFunction(type, props, state, self) {
                         width: state.totalWidth,
                         height: state.totalHeight,
                         display: 'flex',
+                        flex: "1 0 auto",
                         flexDirection: 'column',
                         alignItems: state.alignItems,
                         margin: '0',
@@ -61,6 +62,7 @@ function navbarFunction(type, props, state, self) {
                         height: 'inherit',
                         display: state.display,
                         flexWrap: 'wrap',
+                        flex: "1 0 auto",
                         alignItems: state.columnAlign,
                         fontFamily: state.fontFamily,
                         flexDirection: state.direction,
@@ -87,6 +89,7 @@ function navbarFunction(type, props, state, self) {
                         width: '50px',
                         height: '50px',
                         display: state.hamMenuDis,
+                        flex: "1 0 auto",
                         cursor: 'pointer',
                         flexDirection: 'column'
 
@@ -108,6 +111,7 @@ function navbarFunction(type, props, state, self) {
                 }),
                 HAMLINES: {
                     display: 'flex',
+                    flex: "1 0 auto",
                     width: '25px',
                     height: '5px',
                     backgroundColor: 'black',
@@ -122,7 +126,8 @@ function navbarFunction(type, props, state, self) {
                         top: state.hamTop,
                         left: state.hamLeft,
                         background: state.hamBackground,
-                        display: 'flex'
+                        display: 'flex',
+                        flex: "1 0 auto"
                     }, _defineProperty(_hamestnav, 'flexDirection', 'column'), _defineProperty(_hamestnav, 'alignItems', 'center'), _defineProperty(_hamestnav, 'boxShadow', state.hamShadow), _defineProperty(_hamestnav, 'animationIterationCount', state.animationIterationCount), _defineProperty(_hamestnav, 'animationTimingFunction', state.animationTimingFunction), _defineProperty(_hamestnav, 'animationName', state.animationName), _defineProperty(_hamestnav, 'animationDuration', state.animationDuration), _defineProperty(_hamestnav, 'transformOrigin', state.transformOrigin), _defineProperty(_hamestnav, 'animationFillMode', state.animationFillMode), _hamestnav),
                     '@media screen and (max-width: 768px)': {
                         hamestnav: {

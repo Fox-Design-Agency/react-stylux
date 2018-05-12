@@ -97,7 +97,7 @@ var Subnavbar = function (_React$Component) {
                 var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -133,11 +133,49 @@ var Subnavbar = function (_React$Component) {
                         NAVBAR
                     )
                 )];
+
+                // } else if (this.state.box === "2") {
+                //     const SUBNAVBAR_NAVBAR_LI = {
+                //         display: 'flex',
+                //         flex: 1,
+                //         fontSize: this.state.fontSize,
+                //         fontWeight: this.state.fontWeight,
+                //         justifyContent: 'center',
+                //         margin: this.state.itemSpaceing,
+                //         background: this.state.itemBackground,
+                //         fontVariant: this.state.fontVariant,
+                //     };
+                //     const CHILDS = React.Children.toArray(this.props.children)
+                //     const NAVBAR = CHILDS.map((x, i) => {
+                //         return <li key={i} style={SUBNAVBAR_NAVBAR_LI} id={this.state.itemsid} className={this.state.itemsClassName}>{x}</li>
+                //     })
+                //     use = subnavbarFuntion("2", props, state, self)
+                //     styledSubnavbar = [
+                //         <nav style={use.SUBNAVBAR} className="subnavbar2 socialness">
+                //         <Holder>
+                //             <ul style={use.SUBNAVBAR_NAVBAR1} id={this.state.navid} className={`subnavbar2-navbar1 ${this.state.navClassName}`}>
+                //                 {NAVBAR[0]}
+                //                 {NAVBAR[1]}
+                //             </ul>
+                //             <Holder
+                //                 alignBlock1="flex-end"
+                //                 alignBlock2="flex-start">
+                //                 <div id={this.state.leftItemsid} className={`subnavbar2-globalSearch ${this.state.leftItemsClassName}`}>
+                //                     <p>Search Holder</p>
+                //                 </div>
+                //                 <ul style={use.SUBNAVBAR_NAVBAR2} id={this.state.rightItemsid} className={`subnavbar2-navbar2 ${this.state.rightItemsClassName}`}>
+                //                     {NAVBAR}
+                //                 </ul>
+                //             </Holder>
+                //         </Holder>
+                //     </nav>
+                //     ]
+
             } else {
                 var _SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -193,7 +231,7 @@ var Subnavbar = function (_React$Component) {
                 var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -233,7 +271,7 @@ var Subnavbar = function (_React$Component) {
                 var _SUBNAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',

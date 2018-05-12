@@ -48,6 +48,7 @@ function popupFunction(type, props, state, self) {
                 },
                 POPUPSTYLE: {
                     visibility: visibility ? "visible" : "hidden",
+
                     backgroundColor: '#333',
                     minWidth: '250px',
                     color: '#fff',

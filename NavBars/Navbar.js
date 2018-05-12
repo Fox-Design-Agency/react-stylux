@@ -208,7 +208,7 @@ var Navbar = function (_React$Component) {
                 var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -233,7 +233,7 @@ var Navbar = function (_React$Component) {
                 var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -383,7 +383,7 @@ var Navbar = function (_React$Component) {
                 var _NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -408,7 +408,7 @@ var Navbar = function (_React$Component) {
                 var _HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -537,7 +537,7 @@ var Navbar = function (_React$Component) {
                 var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -562,7 +562,7 @@ var Navbar = function (_React$Component) {
                 var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -712,7 +712,7 @@ var Navbar = function (_React$Component) {
                 var _NAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
                     navbar_navbar_li: {
                         display: this.state.display,
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -737,7 +737,7 @@ var Navbar = function (_React$Component) {
                 var _HAM_NAVBAR_LI2 = _nestingstyles2.default.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                        flex: 1,
+                        flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',

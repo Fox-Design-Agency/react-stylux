@@ -88,7 +88,7 @@ function heading4Function(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap,
                         cursor: cursor
@@ -154,7 +154,7 @@ function heading4Function(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap,
                         cursor: cursor
@@ -219,7 +219,7 @@ function heading4Function(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap,
                         cursor: cursor
@@ -284,7 +284,7 @@ function heading4Function(type, props, state, self) {
                         transform: transform,
                         transformOrigin: transformOrigin,
                         animationFillMode: animationFillMode,
-                        flex: 1,
+                        flex: "1 0 auto",
                         flexWrap: "wrap",
                         wordWrap: wordWrap,
                         cursor: cursor

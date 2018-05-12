@@ -33,7 +33,7 @@ function dropdownnavFunction(type, props, state, self) {
                     width: state.width,
                     padding: '5px',
                     textAlign: state.textAlign,
-                    flex: 1,
+                    flex: "1 0 auto",
                     background: state.background,
                     zIndex: "1000",
                     color: state.color,

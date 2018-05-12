@@ -27,6 +27,7 @@ function subnavbarFunction(type, props, state, self) {
                         width: state.totalWidth,
                         height: state.totalHeight,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: 'column',
                         alignItems: state.alignItems,
                         margin: '0',
@@ -57,8 +58,8 @@ function subnavbarFunction(type, props, state, self) {
                         width: state.navBarWidth,
                         height: 'inherit',
                         display: 'flex',
+                        flex: "1 0 auto",
                         flexWrap: 'wrap',
-                        flex: 1,
                         alignItems: state.columnAlign,
                         fontFamily: state.fontFamily,
                         flexDirection: state.direction
@@ -85,6 +86,7 @@ function subnavbarFunction(type, props, state, self) {
                     height: state.totalHeight,
                     color: state.color,
                     display: state.display,
+                    flex: "1 0 auto",
                     flexDirection: 'column',
                     alignItems: state.alignItems,
                     margin: '0',
@@ -98,7 +100,7 @@ function subnavbarFunction(type, props, state, self) {
                     height: 'inherit',
                     display: 'flex',
                     flexWrap: 'wrap',
-                    flex: 1,
+                    flex: "1 0 auto",
                     alignItems: state.columnAlign,
                     fontFamily: state.fontFamily,
                     flexDirection: state.direction
@@ -108,7 +110,7 @@ function subnavbarFunction(type, props, state, self) {
                     height: 'inherit',
                     display: 'flex',
                     flexWrap: 'wrap',
-                    flex: 1,
+                    flex: "1 0 auto",
                     alignItems: state.columnAlign,
                     fontFamily: state.fontFamily,
                     flexDirection: state.direction

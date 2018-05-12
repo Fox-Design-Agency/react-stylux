@@ -15,6 +15,8 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function containerSwitch0_5(num, props, state) {
     var blocks = '';
 
@@ -22,7 +24,7 @@ function containerSwitch0_5(num, props, state) {
         case num = 1:
             blocks = {
                 block1Direction: props.block1direction || 'row',
-                block1: props.block1 || '1',
+                block1: props.block1 || '1 0 auto',
                 block1BorderLeft: props.b1BLeft,
                 block1BorderRight: props.b1BRight,
                 block1BorderTop: props.b1BTop,
@@ -43,6 +45,7 @@ function containerSwitch0_5(num, props, state) {
                         padding: state.padding,
                         margin: state.margin,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
                         background: state.text,
@@ -99,7 +102,7 @@ function containerSwitch0_5(num, props, state) {
         case num = 2:
             blocks = {
                 block1Direction: props.block1direction || 'row',
-                block1: props.block1 || '1',
+                block1: props.block1 || '1 0 auto',
                 block1BorderLeft: props.b1BLeft,
                 block1BorderRight: props.b1BRight,
                 block1BorderTop: props.b1BTop,
@@ -110,7 +113,7 @@ function containerSwitch0_5(num, props, state) {
                 block1smdis: props.block1smdis || 'flex',
                 block1mddis: props.block1mddis || 'flex',
                 block2Direction: props.block2direction || 'row',
-                block2: props.block2 || '1',
+                block2: props.block2 || '1 0 auto',
                 block2BorderLeft: props.b2BLeft,
                 block2BorderRight: props.b2BRight,
                 block2BorderTop: props.b2BTop,
@@ -131,6 +134,7 @@ function containerSwitch0_5(num, props, state) {
                         padding: state.padding,
                         margin: state.margin,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
                         background: state.text,
@@ -212,7 +216,7 @@ function containerSwitch0_5(num, props, state) {
         case num = 3:
             blocks = {
                 block1Direction: props.block1direction || 'row',
-                block1: props.block1 || '1',
+                block1: props.block1 || '1 0 auto',
                 block1BorderLeft: props.b1BLeft,
                 block1BorderRight: props.b1BRight,
                 block1BorderTop: props.b1BTop,
@@ -223,7 +227,7 @@ function containerSwitch0_5(num, props, state) {
                 block1smdis: props.block1smdis || 'flex',
                 block1mddis: props.block1mddis || 'flex',
                 block2Direction: props.block2direction || 'row',
-                block2: props.block2 || '1',
+                block2: props.block2 || '1 0 auto',
                 block2BorderLeft: props.b2BLeft,
                 block2BorderRight: props.b2BRight,
                 block2BorderTop: props.b2BTop,
@@ -234,7 +238,7 @@ function containerSwitch0_5(num, props, state) {
                 block2smdis: props.block2smdis || 'flex',
                 block2mddis: props.block2mddis || 'flex',
                 block3Direction: props.block3direction || 'row',
-                block3: props.block3 || '1',
+                block3: props.block3 || '1 0 auto',
                 block3BorderLeft: props.b3BLeft,
                 block3BorderRight: props.b3BRight,
                 block3BorderTop: props.b3BTop,
@@ -247,7 +251,7 @@ function containerSwitch0_5(num, props, state) {
             };
             return {
                 holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
+                    holderstyles: _defineProperty({
                         width: state.width,
                         maxWidth: state.width,
                         height: state.height,
@@ -255,6 +259,7 @@ function containerSwitch0_5(num, props, state) {
                         padding: state.padding,
                         margin: state.margin,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
                         background: state.text,
@@ -264,9 +269,8 @@ function containerSwitch0_5(num, props, state) {
                         borderRight: state.borderRight,
                         borderTop: state.borderTop,
                         borderBottom: state.borderBottom,
-                        border: state.border,
-                        flex: 1
-                    },
+                        border: state.border
+                    }, 'flex', 1),
                     '@media (max-width: 768px)': {
                         holderstyles: {
                             display: state.smdis,
@@ -363,7 +367,7 @@ function containerSwitch0_5(num, props, state) {
         case num = 4:
             blocks = {
                 block1Direction: props.block1direction || 'row',
-                block1: props.block1 || '1',
+                block1: props.block1 || '1 0 auto',
                 block1BorderLeft: props.b1BLeft,
                 block1BorderRight: props.b1BRight,
                 block1BorderTop: props.b1BTop,
@@ -374,7 +378,7 @@ function containerSwitch0_5(num, props, state) {
                 block1smdis: props.block1smdis || 'flex',
                 block1mddis: props.block1mddis || 'flex',
                 block2Direction: props.block2direction || 'row',
-                block2: props.block2 || '1',
+                block2: props.block2 || '1 0 auto',
                 block2BorderLeft: props.b2BLeft,
                 block2BorderRight: props.b2BRight,
                 block2BorderTop: props.b2BTop,
@@ -385,7 +389,7 @@ function containerSwitch0_5(num, props, state) {
                 block2smdis: props.block2smdis || 'flex',
                 block2mddis: props.block2mddis || 'flex',
                 block3Direction: props.block3direction || 'row',
-                block3: props.block3 || '1',
+                block3: props.block3 || '1 0 auto',
                 block3BorderLeft: props.b3BLeft,
                 block3BorderRight: props.b3BRight,
                 block3BorderTop: props.b3BTop,
@@ -396,7 +400,7 @@ function containerSwitch0_5(num, props, state) {
                 block3smdis: props.block3smdis || 'flex',
                 block3mddis: props.block3mddis || 'flex',
                 block4Direction: props.block4direction || 'row',
-                block4: props.block4 || '1',
+                block4: props.block4 || '1 0 auto',
                 block4BorderLeft: props.b4BLeft,
                 block4BorderRight: props.b4BRight,
                 block4BorderTop: props.b4BTop,
@@ -417,6 +421,7 @@ function containerSwitch0_5(num, props, state) {
                         padding: state.padding,
                         margin: state.margin,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
                         background: state.text,
@@ -550,7 +555,7 @@ function containerSwitch0_5(num, props, state) {
         case num = 5:
             blocks = {
                 block1Direction: props.block1direction || 'row',
-                block1: props.block1 || '1',
+                block1: props.block1 || '1 0 auto',
                 block1BorderLeft: props.b1BLeft,
                 block1BorderRight: props.b1BRight,
                 block1BorderTop: props.b1BTop,
@@ -561,7 +566,7 @@ function containerSwitch0_5(num, props, state) {
                 block1smdis: props.block1smdis || 'flex',
                 block1mddis: props.block1mddis || 'flex',
                 block2Direction: props.block2direction || 'row',
-                block2: props.block2 || '1',
+                block2: props.block2 || '1 0 auto',
                 block2BorderLeft: props.b2BLeft,
                 block2BorderRight: props.b2BRight,
                 block2BorderTop: props.b2BTop,
@@ -572,7 +577,7 @@ function containerSwitch0_5(num, props, state) {
                 block2smdis: props.block2smdis || 'flex',
                 block2mddis: props.block2mddis || 'flex',
                 block3Direction: props.block3direction || 'row',
-                block3: props.block3 || '1',
+                block3: props.block3 || '1 0 auto',
                 block3BorderLeft: props.b3BLeft,
                 block3BorderRight: props.b3BRight,
                 block3BorderTop: props.b3BTop,
@@ -583,7 +588,7 @@ function containerSwitch0_5(num, props, state) {
                 block3smdis: props.block3smdis || 'flex',
                 block3mddis: props.block3mddis || 'flex',
                 block4Direction: props.block4direction || 'row',
-                block4: props.block4 || '1',
+                block4: props.block4 || '1 0 auto',
                 block4BorderLeft: props.b4BLeft,
                 block4BorderRight: props.b4BRight,
                 block4BorderTop: props.b4BTop,
@@ -594,7 +599,7 @@ function containerSwitch0_5(num, props, state) {
                 block4smdis: props.block4smdis || 'flex',
                 block4mddis: props.block4mddis || 'flex',
                 block5Direction: props.block5direction || 'row',
-                block5: props.block5 || '1',
+                block5: props.block5 || '1 0 auto',
                 block5BorderLeft: props.b5BLeft,
                 block5BorderRight: props.b5BRight,
                 block5BorderTop: props.b5BTop,
@@ -615,6 +620,7 @@ function containerSwitch0_5(num, props, state) {
                         padding: state.padding,
                         margin: state.margin,
                         display: state.display,
+                        flex: "1 0 auto",
                         flexDirection: state.direction,
                         flexWrap: 'wrap',
                         background: state.text,

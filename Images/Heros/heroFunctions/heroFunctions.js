@@ -46,6 +46,7 @@ function heroFunction(type, props, state, self) {
                         width: width,
                         height: height,
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
@@ -74,6 +75,7 @@ function heroFunction(type, props, state, self) {
                         width: width,
                         height: height,
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'flex-end',
                         justifyContent: 'center'
                     },
@@ -115,6 +117,7 @@ function heroFunction(type, props, state, self) {
                         width: width,
                         height: height,
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
@@ -143,6 +146,7 @@ function heroFunction(type, props, state, self) {
                         width: width,
                         height: height,
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'center',
                         justifyContent: 'center'
                     },
@@ -171,6 +175,7 @@ function heroFunction(type, props, state, self) {
                         width: width,
                         height: height,
                         display: 'flex',
+                        flex: "1 0 auto",
                         alignItems: 'flex-end',
                         justifyContent: 'center'
                     },
