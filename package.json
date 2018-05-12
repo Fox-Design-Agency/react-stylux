@@ -18,7 +18,7 @@
     "react-dom": "^16.3.2"
   },
   "dependencies": {
-    "nestingstyles": "0.0.1",
+    "nestingstyles": "0.0.3",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
