@@ -46,8 +46,6 @@ a link should go to the code of conduct
 
 ## Contributing
 
-- Currently looking for any fix for Safari support. I have two theories, adding webkit and other prefixes, which should be a thing anyway, or fixing the way nestingstyles works. This will be a primary concern until fixed, please reach out to https://github.com/Fox-Design-Agency/react-stylux/issues/5
-
 Contribution form and system is currently being thought through. No contributions will currently be accepted outside of Fox Design Agency until system is put into place.
 
 
