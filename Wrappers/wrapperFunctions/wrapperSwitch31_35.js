@@ -3,23 +3,30 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = containerSwitch31_35;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function containerSwitch31_35(num, props, state) {
+exports.default = wrapperSwitch31_35;
+function wrapperSwitch31_35(num, props, state) {
     var blocks = '';
-
+    var background = props.background;
+    var display = props.display || 'flex';
+    var direction = props.direction || 'column';
+    var height = props.height;
+    var maxHeight = props.maxHeight;
+    var width = props.width || "100%";
+    var maxWidth = props.maxWidth;
+    var borderLeft = props.bLeft;
+    var borderRight = props.bRight;
+    var borderTop = props.bTop;
+    var borderBottom = props.bBottom;
+    var border = props.border;
+    var padding = props.padding || '0';
+    var margin = props.margin || '10px 0';
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+    var smflexDir = props.smflexDir || 'column';
+    var mdflexDir = props.mdflexDir || 'column';
+    var alignBlocks = props.alignBlocks;
     switch (num) {
-        case num = 31:
+        case 31:
             blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1 0 auto',
@@ -364,851 +371,1395 @@ function containerSwitch31_35(num, props, state) {
                 block31mddis: props.block31mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: blocks.block3Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: blocks.block4Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: blocks.block5Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                block6styles: {
+                    display: 'flex',
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                smblock6styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                mdblock6styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                block7styles: {
+                    display: 'flex',
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                smblock7styles: {
+                    display: blocks.block7smdis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                mdblock7styles: {
+                    display: blocks.block7mddis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                block8styles: {
+                    display: 'flex',
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
+                },
+                smblock8styles: {
+                    display: blocks.block8smdis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block6styles: _nestingstyles2.default.create({
-                    block6styles: {
-                        display: 'flex',
-                        flex: blocks.block6,
-                        flexDirection: blocks.block6Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock6,
-                        borderLeft: blocks.block6BorderLeft,
-                        borderRight: blocks.block6BorderRight,
-                        borderTop: blocks.block6BorderTop,
-                        borderBottom: blocks.block6BorderBottom,
-                        border: blocks.b6Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock6
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block6styles: {
-                            display: blocks.block6smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block6styles: {
-                            display: blocks.block6mddis
-                        }
-                    }
+                },
+                mdblock8styles: {
+                    display: blocks.block8mddis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block7styles: _nestingstyles2.default.create({
-                    block7styles: {
-                        display: 'flex',
-                        flex: blocks.block7,
-                        flexDirection: blocks.block7Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock7,
-                        borderLeft: blocks.block7BorderLeft,
-                        borderRight: blocks.block7BorderRight,
-                        borderTop: blocks.block7BorderTop,
-                        borderBottom: blocks.block7BorderBottom,
-                        border: blocks.b7Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock7
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block7styles: {
-                            display: blocks.block7smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block7styles: {
-                            display: blocks.block7mddis
-                        }
-                    }
-                }),
-                block8styles: _nestingstyles2.default.create({
-                    block8styles: {
-                        display: 'flex',
-                        flex: blocks.block8,
-                        flexDirection: blocks.block8Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock8,
-                        borderLeft: blocks.block8BorderLeft,
-                        borderRight: blocks.block8BorderRight,
-                        borderTop: blocks.block8BorderTop,
-                        borderBottom: blocks.block8BorderBottom,
-                        border: blocks.b8Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock8
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block8styles: {
-                            display: blocks.block8smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block8styles: {
-                            display: blocks.block8mddis
-                        }
-                    }
-                }),
-                block9styles: _nestingstyles2.default.create({
-                    block9styles: {
-                        display: 'flex',
-                        flex: blocks.block9,
-                        flexDirection: blocks.block9Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock9,
-                        borderLeft: blocks.block9BorderLeft,
-                        borderRight: blocks.block9BorderRight,
-                        borderTop: blocks.block9BorderTop,
-                        borderBottom: blocks.block9BorderBottom,
-                        border: blocks.b9Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock9
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block9styles: {
-                            display: blocks.block9smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block9styles: {
-                            display: blocks.block9mddis
-                        }
-                    }
-                }),
-                block10styles: _nestingstyles2.default.create({
-                    block10styles: {
-                        display: 'flex',
-                        flex: blocks.block10,
-                        flexDirection: blocks.block10Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock10,
-                        borderLeft: blocks.block10BorderLeft,
-                        borderRight: blocks.block10BorderRight,
-                        borderTop: blocks.block10BorderTop,
-                        borderBottom: blocks.block10BorderBottom,
-                        border: blocks.b10Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock10
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block10styles: {
-                            display: blocks.block10smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block10styles: {
-                            display: blocks.block10mddis
-                        }
-                    }
-                }),
-                block11styles: _nestingstyles2.default.create({
-                    block11styles: {
-                        display: 'flex',
-                        flex: blocks.block11,
-                        flexDirection: blocks.block11Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock11,
-                        borderLeft: blocks.block11BorderLeft,
-                        borderRight: blocks.block11BorderRight,
-                        borderTop: blocks.block11BorderTop,
-                        borderBottom: blocks.block11BorderBottom,
-                        border: blocks.b11Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock11
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block11styles: {
-                            display: blocks.block11smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block11styles: {
-                            display: blocks.block11mddis
-                        }
-                    }
-                }),
-                block12styles: _nestingstyles2.default.create({
-                    block12styles: {
-                        display: 'flex',
-                        flex: blocks.block12,
-                        flexDirection: blocks.block12Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock12,
-                        borderLeft: blocks.block12BorderLeft,
-                        borderRight: blocks.block12BorderRight,
-                        borderTop: blocks.block12BorderTop,
-                        borderBottom: blocks.block12BorderBottom,
-                        border: blocks.b12Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock12
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block12styles: {
-                            display: blocks.block12smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block12styles: {
-                            display: blocks.block12mddis
-                        }
-                    }
-                }),
-                block13styles: _nestingstyles2.default.create({
-                    block13styles: {
-                        display: 'flex',
-                        flex: blocks.block13,
-                        flexDirection: blocks.block13Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock13,
-                        borderLeft: blocks.block13BorderLeft,
-                        borderRight: blocks.block13BorderRight,
-                        borderTop: blocks.block13BorderTop,
-                        borderBottom: blocks.block13BorderBottom,
-                        border: blocks.b13Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock13
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block13styles: {
-                            display: blocks.block13smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block13styles: {
-                            display: blocks.block13mddis
-                        }
-                    }
-                }),
-                block14styles: _nestingstyles2.default.create({
-                    block14styles: {
-                        display: 'flex',
-                        flex: blocks.block14,
-                        flexDirection: blocks.block14Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock14,
-                        borderLeft: blocks.block14BorderLeft,
-                        borderRight: blocks.block14BorderRight,
-                        borderTop: blocks.block14BorderTop,
-                        borderBottom: blocks.block14BorderBottom,
-                        border: blocks.b14Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock14
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block14styles: {
-                            display: blocks.block14smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block14styles: {
-                            display: blocks.block14mddis
-                        }
-                    }
-                }),
-                block15styles: _nestingstyles2.default.create({
-                    block15styles: {
-                        display: 'flex',
-                        flex: blocks.block15,
-                        flexDirection: blocks.block15Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock15,
-                        borderLeft: blocks.block15BorderLeft,
-                        borderRight: blocks.block15BorderRight,
-                        borderTop: blocks.block15BorderTop,
-                        borderBottom: blocks.block15BorderBottom,
-                        border: blocks.b15Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock15
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block15styles: {
-                            display: blocks.block15smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block15styles: {
-                            display: blocks.block15mddis
-                        }
-                    }
-                }),
-                block16styles: _nestingstyles2.default.create({
-                    block16styles: {
-                        display: 'flex',
-                        flex: blocks.block16,
-                        flexDirection: blocks.block16Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock16,
-                        borderLeft: blocks.block16BorderLeft,
-                        borderRight: blocks.block16BorderRight,
-                        borderTop: blocks.block16BorderTop,
-                        borderBottom: blocks.block16BorderBottom,
-                        border: blocks.b16Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock16
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block16styles: {
-                            display: blocks.block16smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block16styles: {
-                            display: blocks.block16mddis
-                        }
-                    }
-                }),
-                block17styles: _nestingstyles2.default.create({
-                    block17styles: {
-                        display: 'flex',
-                        flex: blocks.block17,
-                        flexDirection: blocks.block17Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock17,
-                        borderLeft: blocks.block17BorderLeft,
-                        borderRight: blocks.block17BorderRight,
-                        borderTop: blocks.block17BorderTop,
-                        borderBottom: blocks.block17BorderBottom,
-                        border: blocks.b17Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock17
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block17styles: {
-                            display: blocks.block17smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block17styles: {
-                            display: blocks.block17mddis
-                        }
-                    }
-                }),
-                block18styles: _nestingstyles2.default.create({
-                    block18styles: {
-                        display: 'flex',
-                        flex: blocks.block18,
-                        flexDirection: blocks.block18Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock18,
-                        borderLeft: blocks.block18BorderLeft,
-                        borderRight: blocks.block18BorderRight,
-                        borderTop: blocks.block18BorderTop,
-                        borderBottom: blocks.block18BorderBottom,
-                        border: blocks.b18Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock18
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block18styles: {
-                            display: blocks.block18smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block18styles: {
-                            display: blocks.block18mddis
-                        }
-                    }
-                }),
-                block19styles: _nestingstyles2.default.create({
-                    block19styles: {
-                        display: 'flex',
-                        flex: blocks.block19,
-                        flexDirection: blocks.block19Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock19,
-                        borderLeft: blocks.block19BorderLeft,
-                        borderRight: blocks.block19BorderRight,
-                        borderTop: blocks.block19BorderTop,
-                        borderBottom: blocks.block19BorderBottom,
-                        border: blocks.b19Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock19
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block19styles: {
-                            display: blocks.block19smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block19styles: {
-                            display: blocks.block19mddis
-                        }
-                    }
-                }),
-                block20styles: _nestingstyles2.default.create({
-                    block20styles: {
-                        display: 'flex',
-                        flex: blocks.block20,
-                        flexDirection: blocks.block20Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock20,
-                        borderLeft: blocks.block20BorderLeft,
-                        borderRight: blocks.block20BorderRight,
-                        borderTop: blocks.block20BorderTop,
-                        borderBottom: blocks.block20BorderBottom,
-                        border: blocks.b20Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock20
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block20styles: {
-                            display: blocks.block20smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block20styles: {
-                            display: blocks.block20mddis
-                        }
-                    }
-                }),
-                block21styles: _nestingstyles2.default.create({
-                    block21styles: {
-                        display: 'flex',
-                        flex: blocks.block21,
-                        flexDirection: blocks.block21Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock21,
-                        borderLeft: blocks.block21BorderLeft,
-                        borderRight: blocks.block21BorderRight,
-                        borderTop: blocks.block21BorderTop,
-                        borderBottom: blocks.block21BorderBottom,
-                        border: blocks.b21Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock21
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block21styles: {
-                            display: blocks.block21smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block21styles: {
-                            display: blocks.block21mddis
-                        }
-                    }
-                }),
-                block22styles: _nestingstyles2.default.create({
-                    block22styles: {
-                        display: 'flex',
-                        flex: blocks.block22,
-                        flexDirection: blocks.block22Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock22,
-                        borderLeft: blocks.block22BorderLeft,
-                        borderRight: blocks.block22BorderRight,
-                        borderTop: blocks.block22BorderTop,
-                        borderBottom: blocks.block22BorderBottom,
-                        border: blocks.b22Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock22
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block22styles: {
-                            display: blocks.block22smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block22styles: {
-                            display: blocks.block22mddis
-                        }
-                    }
-                }),
-                block23styles: _nestingstyles2.default.create({
-                    block23styles: {
-                        display: 'flex',
-                        flex: blocks.block23,
-                        flexDirection: blocks.block23Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock23,
-                        borderLeft: blocks.block23BorderLeft,
-                        borderRight: blocks.block23BorderRight,
-                        borderTop: blocks.block23BorderTop,
-                        borderBottom: blocks.block23BorderBottom,
-                        border: blocks.b23Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock23
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block23styles: {
-                            display: blocks.block23smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block23styles: {
-                            display: blocks.block23mddis
-                        }
-                    }
-                }),
-                block24styles: _nestingstyles2.default.create({
-                    block24styles: {
-                        display: 'flex',
-                        flex: blocks.block24,
-                        flexDirection: blocks.block24Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock24,
-                        borderLeft: blocks.block24BorderLeft,
-                        borderRight: blocks.block24BorderRight,
-                        borderTop: blocks.block24BorderTop,
-                        borderBottom: blocks.block24BorderBottom,
-                        border: blocks.b24Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock24
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block24styles: {
-                            display: blocks.block24smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block24styles: {
-                            display: blocks.block24mddis
-                        }
-                    }
-                }),
-                block25styles: _nestingstyles2.default.create({
-                    block25styles: {
-                        display: 'flex',
-                        flex: blocks.block25,
-                        flexDirection: blocks.block25Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock25,
-                        borderLeft: blocks.block25BorderLeft,
-                        borderRight: blocks.block25BorderRight,
-                        borderTop: blocks.block25BorderTop,
-                        borderBottom: blocks.block25BorderBottom,
-                        border: blocks.b25Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock25
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block25styles: {
-                            display: blocks.block25smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block25styles: {
-                            display: blocks.block25mddis
-                        }
-                    }
-                }),
-                block26styles: _nestingstyles2.default.create({
-                    block26styles: {
-                        display: 'flex',
-                        flex: blocks.block26,
-                        flexDirection: blocks.block26Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock26,
-                        borderLeft: blocks.block26BorderLeft,
-                        borderRight: blocks.block26BorderRight,
-                        borderTop: blocks.block26BorderTop,
-                        borderBottom: blocks.block26BorderBottom,
-                        border: blocks.b26Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock26
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block26styles: {
-                            display: blocks.block26smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block26styles: {
-                            display: blocks.block26mddis
-                        }
-                    }
-                }),
-                block27styles: _nestingstyles2.default.create({
-                    block27styles: {
-                        display: 'flex',
-                        flex: blocks.block27,
-                        flexDirection: blocks.block27Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock27,
-                        borderLeft: blocks.block27BorderLeft,
-                        borderRight: blocks.block27BorderRight,
-                        borderTop: blocks.block27BorderTop,
-                        borderBottom: blocks.block27BorderBottom,
-                        border: blocks.b27Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock27
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block27styles: {
-                            display: blocks.block27smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block27styles: {
-                            display: blocks.block27mddis
-                        }
-                    }
-                }),
-                block28styles: _nestingstyles2.default.create({
-                    block28styles: {
-                        display: 'flex',
-                        flex: blocks.block28,
-                        flexDirection: blocks.block28Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock28,
-                        borderLeft: blocks.block28BorderLeft,
-                        borderRight: blocks.block28BorderRight,
-                        borderTop: blocks.block28BorderTop,
-                        borderBottom: blocks.block28BorderBottom,
-                        border: blocks.b28Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock28
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block28styles: {
-                            display: blocks.block28smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block28styles: {
-                            display: blocks.block28mddis
-                        }
-                    }
-                }),
-                block29styles: _nestingstyles2.default.create({
-                    block29styles: {
-                        display: 'flex',
-                        flex: blocks.block29,
-                        flexDirection: blocks.block29Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock29,
-                        borderLeft: blocks.block29BorderLeft,
-                        borderRight: blocks.block29BorderRight,
-                        borderTop: blocks.block29BorderTop,
-                        borderBottom: blocks.block29BorderBottom,
-                        border: blocks.b29Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock29
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block29styles: {
-                            display: blocks.block29smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block29styles: {
-                            display: blocks.block29mddis
-                        }
-                    }
-                }),
-                block30styles: _nestingstyles2.default.create({
-                    block30styles: {
-                        display: 'flex',
-                        flex: blocks.block30,
-                        flexDirection: blocks.block30Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock30,
-                        borderLeft: blocks.block30BorderLeft,
-                        borderRight: blocks.block30BorderRight,
-                        borderTop: blocks.block30BorderTop,
-                        borderBottom: blocks.block30BorderBottom,
-                        border: blocks.b30Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock30
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block30styles: {
-                            display: blocks.block30smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block30styles: {
-                            display: blocks.block30mddis
-                        }
-                    }
-                }),
-                block31styles: _nestingstyles2.default.create({
-                    block31styles: {
-                        display: 'flex',
-                        flex: blocks.block31,
-                        flexDirection: blocks.block31Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock31,
-                        borderLeft: blocks.block31BorderLeft,
-                        borderRight: blocks.block31BorderRight,
-                        borderTop: blocks.block31BorderTop,
-                        borderBottom: blocks.block31BorderBottom,
-                        border: blocks.b31Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock31
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block31styles: {
-                            display: blocks.block31smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block31styles: {
-                            display: blocks.block31mddis
-                        }
-                    }
-                })
+                },
+                block9styles: {
+                    display: 'flex',
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                smblock9styles: {
+                    display: blocks.block9smdis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+
+                },
+                mdblock9styles: {
+                    display: blocks.block9mddis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                block10styles: {
+                    display: 'flex',
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                smblock10styles: {
+                    display: blocks.block10smdis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+
+                },
+                mdblock10styles: {
+                    display: blocks.block10mddis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                block11styles: {
+                    display: 'flex',
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                smblock11styles: {
+                    display: blocks.block11smdis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+
+                },
+                mdblock11styles: {
+                    display: blocks.block11mddis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                block12styles: {
+                    display: 'flex',
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                smblock12styles: {
+                    display: blocks.block12smdis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+
+                },
+                mdblock12styles: {
+                    display: blocks.block12mddis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                block13styles: {
+                    display: 'flex',
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                smblock13styles: {
+                    display: blocks.block13smdis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+
+                },
+                mdblock13styles: {
+                    display: blocks.block13mddis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                block14styles: {
+                    display: 'flex',
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                smblock14styles: {
+                    display: blocks.block14smdis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+
+                },
+                mdblock14styles: {
+                    display: blocks.block14mddis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                block15styles: {
+                    display: 'flex',
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                smblock15styles: {
+                    display: blocks.block15smdis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+
+                },
+                mdblock15styles: {
+                    display: blocks.block15mddis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                block16styles: {
+                    display: 'flex',
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                smblock16styles: {
+                    display: blocks.block16smdis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+
+                },
+                mdblock16styles: {
+                    display: blocks.block16mddis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                block17styles: {
+                    display: 'flex',
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                smblock17styles: {
+                    display: blocks.block17smdis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+
+                },
+                mdblock17styles: {
+                    display: blocks.block17mddis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                block18styles: {
+                    display: 'flex',
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                smblock18styles: {
+                    display: blocks.block18smdis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+
+                },
+                mdblock18styles: {
+                    display: blocks.block18mddis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                block19styles: {
+                    display: 'flex',
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                smblock19styles: {
+                    display: blocks.block19smdis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+
+                },
+                mdblock19styles: {
+                    display: blocks.block19mddis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                block20styles: {
+                    display: 'flex',
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+                },
+                smblock20styles: {
+                    display: blocks.block20smdis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                mdblock20styles: {
+                    display: blocks.block20mddis, flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                block21styles: {
+                    display: 'flex',
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                smblock21styles: {
+                    display: blocks.block21smdis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+
+                },
+                mdblock21styles: {
+                    display: blocks.block21mddis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                block22styles: {
+                    display: 'flex',
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                smblock22styles: {
+                    display: blocks.block22smdis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+
+                },
+                mdblock22styles: {
+                    display: blocks.block22mddis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                block23styles: {
+                    display: 'flex',
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                smblock23styles: {
+                    display: blocks.block23smdis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+
+                },
+                mdblock23styles: {
+                    display: blocks.block23mddis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                block24styles: {
+                    display: 'flex',
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                smblock24styles: {
+                    display: blocks.block24smdis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+
+                },
+                mdblock24styles: {
+                    display: blocks.block24mddis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                block25styles: {
+                    display: 'flex',
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                smblock25styles: {
+                    display: blocks.block25smdis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+
+                },
+                mdblock25styles: {
+                    display: blocks.block25mddis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                block26styles: {
+                    display: 'flex',
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                smblock26styles: {
+                    display: blocks.block26smdis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+
+                },
+                mdblock26styles: {
+                    display: blocks.block26mddis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                block27styles: {
+                    display: 'flex',
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                smblock27styles: {
+                    display: blocks.block27smdis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+
+                },
+                mdblock27styles: {
+                    display: blocks.block27mddis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                block28styles: {
+                    display: 'flex',
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                smblock28styles: {
+                    display: blocks.block28smdis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+
+                },
+                mdblock28styles: {
+                    display: blocks.block28mddis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                block29styles: {
+                    display: 'flex',
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                smblock29styles: {
+                    display: blocks.block29smdis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+
+                },
+                mdblock29styles: {
+                    display: blocks.block29mddis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                block30styles: {
+                    display: 'flex',
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                smblock30styles: {
+                    display: blocks.block30smdis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+
+                },
+                mdblock30styles: {
+                    display: blocks.block30mddis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                block31styles: {
+                    display: 'flex',
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                smblock31styles: {
+                    display: blocks.block31smdis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+
+                },
+                mdblock31styles: {
+                    display: blocks.block31mddis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                }
             };
 
-        case num = 32:
+        case 32:
             blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1 0 auto',
@@ -1564,876 +2115,1437 @@ function containerSwitch31_35(num, props, state) {
                 block32mddis: props.block32mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: blocks.block3Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: blocks.block4Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: blocks.block5Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                block6styles: {
+                    display: 'flex',
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                smblock6styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                mdblock6styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                block7styles: {
+                    display: 'flex',
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                smblock7styles: {
+                    display: blocks.block7smdis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                mdblock7styles: {
+                    display: blocks.block7mddis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                block8styles: {
+                    display: 'flex',
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
+                },
+                smblock8styles: {
+                    display: blocks.block8smdis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block6styles: _nestingstyles2.default.create({
-                    block6styles: {
-                        display: 'flex',
-                        flex: blocks.block6,
-                        flexDirection: blocks.block6Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock6,
-                        borderLeft: blocks.block6BorderLeft,
-                        borderRight: blocks.block6BorderRight,
-                        borderTop: blocks.block6BorderTop,
-                        borderBottom: blocks.block6BorderBottom,
-                        border: blocks.b6Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock6
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block6styles: {
-                            display: blocks.block6smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block6styles: {
-                            display: blocks.block6mddis
-                        }
-                    }
+                },
+                mdblock8styles: {
+                    display: blocks.block8mddis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block7styles: _nestingstyles2.default.create({
-                    block7styles: {
-                        display: 'flex',
-                        flex: blocks.block7,
-                        flexDirection: blocks.block7Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock7,
-                        borderLeft: blocks.block7BorderLeft,
-                        borderRight: blocks.block7BorderRight,
-                        borderTop: blocks.block7BorderTop,
-                        borderBottom: blocks.block7BorderBottom,
-                        border: blocks.b7Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock7
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block7styles: {
-                            display: blocks.block7smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block7styles: {
-                            display: blocks.block7mddis
-                        }
-                    }
-                }),
-                block8styles: _nestingstyles2.default.create({
-                    block8styles: {
-                        display: 'flex',
-                        flex: blocks.block8,
-                        flexDirection: blocks.block8Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock8,
-                        borderLeft: blocks.block8BorderLeft,
-                        borderRight: blocks.block8BorderRight,
-                        borderTop: blocks.block8BorderTop,
-                        borderBottom: blocks.block8BorderBottom,
-                        border: blocks.b8Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock8
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block8styles: {
-                            display: blocks.block8smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block8styles: {
-                            display: blocks.block8mddis
-                        }
-                    }
-                }),
-                block9styles: _nestingstyles2.default.create({
-                    block9styles: {
-                        display: 'flex',
-                        flex: blocks.block9,
-                        flexDirection: blocks.block9Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock9,
-                        borderLeft: blocks.block9BorderLeft,
-                        borderRight: blocks.block9BorderRight,
-                        borderTop: blocks.block9BorderTop,
-                        borderBottom: blocks.block9BorderBottom,
-                        border: blocks.b9Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock9
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block9styles: {
-                            display: blocks.block9smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block9styles: {
-                            display: blocks.block9mddis
-                        }
-                    }
-                }),
-                block10styles: _nestingstyles2.default.create({
-                    block10styles: {
-                        display: 'flex',
-                        flex: blocks.block10,
-                        flexDirection: blocks.block10Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock10,
-                        borderLeft: blocks.block10BorderLeft,
-                        borderRight: blocks.block10BorderRight,
-                        borderTop: blocks.block10BorderTop,
-                        borderBottom: blocks.block10BorderBottom,
-                        border: blocks.b10Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock10
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block10styles: {
-                            display: blocks.block10smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block10styles: {
-                            display: blocks.block10mddis
-                        }
-                    }
-                }),
-                block11styles: _nestingstyles2.default.create({
-                    block11styles: {
-                        display: 'flex',
-                        flex: blocks.block11,
-                        flexDirection: blocks.block11Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock11,
-                        borderLeft: blocks.block11BorderLeft,
-                        borderRight: blocks.block11BorderRight,
-                        borderTop: blocks.block11BorderTop,
-                        borderBottom: blocks.block11BorderBottom,
-                        border: blocks.b11Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock11
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block11styles: {
-                            display: blocks.block11smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block11styles: {
-                            display: blocks.block11mddis
-                        }
-                    }
-                }),
-                block12styles: _nestingstyles2.default.create({
-                    block12styles: {
-                        display: 'flex',
-                        flex: blocks.block12,
-                        flexDirection: blocks.block12Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock12,
-                        borderLeft: blocks.block12BorderLeft,
-                        borderRight: blocks.block12BorderRight,
-                        borderTop: blocks.block12BorderTop,
-                        borderBottom: blocks.block12BorderBottom,
-                        border: blocks.b12Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock12
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block12styles: {
-                            display: blocks.block12smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block12styles: {
-                            display: blocks.block12mddis
-                        }
-                    }
-                }),
-                block13styles: _nestingstyles2.default.create({
-                    block13styles: {
-                        display: 'flex',
-                        flex: blocks.block13,
-                        flexDirection: blocks.block13Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock13,
-                        borderLeft: blocks.block13BorderLeft,
-                        borderRight: blocks.block13BorderRight,
-                        borderTop: blocks.block13BorderTop,
-                        borderBottom: blocks.block13BorderBottom,
-                        border: blocks.b13Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock13
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block13styles: {
-                            display: blocks.block13smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block13styles: {
-                            display: blocks.block13mddis
-                        }
-                    }
-                }),
-                block14styles: _nestingstyles2.default.create({
-                    block14styles: {
-                        display: 'flex',
-                        flex: blocks.block14,
-                        flexDirection: blocks.block14Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock14,
-                        borderLeft: blocks.block14BorderLeft,
-                        borderRight: blocks.block14BorderRight,
-                        borderTop: blocks.block14BorderTop,
-                        borderBottom: blocks.block14BorderBottom,
-                        border: blocks.b14Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock14
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block14styles: {
-                            display: blocks.block14smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block14styles: {
-                            display: blocks.block14mddis
-                        }
-                    }
-                }),
-                block15styles: _nestingstyles2.default.create({
-                    block15styles: {
-                        display: 'flex',
-                        flex: blocks.block15,
-                        flexDirection: blocks.block15Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock15,
-                        borderLeft: blocks.block15BorderLeft,
-                        borderRight: blocks.block15BorderRight,
-                        borderTop: blocks.block15BorderTop,
-                        borderBottom: blocks.block15BorderBottom,
-                        border: blocks.b15Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock15
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block15styles: {
-                            display: blocks.block15smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block15styles: {
-                            display: blocks.block15mddis
-                        }
-                    }
-                }),
-                block16styles: _nestingstyles2.default.create({
-                    block16styles: {
-                        display: 'flex',
-                        flex: blocks.block16,
-                        flexDirection: blocks.block16Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock16,
-                        borderLeft: blocks.block16BorderLeft,
-                        borderRight: blocks.block16BorderRight,
-                        borderTop: blocks.block16BorderTop,
-                        borderBottom: blocks.block16BorderBottom,
-                        border: blocks.b16Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock16
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block16styles: {
-                            display: blocks.block16smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block16styles: {
-                            display: blocks.block16mddis
-                        }
-                    }
-                }),
-                block17styles: _nestingstyles2.default.create({
-                    block17styles: {
-                        display: 'flex',
-                        flex: blocks.block17,
-                        flexDirection: blocks.block17Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock17,
-                        borderLeft: blocks.block17BorderLeft,
-                        borderRight: blocks.block17BorderRight,
-                        borderTop: blocks.block17BorderTop,
-                        borderBottom: blocks.block17BorderBottom,
-                        border: blocks.b17Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock17
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block17styles: {
-                            display: blocks.block17smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block17styles: {
-                            display: blocks.block17mddis
-                        }
-                    }
-                }),
-                block18styles: _nestingstyles2.default.create({
-                    block18styles: {
-                        display: 'flex',
-                        flex: blocks.block18,
-                        flexDirection: blocks.block18Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock18,
-                        borderLeft: blocks.block18BorderLeft,
-                        borderRight: blocks.block18BorderRight,
-                        borderTop: blocks.block18BorderTop,
-                        borderBottom: blocks.block18BorderBottom,
-                        border: blocks.b18Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock18
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block18styles: {
-                            display: blocks.block18smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block18styles: {
-                            display: blocks.block18mddis
-                        }
-                    }
-                }),
-                block19styles: _nestingstyles2.default.create({
-                    block19styles: {
-                        display: 'flex',
-                        flex: blocks.block19,
-                        flexDirection: blocks.block19Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock19,
-                        borderLeft: blocks.block19BorderLeft,
-                        borderRight: blocks.block19BorderRight,
-                        borderTop: blocks.block19BorderTop,
-                        borderBottom: blocks.block19BorderBottom,
-                        border: blocks.b19Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock19
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block19styles: {
-                            display: blocks.block19smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block19styles: {
-                            display: blocks.block19mddis
-                        }
-                    }
-                }),
-                block20styles: _nestingstyles2.default.create({
-                    block20styles: {
-                        display: 'flex',
-                        flex: blocks.block20,
-                        flexDirection: blocks.block20Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock20,
-                        borderLeft: blocks.block20BorderLeft,
-                        borderRight: blocks.block20BorderRight,
-                        borderTop: blocks.block20BorderTop,
-                        borderBottom: blocks.block20BorderBottom,
-                        border: blocks.b20Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock20
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block20styles: {
-                            display: blocks.block20smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block20styles: {
-                            display: blocks.block20mddis
-                        }
-                    }
-                }),
-                block21styles: _nestingstyles2.default.create({
-                    block21styles: {
-                        display: 'flex',
-                        flex: blocks.block21,
-                        flexDirection: blocks.block21Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock21,
-                        borderLeft: blocks.block21BorderLeft,
-                        borderRight: blocks.block21BorderRight,
-                        borderTop: blocks.block21BorderTop,
-                        borderBottom: blocks.block21BorderBottom,
-                        border: blocks.b21Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock21
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block21styles: {
-                            display: blocks.block21smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block21styles: {
-                            display: blocks.block21mddis
-                        }
-                    }
-                }),
-                block22styles: _nestingstyles2.default.create({
-                    block22styles: {
-                        display: 'flex',
-                        flex: blocks.block22,
-                        flexDirection: blocks.block22Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock22,
-                        borderLeft: blocks.block22BorderLeft,
-                        borderRight: blocks.block22BorderRight,
-                        borderTop: blocks.block22BorderTop,
-                        borderBottom: blocks.block22BorderBottom,
-                        border: blocks.b22Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock22
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block22styles: {
-                            display: blocks.block22smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block22styles: {
-                            display: blocks.block22mddis
-                        }
-                    }
-                }),
-                block23styles: _nestingstyles2.default.create({
-                    block23styles: {
-                        display: 'flex',
-                        flex: blocks.block23,
-                        flexDirection: blocks.block23Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock23,
-                        borderLeft: blocks.block23BorderLeft,
-                        borderRight: blocks.block23BorderRight,
-                        borderTop: blocks.block23BorderTop,
-                        borderBottom: blocks.block23BorderBottom,
-                        border: blocks.b23Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock23
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block23styles: {
-                            display: blocks.block23smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block23styles: {
-                            display: blocks.block23mddis
-                        }
-                    }
-                }),
-                block24styles: _nestingstyles2.default.create({
-                    block24styles: {
-                        display: 'flex',
-                        flex: blocks.block24,
-                        flexDirection: blocks.block24Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock24,
-                        borderLeft: blocks.block24BorderLeft,
-                        borderRight: blocks.block24BorderRight,
-                        borderTop: blocks.block24BorderTop,
-                        borderBottom: blocks.block24BorderBottom,
-                        border: blocks.b24Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock24
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block24styles: {
-                            display: blocks.block24smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block24styles: {
-                            display: blocks.block24mddis
-                        }
-                    }
-                }),
-                block25styles: _nestingstyles2.default.create({
-                    block25styles: {
-                        display: 'flex',
-                        flex: blocks.block25,
-                        flexDirection: blocks.block25Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock25,
-                        borderLeft: blocks.block25BorderLeft,
-                        borderRight: blocks.block25BorderRight,
-                        borderTop: blocks.block25BorderTop,
-                        borderBottom: blocks.block25BorderBottom,
-                        border: blocks.b25Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock25
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block25styles: {
-                            display: blocks.block25smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block25styles: {
-                            display: blocks.block25mddis
-                        }
-                    }
-                }),
-                block26styles: _nestingstyles2.default.create({
-                    block26styles: {
-                        display: 'flex',
-                        flex: blocks.block26,
-                        flexDirection: blocks.block26Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock26,
-                        borderLeft: blocks.block26BorderLeft,
-                        borderRight: blocks.block26BorderRight,
-                        borderTop: blocks.block26BorderTop,
-                        borderBottom: blocks.block26BorderBottom,
-                        border: blocks.b26Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock26
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block26styles: {
-                            display: blocks.block26smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block26styles: {
-                            display: blocks.block26mddis
-                        }
-                    }
-                }),
-                block27styles: _nestingstyles2.default.create({
-                    block27styles: {
-                        display: 'flex',
-                        flex: blocks.block27,
-                        flexDirection: blocks.block27Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock27,
-                        borderLeft: blocks.block27BorderLeft,
-                        borderRight: blocks.block27BorderRight,
-                        borderTop: blocks.block27BorderTop,
-                        borderBottom: blocks.block27BorderBottom,
-                        border: blocks.b27Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock27
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block27styles: {
-                            display: blocks.block27smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block27styles: {
-                            display: blocks.block27mddis
-                        }
-                    }
-                }),
-                block28styles: _nestingstyles2.default.create({
-                    block28styles: {
-                        display: 'flex',
-                        flex: blocks.block28,
-                        flexDirection: blocks.block28Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock28,
-                        borderLeft: blocks.block28BorderLeft,
-                        borderRight: blocks.block28BorderRight,
-                        borderTop: blocks.block28BorderTop,
-                        borderBottom: blocks.block28BorderBottom,
-                        border: blocks.b28Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock28
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block28styles: {
-                            display: blocks.block28smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block28styles: {
-                            display: blocks.block28mddis
-                        }
-                    }
-                }),
-                block29styles: _nestingstyles2.default.create({
-                    block29styles: {
-                        display: 'flex',
-                        flex: blocks.block29,
-                        flexDirection: blocks.block29Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock29,
-                        borderLeft: blocks.block29BorderLeft,
-                        borderRight: blocks.block29BorderRight,
-                        borderTop: blocks.block29BorderTop,
-                        borderBottom: blocks.block29BorderBottom,
-                        border: blocks.b29Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock29
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block29styles: {
-                            display: blocks.block29smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block29styles: {
-                            display: blocks.block29mddis
-                        }
-                    }
-                }),
-                block30styles: _nestingstyles2.default.create({
-                    block30styles: {
-                        display: 'flex',
-                        flex: blocks.block30,
-                        flexDirection: blocks.block30Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock30,
-                        borderLeft: blocks.block30BorderLeft,
-                        borderRight: blocks.block30BorderRight,
-                        borderTop: blocks.block30BorderTop,
-                        borderBottom: blocks.block30BorderBottom,
-                        border: blocks.b30Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock30
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block30styles: {
-                            display: blocks.block30smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block30styles: {
-                            display: blocks.block30mddis
-                        }
-                    }
-                }),
-                block31styles: _nestingstyles2.default.create({
-                    block31styles: {
-                        display: 'flex',
-                        flex: blocks.block31,
-                        flexDirection: blocks.block31Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock31,
-                        borderLeft: blocks.block31BorderLeft,
-                        borderRight: blocks.block31BorderRight,
-                        borderTop: blocks.block31BorderTop,
-                        borderBottom: blocks.block31BorderBottom,
-                        border: blocks.b31Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock31
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block31styles: {
-                            display: blocks.block31smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block31styles: {
-                            display: blocks.block31mddis
-                        }
-                    }
-                }),
-                block32styles: _nestingstyles2.default.create({
-                    block32styles: {
-                        display: 'flex',
-                        flex: blocks.block32,
-                        flexDirection: blocks.block32Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock32,
-                        borderLeft: blocks.block32BorderLeft,
-                        borderRight: blocks.block32BorderRight,
-                        borderTop: blocks.block32BorderTop,
-                        borderBottom: blocks.block32BorderBottom,
-                        border: blocks.b32Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock32
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block32styles: {
-                            display: blocks.block32smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block32styles: {
-                            display: blocks.block32mddis
-                        }
-                    }
-                })
+                },
+                block9styles: {
+                    display: 'flex',
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                smblock9styles: {
+                    display: blocks.block9smdis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+
+                },
+                mdblock9styles: {
+                    display: blocks.block9mddis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                block10styles: {
+                    display: 'flex',
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                smblock10styles: {
+                    display: blocks.block10smdis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+
+                },
+                mdblock10styles: {
+                    display: blocks.block10mddis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                block11styles: {
+                    display: 'flex',
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                smblock11styles: {
+                    display: blocks.block11smdis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+
+                },
+                mdblock11styles: {
+                    display: blocks.block11mddis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                block12styles: {
+                    display: 'flex',
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                smblock12styles: {
+                    display: blocks.block12smdis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+
+                },
+                mdblock12styles: {
+                    display: blocks.block12mddis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                block13styles: {
+                    display: 'flex',
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                smblock13styles: {
+                    display: blocks.block13smdis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+
+                },
+                mdblock13styles: {
+                    display: blocks.block13mddis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                block14styles: {
+                    display: 'flex',
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                smblock14styles: {
+                    display: blocks.block14smdis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+
+                },
+                mdblock14styles: {
+                    display: blocks.block14mddis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                block15styles: {
+                    display: 'flex',
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                smblock15styles: {
+                    display: blocks.block15smdis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+
+                },
+                mdblock15styles: {
+                    display: blocks.block15mddis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                block16styles: {
+                    display: 'flex',
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                smblock16styles: {
+                    display: blocks.block16smdis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+
+                },
+                mdblock16styles: {
+                    display: blocks.block16mddis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                block17styles: {
+                    display: 'flex',
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                smblock17styles: {
+                    display: blocks.block17smdis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+
+                },
+                mdblock17styles: {
+                    display: blocks.block17mddis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                block18styles: {
+                    display: 'flex',
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                smblock18styles: {
+                    display: blocks.block18smdis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+
+                },
+                mdblock18styles: {
+                    display: blocks.block18mddis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                block19styles: {
+                    display: 'flex',
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                smblock19styles: {
+                    display: blocks.block19smdis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+
+                },
+                mdblock19styles: {
+                    display: blocks.block19mddis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                block20styles: {
+                    display: 'flex',
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+                },
+                smblock20styles: {
+                    display: blocks.block20smdis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                mdblock20styles: {
+                    display: blocks.block20mddis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                block21styles: {
+                    display: 'flex',
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                smblock21styles: {
+                    display: blocks.block21smdis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+
+                },
+                mdblock21styles: {
+                    display: blocks.block21mddis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                block22styles: {
+                    display: 'flex',
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                smblock22styles: {
+                    display: blocks.block22smdis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+
+                },
+                mdblock22styles: {
+                    display: blocks.block22mddis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                block23styles: {
+                    display: 'flex',
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                smblock23styles: {
+                    display: blocks.block23smdis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+
+                },
+                mdblock23styles: {
+                    display: blocks.block23mddis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                block24styles: {
+                    display: 'flex',
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                smblock24styles: {
+                    display: blocks.block24smdis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+
+                },
+                mdblock24styles: {
+                    display: blocks.block24mddis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                block25styles: {
+                    display: 'flex',
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                smblock25styles: {
+                    display: blocks.block25smdis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+
+                },
+                mdblock25styles: {
+                    display: blocks.block25mddis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                block26styles: {
+                    display: 'flex',
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                smblock26styles: {
+                    display: blocks.block26smdis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+
+                },
+                mdblock26styles: {
+                    display: blocks.block26mddis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                block27styles: {
+                    display: 'flex',
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                smblock27styles: {
+                    display: blocks.block27smdis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+
+                },
+                mdblock27styles: {
+                    display: blocks.block27mddis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                block28styles: {
+                    display: 'flex',
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                smblock28styles: {
+                    display: blocks.block28smdis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+
+                },
+                mdblock28styles: {
+                    display: blocks.block28mddis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                block29styles: {
+                    display: 'flex',
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                smblock29styles: {
+                    display: blocks.block29smdis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+
+                },
+                mdblock29styles: {
+                    display: blocks.block29mddis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                block30styles: {
+                    display: 'flex',
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                smblock30styles: {
+                    display: blocks.block30smdis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+
+                },
+                mdblock30styles: {
+                    display: blocks.block30mddis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                block31styles: {
+                    display: 'flex',
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                smblock31styles: {
+                    display: blocks.block31smdis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+
+                },
+                mdblock31styles: {
+                    display: blocks.block31mddis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                block32styles: {
+                    display: 'flex',
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                smblock32styles: {
+                    display: blocks.block32smdis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                mdblock32styles: {
+                    display: blocks.block32mddis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                }
             };
-        case num = 33:
+        case 33:
             blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1 0 auto',
@@ -2800,902 +3912,1480 @@ function containerSwitch31_35(num, props, state) {
                 block33mddis: props.block33mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: blocks.block3Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: blocks.block4Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: blocks.block5Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                block6styles: {
+                    display: 'flex',
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                smblock6styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                mdblock6styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                block7styles: {
+                    display: 'flex',
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                smblock7styles: {
+                    display: blocks.block7smdis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                mdblock7styles: {
+                    display: blocks.block7mddis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                block8styles: {
+                    display: 'flex',
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
+                },
+                smblock8styles: {
+                    display: blocks.block8smdis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block6styles: _nestingstyles2.default.create({
-                    block6styles: {
-                        display: 'flex',
-                        flex: blocks.block6,
-                        flexDirection: blocks.block6Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock6,
-                        borderLeft: blocks.block6BorderLeft,
-                        borderRight: blocks.block6BorderRight,
-                        borderTop: blocks.block6BorderTop,
-                        borderBottom: blocks.block6BorderBottom,
-                        border: blocks.b6Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock6
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block6styles: {
-                            display: blocks.block6smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block6styles: {
-                            display: blocks.block6mddis
-                        }
-                    }
+                },
+                mdblock8styles: {
+                    display: blocks.block8mddis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block7styles: _nestingstyles2.default.create({
-                    block7styles: {
-                        display: 'flex',
-                        flex: blocks.block7,
-                        flexDirection: blocks.block7Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock7,
-                        borderLeft: blocks.block7BorderLeft,
-                        borderRight: blocks.block7BorderRight,
-                        borderTop: blocks.block7BorderTop,
-                        borderBottom: blocks.block7BorderBottom,
-                        border: blocks.b7Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock7
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block7styles: {
-                            display: blocks.block7smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block7styles: {
-                            display: blocks.block7mddis
-                        }
-                    }
-                }),
-                block8styles: _nestingstyles2.default.create({
-                    block8styles: {
-                        display: 'flex',
-                        flex: blocks.block8,
-                        flexDirection: blocks.block8Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock8,
-                        borderLeft: blocks.block8BorderLeft,
-                        borderRight: blocks.block8BorderRight,
-                        borderTop: blocks.block8BorderTop,
-                        borderBottom: blocks.block8BorderBottom,
-                        border: blocks.b8Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock8
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block8styles: {
-                            display: blocks.block8smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block8styles: {
-                            display: blocks.block8mddis
-                        }
-                    }
-                }),
-                block9styles: _nestingstyles2.default.create({
-                    block9styles: {
-                        display: 'flex',
-                        flex: blocks.block9,
-                        flexDirection: blocks.block9Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock9,
-                        borderLeft: blocks.block9BorderLeft,
-                        borderRight: blocks.block9BorderRight,
-                        borderTop: blocks.block9BorderTop,
-                        borderBottom: blocks.block9BorderBottom,
-                        border: blocks.b9Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock9
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block9styles: {
-                            display: blocks.block9smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block9styles: {
-                            display: blocks.block9mddis
-                        }
-                    }
-                }),
-                block10styles: _nestingstyles2.default.create({
-                    block10styles: {
-                        display: 'flex',
-                        flex: blocks.block10,
-                        flexDirection: blocks.block10Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock10,
-                        borderLeft: blocks.block10BorderLeft,
-                        borderRight: blocks.block10BorderRight,
-                        borderTop: blocks.block10BorderTop,
-                        borderBottom: blocks.block10BorderBottom,
-                        border: blocks.b10Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock10
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block10styles: {
-                            display: blocks.block10smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block10styles: {
-                            display: blocks.block10mddis
-                        }
-                    }
-                }),
-                block11styles: _nestingstyles2.default.create({
-                    block11styles: {
-                        display: 'flex',
-                        flex: blocks.block11,
-                        flexDirection: blocks.block11Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock11,
-                        borderLeft: blocks.block11BorderLeft,
-                        borderRight: blocks.block11BorderRight,
-                        borderTop: blocks.block11BorderTop,
-                        borderBottom: blocks.block11BorderBottom,
-                        border: blocks.b11Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock11
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block11styles: {
-                            display: blocks.block11smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block11styles: {
-                            display: blocks.block11mddis
-                        }
-                    }
-                }),
-                block12styles: _nestingstyles2.default.create({
-                    block12styles: {
-                        display: 'flex',
-                        flex: blocks.block12,
-                        flexDirection: blocks.block12Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock12,
-                        borderLeft: blocks.block12BorderLeft,
-                        borderRight: blocks.block12BorderRight,
-                        borderTop: blocks.block12BorderTop,
-                        borderBottom: blocks.block12BorderBottom,
-                        border: blocks.b12Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock12
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block12styles: {
-                            display: blocks.block12smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block12styles: {
-                            display: blocks.block12mddis
-                        }
-                    }
-                }),
-                block13styles: _nestingstyles2.default.create({
-                    block13styles: {
-                        display: 'flex',
-                        flex: blocks.block13,
-                        flexDirection: blocks.block13Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock13,
-                        borderLeft: blocks.block13BorderLeft,
-                        borderRight: blocks.block13BorderRight,
-                        borderTop: blocks.block13BorderTop,
-                        borderBottom: blocks.block13BorderBottom,
-                        border: blocks.b13Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock13
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block13styles: {
-                            display: blocks.block13smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block13styles: {
-                            display: blocks.block13mddis
-                        }
-                    }
-                }),
-                block14styles: _nestingstyles2.default.create({
-                    block14styles: {
-                        display: 'flex',
-                        flex: blocks.block14,
-                        flexDirection: blocks.block14Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock14,
-                        borderLeft: blocks.block14BorderLeft,
-                        borderRight: blocks.block14BorderRight,
-                        borderTop: blocks.block14BorderTop,
-                        borderBottom: blocks.block14BorderBottom,
-                        border: blocks.b14Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock14
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block14styles: {
-                            display: blocks.block14smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block14styles: {
-                            display: blocks.block14mddis
-                        }
-                    }
-                }),
-                block15styles: _nestingstyles2.default.create({
-                    block15styles: {
-                        display: 'flex',
-                        flex: blocks.block15,
-                        flexDirection: blocks.block15Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock15,
-                        borderLeft: blocks.block15BorderLeft,
-                        borderRight: blocks.block15BorderRight,
-                        borderTop: blocks.block15BorderTop,
-                        borderBottom: blocks.block15BorderBottom,
-                        border: blocks.b15Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock15
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block15styles: {
-                            display: blocks.block15smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block15styles: {
-                            display: blocks.block15mddis
-                        }
-                    }
-                }),
-                block16styles: _nestingstyles2.default.create({
-                    block16styles: {
-                        display: 'flex',
-                        flex: blocks.block16,
-                        flexDirection: blocks.block16Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock16,
-                        borderLeft: blocks.block16BorderLeft,
-                        borderRight: blocks.block16BorderRight,
-                        borderTop: blocks.block16BorderTop,
-                        borderBottom: blocks.block16BorderBottom,
-                        border: blocks.b16Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock16
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block16styles: {
-                            display: blocks.block16smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block16styles: {
-                            display: blocks.block16mddis
-                        }
-                    }
-                }),
-                block17styles: _nestingstyles2.default.create({
-                    block17styles: {
-                        display: 'flex',
-                        flex: blocks.block17,
-                        flexDirection: blocks.block17Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock17,
-                        borderLeft: blocks.block17BorderLeft,
-                        borderRight: blocks.block17BorderRight,
-                        borderTop: blocks.block17BorderTop,
-                        borderBottom: blocks.block17BorderBottom,
-                        border: blocks.b17Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock17
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block17styles: {
-                            display: blocks.block17smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block17styles: {
-                            display: blocks.block17mddis
-                        }
-                    }
-                }),
-                block18styles: _nestingstyles2.default.create({
-                    block18styles: {
-                        display: 'flex',
-                        flex: blocks.block18,
-                        flexDirection: blocks.block18Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock18,
-                        borderLeft: blocks.block18BorderLeft,
-                        borderRight: blocks.block18BorderRight,
-                        borderTop: blocks.block18BorderTop,
-                        borderBottom: blocks.block18BorderBottom,
-                        border: blocks.b18Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock18
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block18styles: {
-                            display: blocks.block18smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block18styles: {
-                            display: blocks.block18mddis
-                        }
-                    }
-                }),
-                block19styles: _nestingstyles2.default.create({
-                    block19styles: {
-                        display: 'flex',
-                        flex: blocks.block19,
-                        flexDirection: blocks.block19Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock19,
-                        borderLeft: blocks.block19BorderLeft,
-                        borderRight: blocks.block19BorderRight,
-                        borderTop: blocks.block19BorderTop,
-                        borderBottom: blocks.block19BorderBottom,
-                        border: blocks.b19Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock19
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block19styles: {
-                            display: blocks.block19smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block19styles: {
-                            display: blocks.block19mddis
-                        }
-                    }
-                }),
-                block20styles: _nestingstyles2.default.create({
-                    block20styles: {
-                        display: 'flex',
-                        flex: blocks.block20,
-                        flexDirection: blocks.block20Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock20,
-                        borderLeft: blocks.block20BorderLeft,
-                        borderRight: blocks.block20BorderRight,
-                        borderTop: blocks.block20BorderTop,
-                        borderBottom: blocks.block20BorderBottom,
-                        border: blocks.b20Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock20
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block20styles: {
-                            display: blocks.block20smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block20styles: {
-                            display: blocks.block20mddis
-                        }
-                    }
-                }),
-                block21styles: _nestingstyles2.default.create({
-                    block21styles: {
-                        display: 'flex',
-                        flex: blocks.block21,
-                        flexDirection: blocks.block21Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock21,
-                        borderLeft: blocks.block21BorderLeft,
-                        borderRight: blocks.block21BorderRight,
-                        borderTop: blocks.block21BorderTop,
-                        borderBottom: blocks.block21BorderBottom,
-                        border: blocks.b21Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock21
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block21styles: {
-                            display: blocks.block21smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block21styles: {
-                            display: blocks.block21mddis
-                        }
-                    }
-                }),
-                block22styles: _nestingstyles2.default.create({
-                    block22styles: {
-                        display: 'flex',
-                        flex: blocks.block22,
-                        flexDirection: blocks.block22Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock22,
-                        borderLeft: blocks.block22BorderLeft,
-                        borderRight: blocks.block22BorderRight,
-                        borderTop: blocks.block22BorderTop,
-                        borderBottom: blocks.block22BorderBottom,
-                        border: blocks.b22Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock22
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block22styles: {
-                            display: blocks.block22smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block22styles: {
-                            display: blocks.block22mddis
-                        }
-                    }
-                }),
-                block23styles: _nestingstyles2.default.create({
-                    block23styles: {
-                        display: 'flex',
-                        flex: blocks.block23,
-                        flexDirection: blocks.block23Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock23,
-                        borderLeft: blocks.block23BorderLeft,
-                        borderRight: blocks.block23BorderRight,
-                        borderTop: blocks.block23BorderTop,
-                        borderBottom: blocks.block23BorderBottom,
-                        border: blocks.b23Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock23
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block23styles: {
-                            display: blocks.block23smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block23styles: {
-                            display: blocks.block23mddis
-                        }
-                    }
-                }),
-                block24styles: _nestingstyles2.default.create({
-                    block24styles: {
-                        display: 'flex',
-                        flex: blocks.block24,
-                        flexDirection: blocks.block24Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock24,
-                        borderLeft: blocks.block24BorderLeft,
-                        borderRight: blocks.block24BorderRight,
-                        borderTop: blocks.block24BorderTop,
-                        borderBottom: blocks.block24BorderBottom,
-                        border: blocks.b24Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock24
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block24styles: {
-                            display: blocks.block24smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block24styles: {
-                            display: blocks.block24mddis
-                        }
-                    }
-                }),
-                block25styles: _nestingstyles2.default.create({
-                    block25styles: {
-                        display: 'flex',
-                        flex: blocks.block25,
-                        flexDirection: blocks.block25Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock25,
-                        borderLeft: blocks.block25BorderLeft,
-                        borderRight: blocks.block25BorderRight,
-                        borderTop: blocks.block25BorderTop,
-                        borderBottom: blocks.block25BorderBottom,
-                        border: blocks.b25Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock25
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block25styles: {
-                            display: blocks.block25smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block25styles: {
-                            display: blocks.block25mddis
-                        }
-                    }
-                }),
-                block26styles: _nestingstyles2.default.create({
-                    block26styles: {
-                        display: 'flex',
-                        flex: blocks.block26,
-                        flexDirection: blocks.block26Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock26,
-                        borderLeft: blocks.block26BorderLeft,
-                        borderRight: blocks.block26BorderRight,
-                        borderTop: blocks.block26BorderTop,
-                        borderBottom: blocks.block26BorderBottom,
-                        border: blocks.b26Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock26
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block26styles: {
-                            display: blocks.block26smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block26styles: {
-                            display: blocks.block26mddis
-                        }
-                    }
-                }),
-                block27styles: _nestingstyles2.default.create({
-                    block27styles: {
-                        display: 'flex',
-                        flex: blocks.block27,
-                        flexDirection: blocks.block27Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock27,
-                        borderLeft: blocks.block27BorderLeft,
-                        borderRight: blocks.block27BorderRight,
-                        borderTop: blocks.block27BorderTop,
-                        borderBottom: blocks.block27BorderBottom,
-                        border: blocks.b27Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock27
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block27styles: {
-                            display: blocks.block27smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block27styles: {
-                            display: blocks.block27mddis
-                        }
-                    }
-                }),
-                block28styles: _nestingstyles2.default.create({
-                    block28styles: {
-                        display: 'flex',
-                        flex: blocks.block28,
-                        flexDirection: blocks.block28Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock28,
-                        borderLeft: blocks.block28BorderLeft,
-                        borderRight: blocks.block28BorderRight,
-                        borderTop: blocks.block28BorderTop,
-                        borderBottom: blocks.block28BorderBottom,
-                        border: blocks.b28Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock28
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block28styles: {
-                            display: blocks.block28smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block28styles: {
-                            display: blocks.block28mddis
-                        }
-                    }
-                }),
-                block29styles: _nestingstyles2.default.create({
-                    block29styles: {
-                        display: 'flex',
-                        flex: blocks.block29,
-                        flexDirection: blocks.block29Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock29,
-                        borderLeft: blocks.block29BorderLeft,
-                        borderRight: blocks.block29BorderRight,
-                        borderTop: blocks.block29BorderTop,
-                        borderBottom: blocks.block29BorderBottom,
-                        border: blocks.b29Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock29
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block29styles: {
-                            display: blocks.block29smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block29styles: {
-                            display: blocks.block29mddis
-                        }
-                    }
-                }),
-                block30styles: _nestingstyles2.default.create({
-                    block30styles: {
-                        display: 'flex',
-                        flex: blocks.block30,
-                        flexDirection: blocks.block30Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock30,
-                        borderLeft: blocks.block30BorderLeft,
-                        borderRight: blocks.block30BorderRight,
-                        borderTop: blocks.block30BorderTop,
-                        borderBottom: blocks.block30BorderBottom,
-                        border: blocks.b30Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock30
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block30styles: {
-                            display: blocks.block30smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block30styles: {
-                            display: blocks.block30mddis
-                        }
-                    }
-                }),
-                block31styles: _nestingstyles2.default.create({
-                    block31styles: {
-                        display: 'flex',
-                        flex: blocks.block31,
-                        flexDirection: blocks.block31Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock31,
-                        borderLeft: blocks.block31BorderLeft,
-                        borderRight: blocks.block31BorderRight,
-                        borderTop: blocks.block31BorderTop,
-                        borderBottom: blocks.block31BorderBottom,
-                        border: blocks.b31Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock31
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block31styles: {
-                            display: blocks.block31smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block31styles: {
-                            display: blocks.block31mddis
-                        }
-                    }
-                }),
-                block32styles: _nestingstyles2.default.create({
-                    block32styles: {
-                        display: 'flex',
-                        flex: blocks.block32,
-                        flexDirection: blocks.block32Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock32,
-                        borderLeft: blocks.block32BorderLeft,
-                        borderRight: blocks.block32BorderRight,
-                        borderTop: blocks.block32BorderTop,
-                        borderBottom: blocks.block32BorderBottom,
-                        border: blocks.b32Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock32
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block32styles: {
-                            display: blocks.block32smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block32styles: {
-                            display: blocks.block32mddis
-                        }
-                    }
-                }),
-                block33styles: _nestingstyles2.default.create({
-                    block33styles: {
-                        display: 'flex',
-                        flex: blocks.block33,
-                        flexDirection: blocks.block33Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock33,
-                        borderLeft: blocks.block33BorderLeft,
-                        borderRight: blocks.block33BorderRight,
-                        borderTop: blocks.block33BorderTop,
-                        borderBottom: blocks.block33BorderBottom,
-                        border: blocks.b33Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock33
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block33styles: {
-                            display: blocks.block33smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block33styles: {
-                            display: blocks.block33mddis
-                        }
-                    }
-                })
+                },
+                block9styles: {
+                    display: 'flex',
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                smblock9styles: {
+                    display: blocks.block9smdis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+
+                },
+                mdblock9styles: {
+                    display: blocks.block9mddis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                block10styles: {
+                    display: 'flex',
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                smblock10styles: {
+                    display: blocks.block10smdis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+
+                },
+                mdblock10styles: {
+                    display: blocks.block10mddis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                block11styles: {
+                    display: 'flex',
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                smblock11styles: {
+                    display: blocks.block11smdis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+
+                },
+                mdblock11styles: {
+                    display: blocks.block11mddis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                block12styles: {
+                    display: 'flex',
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                smblock12styles: {
+                    display: blocks.block12smdis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+
+                },
+                mdblock12styles: {
+                    display: blocks.block12mddis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                block13styles: {
+                    display: 'flex',
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                smblock13styles: {
+                    display: blocks.block13smdis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+
+                },
+                mdblock13styles: {
+                    display: blocks.block13mddis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                block14styles: {
+                    display: 'flex',
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                smblock14styles: {
+                    display: blocks.block14smdis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+
+                },
+                mdblock14styles: {
+                    display: blocks.block14mddis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                block15styles: {
+                    display: 'flex',
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                smblock15styles: {
+                    display: blocks.block15smdis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+
+                },
+                mdblock15styles: {
+                    display: blocks.block15mddis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                block16styles: {
+                    display: 'flex',
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                smblock16styles: {
+                    display: blocks.block16smdis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+
+                },
+                mdblock16styles: {
+                    display: blocks.block16mddis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                block17styles: {
+                    display: 'flex',
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                smblock17styles: {
+                    display: blocks.block17smdis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+
+                },
+                mdblock17styles: {
+                    display: blocks.block17mddis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                block18styles: {
+                    display: 'flex',
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                smblock18styles: {
+                    display: blocks.block18smdis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+
+                },
+                mdblock18styles: {
+                    display: blocks.block18mddis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                block19styles: {
+                    display: 'flex',
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                smblock19styles: {
+                    display: blocks.block19smdis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+
+                },
+                mdblock19styles: {
+                    display: blocks.block19mddis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                block20styles: {
+                    display: 'flex',
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+                },
+                mdblock20styles: {
+                    display: blocks.block20smdis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                smblock20styles: {
+                    display: blocks.block20mddis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                block21styles: {
+                    display: 'flex',
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                smblock21styles: {
+                    display: blocks.block21smdis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+
+                },
+                mdblock21styles: {
+                    display: blocks.block21mddis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                block22styles: {
+                    display: 'flex',
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                smblock22styles: {
+                    display: blocks.block22smdis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+
+                },
+                mdblock22styles: {
+                    display: blocks.block22mddis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                block23styles: {
+                    display: 'flex',
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                smblock23styles: {
+                    display: blocks.block23smdis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+
+                },
+                mdblock23styles: {
+                    display: blocks.block23mddis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                block24styles: {
+                    display: 'flex',
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                smblock24styles: {
+                    display: blocks.block24smdis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+
+                },
+                mdblock24styles: {
+                    display: blocks.block24mddis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                block25styles: {
+                    display: 'flex',
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                smblock25styles: {
+                    display: blocks.block25smdis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+
+                },
+                mdblock25styles: {
+                    display: blocks.block25mddis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                block26styles: {
+                    display: 'flex',
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                smblock26styles: {
+                    display: blocks.block26smdis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+
+                },
+                mdblock26styles: {
+                    display: blocks.block26mddis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                block27styles: {
+                    display: 'flex',
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                smblock27styles: {
+                    display: blocks.block27smdis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+
+                },
+                mdblock27styles: {
+                    display: blocks.block27mddis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                block28styles: {
+                    display: 'flex',
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                smblock28styles: {
+                    display: blocks.block28smdis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+
+                },
+                mdblock28styles: {
+                    display: blocks.block28mddis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                block29styles: {
+                    display: 'flex',
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                smblock29styles: {
+                    display: blocks.block29smdis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+
+                },
+                mdblock29styles: {
+                    display: blocks.block29mddis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                block30styles: {
+                    display: 'flex',
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                smblock30styles: {
+                    display: blocks.block30smdis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+
+                },
+                mdblock30styles: {
+                    display: blocks.block30mddis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                block31styles: {
+                    display: 'flex',
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                smblock31styles: {
+                    display: blocks.block31smdis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+
+                },
+                mdblock31styles: {
+                    display: blocks.block31mddis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                block32styles: {
+                    display: 'flex',
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                smblock32styles: {
+                    display: blocks.block32smdis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                mdblock32styles: {
+                    display: blocks.block32mddis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                block33styles: {
+                    display: 'flex',
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                },
+                smblock33styles: {
+                    display: blocks.block33smdis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+
+                },
+                mdblock33styles: {
+                    display: blocks.block33mddis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                }
             };
-        case num = 34:
+        case 34:
             blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1 0 auto',
@@ -4073,928 +5763,1523 @@ function containerSwitch31_35(num, props, state) {
                 block34mddis: props.block34mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: blocks.block3Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: blocks.block4Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: blocks.block5Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                block6styles: {
+                    display: 'flex',
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                smblock6styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                mdblock6styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                block7styles: {
+                    display: 'flex',
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                smblock7styles: {
+                    display: blocks.block7smdis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                mdblock7styles: {
+                    display: blocks.block7mddis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                block8styles: {
+                    display: 'flex',
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
+                },
+                smblock8styles: {
+                    display: blocks.block8smdis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block6styles: _nestingstyles2.default.create({
-                    block6styles: {
-                        display: 'flex',
-                        flex: blocks.block6,
-                        flexDirection: blocks.block6Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock6,
-                        borderLeft: blocks.block6BorderLeft,
-                        borderRight: blocks.block6BorderRight,
-                        borderTop: blocks.block6BorderTop,
-                        borderBottom: blocks.block6BorderBottom,
-                        border: blocks.b6Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock6
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block6styles: {
-                            display: blocks.block6smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block6styles: {
-                            display: blocks.block6mddis
-                        }
-                    }
+                },
+                mdblock8styles: {
+                    display: blocks.block8mddis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block7styles: _nestingstyles2.default.create({
-                    block7styles: {
-                        display: 'flex',
-                        flex: blocks.block7,
-                        flexDirection: blocks.block7Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock7,
-                        borderLeft: blocks.block7BorderLeft,
-                        borderRight: blocks.block7BorderRight,
-                        borderTop: blocks.block7BorderTop,
-                        borderBottom: blocks.block7BorderBottom,
-                        border: blocks.b7Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock7
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block7styles: {
-                            display: blocks.block7smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block7styles: {
-                            display: blocks.block7mddis
-                        }
-                    }
-                }),
-                block8styles: _nestingstyles2.default.create({
-                    block8styles: {
-                        display: 'flex',
-                        flex: blocks.block8,
-                        flexDirection: blocks.block8Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock8,
-                        borderLeft: blocks.block8BorderLeft,
-                        borderRight: blocks.block8BorderRight,
-                        borderTop: blocks.block8BorderTop,
-                        borderBottom: blocks.block8BorderBottom,
-                        border: blocks.b8Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock8
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block8styles: {
-                            display: blocks.block8smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block8styles: {
-                            display: blocks.block8mddis
-                        }
-                    }
-                }),
-                block9styles: _nestingstyles2.default.create({
-                    block9styles: {
-                        display: 'flex',
-                        flex: blocks.block9,
-                        flexDirection: blocks.block9Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock9,
-                        borderLeft: blocks.block9BorderLeft,
-                        borderRight: blocks.block9BorderRight,
-                        borderTop: blocks.block9BorderTop,
-                        borderBottom: blocks.block9BorderBottom,
-                        border: blocks.b9Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock9
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block9styles: {
-                            display: blocks.block9smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block9styles: {
-                            display: blocks.block9mddis
-                        }
-                    }
-                }),
-                block10styles: _nestingstyles2.default.create({
-                    block10styles: {
-                        display: 'flex',
-                        flex: blocks.block10,
-                        flexDirection: blocks.block10Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock10,
-                        borderLeft: blocks.block10BorderLeft,
-                        borderRight: blocks.block10BorderRight,
-                        borderTop: blocks.block10BorderTop,
-                        borderBottom: blocks.block10BorderBottom,
-                        border: blocks.b10Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock10
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block10styles: {
-                            display: blocks.block10smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block10styles: {
-                            display: blocks.block10mddis
-                        }
-                    }
-                }),
-                block11styles: _nestingstyles2.default.create({
-                    block11styles: {
-                        display: 'flex',
-                        flex: blocks.block11,
-                        flexDirection: blocks.block11Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock11,
-                        borderLeft: blocks.block11BorderLeft,
-                        borderRight: blocks.block11BorderRight,
-                        borderTop: blocks.block11BorderTop,
-                        borderBottom: blocks.block11BorderBottom,
-                        border: blocks.b11Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock11
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block11styles: {
-                            display: blocks.block11smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block11styles: {
-                            display: blocks.block11mddis
-                        }
-                    }
-                }),
-                block12styles: _nestingstyles2.default.create({
-                    block12styles: {
-                        display: 'flex',
-                        flex: blocks.block12,
-                        flexDirection: blocks.block12Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock12,
-                        borderLeft: blocks.block12BorderLeft,
-                        borderRight: blocks.block12BorderRight,
-                        borderTop: blocks.block12BorderTop,
-                        borderBottom: blocks.block12BorderBottom,
-                        border: blocks.b12Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock12
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block12styles: {
-                            display: blocks.block12smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block12styles: {
-                            display: blocks.block12mddis
-                        }
-                    }
-                }),
-                block13styles: _nestingstyles2.default.create({
-                    block13styles: {
-                        display: 'flex',
-                        flex: blocks.block13,
-                        flexDirection: blocks.block13Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock13,
-                        borderLeft: blocks.block13BorderLeft,
-                        borderRight: blocks.block13BorderRight,
-                        borderTop: blocks.block13BorderTop,
-                        borderBottom: blocks.block13BorderBottom,
-                        border: blocks.b13Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock13
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block13styles: {
-                            display: blocks.block13smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block13styles: {
-                            display: blocks.block13mddis
-                        }
-                    }
-                }),
-                block14styles: _nestingstyles2.default.create({
-                    block14styles: {
-                        display: 'flex',
-                        flex: blocks.block14,
-                        flexDirection: blocks.block14Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock14,
-                        borderLeft: blocks.block14BorderLeft,
-                        borderRight: blocks.block14BorderRight,
-                        borderTop: blocks.block14BorderTop,
-                        borderBottom: blocks.block14BorderBottom,
-                        border: blocks.b14Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock14
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block14styles: {
-                            display: blocks.block14smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block14styles: {
-                            display: blocks.block14mddis
-                        }
-                    }
-                }),
-                block15styles: _nestingstyles2.default.create({
-                    block15styles: {
-                        display: 'flex',
-                        flex: blocks.block15,
-                        flexDirection: blocks.block15Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock15,
-                        borderLeft: blocks.block15BorderLeft,
-                        borderRight: blocks.block15BorderRight,
-                        borderTop: blocks.block15BorderTop,
-                        borderBottom: blocks.block15BorderBottom,
-                        border: blocks.b15Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock15
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block15styles: {
-                            display: blocks.block15smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block15styles: {
-                            display: blocks.block15mddis
-                        }
-                    }
-                }),
-                block16styles: _nestingstyles2.default.create({
-                    block16styles: {
-                        display: 'flex',
-                        flex: blocks.block16,
-                        flexDirection: blocks.block16Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock16,
-                        borderLeft: blocks.block16BorderLeft,
-                        borderRight: blocks.block16BorderRight,
-                        borderTop: blocks.block16BorderTop,
-                        borderBottom: blocks.block16BorderBottom,
-                        border: blocks.b16Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock16
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block16styles: {
-                            display: blocks.block16smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block16styles: {
-                            display: blocks.block16mddis
-                        }
-                    }
-                }),
-                block17styles: _nestingstyles2.default.create({
-                    block17styles: {
-                        display: 'flex',
-                        flex: blocks.block17,
-                        flexDirection: blocks.block17Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock17,
-                        borderLeft: blocks.block17BorderLeft,
-                        borderRight: blocks.block17BorderRight,
-                        borderTop: blocks.block17BorderTop,
-                        borderBottom: blocks.block17BorderBottom,
-                        border: blocks.b17Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock17
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block17styles: {
-                            display: blocks.block17smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block17styles: {
-                            display: blocks.block17mddis
-                        }
-                    }
-                }),
-                block18styles: _nestingstyles2.default.create({
-                    block18styles: {
-                        display: 'flex',
-                        flex: blocks.block18,
-                        flexDirection: blocks.block18Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock18,
-                        borderLeft: blocks.block18BorderLeft,
-                        borderRight: blocks.block18BorderRight,
-                        borderTop: blocks.block18BorderTop,
-                        borderBottom: blocks.block18BorderBottom,
-                        border: blocks.b18Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock18
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block18styles: {
-                            display: blocks.block18smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block18styles: {
-                            display: blocks.block18mddis
-                        }
-                    }
-                }),
-                block19styles: _nestingstyles2.default.create({
-                    block19styles: {
-                        display: 'flex',
-                        flex: blocks.block19,
-                        flexDirection: blocks.block19Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock19,
-                        borderLeft: blocks.block19BorderLeft,
-                        borderRight: blocks.block19BorderRight,
-                        borderTop: blocks.block19BorderTop,
-                        borderBottom: blocks.block19BorderBottom,
-                        border: blocks.b19Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock19
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block19styles: {
-                            display: blocks.block19smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block19styles: {
-                            display: blocks.block19mddis
-                        }
-                    }
-                }),
-                block20styles: _nestingstyles2.default.create({
-                    block20styles: {
-                        display: 'flex',
-                        flex: blocks.block20,
-                        flexDirection: blocks.block20Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock20,
-                        borderLeft: blocks.block20BorderLeft,
-                        borderRight: blocks.block20BorderRight,
-                        borderTop: blocks.block20BorderTop,
-                        borderBottom: blocks.block20BorderBottom,
-                        border: blocks.b20Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock20
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block20styles: {
-                            display: blocks.block20smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block20styles: {
-                            display: blocks.block20mddis
-                        }
-                    }
-                }),
-                block21styles: _nestingstyles2.default.create({
-                    block21styles: {
-                        display: 'flex',
-                        flex: blocks.block21,
-                        flexDirection: blocks.block21Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock21,
-                        borderLeft: blocks.block21BorderLeft,
-                        borderRight: blocks.block21BorderRight,
-                        borderTop: blocks.block21BorderTop,
-                        borderBottom: blocks.block21BorderBottom,
-                        border: blocks.b21Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock21
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block21styles: {
-                            display: blocks.block21smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block21styles: {
-                            display: blocks.block21mddis
-                        }
-                    }
-                }),
-                block22styles: _nestingstyles2.default.create({
-                    block22styles: {
-                        display: 'flex',
-                        flex: blocks.block22,
-                        flexDirection: blocks.block22Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock22,
-                        borderLeft: blocks.block22BorderLeft,
-                        borderRight: blocks.block22BorderRight,
-                        borderTop: blocks.block22BorderTop,
-                        borderBottom: blocks.block22BorderBottom,
-                        border: blocks.b22Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock22
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block22styles: {
-                            display: blocks.block22smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block22styles: {
-                            display: blocks.block22mddis
-                        }
-                    }
-                }),
-                block23styles: _nestingstyles2.default.create({
-                    block23styles: {
-                        display: 'flex',
-                        flex: blocks.block23,
-                        flexDirection: blocks.block23Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock23,
-                        borderLeft: blocks.block23BorderLeft,
-                        borderRight: blocks.block23BorderRight,
-                        borderTop: blocks.block23BorderTop,
-                        borderBottom: blocks.block23BorderBottom,
-                        border: blocks.b23Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock23
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block23styles: {
-                            display: blocks.block23smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block23styles: {
-                            display: blocks.block23mddis
-                        }
-                    }
-                }),
-                block24styles: _nestingstyles2.default.create({
-                    block24styles: {
-                        display: 'flex',
-                        flex: blocks.block24,
-                        flexDirection: blocks.block24Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock24,
-                        borderLeft: blocks.block24BorderLeft,
-                        borderRight: blocks.block24BorderRight,
-                        borderTop: blocks.block24BorderTop,
-                        borderBottom: blocks.block24BorderBottom,
-                        border: blocks.b24Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock24
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block24styles: {
-                            display: blocks.block24smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block24styles: {
-                            display: blocks.block24mddis
-                        }
-                    }
-                }),
-                block25styles: _nestingstyles2.default.create({
-                    block25styles: {
-                        display: 'flex',
-                        flex: blocks.block25,
-                        flexDirection: blocks.block25Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock25,
-                        borderLeft: blocks.block25BorderLeft,
-                        borderRight: blocks.block25BorderRight,
-                        borderTop: blocks.block25BorderTop,
-                        borderBottom: blocks.block25BorderBottom,
-                        border: blocks.b25Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock25
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block25styles: {
-                            display: blocks.block25smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block25styles: {
-                            display: blocks.block25mddis
-                        }
-                    }
-                }),
-                block26styles: _nestingstyles2.default.create({
-                    block26styles: {
-                        display: 'flex',
-                        flex: blocks.block26,
-                        flexDirection: blocks.block26Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock26,
-                        borderLeft: blocks.block26BorderLeft,
-                        borderRight: blocks.block26BorderRight,
-                        borderTop: blocks.block26BorderTop,
-                        borderBottom: blocks.block26BorderBottom,
-                        border: blocks.b26Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock26
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block26styles: {
-                            display: blocks.block26smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block26styles: {
-                            display: blocks.block26mddis
-                        }
-                    }
-                }),
-                block27styles: _nestingstyles2.default.create({
-                    block27styles: {
-                        display: 'flex',
-                        flex: blocks.block27,
-                        flexDirection: blocks.block27Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock27,
-                        borderLeft: blocks.block27BorderLeft,
-                        borderRight: blocks.block27BorderRight,
-                        borderTop: blocks.block27BorderTop,
-                        borderBottom: blocks.block27BorderBottom,
-                        border: blocks.b27Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock27
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block27styles: {
-                            display: blocks.block27smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block27styles: {
-                            display: blocks.block27mddis
-                        }
-                    }
-                }),
-                block28styles: _nestingstyles2.default.create({
-                    block28styles: {
-                        display: 'flex',
-                        flex: blocks.block28,
-                        flexDirection: blocks.block28Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock28,
-                        borderLeft: blocks.block28BorderLeft,
-                        borderRight: blocks.block28BorderRight,
-                        borderTop: blocks.block28BorderTop,
-                        borderBottom: blocks.block28BorderBottom,
-                        border: blocks.b28Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock28
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block28styles: {
-                            display: blocks.block28smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block28styles: {
-                            display: blocks.block28mddis
-                        }
-                    }
-                }),
-                block29styles: _nestingstyles2.default.create({
-                    block29styles: {
-                        display: 'flex',
-                        flex: blocks.block29,
-                        flexDirection: blocks.block29Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock29,
-                        borderLeft: blocks.block29BorderLeft,
-                        borderRight: blocks.block29BorderRight,
-                        borderTop: blocks.block29BorderTop,
-                        borderBottom: blocks.block29BorderBottom,
-                        border: blocks.b29Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock29
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block29styles: {
-                            display: blocks.block29smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block29styles: {
-                            display: blocks.block29mddis
-                        }
-                    }
-                }),
-                block30styles: _nestingstyles2.default.create({
-                    block30styles: {
-                        display: 'flex',
-                        flex: blocks.block30,
-                        flexDirection: blocks.block30Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock30,
-                        borderLeft: blocks.block30BorderLeft,
-                        borderRight: blocks.block30BorderRight,
-                        borderTop: blocks.block30BorderTop,
-                        borderBottom: blocks.block30BorderBottom,
-                        border: blocks.b30Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock30
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block30styles: {
-                            display: blocks.block30smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block30styles: {
-                            display: blocks.block30mddis
-                        }
-                    }
-                }),
-                block31styles: _nestingstyles2.default.create({
-                    block31styles: {
-                        display: 'flex',
-                        flex: blocks.block31,
-                        flexDirection: blocks.block31Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock31,
-                        borderLeft: blocks.block31BorderLeft,
-                        borderRight: blocks.block31BorderRight,
-                        borderTop: blocks.block31BorderTop,
-                        borderBottom: blocks.block31BorderBottom,
-                        border: blocks.b31Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock31
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block31styles: {
-                            display: blocks.block31smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block31styles: {
-                            display: blocks.block31mddis
-                        }
-                    }
-                }),
-                block32styles: _nestingstyles2.default.create({
-                    block32styles: {
-                        display: 'flex',
-                        flex: blocks.block32,
-                        flexDirection: blocks.block32Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock32,
-                        borderLeft: blocks.block32BorderLeft,
-                        borderRight: blocks.block32BorderRight,
-                        borderTop: blocks.block32BorderTop,
-                        borderBottom: blocks.block32BorderBottom,
-                        border: blocks.b32Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock32
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block32styles: {
-                            display: blocks.block32smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block32styles: {
-                            display: blocks.block32mddis
-                        }
-                    }
-                }),
-                block33styles: _nestingstyles2.default.create({
-                    block33styles: {
-                        display: 'flex',
-                        flex: blocks.block33,
-                        flexDirection: blocks.block33Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock33,
-                        borderLeft: blocks.block33BorderLeft,
-                        borderRight: blocks.block33BorderRight,
-                        borderTop: blocks.block33BorderTop,
-                        borderBottom: blocks.block33BorderBottom,
-                        border: blocks.b33Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock33
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block33styles: {
-                            display: blocks.block33smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block33styles: {
-                            display: blocks.block33mddis
-                        }
-                    }
-                }),
-                block34styles: _nestingstyles2.default.create({
-                    block34styles: {
-                        display: 'flex',
-                        flex: blocks.block34,
-                        flexDirection: blocks.block34Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock34,
-                        borderLeft: blocks.block34BorderLeft,
-                        borderRight: blocks.block34BorderRight,
-                        borderTop: blocks.block34BorderTop,
-                        borderBottom: blocks.block34BorderBottom,
-                        border: blocks.b34Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock34
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block34styles: {
-                            display: blocks.block34smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block34styles: {
-                            display: blocks.block34mddis
-                        }
-                    }
-                })
+                },
+                block9styles: {
+                    display: 'flex',
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                smblock9styles: {
+                    display: blocks.block9smdis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+
+                },
+                mdblock9styles: {
+                    display: blocks.block9mddis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                block10styles: {
+                    display: 'flex',
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                smblock10styles: {
+                    display: blocks.block10smdis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+
+                },
+                mdblock10styles: {
+                    display: blocks.block10mddis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                block11styles: {
+                    display: 'flex',
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                smblock11styles: {
+                    display: blocks.block11smdis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+
+                },
+                mdblock11styles: {
+                    display: blocks.block11mddis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                block12styles: {
+                    display: 'flex',
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                smblock12styles: {
+                    display: blocks.block12smdis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+
+                },
+                mdblock12styles: {
+                    display: blocks.block12mddis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                block13styles: {
+                    display: 'flex',
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                smblock13styles: {
+                    display: blocks.block13smdis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+
+                },
+                mdblock13styles: {
+                    display: blocks.block13mddis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                block14styles: {
+                    display: 'flex',
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                smblock14styles: {
+                    display: blocks.block14smdis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+
+                },
+                mdblock14styles: {
+                    display: blocks.block14mddis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                block15styles: {
+                    display: 'flex',
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                smblock15styles: {
+                    display: blocks.block15smdis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+
+                },
+                mdblock15styles: {
+                    display: blocks.block15mddis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                block16styles: {
+                    display: 'flex',
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                smblock16styles: {
+                    display: blocks.block16smdis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+
+                },
+                mdblock16styles: {
+                    display: blocks.block16mddis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                block17styles: {
+                    display: 'flex',
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                smblock17styles: {
+                    display: blocks.block17smdis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+
+                },
+                mdblock17styles: {
+                    display: blocks.block17mddis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                block18styles: {
+                    display: 'flex',
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                smblock18styles: {
+                    display: blocks.block18smdis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+
+                },
+                mdblock18styles: {
+                    display: blocks.block18mddis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                block19styles: {
+                    display: 'flex',
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                smblock19styles: {
+                    display: blocks.block19smdis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+
+                },
+                mdblock19styles: {
+                    display: blocks.block19mddis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                block20styles: {
+                    display: 'flex',
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+                },
+                smblock20styles: {
+                    display: blocks.block20smdis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                mdblock20styles: {
+                    display: blocks.block20mddis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                block21styles: {
+                    display: 'flex',
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                smblock21styles: {
+                    display: blocks.block21smdis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+
+                },
+                mdblock21styles: {
+                    display: blocks.block21mddis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                block22styles: {
+                    display: 'flex',
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                smblock22styles: {
+                    display: blocks.block22smdis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+
+                },
+                mdblock22styles: {
+                    display: blocks.block22mddis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                block23styles: {
+                    display: 'flex',
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                smblock23styles: {
+                    display: blocks.block23smdis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+
+                },
+                mdblock23styles: {
+                    display: blocks.block23mddis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                block24styles: {
+                    display: 'flex',
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                smblock24styles: {
+                    display: blocks.block24smdis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+
+                },
+                mdblock24styles: {
+                    display: blocks.block24mddis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                block25styles: {
+                    display: 'flex',
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                smblock25styles: {
+                    display: blocks.block25smdis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+
+                },
+                mdblock25styles: {
+                    display: blocks.block25mddis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                block26styles: {
+                    display: 'flex',
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                smblock26styles: {
+                    display: blocks.block26smdis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+
+                },
+                mdblock26styles: {
+                    display: blocks.block26mddis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                block27styles: {
+                    display: 'flex',
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                smblock27styles: {
+                    display: blocks.block27smdis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+
+                },
+                mdblock27styles: {
+                    display: blocks.block27mddis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                block28styles: {
+                    display: 'flex',
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                smblock28styles: {
+                    display: blocks.block28smdis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+
+                },
+                mdblock28styles: {
+                    display: blocks.block28mddis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                block29styles: {
+                    display: 'flex',
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                smblock29styles: {
+                    display: blocks.block29smdis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+
+                },
+                mdblock29styles: {
+                    display: blocks.block29mddis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                block30styles: {
+                    display: 'flex',
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                smblock30styles: {
+                    display: blocks.block30smdis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+
+                },
+                mdblock30styles: {
+                    display: blocks.block30mddis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                block31styles: {
+                    display: 'flex',
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                smblock31styles: {
+                    display: blocks.block31smdis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+
+                },
+                mdblock31styles: {
+                    display: blocks.block31mddis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                block32styles: {
+                    display: 'flex',
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                smblock32styles: {
+                    display: blocks.block32smdis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                mdblock32styles: {
+                    display: blocks.block32mddis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                block33styles: {
+                    display: 'flex',
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                },
+                smblock33styles: {
+                    display: blocks.block33smdis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+
+                },
+                mdblock33styles: {
+                    display: blocks.block33mddis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                },
+                block34styles: {
+                    display: 'flex',
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+                },
+                smblock34styles: {
+                    display: blocks.block34smdis,
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+
+                },
+                mdblock34styles: {
+                    display: blocks.block34mddis,
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+                }
             };
-        case num = 35:
+        case 35:
             blocks = {
                 block1Direction: props.block1direction || 'column',
                 block1: props.block1 || '1 0 auto',
@@ -5383,952 +7668,1564 @@ function containerSwitch31_35(num, props, state) {
                 block35mddis: props.block35mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: blocks.block3Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: blocks.block4Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: blocks.block5Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                block6styles: {
+                    display: 'flex',
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                smblock6styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                mdblock6styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block6,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock6,
+                    borderLeft: blocks.block6BorderLeft,
+                    borderRight: blocks.block6BorderRight,
+                    borderTop: blocks.block6BorderTop,
+                    borderBottom: blocks.block6BorderBottom,
+                    border: blocks.b6Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock6
+                },
+                block7styles: {
+                    display: 'flex',
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                smblock7styles: {
+                    display: blocks.block7smdis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                mdblock7styles: {
+                    display: blocks.block7mddis,
+                    flex: blocks.block7,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock7,
+                    borderLeft: blocks.block7BorderLeft,
+                    borderRight: blocks.block7BorderRight,
+                    borderTop: blocks.block7BorderTop,
+                    borderBottom: blocks.block7BorderBottom,
+                    border: blocks.b7Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock7
+                },
+                block8styles: {
+                    display: 'flex',
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
+                },
+                smblock8styles: {
+                    display: blocks.block8smdis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block6styles: _nestingstyles2.default.create({
-                    block6styles: {
-                        display: 'flex',
-                        flex: blocks.block6,
-                        flexDirection: blocks.block6Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock6,
-                        borderLeft: blocks.block6BorderLeft,
-                        borderRight: blocks.block6BorderRight,
-                        borderTop: blocks.block6BorderTop,
-                        borderBottom: blocks.block6BorderBottom,
-                        border: blocks.b6Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock6
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block6styles: {
-                            display: blocks.block6smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block6styles: {
-                            display: blocks.block6mddis
-                        }
-                    }
+                },
+                mdblock8styles: {
+                    display: blocks.block8mddis,
+                    flex: blocks.block8,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock8,
+                    borderLeft: blocks.block8BorderLeft,
+                    borderRight: blocks.block8BorderRight,
+                    borderTop: blocks.block8BorderTop,
+                    borderBottom: blocks.block8BorderBottom,
+                    border: blocks.b8Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock8
 
-                }),
-                block7styles: _nestingstyles2.default.create({
-                    block7styles: {
-                        display: 'flex',
-                        flex: blocks.block7,
-                        flexDirection: blocks.block7Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock7,
-                        borderLeft: blocks.block7BorderLeft,
-                        borderRight: blocks.block7BorderRight,
-                        borderTop: blocks.block7BorderTop,
-                        borderBottom: blocks.block7BorderBottom,
-                        border: blocks.b7Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock7
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block7styles: {
-                            display: blocks.block7smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block7styles: {
-                            display: blocks.block7mddis
-                        }
-                    }
-                }),
-                block8styles: _nestingstyles2.default.create({
-                    block8styles: {
-                        display: 'flex',
-                        flex: blocks.block8,
-                        flexDirection: blocks.block8Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock8,
-                        borderLeft: blocks.block8BorderLeft,
-                        borderRight: blocks.block8BorderRight,
-                        borderTop: blocks.block8BorderTop,
-                        borderBottom: blocks.block8BorderBottom,
-                        border: blocks.b8Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock8
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block8styles: {
-                            display: blocks.block8smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block8styles: {
-                            display: blocks.block8mddis
-                        }
-                    }
-                }),
-                block9styles: _nestingstyles2.default.create({
-                    block9styles: {
-                        display: 'flex',
-                        flex: blocks.block9,
-                        flexDirection: blocks.block9Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock9,
-                        borderLeft: blocks.block9BorderLeft,
-                        borderRight: blocks.block9BorderRight,
-                        borderTop: blocks.block9BorderTop,
-                        borderBottom: blocks.block9BorderBottom,
-                        border: blocks.b9Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock9
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block9styles: {
-                            display: blocks.block9smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block9styles: {
-                            display: blocks.block9mddis
-                        }
-                    }
-                }),
-                block10styles: _nestingstyles2.default.create({
-                    block10styles: {
-                        display: 'flex',
-                        flex: blocks.block10,
-                        flexDirection: blocks.block10Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock10,
-                        borderLeft: blocks.block10BorderLeft,
-                        borderRight: blocks.block10BorderRight,
-                        borderTop: blocks.block10BorderTop,
-                        borderBottom: blocks.block10BorderBottom,
-                        border: blocks.b10Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock10
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block10styles: {
-                            display: blocks.block10smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block10styles: {
-                            display: blocks.block10mddis
-                        }
-                    }
-                }),
-                block11styles: _nestingstyles2.default.create({
-                    block11styles: {
-                        display: 'flex',
-                        flex: blocks.block11,
-                        flexDirection: blocks.block11Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock11,
-                        borderLeft: blocks.block11BorderLeft,
-                        borderRight: blocks.block11BorderRight,
-                        borderTop: blocks.block11BorderTop,
-                        borderBottom: blocks.block11BorderBottom,
-                        border: blocks.b11Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock11
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block11styles: {
-                            display: blocks.block11smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block11styles: {
-                            display: blocks.block11mddis
-                        }
-                    }
-                }),
-                block12styles: _nestingstyles2.default.create({
-                    block12styles: {
-                        display: 'flex',
-                        flex: blocks.block12,
-                        flexDirection: blocks.block12Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock12,
-                        borderLeft: blocks.block12BorderLeft,
-                        borderRight: blocks.block12BorderRight,
-                        borderTop: blocks.block12BorderTop,
-                        borderBottom: blocks.block12BorderBottom,
-                        border: blocks.b12Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock12
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block12styles: {
-                            display: blocks.block12smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block12styles: {
-                            display: blocks.block12mddis
-                        }
-                    }
-                }),
-                block13styles: _nestingstyles2.default.create({
-                    block13styles: {
-                        display: 'flex',
-                        flex: blocks.block13,
-                        flexDirection: blocks.block13Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock13,
-                        borderLeft: blocks.block13BorderLeft,
-                        borderRight: blocks.block13BorderRight,
-                        borderTop: blocks.block13BorderTop,
-                        borderBottom: blocks.block13BorderBottom,
-                        border: blocks.b13Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock13
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block13styles: {
-                            display: blocks.block13smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block13styles: {
-                            display: blocks.block13mddis
-                        }
-                    }
-                }),
-                block14styles: _nestingstyles2.default.create({
-                    block14styles: {
-                        display: 'flex',
-                        flex: blocks.block14,
-                        flexDirection: blocks.block14Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock14,
-                        borderLeft: blocks.block14BorderLeft,
-                        borderRight: blocks.block14BorderRight,
-                        borderTop: blocks.block14BorderTop,
-                        borderBottom: blocks.block14BorderBottom,
-                        border: blocks.b14Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock14
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block14styles: {
-                            display: blocks.block14smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block14styles: {
-                            display: blocks.block14mddis
-                        }
-                    }
-                }),
-                block15styles: _nestingstyles2.default.create({
-                    block15styles: {
-                        display: 'flex',
-                        flex: blocks.block15,
-                        flexDirection: blocks.block15Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock15,
-                        borderLeft: blocks.block15BorderLeft,
-                        borderRight: blocks.block15BorderRight,
-                        borderTop: blocks.block15BorderTop,
-                        borderBottom: blocks.block15BorderBottom,
-                        border: blocks.b15Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock15
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block15styles: {
-                            display: blocks.block15smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block15styles: {
-                            display: blocks.block15mddis
-                        }
-                    }
-                }),
-                block16styles: _nestingstyles2.default.create({
-                    block16styles: {
-                        display: 'flex',
-                        flex: blocks.block16,
-                        flexDirection: blocks.block16Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock16,
-                        borderLeft: blocks.block16BorderLeft,
-                        borderRight: blocks.block16BorderRight,
-                        borderTop: blocks.block16BorderTop,
-                        borderBottom: blocks.block16BorderBottom,
-                        border: blocks.b16Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock16
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block16styles: {
-                            display: blocks.block16smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block16styles: {
-                            display: blocks.block16mddis
-                        }
-                    }
-                }),
-                block17styles: _nestingstyles2.default.create({
-                    block17styles: {
-                        display: 'flex',
-                        flex: blocks.block17,
-                        flexDirection: blocks.block17Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock17,
-                        borderLeft: blocks.block17BorderLeft,
-                        borderRight: blocks.block17BorderRight,
-                        borderTop: blocks.block17BorderTop,
-                        borderBottom: blocks.block17BorderBottom,
-                        border: blocks.b17Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock17
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block17styles: {
-                            display: blocks.block17smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block17styles: {
-                            display: blocks.block17mddis
-                        }
-                    }
-                }),
-                block18styles: _nestingstyles2.default.create({
-                    block18styles: {
-                        display: 'flex',
-                        flex: blocks.block18,
-                        flexDirection: blocks.block18Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock18,
-                        borderLeft: blocks.block18BorderLeft,
-                        borderRight: blocks.block18BorderRight,
-                        borderTop: blocks.block18BorderTop,
-                        borderBottom: blocks.block18BorderBottom,
-                        border: blocks.b18Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock18
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block18styles: {
-                            display: blocks.block18smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block18styles: {
-                            display: blocks.block18mddis
-                        }
-                    }
-                }),
-                block19styles: _nestingstyles2.default.create({
-                    block19styles: {
-                        display: 'flex',
-                        flex: blocks.block19,
-                        flexDirection: blocks.block19Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock19,
-                        borderLeft: blocks.block19BorderLeft,
-                        borderRight: blocks.block19BorderRight,
-                        borderTop: blocks.block19BorderTop,
-                        borderBottom: blocks.block19BorderBottom,
-                        border: blocks.b19Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock19
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block19styles: {
-                            display: blocks.block19smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block19styles: {
-                            display: blocks.block19mddis
-                        }
-                    }
-                }),
-                block20styles: _nestingstyles2.default.create({
-                    block20styles: {
-                        display: 'flex',
-                        flex: blocks.block20,
-                        flexDirection: blocks.block20Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock20,
-                        borderLeft: blocks.block20BorderLeft,
-                        borderRight: blocks.block20BorderRight,
-                        borderTop: blocks.block20BorderTop,
-                        borderBottom: blocks.block20BorderBottom,
-                        border: blocks.b20Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock20
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block20styles: {
-                            display: blocks.block20smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block20styles: {
-                            display: blocks.block20mddis
-                        }
-                    }
-                }),
-                block21styles: _nestingstyles2.default.create({
-                    block21styles: {
-                        display: 'flex',
-                        flex: blocks.block21,
-                        flexDirection: blocks.block21Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock21,
-                        borderLeft: blocks.block21BorderLeft,
-                        borderRight: blocks.block21BorderRight,
-                        borderTop: blocks.block21BorderTop,
-                        borderBottom: blocks.block21BorderBottom,
-                        border: blocks.b21Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock21
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block21styles: {
-                            display: blocks.block21smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block21styles: {
-                            display: blocks.block21mddis
-                        }
-                    }
-                }),
-                block22styles: _nestingstyles2.default.create({
-                    block22styles: {
-                        display: 'flex',
-                        flex: blocks.block22,
-                        flexDirection: blocks.block22Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock22,
-                        borderLeft: blocks.block22BorderLeft,
-                        borderRight: blocks.block22BorderRight,
-                        borderTop: blocks.block22BorderTop,
-                        borderBottom: blocks.block22BorderBottom,
-                        border: blocks.b22Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock22
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block22styles: {
-                            display: blocks.block22smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block22styles: {
-                            display: blocks.block22mddis
-                        }
-                    }
-                }),
-                block23styles: _nestingstyles2.default.create({
-                    block23styles: {
-                        display: 'flex',
-                        flex: blocks.block23,
-                        flexDirection: blocks.block23Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock23,
-                        borderLeft: blocks.block23BorderLeft,
-                        borderRight: blocks.block23BorderRight,
-                        borderTop: blocks.block23BorderTop,
-                        borderBottom: blocks.block23BorderBottom,
-                        border: blocks.b23Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock23
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block23styles: {
-                            display: blocks.block23smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block23styles: {
-                            display: blocks.block23mddis
-                        }
-                    }
-                }),
-                block24styles: _nestingstyles2.default.create({
-                    block24styles: {
-                        display: 'flex',
-                        flex: blocks.block24,
-                        flexDirection: blocks.block24Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock24,
-                        borderLeft: blocks.block24BorderLeft,
-                        borderRight: blocks.block24BorderRight,
-                        borderTop: blocks.block24BorderTop,
-                        borderBottom: blocks.block24BorderBottom,
-                        border: blocks.b24Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock24
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block24styles: {
-                            display: blocks.block24smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block24styles: {
-                            display: blocks.block24mddis
-                        }
-                    }
-                }),
-                block25styles: _nestingstyles2.default.create({
-                    block25styles: {
-                        display: 'flex',
-                        flex: blocks.block25,
-                        flexDirection: blocks.block25Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock25,
-                        borderLeft: blocks.block25BorderLeft,
-                        borderRight: blocks.block25BorderRight,
-                        borderTop: blocks.block25BorderTop,
-                        borderBottom: blocks.block25BorderBottom,
-                        border: blocks.b25Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock25
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block25styles: {
-                            display: blocks.block25smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block25styles: {
-                            display: blocks.block25mddis
-                        }
-                    }
-                }),
-                block26styles: _nestingstyles2.default.create({
-                    block26styles: {
-                        display: 'flex',
-                        flex: blocks.block26,
-                        flexDirection: blocks.block26Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock26,
-                        borderLeft: blocks.block26BorderLeft,
-                        borderRight: blocks.block26BorderRight,
-                        borderTop: blocks.block26BorderTop,
-                        borderBottom: blocks.block26BorderBottom,
-                        border: blocks.b26Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock26
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block26styles: {
-                            display: blocks.block26smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block26styles: {
-                            display: blocks.block26mddis
-                        }
-                    }
-                }),
-                block27styles: _nestingstyles2.default.create({
-                    block27styles: {
-                        display: 'flex',
-                        flex: blocks.block27,
-                        flexDirection: blocks.block27Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock27,
-                        borderLeft: blocks.block27BorderLeft,
-                        borderRight: blocks.block27BorderRight,
-                        borderTop: blocks.block27BorderTop,
-                        borderBottom: blocks.block27BorderBottom,
-                        border: blocks.b27Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock27
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block27styles: {
-                            display: blocks.block27smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block27styles: {
-                            display: blocks.block27mddis
-                        }
-                    }
-                }),
-                block28styles: _nestingstyles2.default.create({
-                    block28styles: {
-                        display: 'flex',
-                        flex: blocks.block28,
-                        flexDirection: blocks.block28Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock28,
-                        borderLeft: blocks.block28BorderLeft,
-                        borderRight: blocks.block28BorderRight,
-                        borderTop: blocks.block28BorderTop,
-                        borderBottom: blocks.block28BorderBottom,
-                        border: blocks.b28Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock28
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block28styles: {
-                            display: blocks.block28smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block28styles: {
-                            display: blocks.block28mddis
-                        }
-                    }
-                }),
-                block29styles: _nestingstyles2.default.create({
-                    block29styles: {
-                        display: 'flex',
-                        flex: blocks.block29,
-                        flexDirection: blocks.block29Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock29,
-                        borderLeft: blocks.block29BorderLeft,
-                        borderRight: blocks.block29BorderRight,
-                        borderTop: blocks.block29BorderTop,
-                        borderBottom: blocks.block29BorderBottom,
-                        border: blocks.b29Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock29
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block29styles: {
-                            display: blocks.block29smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block29styles: {
-                            display: blocks.block29mddis
-                        }
-                    }
-                }),
-                block30styles: _nestingstyles2.default.create({
-                    block30styles: {
-                        display: 'flex',
-                        flex: blocks.block30,
-                        flexDirection: blocks.block30Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock30,
-                        borderLeft: blocks.block30BorderLeft,
-                        borderRight: blocks.block30BorderRight,
-                        borderTop: blocks.block30BorderTop,
-                        borderBottom: blocks.block30BorderBottom,
-                        border: blocks.b30Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock30
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block30styles: {
-                            display: blocks.block30smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block30styles: {
-                            display: blocks.block30mddis
-                        }
-                    }
-                }),
-                block31styles: _nestingstyles2.default.create({
-                    block31styles: {
-                        display: 'flex',
-                        flex: blocks.block31,
-                        flexDirection: blocks.block31Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock31,
-                        borderLeft: blocks.block31BorderLeft,
-                        borderRight: blocks.block31BorderRight,
-                        borderTop: blocks.block31BorderTop,
-                        borderBottom: blocks.block31BorderBottom,
-                        border: blocks.b31Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock31
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block31styles: {
-                            display: blocks.block31smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block31styles: {
-                            display: blocks.block31mddis
-                        }
-                    }
-                }),
-                block32styles: _nestingstyles2.default.create({
-                    block32styles: {
-                        display: 'flex',
-                        flex: blocks.block32,
-                        flexDirection: blocks.block32Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock32,
-                        borderLeft: blocks.block32BorderLeft,
-                        borderRight: blocks.block32BorderRight,
-                        borderTop: blocks.block32BorderTop,
-                        borderBottom: blocks.block32BorderBottom,
-                        border: blocks.b32Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock32
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block32styles: {
-                            display: blocks.block32smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block32styles: {
-                            display: blocks.block32mddis
-                        }
-                    }
-                }),
-                block33styles: _nestingstyles2.default.create({
-                    block33styles: {
-                        display: 'flex',
-                        flex: blocks.block33,
-                        flexDirection: blocks.block33Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock33,
-                        borderLeft: blocks.block33BorderLeft,
-                        borderRight: blocks.block33BorderRight,
-                        borderTop: blocks.block33BorderTop,
-                        borderBottom: blocks.block33BorderBottom,
-                        border: blocks.b33Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock33
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block33styles: {
-                            display: blocks.block33smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block33styles: {
-                            display: blocks.block33mddis
-                        }
-                    }
-                }),
-                block34styles: _nestingstyles2.default.create({
-                    block34styles: {
-                        display: 'flex',
-                        flex: blocks.block34,
-                        flexDirection: blocks.block34Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock34,
-                        borderLeft: blocks.block34BorderLeft,
-                        borderRight: blocks.block34BorderRight,
-                        borderTop: blocks.block34BorderTop,
-                        borderBottom: blocks.block34BorderBottom,
-                        border: blocks.b34Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock34
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block34styles: {
-                            display: blocks.block34smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block34styles: {
-                            display: blocks.block34mddis
-                        }
-                    }
-                }),
-                block35styles: _nestingstyles2.default.create({
-                    block35styles: {
-                        display: 'flex',
-                        flex: blocks.block35,
-                        flexDirection: blocks.block35Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock35,
-                        borderLeft: blocks.block35BorderLeft,
-                        borderRight: blocks.block35BorderRight,
-                        borderTop: blocks.block35BorderTop,
-                        borderBottom: blocks.block35BorderBottom,
-                        border: blocks.b35Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock35
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block35styles: {
-                            display: blocks.block35smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block35styles: {
-                            display: blocks.block35mddis
-                        }
-                    }
-                })
+                },
+                block9styles: {
+                    display: 'flex',
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                smblock9styles: {
+                    display: blocks.block9smdis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+
+                },
+                mdblock9styles: {
+                    display: blocks.block9mddis,
+                    flex: blocks.block9,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock9,
+                    borderLeft: blocks.block9BorderLeft,
+                    borderRight: blocks.block9BorderRight,
+                    borderTop: blocks.block9BorderTop,
+                    borderBottom: blocks.block9BorderBottom,
+                    border: blocks.b9Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock9
+                },
+                block10styles: {
+                    display: 'flex',
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                smblock10styles: {
+                    display: blocks.block10smdis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+
+                },
+                mdblock10styles: {
+                    display: blocks.block10mddis,
+                    flex: blocks.block10,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock10,
+                    borderLeft: blocks.block10BorderLeft,
+                    borderRight: blocks.block10BorderRight,
+                    borderTop: blocks.block10BorderTop,
+                    borderBottom: blocks.block10BorderBottom,
+                    border: blocks.b10Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock10
+                },
+                block11styles: {
+                    display: 'flex',
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                smblock11styles: {
+                    display: blocks.block11smdis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+
+                },
+                mdblock11styles: {
+                    display: blocks.block11mddis,
+                    flex: blocks.block11,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock11,
+                    borderLeft: blocks.block11BorderLeft,
+                    borderRight: blocks.block11BorderRight,
+                    borderTop: blocks.block11BorderTop,
+                    borderBottom: blocks.block11BorderBottom,
+                    border: blocks.b11Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock11
+                },
+                block12styles: {
+                    display: 'flex',
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                smblock12styles: {
+                    display: blocks.block12smdis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+
+                },
+                mdblock12styles: {
+                    display: blocks.block12mddis,
+                    flex: blocks.block12,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock12,
+                    borderLeft: blocks.block12BorderLeft,
+                    borderRight: blocks.block12BorderRight,
+                    borderTop: blocks.block12BorderTop,
+                    borderBottom: blocks.block12BorderBottom,
+                    border: blocks.b12Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock12
+                },
+                block13styles: {
+                    display: 'flex',
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                smblock13styles: {
+                    display: blocks.block13smdis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+
+                },
+                mdblock13styles: {
+                    display: blocks.block13mddis,
+                    flex: blocks.block13,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock13,
+                    borderLeft: blocks.block13BorderLeft,
+                    borderRight: blocks.block13BorderRight,
+                    borderTop: blocks.block13BorderTop,
+                    borderBottom: blocks.block13BorderBottom,
+                    border: blocks.b13Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock13
+                },
+                block14styles: {
+                    display: 'flex',
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                smblock14styles: {
+                    display: blocks.block14smdis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+
+                },
+                mdblock14styles: {
+                    display: blocks.block14mddis,
+                    flex: blocks.block14,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock14,
+                    borderLeft: blocks.block14BorderLeft,
+                    borderRight: blocks.block14BorderRight,
+                    borderTop: blocks.block14BorderTop,
+                    borderBottom: blocks.block14BorderBottom,
+                    border: blocks.b14Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock14
+                },
+                block15styles: {
+                    display: 'flex',
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                smblock15styles: {
+                    display: blocks.block15smdis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+
+                },
+                mdblock15styles: {
+                    display: blocks.block15mddis,
+                    flex: blocks.block15,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock15,
+                    borderLeft: blocks.block15BorderLeft,
+                    borderRight: blocks.block15BorderRight,
+                    borderTop: blocks.block15BorderTop,
+                    borderBottom: blocks.block15BorderBottom,
+                    border: blocks.b15Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock15
+                },
+                block16styles: {
+                    display: 'flex',
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                smblock16styles: {
+                    display: blocks.block16smdis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+
+                },
+                mdblock16styles: {
+                    display: blocks.block16mddis,
+                    flex: blocks.block16,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock16,
+                    borderLeft: blocks.block16BorderLeft,
+                    borderRight: blocks.block16BorderRight,
+                    borderTop: blocks.block16BorderTop,
+                    borderBottom: blocks.block16BorderBottom,
+                    border: blocks.b16Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock16
+                },
+                block17styles: {
+                    display: 'flex',
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                smblock17styles: {
+                    display: blocks.block17smdis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+
+                },
+                mdblock17styles: {
+                    display: blocks.block17mddis,
+                    flex: blocks.block17,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock17,
+                    borderLeft: blocks.block17BorderLeft,
+                    borderRight: blocks.block17BorderRight,
+                    borderTop: blocks.block17BorderTop,
+                    borderBottom: blocks.block17BorderBottom,
+                    border: blocks.b17Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock17
+                },
+                block18styles: {
+                    display: 'flex',
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                smblock18styles: {
+                    display: blocks.block18smdis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+
+                },
+                mdblock18styles: {
+                    display: blocks.block18mddis,
+                    flex: blocks.block18,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock18,
+                    borderLeft: blocks.block18BorderLeft,
+                    borderRight: blocks.block18BorderRight,
+                    borderTop: blocks.block18BorderTop,
+                    borderBottom: blocks.block18BorderBottom,
+                    border: blocks.b18Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock18
+                },
+                block19styles: {
+                    display: 'flex',
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                smblock19styles: {
+                    display: blocks.block19smdis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+
+                },
+                mdblock19styles: {
+                    display: blocks.block19mddis,
+                    flex: blocks.block19,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock19,
+                    borderLeft: blocks.block19BorderLeft,
+                    borderRight: blocks.block19BorderRight,
+                    borderTop: blocks.block19BorderTop,
+                    borderBottom: blocks.block19BorderBottom,
+                    border: blocks.b19Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock19
+                },
+                block20styles: {
+                    display: 'flex',
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+                },
+                smblock20styles: {
+                    display: blocks.block20smdis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                mdblock20styles: {
+                    display: blocks.block20mddis,
+                    flex: blocks.block20,
+                    flexDirection: blocks.block20Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock20,
+                    borderLeft: blocks.block20BorderLeft,
+                    borderRight: blocks.block20BorderRight,
+                    borderTop: blocks.block20BorderTop,
+                    borderBottom: blocks.block20BorderBottom,
+                    border: blocks.b20Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock20
+
+                },
+                block21styles: {
+                    display: 'flex',
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                smblock21styles: {
+                    display: blocks.block21smdis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+
+                },
+                mdblock21styles: {
+                    display: blocks.block21mddis,
+                    flex: blocks.block21,
+                    flexDirection: blocks.block21Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock21,
+                    borderLeft: blocks.block21BorderLeft,
+                    borderRight: blocks.block21BorderRight,
+                    borderTop: blocks.block21BorderTop,
+                    borderBottom: blocks.block21BorderBottom,
+                    border: blocks.b21Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock21
+                },
+                block22styles: {
+                    display: 'flex',
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                smblock22styles: {
+                    display: blocks.block22smdis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+
+                },
+                mdblock22styles: {
+                    display: blocks.block22mddis,
+                    flex: blocks.block22,
+                    flexDirection: blocks.block22Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock22,
+                    borderLeft: blocks.block22BorderLeft,
+                    borderRight: blocks.block22BorderRight,
+                    borderTop: blocks.block22BorderTop,
+                    borderBottom: blocks.block22BorderBottom,
+                    border: blocks.b22Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock22
+                },
+                block23styles: {
+                    display: 'flex',
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                smblock23styles: {
+                    display: blocks.block23smdis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+
+                },
+                mdblock23styles: {
+                    display: blocks.block23mddis,
+                    flex: blocks.block23,
+                    flexDirection: blocks.block23Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock23,
+                    borderLeft: blocks.block23BorderLeft,
+                    borderRight: blocks.block23BorderRight,
+                    borderTop: blocks.block23BorderTop,
+                    borderBottom: blocks.block23BorderBottom,
+                    border: blocks.b23Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock23
+                },
+                block24styles: {
+                    display: 'flex',
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                smblock24styles: {
+                    display: blocks.block24smdis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+
+                },
+                mdblock24styles: {
+                    display: blocks.block24mddis,
+                    flex: blocks.block24,
+                    flexDirection: blocks.block24Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock24,
+                    borderLeft: blocks.block24BorderLeft,
+                    borderRight: blocks.block24BorderRight,
+                    borderTop: blocks.block24BorderTop,
+                    borderBottom: blocks.block24BorderBottom,
+                    border: blocks.b24Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock24
+                },
+                block25styles: {
+                    display: 'flex',
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                smblock25styles: {
+                    display: blocks.block25smdis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+
+                },
+                mdblock25styles: {
+                    display: blocks.block25mddis,
+                    flex: blocks.block25,
+                    flexDirection: blocks.block25Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock25,
+                    borderLeft: blocks.block25BorderLeft,
+                    borderRight: blocks.block25BorderRight,
+                    borderTop: blocks.block25BorderTop,
+                    borderBottom: blocks.block25BorderBottom,
+                    border: blocks.b25Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock25
+                },
+                block26styles: {
+                    display: 'flex',
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                smblock26styles: {
+                    display: blocks.block26smdis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+
+                },
+                mdblock26styles: {
+                    display: blocks.block26mddis,
+                    flex: blocks.block26,
+                    flexDirection: blocks.block26Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock26,
+                    borderLeft: blocks.block26BorderLeft,
+                    borderRight: blocks.block26BorderRight,
+                    borderTop: blocks.block26BorderTop,
+                    borderBottom: blocks.block26BorderBottom,
+                    border: blocks.b26Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock26
+                },
+                block27styles: {
+                    display: 'flex',
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                smblock27styles: {
+                    display: blocks.block27smdis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+
+                },
+                mdblock27styles: {
+                    display: blocks.block27mddis,
+                    flex: blocks.block27,
+                    flexDirection: blocks.block27Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock27,
+                    borderLeft: blocks.block27BorderLeft,
+                    borderRight: blocks.block27BorderRight,
+                    borderTop: blocks.block27BorderTop,
+                    borderBottom: blocks.block27BorderBottom,
+                    border: blocks.b27Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock27
+                },
+                block28styles: {
+                    display: 'flex',
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                smblock28styles: {
+                    display: blocks.block28smdis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+
+                },
+                mdblock28styles: {
+                    display: blocks.block28mddis,
+                    flex: blocks.block28,
+                    flexDirection: blocks.block28Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock28,
+                    borderLeft: blocks.block28BorderLeft,
+                    borderRight: blocks.block28BorderRight,
+                    borderTop: blocks.block28BorderTop,
+                    borderBottom: blocks.block28BorderBottom,
+                    border: blocks.b28Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock28
+                },
+                block29styles: {
+                    display: 'flex',
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                smblock29styles: {
+                    display: blocks.block29smdis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+
+                },
+                mdblock29styles: {
+                    display: blocks.block29mddis,
+                    flex: blocks.block29,
+                    flexDirection: blocks.block29Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock29,
+                    borderLeft: blocks.block29BorderLeft,
+                    borderRight: blocks.block29BorderRight,
+                    borderTop: blocks.block29BorderTop,
+                    borderBottom: blocks.block29BorderBottom,
+                    border: blocks.b29Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock29
+                },
+                block30styles: {
+                    display: 'flex',
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                smblock30styles: {
+                    display: blocks.block30smdis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+
+                },
+                mdblock30styles: {
+                    display: blocks.block30mddis,
+                    flex: blocks.block30,
+                    flexDirection: blocks.block30Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock30,
+                    borderLeft: blocks.block30BorderLeft,
+                    borderRight: blocks.block30BorderRight,
+                    borderTop: blocks.block30BorderTop,
+                    borderBottom: blocks.block30BorderBottom,
+                    border: blocks.b30Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock30
+                },
+                block31styles: {
+                    display: 'flex',
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                smblock31styles: {
+                    display: blocks.block31smdis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+
+                },
+                mdblock31styles: {
+                    display: blocks.block31mddis,
+                    flex: blocks.block31,
+                    flexDirection: blocks.block31Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock31,
+                    borderLeft: blocks.block31BorderLeft,
+                    borderRight: blocks.block31BorderRight,
+                    borderTop: blocks.block31BorderTop,
+                    borderBottom: blocks.block31BorderBottom,
+                    border: blocks.b31Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock31
+                },
+                block32styles: {
+                    display: 'flex',
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                smblock32styles: {
+                    display: blocks.block32smdis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                mdblock32styles: {
+                    display: blocks.block32mddis,
+                    flex: blocks.block32,
+                    flexDirection: blocks.block32Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock32,
+                    borderLeft: blocks.block32BorderLeft,
+                    borderRight: blocks.block32BorderRight,
+                    borderTop: blocks.block32BorderTop,
+                    borderBottom: blocks.block32BorderBottom,
+                    border: blocks.b32Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock32
+                },
+                block33styles: {
+                    display: 'flex',
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                },
+                smblock33styles: {
+                    display: blocks.block33smdis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+
+                },
+                mdblock33styles: {
+                    display: blocks.block33mddis,
+                    flex: blocks.block33,
+                    flexDirection: blocks.block33Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock33,
+                    borderLeft: blocks.block33BorderLeft,
+                    borderRight: blocks.block33BorderRight,
+                    borderTop: blocks.block33BorderTop,
+                    borderBottom: blocks.block33BorderBottom,
+                    border: blocks.b33Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock33
+                },
+                block34styles: {
+                    display: 'flex',
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+                },
+                smblock34styles: {
+                    display: blocks.block34smdis,
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+
+                },
+                mdblock34styles: {
+                    display: blocks.block34mddis,
+                    flex: blocks.block34,
+                    flexDirection: blocks.block34Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock34,
+                    borderLeft: blocks.block34BorderLeft,
+                    borderRight: blocks.block34BorderRight,
+                    borderTop: blocks.block34BorderTop,
+                    borderBottom: blocks.block34BorderBottom,
+                    border: blocks.b34Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock34
+                },
+                block35styles: {
+                    display: 'flex',
+                    flex: blocks.block35,
+                    flexDirection: blocks.block35Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock35,
+                    borderLeft: blocks.block35BorderLeft,
+                    borderRight: blocks.block35BorderRight,
+                    borderTop: blocks.block35BorderTop,
+                    borderBottom: blocks.block35BorderBottom,
+                    border: blocks.b35Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock35
+                },
+                smblock35styles: {
+                    display: blocks.block35smdis,
+                    flex: blocks.block35,
+                    flexDirection: blocks.block35Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock35,
+                    borderLeft: blocks.block35BorderLeft,
+                    borderRight: blocks.block35BorderRight,
+                    borderTop: blocks.block35BorderTop,
+                    borderBottom: blocks.block35BorderBottom,
+                    border: blocks.b35Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock35
+
+                },
+                mdblock35styles: {
+                    display: blocks.block35mddis,
+                    flex: blocks.block35,
+                    flexDirection: blocks.block35Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock35,
+                    borderLeft: blocks.block35BorderLeft,
+                    borderRight: blocks.block35BorderRight,
+                    borderTop: blocks.block35BorderTop,
+                    borderBottom: blocks.block35BorderBottom,
+                    border: blocks.b35Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock35
+                }
             };
         default:
             return;

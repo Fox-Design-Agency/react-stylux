@@ -3,25 +3,32 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = containerSwitch0_5;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function containerSwitch0_5(num, props, state) {
+exports.default = holderSwitch0_5;
+function holderSwitch0_5(num, props, state) {
     var blocks = '';
 
+    var background = props.background;
+    var display = props.display || 'flex';
+    var direction = props.direction || 'row';
+    var height = props.height;
+    var maxHeight = props.maxHeight;
+    var width = props.width || "100%";
+    var maxWidth = props.maxWidth;
+    var borderLeft = props.bLeft;
+    var borderRight = props.bRight;
+    var borderTop = props.bTop;
+    var borderBottom = props.bBottom;
+    var border = props.border;
+    var padding = props.padding || '0';
+    var margin = props.margin || '10px 0';
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+    var smflexDir = props.smflexDir || 'row';
+    var mdflexDir = props.mdflexDir || 'row';
+    var alignBlocks = props.alignBlocks;
+
     switch (num) {
-        case num = 1:
+        case 1:
             blocks = {
                 block1Direction: props.block1direction || 'row',
                 block1: props.block1 || '1 0 auto',
@@ -36,70 +43,109 @@ function containerSwitch0_5(num, props, state) {
                 block1mddis: props.block1mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                })
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                }
             };
-
-        case num = 2:
+        case 2:
             blocks = {
                 block1Direction: props.block1direction || 'row',
                 block1: props.block1 || '1 0 auto',
@@ -125,95 +171,153 @@ function containerSwitch0_5(num, props, state) {
                 block2mddis: props.block2mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: blocks.block1Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: blocks.block2Direction,
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                })
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                }
+
             };
 
-        case num = 3:
+        case 3:
             blocks = {
                 block1Direction: props.block1direction || 'row',
                 block1: props.block1 || '1 0 auto',
@@ -250,121 +354,194 @@ function containerSwitch0_5(num, props, state) {
                 block3mddis: props.block3mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: _defineProperty({
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    }, 'flex', 1),
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                })
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                }
             };
 
-        case num = 4:
+        case 4:
             blocks = {
                 block1Direction: props.block1direction || 'row',
                 block1: props.block1 || '1 0 auto',
@@ -412,147 +589,235 @@ function containerSwitch0_5(num, props, state) {
                 block4mddis: props.block4mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                })
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                }
             };
-
-        case num = 5:
+        case 5:
             blocks = {
                 block1Direction: props.block1direction || 'row',
                 block1: props.block1 || '1 0 auto',
@@ -611,170 +876,275 @@ function containerSwitch0_5(num, props, state) {
                 block5mddis: props.block5mddis || 'flex'
             };
             return {
-                holderstyles: _nestingstyles2.default.create({
-                    holderstyles: {
-                        width: state.width,
-                        maxWidth: state.width,
-                        height: state.height,
-                        maxHeight: state.maxHeight,
-                        padding: state.padding,
-                        margin: state.margin,
-                        display: state.display,
-                        flex: "1 0 auto",
-                        flexDirection: state.direction,
-                        flexWrap: 'wrap',
-                        background: state.text,
-                        justifyContent: state.alignBlocks,
-                        overflow: 'hidden',
-                        borderLeft: state.borderLeft,
-                        borderRight: state.borderRight,
-                        borderTop: state.borderTop,
-                        borderBottom: state.borderBottom,
-                        border: state.border
-                    },
-                    '@media (max-width: 768px)': {
-                        holderstyles: {
-                            display: state.smdis,
-                            flexDirection: state.smflexDir
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        holderstyles: {
-                            display: state.mddis,
-                            flexDirection: state.mdflexDir
-                        }
-                    }
-                }),
-                block1styles: _nestingstyles2.default.create({
-                    block1styles: {
-                        display: 'flex',
-                        flex: blocks.block1 || state.block1,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock1,
-                        borderLeft: blocks.block1BorderLeft,
-                        borderRight: blocks.block1BorderRight,
-                        borderTop: blocks.block1BorderTop,
-                        borderBottom: blocks.block1BorderBottom,
-                        border: blocks.b1Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock1
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block1styles: {
-                            display: blocks.block1smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block1styles: {
-                            display: blocks.block1mddis
-                        }
-                    }
-                }),
-                block2styles: _nestingstyles2.default.create({
-                    block2styles: {
-                        display: 'flex',
-                        flex: blocks.block2,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock2,
-                        borderLeft: blocks.block2BorderLeft,
-                        borderRight: blocks.block2BorderRight,
-                        borderTop: blocks.block2BorderTop,
-                        borderBottom: blocks.block2BorderBottom,
-                        border: blocks.b2Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock2
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block2styles: {
-                            display: blocks.block2smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block2styles: {
-                            display: blocks.block2mddis
-                        }
-                    }
-                }),
-                block3styles: _nestingstyles2.default.create({
-                    block3styles: {
-                        display: 'flex',
-                        flex: blocks.block3,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock3,
-                        borderLeft: blocks.block3BorderLeft,
-                        borderRight: blocks.block3BorderRight,
-                        borderTop: blocks.block3BorderTop,
-                        borderBottom: blocks.block3BorderBottom,
-                        border: blocks.b3Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock3
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block3styles: {
-                            display: blocks.block3smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block3styles: {
-                            display: blocks.block3mddis
-                        }
-                    }
-                }),
-                block4styles: _nestingstyles2.default.create({
-                    block4styles: {
-                        display: 'flex',
-                        flex: blocks.block4,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock4,
-                        borderLeft: blocks.block4BorderLeft,
-                        borderRight: blocks.block4BorderRight,
-                        borderTop: blocks.block4BorderTop,
-                        borderBottom: blocks.block4BorderBottom,
-                        border: blocks.b4Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock4
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block4styles: {
-                            display: blocks.block4smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block4styles: {
-                            display: blocks.block4mddis
-                        }
-                    }
-                }),
-                block5styles: _nestingstyles2.default.create({
-                    block5styles: {
-                        display: 'flex',
-                        flex: blocks.block5,
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                        alignItems: blocks.alignBlock5,
-                        borderLeft: blocks.block5BorderLeft,
-                        borderRight: blocks.block5BorderRight,
-                        borderTop: blocks.block5BorderTop,
-                        borderBottom: blocks.block5BorderBottom,
-                        border: blocks.b5Border,
-                        margin: blocks.margin,
-                        justifyContent: blocks.justifyBlock5
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        block5styles: {
-                            display: blocks.block5smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        block5styles: {
-                            display: blocks.block5mddis
-                        }
-                    }
-                })
+                holderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: display,
+                    flex: "1 0 auto",
+                    flexDirection: direction,
+                    flexWrap: 'wrap',
+                    background: background,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                smholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: smdis,
+                    flex: "1 0 auto",
+                    flexDirection: smflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                mdholderstyles: {
+                    width: width,
+                    maxWidth: maxWidth,
+                    height: height,
+                    maxHeight: maxHeight,
+                    padding: padding,
+                    margin: margin,
+                    display: mddis,
+                    flex: "1 0 auto",
+                    flexDirection: mdflexDir,
+                    flexWrap: 'wrap',
+                    background: background,
+                    justifyContent: alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: borderLeft,
+                    borderRight: borderRight,
+                    borderTop: borderTop,
+                    borderBottom: borderBottom,
+                    border: border
+                },
+                block1styles: {
+                    display: 'flex',
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                smblock1styles: {
+                    display: blocks.block1smdis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                mdblock1styles: {
+                    display: blocks.block1mddis,
+                    flex: blocks.block1,
+                    flexDirection: blocks.block1Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock1,
+                    borderLeft: blocks.block1BorderLeft,
+                    borderRight: blocks.block1BorderRight,
+                    borderTop: blocks.block1BorderTop,
+                    borderBottom: blocks.block1BorderBottom,
+                    border: blocks.b1Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock1
+                },
+                block2styles: {
+                    display: 'flex',
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                smblock2styles: {
+                    display: blocks.block2smdis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                mdblock2styles: {
+                    display: blocks.block2mddis,
+                    flex: blocks.block2,
+                    flexDirection: blocks.block2Direction,
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock2,
+                    borderLeft: blocks.block2BorderLeft,
+                    borderRight: blocks.block2BorderRight,
+                    borderTop: blocks.block2BorderTop,
+                    borderBottom: blocks.block2BorderBottom,
+                    border: blocks.b2Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock2
+                },
+                block3styles: {
+                    display: 'flex',
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                smblock3styles: {
+                    display: blocks.block3smdis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                mdblock3styles: {
+                    display: blocks.block3mddis,
+                    flex: blocks.block3,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock3,
+                    borderLeft: blocks.block3BorderLeft,
+                    borderRight: blocks.block3BorderRight,
+                    borderTop: blocks.block3BorderTop,
+                    borderBottom: blocks.block3BorderBottom,
+                    border: blocks.b3Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock3
+                },
+                block4styles: {
+                    display: 'flex',
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                smblock4styles: {
+                    display: blocks.block4smdis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                mdblock4styles: {
+                    display: blocks.block4mddis,
+                    flex: blocks.block4,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock4,
+                    borderLeft: blocks.block4BorderLeft,
+                    borderRight: blocks.block4BorderRight,
+                    borderTop: blocks.block4BorderTop,
+                    borderBottom: blocks.block4BorderBottom,
+                    border: blocks.b4Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock4
+                },
+                block5styles: {
+                    display: 'flex',
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                smblock5styles: {
+                    display: blocks.block5smdis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                },
+                mdblock5styles: {
+                    display: blocks.block5mddis,
+                    flex: blocks.block5,
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    alignItems: blocks.alignBlock5,
+                    borderLeft: blocks.block5BorderLeft,
+                    borderRight: blocks.block5BorderRight,
+                    borderTop: blocks.block5BorderTop,
+                    borderBottom: blocks.block5BorderBottom,
+                    border: blocks.b5Border,
+                    margin: blocks.margin,
+                    justifyContent: blocks.justifyBlock5
+                }
             };
         default:
             return;
