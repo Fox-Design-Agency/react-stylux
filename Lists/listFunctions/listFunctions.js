@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = listFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function listFunction(type, props, state, self) {
     var cursor = "";
     var color = props.color || 'black';
@@ -43,127 +32,192 @@ function listFunction(type, props, state, self) {
     var itemBGSize = props.itemBGSize;
 
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             return {
-                LISTSTYLE: _nestingstyles2.default.create({
-                    liststyle: {
-                        color: color,
-                        fontFamily: fontFamily,
-                        fontSize: fontSize,
-                        lineHeight: lineHeight,
-                        fontWeight: fontWeight,
-                        paddingLeft: paddingLeft,
-                        listStyleType: listStyleType,
-                        listStyleImage: listStyleImage,
-                        listStylePosition: listStylePosition,
-                        width: width
-                    },
-                    listitemstyle: {
-                        paddingLeft: itemPadding,
-                        backgroundImage: itemBGImage,
-                        backgroundPosition: itemBGPosition,
-                        backgroundSize: itemBGSize,
-                        backgroundRepeat: 'no-repeat'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        liststyle: {
-                            display: smdis
-                        },
-                        listitemstyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        liststyle: {
-                            display: mddis
-                        },
-                        listitemstyle: {
-                            display: mddis
-                        }
-                    }
-                })
-            };
-        case type = '2':
-            cursor = "pointer";
-            return {
-                LISTSTYLE: _nestingstyles2.default.create({
-                    liststyle: {
-                        color: color,
-                        fontFamily: fontFamily,
-                        fontSize: fontSize,
-                        lineHeight: lineHeight,
-                        fontWeight: fontWeight,
-                        paddingLeft: paddingLeft,
-                        position: 'relative',
-                        width: width
+                liststyle: {
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                listitemstyle: {
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
+                },
+                smliststyle: {
+                    display: smdis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                smlistitemstyle: {
+                    display: smdis,
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
 
-                    },
-                    listitemstyle: {
-                        paddingLeft: '70px',
-                        counterIncrement: 'aCounter'
-
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        liststyle: {
-                            display: smdis
-                        },
-                        listitemstyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        liststyle: {
-                            display: mddis
-                        },
-                        listitemstyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                },
+                mdliststyle: {
+                    display: mddis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                mdlistitemstyle: {
+                    display: mddis,
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
+                }
             };
-        case type = '3':
+        case '2':
             cursor = "pointer";
             return {
-                LISTSTYLE: _nestingstyles2.default.create({
-                    liststyle: {
-                        color: color,
-                        fontFamily: fontFamily,
-                        fontSize: fontSize,
-                        lineHeight: lineHeight,
-                        fontWeight: fontWeight,
-                        paddingLeft: paddingLeft,
-                        listStyleType: bulletStyleType,
-                        listStyleImage: listStyleImage,
-                        listStylePosition: listStylePosition,
-                        width: width
-                    },
-                    listitemstyle: {
-                        paddingLeft: itemPadding,
-                        backgroundImage: itemBGImage,
-                        backgroundPosition: itemBGPosition,
-                        backgroundSize: itemBGSize,
-                        backgroundRepeat: 'no-repeat'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        liststyle: {
-                            display: smdis
-                        },
-                        listitemstyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        liststyle: {
-                            display: mddis
-                        },
-                        listitemstyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                liststyle: {
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    position: 'relative',
+                    width: width
+
+                },
+                listitemstyle: {
+                    paddingLeft: '70px',
+                    counterIncrement: 'aCounter'
+
+                },
+                smliststyle: {
+                    display: smdis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    position: 'relative',
+                    width: width
+                },
+                smlistitemstyle: {
+                    display: smdis,
+                    paddingLeft: '70px',
+                    counterIncrement: 'aCounter'
+
+                },
+                mdliststyle: {
+                    display: mddis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    position: 'relative',
+                    width: width
+                },
+                mdlistitemstyle: {
+                    display: mddis,
+                    paddingLeft: '70px',
+                    counterIncrement: 'aCounter'
+                }
             };
-        case type = '4':
+        case '3':
+            cursor = "pointer";
+            return {
+                liststyle: {
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: bulletStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                listitemstyle: {
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
+                },
+                smliststyle: {
+                    display: smdis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: bulletStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                smlistitemstyle: {
+                    display: smdis,
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
+
+                },
+                mdliststyle: {
+                    display: mddis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: bulletStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                mdlistitemstyle: {
+                    display: mddis,
+                    paddingLeft: itemPadding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat'
+                }
+            };
+        case '4':
             cursor = "pointer";
             listStyleType = "none";
             var border = props.border || "1px solid black";
@@ -172,46 +226,77 @@ function listFunction(type, props, state, self) {
             width = props.width;
             var itemWidth = props.itemWidth || "250px";
             return {
-                LISTSTYLE: _nestingstyles2.default.create({
-                    liststyle: {
-                        color: color,
-                        fontFamily: fontFamily,
-                        fontSize: fontSize,
-                        lineHeight: lineHeight,
-                        fontWeight: fontWeight,
-                        paddingLeft: paddingLeft,
-                        listStyleType: listStyleType,
-                        listStyleImage: listStyleImage,
-                        listStylePosition: listStylePosition,
-                        width: width
-                    },
-                    listitemstyle: {
-                        margin: margin,
-                        border: border,
-                        padding: padding,
-                        backgroundImage: itemBGImage,
-                        backgroundPosition: itemBGPosition,
-                        backgroundSize: itemBGSize,
-                        backgroundRepeat: 'no-repeat',
-                        width: itemWidth
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        liststyle: {
-                            display: smdis
-                        },
-                        listitemstyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        liststyle: {
-                            display: mddis
-                        },
-                        listitemstyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                liststyle: {
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                listitemstyle: {
+                    margin: margin,
+                    border: border,
+                    padding: padding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat',
+                    width: itemWidth
+                },
+                smliststyle: {
+                    display: smdis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                smlistitemstyle: {
+                    display: smdis,
+                    margin: margin,
+                    border: border,
+                    padding: padding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat',
+                    width: itemWidth
+
+                },
+                mdliststyle: {
+                    display: mddis,
+                    color: color,
+                    fontFamily: fontFamily,
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    fontWeight: fontWeight,
+                    paddingLeft: paddingLeft,
+                    listStyleType: listStyleType,
+                    listStyleImage: listStyleImage,
+                    listStylePosition: listStylePosition,
+                    width: width
+                },
+                mdlistitemstyle: {
+                    display: mddis,
+                    margin: margin,
+                    border: border,
+                    padding: padding,
+                    backgroundImage: itemBGImage,
+                    backgroundPosition: itemBGPosition,
+                    backgroundSize: itemBGSize,
+                    backgroundRepeat: 'no-repeat',
+                    width: itemWidth
+                }
             };
         default:
             return;

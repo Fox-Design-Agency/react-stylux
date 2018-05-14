@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = carouselFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function carouselFunction(type, props, state, self) {
     var cursor = "";
 
@@ -32,7 +21,7 @@ function carouselFunction(type, props, state, self) {
     var mddis = props.mdDis || 'flex';
 
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             return {
 
@@ -85,7 +74,7 @@ function carouselFunction(type, props, state, self) {
                     animationFillMode: animationFillMode
                 }
             };
-        case type = '2':
+        case '2':
             cursor = "pointer";
             return {
                 WRAP: {
@@ -142,7 +131,7 @@ function carouselFunction(type, props, state, self) {
                     position: 'relative'
                 }
             };
-        case type = '3':
+        case '3':
             cursor = "pointer";
             return {
                 LEFT_ARROW: {
@@ -211,7 +200,7 @@ function carouselFunction(type, props, state, self) {
                     position: 'relative'
                 }
             };
-        case type = '4':
+        case '4':
             cursor = "pointer";
             return {
                 LEFT_ARROW: {
@@ -264,7 +253,7 @@ function carouselFunction(type, props, state, self) {
                     animationFillMode: animationFillMode
                 }
             };
-        case type = '5':
+        case '5':
             cursor = "pointer";
             return {
                 WRAP: {

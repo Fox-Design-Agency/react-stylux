@@ -1,23 +1,15 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = buttonFunction;
 
-var _react = require("react");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require("nestingstyles");
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-require("../../Components 1.0.0/SuperStyleSheet.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function buttonFunction(type, props, state, self) {
+    var _mdbuttonStyles, _mdbuttonStyles2;
+
     var buttonStyles = void 0,
         cursor = "";
 
@@ -53,7 +45,7 @@ function buttonFunction(type, props, state, self) {
     var smdis = props.smDis;
     var mddis = props.mdDis;
     switch (type) {
-        case type = '1':
+        case '1':
             backgroundColor = arguments[4] || backgroundColor;
             color = arguments[5] || color;
             cursor = "pointer";
@@ -68,38 +60,65 @@ function buttonFunction(type, props, state, self) {
                     var revcolor = revColor;
                     self.renderStuff(revbackground, revcolor);
                 },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        borderRadius: borderRadius,
-                        color: color,
-                        fontSize: fontSize,
-                        background: backgroundColor,
-                        padding: padding,
-                        border: border,
-                        cursor: cursor,
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        width: width,
-                        height: height
-                    },
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                buttonStyles: {
+                    borderRadius: borderRadius,
+                    color: color,
+                    fontSize: fontSize,
+                    background: backgroundColor,
+                    padding: padding,
+                    border: border,
+                    cursor: cursor,
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    width: width,
+                    height: height
+                },
+                smbuttonStyles: {
+                    display: smdis,
+                    borderRadius: borderRadius,
+                    color: color,
+                    fontSize: fontSize,
+                    background: backgroundColor,
+                    padding: padding,
+                    border: border,
+                    cursor: cursor,
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    width: width,
+                    height: height
+
+                },
+                mdbuttonStyles: {
+                    display: mddis,
+                    borderRadius: borderRadius,
+                    color: color,
+                    fontSize: fontSize,
+                    background: backgroundColor,
+                    padding: padding,
+                    border: border,
+                    cursor: cursor,
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    width: width,
+                    height: height
+                }
             };
-        case type = '2':
+        case '2':
             backgroundColor = arguments[4] || backgroundColor;
             boxxShadow = arguments[5] || boxShadow;
             var transform = arguments[6] || transform;
@@ -118,36 +137,53 @@ function buttonFunction(type, props, state, self) {
                     var transform = trandformrev;
                     self.renderStuff(backgroundCol, boxShadow, transform);
                 },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        display: 'inline-block',
-                        padding: '15px 25px',
-                        fontSize: fontSize,
-                        cursor: cursor,
-                        textAlign: 'center',
-                        outline: 'none',
-                        color: color,
-                        backgroundColor: backgroundColor,
-                        borderRadius: '15px',
-                        boxShadow: boxxShadow,
-                        transform: transform,
-                        margin: margin
-                    },
+                buttonStyles: {
+                    display: 'inline-block',
+                    padding: '15px 25px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    outline: 'none',
+                    color: color,
+                    backgroundColor: backgroundColor,
+                    borderRadius: '15px',
+                    boxShadow: boxxShadow,
+                    transform: transform,
+                    margin: margin
+                },
 
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                smbuttonStyles: {
+                    display: smdis,
+                    padding: '15px 25px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    outline: 'none',
+                    color: color,
+                    backgroundColor: backgroundColor,
+                    borderRadius: '15px',
+                    boxShadow: boxxShadow,
+                    transform: transform,
+                    margin: margin
+
+                },
+                mdbuttonStyles: {
+                    display: mddis,
+                    padding: '15px 25px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    outline: 'none',
+                    color: color,
+                    backgroundColor: backgroundColor,
+                    borderRadius: '15px',
+                    boxShadow: boxxShadow,
+                    transform: transform,
+                    margin: margin
+                }
 
             };
-        case type = '3':
+        case '3':
             var boxxShadow = arguments[4] || floatBoxShadow;
             cursor = "pointer";
             return {
@@ -159,36 +195,43 @@ function buttonFunction(type, props, state, self) {
                     var revBoxShadow = floatBoxShadow;
                     self.renderStuff(revBoxShadow);
                 },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        width: width,
-                        display: 'block',
-                        border: 'none',
-                        backgroundColor: backgroundColor,
-                        padding: '14px 28px',
-                        fontSize: fontSize,
-                        cursor: cursor,
-                        textAlign: 'center',
-                        color: color,
-                        boxShadow: boxxShadow,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        margin: margin
-                    },
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                buttonStyles: {
+                    width: width,
+                    display: 'block',
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    color: color,
+                    boxShadow: boxxShadow,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    margin: margin
+                },
+                smbuttonStyles: {
+                    display: smdis,
+                    width: width,
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    color: color,
+                    boxShadow: boxxShadow,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    margin: margin
 
+                },
+                mdbuttonStyles: (_mdbuttonStyles = {
+                    display: mddis,
+                    width: width
+                }, _defineProperty(_mdbuttonStyles, 'display', 'block'), _defineProperty(_mdbuttonStyles, 'border', 'none'), _defineProperty(_mdbuttonStyles, 'backgroundColor', backgroundColor), _defineProperty(_mdbuttonStyles, 'padding', '14px 28px'), _defineProperty(_mdbuttonStyles, 'fontSize', fontSize), _defineProperty(_mdbuttonStyles, 'cursor', cursor), _defineProperty(_mdbuttonStyles, 'textAlign', 'center'), _defineProperty(_mdbuttonStyles, 'color', color), _defineProperty(_mdbuttonStyles, 'boxShadow', boxxShadow), _defineProperty(_mdbuttonStyles, 'transform', transform), _defineProperty(_mdbuttonStyles, 'transformOrigin', transformOrigin), _defineProperty(_mdbuttonStyles, 'margin', margin), _mdbuttonStyles)
             };
-        case type = '4':
+        case '4':
             backgroundColor = arguments[4] || blockBackground;
             color = arguments[5] || frev;
             cursor = "pointer";
@@ -203,34 +246,48 @@ function buttonFunction(type, props, state, self) {
                     var col = frev;
                     self.renderStuff(backgroundCol, col);
                 },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        width: '100%',
-                        display: 'block',
-                        border: 'none',
-                        backgroundColor: backgroundColor,
-                        padding: '14px 28px',
-                        fontSize: fontSize,
-                        cursor: cursor,
-                        textAlign: 'center',
-                        color: color,
-                        transform: transform,
-                        transformOrigin: transformOrigin
-                    },
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                buttonStyles: {
+                    width: '100%',
+                    display: 'block',
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    color: color,
+                    transform: transform,
+                    transformOrigin: transformOrigin
+                },
+                smbuttonStyles: {
+                    display: smdis,
+                    width: '100%',
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    color: color,
+                    transform: transform,
+                    transformOrigin: transformOrigin
 
+                },
+                mdbuttonStyles: {
+                    display: mddis,
+                    width: '100%',
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: cursor,
+                    textAlign: 'center',
+                    color: color,
+                    transform: transform,
+                    transformOrigin: transformOrigin
+                }
             };
-        case type = '5':
+        case '5':
             backgroundColor = arguments[4] || backgroundColor;
             cursor = "pointer";
             return {
@@ -242,79 +299,37 @@ function buttonFunction(type, props, state, self) {
                     var backgroundCol = revBackground;
                     self.renderStuff(backgroundCol);
                 },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        width: width,
-                        display: 'block',
-                        border: 'none',
-                        backgroundColor: backgroundColor,
-                        padding: '14px 28px',
-                        fontSize: fontSize,
-                        cursor: 'pointer',
-                        textAlign: 'center',
-                        color: color,
-                        transform: transform,
-                        transformOrigin: transformOrigin
-                    },
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                buttonStyles: {
+                    width: width,
+                    display: 'block',
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: 'pointer',
+                    textAlign: 'center',
+                    color: color,
+                    transform: transform,
+                    transformOrigin: transformOrigin
+                },
+                smbuttonStyles: {
+                    display: smdis,
+                    width: width,
+                    border: 'none',
+                    backgroundColor: backgroundColor,
+                    padding: '14px 28px',
+                    fontSize: fontSize,
+                    cursor: 'pointer',
+                    textAlign: 'center',
+                    color: color,
+                    transform: transform,
+                    transformOrigin: transformOrigin
 
-            };
-        case type = 'custom':
-            background = arguments[4] || background;
-            color = arguments[5] || color;
-            cursor = "pointer";
-            return {
-                changeHover: function changeHover() {
-                    var background = hoverBackground;
-                    var color = hoverColor;
-                    self.renderStuff(background, color);
                 },
-                changeHoverBack: function changeHoverBack() {
-                    var revbackground = revBackground;
-                    var revcolor = revColor;
-                    self.setState({ color: revcolor, background: revbackground });
-                    self.renderStuff(revbackground, revcolor);
-                },
-                BUTTONSTYLES: _nestingstyles2.default.create({
-                    buttonStyles: {
-                        borderRadius: borderRadius,
-                        color: color,
-                        fontSize: fontSize,
-                        background: background,
-                        padding: padding,
-                        border: border,
-                        cursor: cursor,
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        width: width,
-                        height: height
-                    },
-                    '@media (max-width: 768px)': {
-                        buttonStyles: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        buttonStyles: {
-                            display: mddis
-                        }
-                    }
-                })
+                mdbuttonStyles: (_mdbuttonStyles2 = {
+                    display: mddis,
+                    width: width
+                }, _defineProperty(_mdbuttonStyles2, 'display', 'block'), _defineProperty(_mdbuttonStyles2, 'border', 'none'), _defineProperty(_mdbuttonStyles2, 'backgroundColor', backgroundColor), _defineProperty(_mdbuttonStyles2, 'padding', '14px 28px'), _defineProperty(_mdbuttonStyles2, 'fontSize', fontSize), _defineProperty(_mdbuttonStyles2, 'cursor', 'pointer'), _defineProperty(_mdbuttonStyles2, 'textAlign', 'center'), _defineProperty(_mdbuttonStyles2, 'color', color), _defineProperty(_mdbuttonStyles2, 'transform', transform), _defineProperty(_mdbuttonStyles2, 'transformOrigin', transformOrigin), _mdbuttonStyles2)
 
             };
         default:
