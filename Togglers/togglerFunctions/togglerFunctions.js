@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = togglerFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function togglerFunction(type, props, state, self) {
     var cursor = void 0,
         display = void 0,
@@ -72,7 +61,7 @@ function togglerFunction(type, props, state, self) {
     var borderTop = props.boxBorderTop;
     var borderBottom = props.boxBorderBottom;
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             show = arguments[4];
             display = show ? 'inline' : 'none';
@@ -121,7 +110,7 @@ function togglerFunction(type, props, state, self) {
                 }
 
             };
-        case type = '2':
+        case '2':
             cursor = "pointer";
             show = arguments[4];
             display = show ? 'flex' : 'none';
@@ -188,7 +177,7 @@ function togglerFunction(type, props, state, self) {
                 }
 
             };
-        case type = '3':
+        case '3':
             cursor = "pointer";
             width = props.width || '400px';
             position = props.position;
@@ -229,12 +218,10 @@ function togglerFunction(type, props, state, self) {
                     borderRight: '1px solid black',
                     margin: '3px',
                     padding: '5px',
-
                     trasition: '0.3s'
                 }
-
             };
-        case type = '4':
+        case '4':
             cursor = "pointer";
             position = props.position;
             return {
@@ -282,9 +269,7 @@ function togglerFunction(type, props, state, self) {
                     display: 'flex',
                     flex: "1 0 auto",
                     flexDirection: 'column'
-
                 }
-
             };
         default:
             return;

@@ -1,26 +1,15 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = dropdownnavFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function dropdownnavFunction(type, props, state, self) {
     var cursor = void 0,
         show = "";
 
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             show = arguments[4] || "hidden";
             return {
@@ -29,7 +18,7 @@ function dropdownnavFunction(type, props, state, self) {
                     visibility: show,
                     borderRadius: state.borderRadius,
                     boxShadow: state.boxShadow,
-                    margin: '0 0 0 ' + state.offset,
+                    margin: "0 0 0 " + state.offset,
                     width: state.width,
                     padding: '5px',
                     textAlign: state.textAlign,

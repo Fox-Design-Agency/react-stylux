@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = tableFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function tableFunction(type, props, state, self) {
     var cursor = "";
     var smdis = props.smDis;
@@ -56,50 +45,65 @@ function tableFunction(type, props, state, self) {
     var tableHeight = props.tableHeight;
     var tableBorderCollapse = props.borderCollaspe || 'collapse';
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             return {
-                TABLESTYLE: _nestingstyles2.default.create({
-                    tablestyle: {
-                        borderTop: tableBorderTop,
-                        borderRight: tableBorderRight,
-                        borderBottom: tableBorderBottom,
-                        borderLeft: tableBorderLeft,
-                        border: tableBorder,
-                        margin: tableMargin,
-                        padding: tablePadding,
-                        textAlign: 'center',
-                        width: tableWidth,
-                        height: tableHeight,
-                        borderCollapse: tableBorderCollapse,
-                        cursor: 'default'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        tablestyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        tablestyle: {
-                            display: mddis
-                        }
-                    }
-                }),
-                TABLERES: _nestingstyles2.default.create({
-                    tableres: {
-                        overflowX: 'auto'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        tableres: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        tableres: {
-                            display: mddis
-                        }
-                    }
-                })
+                tablestyle: {
+                    borderTop: tableBorderTop,
+                    borderRight: tableBorderRight,
+                    borderBottom: tableBorderBottom,
+                    borderLeft: tableBorderLeft,
+                    border: tableBorder,
+                    margin: tableMargin,
+                    padding: tablePadding,
+                    textAlign: 'center',
+                    width: tableWidth,
+                    height: tableHeight,
+                    borderCollapse: tableBorderCollapse,
+                    cursor: 'default'
+                },
+                smtablestyle: {
+                    display: smdis,
+                    borderTop: tableBorderTop,
+                    borderRight: tableBorderRight,
+                    borderBottom: tableBorderBottom,
+                    borderLeft: tableBorderLeft,
+                    border: tableBorder,
+                    margin: tableMargin,
+                    padding: tablePadding,
+                    textAlign: 'center',
+                    width: tableWidth,
+                    height: tableHeight,
+                    borderCollapse: tableBorderCollapse,
+                    cursor: 'default'
+
+                },
+                mdtablestyle: {
+                    display: mddis,
+                    borderTop: tableBorderTop,
+                    borderRight: tableBorderRight,
+                    borderBottom: tableBorderBottom,
+                    borderLeft: tableBorderLeft,
+                    border: tableBorder,
+                    margin: tableMargin,
+                    padding: tablePadding,
+                    textAlign: 'center',
+                    width: tableWidth,
+                    height: tableHeight,
+                    borderCollapse: tableBorderCollapse,
+                    cursor: 'default'
+                },
+                tableres: {
+                    overflowX: 'auto'
+                },
+                smtableres: {
+                    display: smdis,
+                    overflowX: 'auto'
+                },
+                mdtableres: {
+                    display: mddis,
+                    overflowX: 'auto'
+                }
             };
         default:
             return;

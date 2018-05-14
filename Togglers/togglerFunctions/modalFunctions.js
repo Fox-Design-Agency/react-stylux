@@ -5,16 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = modalFunction;
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function modalFunction(type, props, state, self) {
@@ -55,7 +45,7 @@ function modalFunction(type, props, state, self) {
     var mddis = props.mdDis || 'flex';
 
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             show = arguments[4];
             return {
@@ -111,7 +101,7 @@ function modalFunction(type, props, state, self) {
                 }
 
             };
-        case type = '2':
+        case '2':
             cursor = "pointer";
             show = arguments[4];
             return {
@@ -133,7 +123,8 @@ function modalFunction(type, props, state, self) {
                     margin: '15% auto',
                     padding: '20px',
                     border: '1px solid #888',
-                    width: '80%'
+                    width: boxWidth,
+                    height: boxHeight
                 },
                 CLOSEBTN: {
                     color: '#aaa',
@@ -147,7 +138,7 @@ function modalFunction(type, props, state, self) {
 
                 }
             };
-        case type = '3':
+        case '3':
             cursor = "pointer";
             show = arguments[4];
             return {
