@@ -14,11 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-require('../css/SuperStyleSheet.css');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _imageFunction = require('./imageFunction/imageFunction');
 
@@ -60,142 +58,466 @@ var Image = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            var styledImage = '';
-            if (this.state.box === "1") {
-                var use = (0, _imageFunction2.default)("1", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: use.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: use.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "2") {
-                var _use = (0, _imageFunction2.default)("2", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "3") {
-                var _use2 = (0, _imageFunction2.default)("3", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use2.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use2.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "4") {
-                var _use3 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use3.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use3.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "5") {
-
-                var _use4 = (0, _imageFunction2.default)("5", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use4.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use4.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "6") {
-
-                var _use5 = (0, _imageFunction2.default)("6", this.state.size, props, state);
-
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use5.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use5.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "7") {
-
-                var _use6 = (0, _imageFunction2.default)("7", this.state.size, props, state);
-
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use6.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use6.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "8") {
-                var _use7 = (0, _imageFunction2.default)("8", this.state.size, props, state);
-
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use7.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use7.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
-            } else {
-                var _use8 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: tempkey,
-                    style: _use8.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ boxShadow: _use8.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
-                    } })];
+            var num = CHILDS.length;
+            var tempkeys = [];
+            for (var i = 0; i <= num + 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            return this.setState({ childs: CHILDS, keys: tempkey, styledImage: styledImage });
+            var styledImage = void 0,
+                use = '';
+            switch (this.state.box) {
+                case "1":
+                    use = (0, _imageFunction2.default)("1", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "2":
+                    use = (0, _imageFunction2.default)("2", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "3":
+                    use = (0, _imageFunction2.default)("3", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "4":
+                    use = (0, _imageFunction2.default)("4", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "5":
+
+                    use = (0, _imageFunction2.default)("5", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "6":
+
+                    use = (0, _imageFunction2.default)("6", this.state.size, props, state);
+
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+
+                    break;
+
+                case "7":
+
+                    use = (0, _imageFunction2.default)("7", this.state.size, props, state);
+
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+
+                    break;
+                case "8":
+                    use = (0, _imageFunction2.default)("8", this.state.size, props, state);
+
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+
+                    break;
+                default:
+                    use = (0, _imageFunction2.default)("4", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this2.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this2.setState({ boxShadow: _this2.state.boxShadowRev });
+                            } })
+                    )];
+            }
+            return this.setState({ childs: CHILDS, keys: tempkeys, styledImage: styledImage });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -205,139 +527,459 @@ var Image = function (_React$Component) {
             var props = newProps;
             var state = this.state;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            var styledImage = '';
-            if (this.state.box === "1") {
-                var use = (0, _imageFunction2.default)("1", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: use.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: use.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "2") {
-                var _use9 = (0, _imageFunction2.default)("2", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use9.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use9.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "3") {
-                var _use10 = (0, _imageFunction2.default)("3", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use10.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use10.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "4") {
-                var _use11 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use11.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use11.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "5") {
+            var styledImage = void 0,
+                use = '';
+            switch (this.state.box) {
+                case "1":
+                    use = (0, _imageFunction2.default)("1", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "2":
+                    use = (0, _imageFunction2.default)("2", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "3":
+                    use = (0, _imageFunction2.default)("3", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "4":
+                    use = (0, _imageFunction2.default)("4", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "5":
 
-                var _use12 = (0, _imageFunction2.default)("5", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use12.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use12.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "6") {
+                    use = (0, _imageFunction2.default)("5", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+                    break;
+                case "6":
 
-                var _use13 = (0, _imageFunction2.default)("6", this.state.size, props, state);
+                    use = (0, _imageFunction2.default)("6", this.state.size, props, state);
 
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use13.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use13.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "7") {
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
 
-                var _use14 = (0, _imageFunction2.default)("7", this.state.size, props, state);
+                    break;
 
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use14.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use14.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else if (this.state.box === "8") {
-                var _use15 = (0, _imageFunction2.default)("8", this.state.size, props, state);
+                case "7":
 
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use15.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use15.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
-            } else {
-                var _use16 = (0, _imageFunction2.default)("4", this.state.size, props, state);
-                styledImage = [_react2.default.createElement('img', { key: this.state.keys,
-                    style: _use16.IMAGESTYLES.imageStyles,
-                    id: this.state.id,
-                    className: this.state.className,
-                    src: CHILDS[0],
-                    alt: CHILDS[1],
-                    onMouseEnter: function onMouseEnter() {
-                        return _this3.setState({ boxShadow: _use16.IMAGESTYLES.hoverStyle.boxShadow });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
-                    } })];
+                    use = (0, _imageFunction2.default)("7", this.state.size, props, state);
+
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+
+                    break;
+                case "8":
+                    use = (0, _imageFunction2.default)("8", this.state.size, props, state);
+
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
+
+                    break;
+                default:
+                    use = (0, _imageFunction2.default)("4", this.state.size, props, state);
+                    styledImage = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement('img', {
+                            style: use.imageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement('img', {
+                            style: use.mdimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement('img', {
+                            style: use.smimageStyles,
+                            id: this.state.id,
+                            className: this.state.className,
+                            src: CHILDS[0],
+                            alt: CHILDS[1],
+                            onMouseEnter: function onMouseEnter() {
+                                return _this3.setState({ boxShadow: use.hoverStyle.boxShadow });
+                            },
+                            onMouseLeave: function onMouseLeave() {
+                                return _this3.setState({ boxShadow: _this3.state.boxShadowRev });
+                            } })
+                    )];
             }
             return this.setState({ childs: CHILDS, styledImage: styledImage });
         }

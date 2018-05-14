@@ -18,9 +18,9 @@ var _Holder = require('../../Holders/Holder');
 
 var _Holder2 = _interopRequireDefault(_Holder);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _heroFunctions = require('./heroFunctions/heroFunctions');
 
@@ -62,102 +62,334 @@ var Hero = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _heroFunctions2.default)("1", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
-                        CHILDS[2],
-                        CHILDS[1]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _heroFunctions2.default)("2", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.HEROSTYLE.bottombackground },
-                        _react2.default.createElement(
-                            _Holder2.default,
-                            {
-                                direction: 'column' },
-                            CHILDS[0]
-                        )
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _heroFunctions2.default)("3", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        null,
-                        CHILDS[0]
-                    )
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _heroFunctions2.default)("4", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        null,
-                        CHILDS[2],
-                        CHILDS[0]
-                    )
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _heroFunctions2.default)("5", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
-                        _react2.default.createElement(
-                            _Holder2.default,
-                            null,
-                            CHILDS[1],
-                            CHILDS[2],
-                            CHILDS[3]
-                        ),
-                        _react2.default.createElement(
-                            _Holder2.default,
-                            null,
-                            CHILDS[4],
-                            CHILDS[5],
-                            CHILDS[6]
-                        )
-                    )
-                )];
-            } else {
-                use = (0, _heroFunctions2.default)("1", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
-                        CHILDS[2],
-                        CHILDS[1]
-                    )
-                )];
+            var tempkeys = [];
+            var num = CHILDS.length;
+            for (var i = 0; i <= num + 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            this.setState({ childs: CHILDS, styledHero: styledHero, keys: tempkey });
+            switch (this.state.box) {
+                case "1":
+                    use = (0, _heroFunctions2.default)("1", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+                    break;
+                case "2":
+                    use = (0, _heroFunctions2.default)("2", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    )];
+                    break;
+                case "3":
+                    use = (0, _heroFunctions2.default)("3", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    )];
+                    break;
+                case "4":
+                    use = (0, _heroFunctions2.default)("4", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    )];
+                    break;
+                case "5":
+                    use = (0, _heroFunctions2.default)("5", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    )];
+                    break;
+                default:
+                    use = (0, _heroFunctions2.default)("1", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+            }
+            this.setState({ childs: CHILDS, styledHero: styledHero, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -168,99 +400,327 @@ var Hero = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.type === "1") {
-                use = (0, _heroFunctions2.default)("1", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
-                        CHILDS[2],
-                        CHILDS[1]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _heroFunctions2.default)("2", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.heroid, className: this.state.heroClassName },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.HEROSTYLE.bottombackground, id: this.state.bottomid, className: this.state.bottomClassName },
+            switch (this.state.box) {
+                case "1":
+                    use = (0, _heroFunctions2.default)("1", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
-                            _Holder2.default,
-                            {
-                                direction: 'column' },
-                            CHILDS[0]
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
                         )
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _heroFunctions2.default)("3", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        null,
-                        CHILDS[0]
-                    )
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _heroFunctions2.default)("4", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        null,
-                        CHILDS[2],
-                        CHILDS[0]
-                    )
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _heroFunctions2.default)("5", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            _Holder2.default,
-                            null,
-                            CHILDS[1],
-                            CHILDS[2],
-                            CHILDS[3]
-                        ),
-                        _react2.default.createElement(
-                            _Holder2.default,
-                            null,
-                            CHILDS[4],
-                            CHILDS[5],
-                            CHILDS[6]
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _heroFunctions2.default)("1", props, state, self);
-                styledHero = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.HEROSTYLE.herostyle, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        _Holder2.default,
-                        {
-                            direction: 'column' },
-                        CHILDS[0],
-                        CHILDS[2],
-                        CHILDS[1]
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+                    break;
+                case "2":
+                    use = (0, _heroFunctions2.default)("2", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.heroid, className: this.state.heroClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.HEROSTYLE.bottombackground },
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    {
+                                        direction: 'column' },
+                                    CHILDS[0]
+                                )
+                            )
+                        )
+                    )];
+                    break;
+                case "3":
+                    use = (0, _heroFunctions2.default)("3", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[0]
+                            )
+                        )
+                    )];
+                    break;
+                case "4":
+                    use = (0, _heroFunctions2.default)("4", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                null,
+                                CHILDS[2],
+                                CHILDS[0]
+                            )
+                        )
+                    )];
+                    break;
+                case "5":
+                    use = (0, _heroFunctions2.default)("5", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[1],
+                                    CHILDS[2],
+                                    CHILDS[3]
+                                ),
+                                _react2.default.createElement(
+                                    _Holder2.default,
+                                    null,
+                                    CHILDS[4],
+                                    CHILDS[5],
+                                    CHILDS[6]
+                                )
+                            )
+                        )
+                    )];
+                    break;
+                default:
+                    use = (0, _heroFunctions2.default)("1", props, state, self);
+                    styledHero = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.herostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.mdherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smherostyle, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                _Holder2.default,
+                                {
+                                    direction: 'column' },
+                                CHILDS[0],
+                                CHILDS[2],
+                                CHILDS[1]
+                            )
+                        )
+                    )];
             }
             this.setState({ childs: CHILDS, styledHero: styledHero });
         }

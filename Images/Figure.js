@@ -16,9 +16,9 @@ require('../css/animations.css');
 
 require('../css/SuperStyleSheet.css');
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -70,7 +70,7 @@ var Figure = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var CAPTION = _nestingstyles2.default.create({
+            var CAPTION = StyleSheet.create({
                 caption: {
                     padding: '10px',
                     color: 'gray',

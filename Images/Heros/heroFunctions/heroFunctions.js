@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = heroFunction;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function heroFunction(type, props, state, self) {
     var cursor = "";
 
@@ -24,172 +13,239 @@ function heroFunction(type, props, state, self) {
     var backgroundPosition = props.backgroundPosition || 'center';
     var backgroundSize = props.imageSize || 'cover';
     var width = props.width || '100%';
-    var height = props.height;
+    var height = props.height || "400px";
     var bottomBoxWidth = props.bottomBoxWidth || '100%';
     var bottomBoxHeight = props.bottomBoxHeight || '25%';
     var bottomBoxPadding = props.bottomBoxPadding;
     var bottomBoxBackgroundColor = props.bottomBoxBC || 'rgba(0, 0, 0, 0.5)';
     var smdis = props.smDis || 'flex';
     var mddis = props.mdDis || 'flex';
-
     switch (type) {
-        case type = '1':
+        case '1':
             cursor = "pointer";
             return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: background,
-                        backgroundImage: backgroundImage,
-                        backgroundRepeat: backgroundRepeat,
-                        backgroundPosition: backgroundPosition,
-                        backgroundSize: backgroundSize,
-                        width: width,
-                        height: height,
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                herostyle: {
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    display: 'flex',
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                smherostyle: {
+                    display: smdis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+
+                },
+                mdherostyle: {
+                    display: mddis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }
             };
-        case type = '2':
+        case '2':
             cursor = "pointer";
             return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: background,
-                        backgroundImage: backgroundImage,
-                        backgroundRepeat: backgroundRepeat,
-                        backgroundPosition: backgroundPosition,
-                        backgroundSize: backgroundSize,
-                        width: width,
-                        height: height,
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        alignItems: 'flex-end',
-                        justifyContent: 'center'
-                    },
-                    bottombackground: {
-                        backgroundColor: bottomBoxBackgroundColor,
-                        width: bottomBoxWidth,
-                        height: bottomBoxHeight,
-                        padding: bottomBoxPadding,
-                        overflow: 'hidden'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: smdis
-                        },
-                        bottombackground: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: mddis
-                        },
-                        bottombackground: {
-                            display: mddis
-                        }
-                    }
-                })
+                herostyle: {
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    display: 'flex',
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                },
+                bottombackground: {
+                    backgroundColor: bottomBoxBackgroundColor,
+                    width: bottomBoxWidth,
+                    height: bottomBoxHeight,
+                    padding: bottomBoxPadding,
+                    overflow: 'hidden'
+                },
+                smherostyle: {
+                    display: smdis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                },
+                mderostyle: {
+                    display: mddis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                }
             };
-        case type = '3':
+        case '3':
             cursor = "pointer";
             return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: background,
-                        backgroundImage: backgroundImage,
-                        backgroundRepeat: backgroundRepeat,
-                        backgroundPosition: backgroundPosition,
-                        backgroundSize: backgroundSize,
-                        width: width,
-                        height: height,
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                herostyle: {
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    display: 'flex',
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                smherostyle: {
+                    display: smdis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+
+                },
+                mdherostyle: {
+                    display: mddis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }
             };
-        case type = '4':
+        case '4':
             cursor = "pointer";
             return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: background,
-                        backgroundImage: backgroundImage,
-                        backgroundRepeat: backgroundRepeat,
-                        backgroundPosition: backgroundPosition,
-                        backgroundSize: backgroundSize,
-                        width: width,
-                        height: height,
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                herostyle: {
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    display: 'flex',
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                smherostyle: {
+                    display: smdis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+
+                },
+                mdherostyle: {
+                    display: mddis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }
             };
-        case type = '5':
+        case '5':
             cursor = "pointer";
             return {
-                HEROSTYLE: _nestingstyles2.default.create({
-                    herostyle: {
-                        background: background,
-                        backgroundImage: backgroundImage,
-                        backgroundRepeat: backgroundRepeat,
-                        backgroundPosition: backgroundPosition,
-                        backgroundSize: backgroundSize,
-                        width: width,
-                        height: height,
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        alignItems: 'flex-end',
-                        justifyContent: 'center'
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        herostyle: {
-                            display: smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        herostyle: {
-                            display: mddis
-                        }
-                    }
-                })
+                herostyle: {
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    display: 'flex',
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                },
+                smherostyle: {
+                    display: smdis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+
+                },
+                mdherostyle: {
+                    display: mddis,
+                    background: background,
+                    backgroundImage: backgroundImage,
+                    backgroundRepeat: backgroundRepeat,
+                    backgroundPosition: backgroundPosition,
+                    backgroundSize: backgroundSize,
+                    width: width,
+                    height: height,
+                    flex: "1 0 auto",
+                    alignItems: 'flex-end',
+                    justifyContent: 'center'
+                }
             };
         default:
             return;

@@ -1,21 +1,15 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = imageFunction;
 
-var _react = require("react");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _nestingstyles = require("nestingstyles");
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function imageFunction(type, size, props, state, self) {
+    var _smimageStyles;
+
     var smimgHeight = void 0,
         smimgWidth = void 0,
         mdimgHeight = void 0,
@@ -39,7 +33,7 @@ function imageFunction(type, size, props, state, self) {
     var display = props.display || "flex";
 
     switch (type) {
-        case type = '1':
+        case '1':
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -84,47 +78,69 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "300px";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        borderRadius: "100%",
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: state.hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: state.hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: _defineProperty({
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding
+                }, 'display', display)
             };
 
-        case type = "2":
+        case "2":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -169,47 +185,69 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "300px";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        borderRadius: "30%",
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
-            };
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
 
-        case type = "3":
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
+            };
+        case "3":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -254,47 +292,70 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "300px";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        borderRadius: "100%",
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
             };
 
-        case type = "4":
+        case "4":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "50px";
@@ -340,45 +401,66 @@ function imageFunction(type, size, props, state, self) {
             }
 
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
             };
-        case type = "5":
+        case "5":
             if (size === "tn") {
                 imgWidth = "81px";
                 imgHeight = "50px";
@@ -423,45 +505,66 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "300px";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
             };
-        case type = "6":
+        case "6":
             if (size === "tn") {
                 imgWidth = "81px";
                 imgHeight = "50px";
@@ -506,46 +609,70 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "300px";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        borderRadius: "30%",
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: state.hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: state.hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
+
             };
-        case type = "7":
+        case "7":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "81px";
@@ -590,47 +717,68 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "487pxpx";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        borderRadius: "30%",
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: (_smimageStyles = {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding
+                }, _defineProperty(_smimageStyles, 'display', display), _defineProperty(_smimageStyles, 'flex', "1 0 auto"), _smimageStyles),
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    borderRadius: "30%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
             };
 
-        case type = "8":
+        case "8":
             if (size === "tn") {
                 imgWidth = "50px";
                 imgHeight = "81px";
@@ -675,43 +823,64 @@ function imageFunction(type, size, props, state, self) {
                 smimgHeight = "487pxpx";
             }
             return {
-                IMAGESTYLES: _nestingstyles2.default.create({
-                    imageStyles: {
-                        width: imgWidth,
-                        height: imgHeight,
-                        overflowX: 'hidden',
-                        overflowY: 'hidden',
-                        animationIterationCount: animationIterationCount,
-                        animationTimingFunction: animationTimingFunction,
-                        animationName: animationName,
-                        animationDuration: animationDuration,
-                        transform: transform,
-                        transformOrigin: transformOrigin,
-                        animationFillMode: animationFillMode,
-                        boxShadow: boxShadow,
-                        margin: margin,
-                        padding: padding,
-                        display: display,
-                        flex: "1 0 auto"
-                    },
-                    hoverStyle: {
-                        boxShadow: hoverShadow
-                    },
-                    '@media (max-width: 768px)': {
-                        imageStyles: {
-                            display: smdis,
-                            width: smimgWidth,
-                            height: smimgHeight
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        imageStyles: {
-                            display: mddis,
-                            width: mdimgWidth,
-                            height: mdimgHeight
-                        }
-                    }
-                })
+                imageStyles: {
+                    width: imgWidth,
+                    height: imgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    display: display,
+                    flex: "1 0 auto"
+                },
+                hoverStyle: {
+                    boxShadow: hoverShadow
+                },
+                smimageStyles: {
+                    display: smdis,
+                    width: smimgWidth,
+                    height: smimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+
+                },
+                mdimageStyles: {
+                    display: mddis,
+                    width: mdimgWidth,
+                    height: mdimgHeight,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: animationIterationCount,
+                    animationTimingFunction: animationTimingFunction,
+                    animationName: animationName,
+                    animationDuration: animationDuration,
+                    transform: transform,
+                    transformOrigin: transformOrigin,
+                    animationFillMode: animationFillMode,
+                    boxShadow: boxShadow,
+                    margin: margin,
+                    padding: padding,
+                    flex: "1 0 auto"
+                }
             };
         default:
             return;
