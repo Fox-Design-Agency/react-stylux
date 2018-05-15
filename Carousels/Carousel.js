@@ -10,9 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 require('../css/reset.css');
 
@@ -52,6 +52,7 @@ var Carousel = function (_React$Component) {
             rightArrowClassName: props.rightArrowClassName,
             intervalTime: '',
             box: props.box,
+            vars: props.vars,
             styledCarousel: '',
             keys: '',
             dots: ''
@@ -78,206 +79,802 @@ var Carousel = function (_React$Component) {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
             var tempKeys = [];
-            for (var i = 0; i <= CHILDS.length + 2; i++) {
+            for (var i = 0; i <= CHILDS.length + 4; i++) {
                 tempKeys.push(tempKeys[i] = Math.random());
             }
             var RENDERSLIDES = '';
-            if (this.state.box === "1") {
-                use = (0, _carouselFunctions2.default)("1", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("1", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("1", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this2.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this2.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this2.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this2.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                    }
+                    break;
+
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("4", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        arr[i],
+                                        arr[i + 1],
+                                        arr[i + 2],
+                                        arr[i + 3]
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("4", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        arr[i],
+                                        arr[i + 1],
+                                        arr[i + 2],
+                                        arr[i + 3]
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this2.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this2.slideRight();
+                                        } })
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("5", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("5", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: tempKeys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempKeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
+                    RENDERSLIDES = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement(
+                            'div',
+                            { key: tempKeys[i + 3], style: use.SLIDE },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDE_CONTENT },
+                                x
+                            )
+                        );
+                    });
+                    DOTS = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                return _this2.currentSlide(i);
+                            } });
+                    });
+                    styledCarousel = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempKeys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                    },
-                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                            return _this2.slideLeft();
-                        } }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER },
-                        RENDERSLIDES[this.state.cur]
-                    ),
-                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                            return _this2.slideRight();
-                        } })
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this2.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _carouselFunctions2.default)("3", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this2.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this2.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
                         ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this2.slideRight();
-                            } })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _carouselFunctions2.default)("4", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            arr[i],
-                            arr[i + 1],
-                            arr[i + 2],
-                            arr[i + 3]
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                            return _this2.slideLeft();
-                        } }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER },
-                        RENDERSLIDES[this.state.cur]
-                    ),
-                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                            return _this2.slideRight();
-                        } })
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _carouselFunctions2.default)("5", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempKeys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER },
-                        RENDERSLIDES[this.state.cur]
-                    )
-                )];
-            } else {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
+                        ),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this2.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempKeys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
+                    )];
             }
             this.setState({
                 sliderImages: RENDERSLIDES,
@@ -300,213 +897,804 @@ var Carousel = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
-            var tempKeys = [];
-            for (var i = 0; i <= CHILDS.length + 2; i++) {
-                tempKeys.push(tempKeys[i] = Math.random());
-            }
             var RENDERSLIDES = '';
-            if (this.state.box === "1") {
-                use = (0, _carouselFunctions2.default)("1", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("1", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("1", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className
+                                    },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this3.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this3.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this3.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            DOTS = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                        return _this3.currentSlide(i);
+                                    } });
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    DOTS
+                                )
+                            )];
+                    }
+                    break;
+
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("4", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        arr[i],
+                                        arr[i + 1],
+                                        arr[i + 2],
+                                        arr[i + 3]
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("4", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        arr[i],
+                                        arr[i + 1],
+                                        arr[i + 2],
+                                        arr[i + 3]
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this3.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this3.slideRight();
+                                        } })
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("5", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("5", props, state, self);
+                            RENDERSLIDES = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDE_CONTENT },
+                                        x
+                                    )
+                                );
+                            });
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        RENDERSLIDES[this.state.cur]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
+                    RENDERSLIDES = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement(
+                            'div',
+                            { key: _this3.state.keys[i + 3], style: use.SLIDE },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDE_CONTENT },
+                                x
+                            )
+                        );
+                    });
+                    DOTS = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
+                                return _this3.currentSlide(i);
+                            } });
+                    });
+                    styledCarousel = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                    },
-                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                            return _this3.slideLeft();
-                        } }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER },
-                        RENDERSLIDES[this.state.cur]
-                    ),
-                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                            return _this3.slideRight();
-                        } })
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this3.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _carouselFunctions2.default)("3", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this3.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this3.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
                         ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this3.slideRight();
-                            } })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _carouselFunctions2.default)("4", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            arr[i],
-                            arr[i + 1],
-                            arr[i + 2],
-                            arr[i + 3]
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                            return _this3.slideLeft();
-                        } }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER },
-                        RENDERSLIDES[this.state.cur]
-                    ),
-                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                            return _this3.slideRight();
-                        } })
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _carouselFunctions2.default)("5", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
-                        )
-                    );
-                });
-                styledCarousel = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                        RENDERSLIDES[this.state.cur]
-                    )
-                )];
-            } else {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                RENDERSLIDES = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: tempKeys[i + 1], style: use.SLIDE },
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
+                        ),
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDE_CONTENT },
-                            x
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    );
-                });
-                DOTS = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement('span', { key: i, style: use.CIRCLES, onClick: function onClick() {
-                            return _this3.currentSlide(i);
-                        } });
-                });
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: tempKeys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER },
-                            RENDERSLIDES[this.state.cur]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                RENDERSLIDES[this.state.cur]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            DOTS
                         )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        DOTS
-                    )
-                )];
+                    )];
             }
             this.setState({
                 sliderImages: RENDERSLIDES,
                 intervalTime: intervalTime,
                 styledCarousel: styledCarousel,
-                keys: tempKeys,
                 dots: DOTS
             });
         }
@@ -526,118 +1714,645 @@ var Carousel = function (_React$Component) {
             var state = this.state;
             var self = this;
             if (this.state.cur === 0) {
-                if (this.state.box === "1") {
-                    use = (0, _carouselFunctions2.default)("1", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                        },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this4.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this4.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "2") {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                switch (this.state.box) {
+                    case "1":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "2":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "3":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "4":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "5":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                        }
+                        break;
+                    default:
+                        use = (0, _carouselFunctions2.default)("2", props, state, self);
+                        styledCarousel = [_react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[0], query: '(min-width: 1224px)' },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "3") {
-                    use = (0, _carouselFunctions2.default)("3", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
-                            _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                    return _this4.slideLeft();
-                                } }),
-                            _react2.default.createElement(
-                                'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
                             ),
-                            _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                    return _this4.slideRight();
-                                } })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "4") {
-                    use = (0, _carouselFunctions2.default)("4", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this4.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this4.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "5") {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        )
-                    )];
-                } else {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
                             )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[2], maxWidth: 767 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        )];
                 }
                 return this.setState({
                     cur: this.state.sliderImages.length - 1,
@@ -648,118 +2363,645 @@ var Carousel = function (_React$Component) {
                     styledCarousel: styledCarousel
                 });
             } else {
-                if (this.state.box === "1") {
-                    use = (0, _carouselFunctions2.default)("1", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                        },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this4.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this4.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "2") {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                switch (this.state.box) {
+                    case "1":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "2":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "3":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "4":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this4.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this4.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "5":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                        }
+                        break;
+                    default:
+                        use = (0, _carouselFunctions2.default)("2", props, state, self);
+                        styledCarousel = [_react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[0], query: '(min-width: 1224px)' },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                                this.state.sliderImages[this.state.cur]
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "3") {
-                    use = (0, _carouselFunctions2.default)("3", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
-                            _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                    return _this4.slideLeft();
-                                } }),
-                            _react2.default.createElement(
-                                'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
                             ),
-                            _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                    return _this4.slideRight();
-                                } })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "4") {
-                    use = (0, _carouselFunctions2.default)("4", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this4.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this4.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "5") {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        )
-                    )];
-                } else {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.mainid, className: this.state.mainClassName },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
                             )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[2], maxWidth: 767 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        )];
                 }
                 return this.setState({
                     cur: this.state.cur - 1,
@@ -782,118 +3024,645 @@ var Carousel = function (_React$Component) {
             var state = this.state;
             var self = this;
             if (this.state.cur >= this.state.sliderImages.length - 1) {
-                if (this.state.box === "1") {
-                    use = (0, _carouselFunctions2.default)("1", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                        },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this5.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this5.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "2") {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                switch (this.state.box) {
+                    case "1":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "2":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "3":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "4":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "5":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                        }
+                        break;
+                    default:
+                        use = (0, _carouselFunctions2.default)("2", props, state, self);
+                        styledCarousel = [_react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[0], query: '(min-width: 1224px)' },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "3") {
-                    use = (0, _carouselFunctions2.default)("3", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
-                            _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                    return _this5.slideLeft();
-                                } }),
-                            _react2.default.createElement(
-                                'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
                             ),
-                            _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                    return _this5.slideRight();
-                                } })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "4") {
-                    use = (0, _carouselFunctions2.default)("4", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this5.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this5.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "5") {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                            this.state.sliderImages[this.state.cur]
-                        )
-                    )];
-                } else {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
                             )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[2], maxWidth: 767 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        )];
                 }
                 return this.setState({
                     cur: 0,
@@ -904,118 +3673,645 @@ var Carousel = function (_React$Component) {
                     styledCarousel: styledCarousel
                 });
             } else {
-                if (this.state.box === "1") {
-                    use = (0, _carouselFunctions2.default)("1", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className
-                        },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this5.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this5.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "2") {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                switch (this.state.box) {
+                    case "1":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("1", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className
+                                        },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "2":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("2", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "3":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("3", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CIRCLESDIV },
+                                        this.state.dots
+                                    )
+                                )];
+                        }
+                        break;
+                    case "4":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("4", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                                return _this5.slideLeft();
+                                            } }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        ),
+                                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                                return _this5.slideRight();
+                                            } })
+                                    )
+                                )];
+                        }
+                        break;
+                    case "5":
+                        switch (this.state.vars) {
+                            case "1":
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                            default:
+                                use = (0, _carouselFunctions2.default)("5", props, state, self);
+                                styledCarousel = [_react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                ), _react2.default.createElement(
+                                    _reactResponsive2.default,
+                                    { key: this.state.keys[2], maxWidth: 767 },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { style: use.SLIDER },
+                                            this.state.sliderImages[this.state.cur]
+                                        )
+                                    )
+                                )];
+                        }
+                        break;
+                    default:
+                        use = (0, _carouselFunctions2.default)("2", props, state, self);
+                        styledCarousel = [_react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[0], query: '(min-width: 1224px)' },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "3") {
-                    use = (0, _carouselFunctions2.default)("3", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
-                            _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                    return _this5.slideLeft();
-                                } }),
-                            _react2.default.createElement(
-                                'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
                             ),
-                            _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                    return _this5.slideRight();
-                                } })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
-                } else if (this.state.box === "4") {
-                    use = (0, _carouselFunctions2.default)("4", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this5.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this5.slideRight();
-                            } })
-                    )];
-                } else if (this.state.box === "5") {
-                    use = (0, _carouselFunctions2.default)("5", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        'div',
-                        { key: this.state.keys[0], style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[this.state.cur]
-                        )
-                    )];
-                } else {
-                    use = (0, _carouselFunctions2.default)("2", props, state, self);
-                    styledCarousel = [_react2.default.createElement(
-                        _react2.default.Fragment,
-                        { key: this.state.keys[0] },
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.WRAP, id: this.state.id, className: this.state.className },
                             _react2.default.createElement(
                                 'div',
-                                { style: use.SLIDER },
-                                this.state.sliderImages[this.state.cur]
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
                             )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.CIRCLESDIV },
-                            this.state.dots
-                        )
-                    )];
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[2], maxWidth: 767 },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.SLIDER },
+                                    this.state.sliderImages[this.state.cur]
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CIRCLESDIV },
+                                this.state.dots
+                            )
+                        )];
                 }
                 return this.setState({
                     cur: this.state.cur + 1,
@@ -1037,72 +4333,321 @@ var Carousel = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var self = this;
-            if (this.state.box === "2") {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: this.state.keys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
+            switch (this.state.box) {
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("2", props, state, self);
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            )];
+                        default:
+                            use = (0, _carouselFunctions2.default)("3", props, state, self);
+                            styledCarousel = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.WRAP, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                                            return _this6.slideLeft();
+                                        } }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.SLIDER },
+                                        this.state.sliderImages[x]
+                                    ),
+                                    _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                                            return _this6.slideRight();
+                                        } })
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.CIRCLESDIV },
+                                    this.state.dots
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _carouselFunctions2.default)("2", props, state, self);
+                    styledCarousel = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[x]
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        this.state.dots
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _carouselFunctions2.default)("3", props, state, self);
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: this.state.keys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
-                        _react2.default.createElement('div', { style: use.LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
-                                return _this6.slideLeft();
-                            } }),
-                        _react2.default.createElement(
-                            'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[x]
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[x]
+                            )
                         ),
-                        _react2.default.createElement('div', { style: use.RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
-                                return _this6.slideRight();
-                            } })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        this.state.dots
-                    )
-                )];
-            } else {
-                use = (0, _carouselFunctions2.default)("2", props, state, self);
-                styledCarousel = [_react2.default.createElement(
-                    _react2.default.Fragment,
-                    { key: this.state.keys[0] },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.WRAP, id: this.state.id, className: this.state.className },
                         _react2.default.createElement(
                             'div',
-                            { style: use.SLIDER },
-                            this.state.sliderImages[x]
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
                         )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CIRCLESDIV },
-                        this.state.dots
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[x]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.WRAP, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.SLIDER },
+                                this.state.sliderImages[x]
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.CIRCLESDIV },
+                            this.state.dots
+                        )
+                    )];
             }
             this.setState({ cur: x, styledCarousel: styledCarousel });
         }
