@@ -16,9 +16,9 @@ require('../css/animations.css');
 
 require('../css/SuperStyleSheet.css');
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _buttonFunctions = require('./buttonFunctions/buttonFunctions');
 
@@ -45,6 +45,7 @@ var Button = function (_React$Component) {
             className: props.className,
             onClick: props.onClick,
             box: props.box,
+            vars: props.vars,
             buttonStyle: '',
             childs: '',
             keys: ''
@@ -62,82 +63,529 @@ var Button = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _buttonFunctions2.default)("1", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id, className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseOut: use.changeHoverBack
-                    },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _buttonFunctions2.default)("2", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _buttonFunctions2.default)("3", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _buttonFunctions2.default)("4", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _buttonFunctions2.default)("5", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else {
-                use = (0, _buttonFunctions2.default)("custom", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: tempkey, style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
+            }
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("1", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("1", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("2", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("2", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("3", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("3", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("4", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("4", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("5", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("5", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _buttonFunctions2.default)("1", props, state, self);
+                    styledButton = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.buttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.mdbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.smbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    )];
             }
 
-            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use, keys: tempkey });
+            this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -148,78 +596,522 @@ var Button = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                use = (0, _buttonFunctions2.default)("1", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id, className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack
-                    },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _buttonFunctions2.default)("2", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _buttonFunctions2.default)("3", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _buttonFunctions2.default)("4", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _buttonFunctions2.default)("5", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
-            } else {
-                use = (0, _buttonFunctions2.default)("custom", props, state, self);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys, style: use.BUTTONSTYLES.buttonStyles, id: this.state.id, className: this.state.className, onClick: this.state.onClick, onMouseEnter: use.changeHover, onMouseLeave: use.changeHoverBack },
-                    CHILDS[0]
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("1", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("1", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("2", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("2", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("3", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("3", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("4", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("4", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("5", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("5", props, state, self);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    CHILDS[0]
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _buttonFunctions2.default)("1", props, state, self);
+                    styledButton = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.buttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.mdbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.smbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            CHILDS[0]
+                        )
+                    )];
             }
             this.setState({ buttonStyle: styledButton, childs: CHILDS, styleHolder: use });
         }
@@ -231,84 +1123,523 @@ var Button = function (_React$Component) {
             var styledButton = void 0,
                 use = '';
             var self = this;
-            if (this.state.box === "1") {
-                use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id, className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseOut: use.changeHoverBack
-                    },
-                    this.state.childs[0]
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    this.state.childs[0]
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    this.state.childs[0]
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    this.state.childs[0]
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    this.state.childs[0]
-                )];
-            } else {
-                use = (0, _buttonFunctions2.default)("custom", props, state, self, arguments[0], arguments[1]);
-                styledButton = [_react2.default.createElement(
-                    'button',
-                    { key: this.state.keys,
-                        style: use.BUTTONSTYLES.buttonStyles,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onClick: this.state.onClick,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    this.state.childs[0]
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id, className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseOut: use.changeHoverBack
+                                    },
+                                    this.state.childs[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                    }
+
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                        default:
+                            use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
+                            styledButton = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.buttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.mdbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'button',
+                                    {
+                                        style: use.smbuttonStyles,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onClick: this.state.onClick,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    this.state.childs[0]
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
+                    styledButton = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.buttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            this.state.childs[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.mdbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            this.state.childs[0]
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                style: use.smbuttonStyles,
+                                id: this.state.id, className: this.state.className,
+                                onClick: this.state.onClick,
+                                onMouseEnter: use.changeHover,
+                                onMouseOut: use.changeHoverBack
+                            },
+                            this.state.childs[0]
+                        )
+                    )];
             }
             this.setState({ buttonStyle: styledButton });
         }
