@@ -1,43 +1,49 @@
-export default function heading4Function(type, props, state, self) {
-    let color = props.color
-    let colorRev = props.color
-    let textShadow = props.shadow
-    let fontFamily = props.font
-    let fontSize = props.size || '3.489em'
-    let smFontSize = props.smSize || '2.5em'
-    let mdFontSize = props.mdSize || '3em'
-    let fontWeight = props.weight || '600'
-    let fontVariant = props.variant
-    let display = props.display || 'flex'
-    let align = props.align || 'center'
-    let textAlign = props.textAlign || 'center'
-    let padding = props.padding || '0 0 5px 0'
-    let margin = props.margin || '1px'
-    let width = props.width
-    let height = props.height
-    let maxWidth = props.maxW
-    let maxHeight = props.maxH
-    let bLeft = props.bLeft
-    let bRight = props.bRight
-    let bTop = props.bTop
-    let bBottom = props.bBottom
-    let border = props.border
-    let animationIterationCount = props.aniCount
-    let animationTimingFunction = props.aniTime
-    let animationName = props.aniName
-    let animationDuration = props.aniDur
-    let transform = props.transform
-    let transformOrigin = props.transformOrigin
-    let animationFillMode = props.aniFillMode
-    let smdis = props.smDis || 'flex'
-    let mddis = props.mdDis || 'flex'
-    let hoverColor = props.hovColor
-    let wordWrap = props.wordWrap || "break-word"
-    let cursor = props.cursor
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = heading6Function;
+function heading6Function(type, props, state, self) {
+    var color = props.color;
+    var colorRev = props.color;
+    var textShadow = props.shadow;
+    var fontFamily = props.font;
+    var fontSize = props.size || '3.489em';
+    var smFontSize = props.smSize || '2.5em';
+    var mdFontSize = props.mdSize || '3em';
+    var fontWeight = props.weight || '600';
+    var fontVariant = props.variant;
+    var display = props.display || 'flex';
+    var align = props.align || 'center';
+    var textAlign = props.textAlign || 'center';
+    var padding = props.padding || '0 0 5px 0';
+    var margin = props.margin || '1px';
+    var width = props.width;
+    var height = props.height;
+    var maxWidth = props.maxW;
+    var maxHeight = props.maxH;
+    var bLeft = props.bLeft;
+    var bRight = props.bRight;
+    var bTop = props.bTop;
+    var bBottom = props.bBottom;
+    var border = props.border;
+    var animationIterationCount = props.aniCount;
+    var animationTimingFunction = props.aniTime;
+    var animationName = props.aniName;
+    var animationDuration = props.aniDur;
+    var transform = props.transform;
+    var transformOrigin = props.transformOrigin;
+    var animationFillMode = props.aniFillMode;
+    var smdis = props.smDis || 'flex';
+    var mddis = props.mdDis || 'flex';
+    var hoverColor = props.hovColor;
+    var wordWrap = props.wordWrap || "break-word";
+    var cursor = props.cursor;
 
     switch (type) {
         case '1':
-            cursor = props.cursor
+            cursor = props.cursor;
             return {
                 heading: {
                     width: width,
@@ -73,7 +79,7 @@ export default function heading4Function(type, props, state, self) {
                     flex: "1 0 auto",
                     flexWrap: "wrap",
                     wordWrap: wordWrap,
-                    cursor: cursor,
+                    cursor: cursor
                 },
                 hoverStyle: {
                     color: hoverColor
@@ -115,7 +121,7 @@ export default function heading4Function(type, props, state, self) {
                     cursor: cursor
 
                 },
-                heading: {
+                mdheading: {
                     display: mddis,
                     fontSize: mdFontSize,
                     width: width,
@@ -152,13 +158,14 @@ export default function heading4Function(type, props, state, self) {
                     cursor: cursor
                 }
 
-            }
+            };
+
         case '2':
 
-            fontSize = props.size || '3.489em'
-            smFontSize = props.smSize || '2.5em'
-            mdFontSize = props.mdSize || '3em'
-            fontWeight = props.weight || '600'
+            fontSize = props.size || '3.489em';
+            smFontSize = props.smSize || '2.5em';
+            mdFontSize = props.mdSize || '3em';
+            fontWeight = props.weight || '600';
 
             return {
                 heading: {
@@ -195,7 +202,7 @@ export default function heading4Function(type, props, state, self) {
                     flex: "1 0 auto",
                     flexWrap: "wrap",
                     wordWrap: wordWrap,
-                    cursor: cursor,
+                    cursor: cursor
                 },
                 hoverStyle: {
                     color: hoverColor
@@ -274,13 +281,13 @@ export default function heading4Function(type, props, state, self) {
                     cursor: cursor
                 }
 
-            }
+            };
         case '3':
 
-            fontSize = props.size || '3.489em'
-            smFontSize = props.smSize || '2.5em'
-            mdFontSize = props.mdSize || '3em'
-            fontWeight = props.weight || '600'
+            fontSize = props.size || '3.489em';
+            smFontSize = props.smSize || '2.5em';
+            mdFontSize = props.mdSize || '3em';
+            fontWeight = props.weight || '600';
 
             return {
                 heading: {
@@ -317,7 +324,7 @@ export default function heading4Function(type, props, state, self) {
                     flex: "1 0 auto",
                     flexWrap: "wrap",
                     wordWrap: wordWrap,
-                    cursor: cursor,
+                    cursor: cursor
                 },
                 hoverStyle: {
                     color: hoverColor
@@ -356,7 +363,7 @@ export default function heading4Function(type, props, state, self) {
                     flex: "1 0 auto",
                     flexWrap: "wrap",
                     wordWrap: wordWrap,
-                    cursor: cursor,
+                    cursor: cursor
 
                 },
                 mdheading: {
@@ -396,13 +403,13 @@ export default function heading4Function(type, props, state, self) {
                     cursor: cursor
                 }
 
-            }
+            };
         case '4':
 
-            fontSize = props.size || '3.489em'
-            smFontSize = props.smSize || '2.5em'
-            mdFontSize = props.mdSize || '3em'
-            fontWeight = props.weight || '600'
+            fontSize = props.size || '3.489em';
+            smFontSize = props.smSize || '2.5em';
+            mdFontSize = props.mdSize || '3em';
+            fontWeight = props.weight || '600';
 
             return {
                 heading: {
@@ -439,12 +446,12 @@ export default function heading4Function(type, props, state, self) {
                     flex: "1 0 auto",
                     flexWrap: "wrap",
                     wordWrap: wordWrap,
-                    cursor: cursor,
+                    cursor: cursor
                 },
                 hoverStyle: {
                     color: hoverColor
                 },
-                heading: {
+                smheading: {
                     display: smdis,
                     fontSize: smFontSize,
                     width: width,
@@ -517,15 +524,13 @@ export default function heading4Function(type, props, state, self) {
                     wordWrap: wordWrap,
                     cursor: cursor
                 }
-
-            }
-        // case (type = '5'):
-        //     cursor = "pointer"
-        //     return {
+                // case (type = '5'):
+                //     cursor = "pointer"
+                //     return {
 
 
-        //     }
-        default:
+                //     }
+            };default:
             return;
     }
 }
