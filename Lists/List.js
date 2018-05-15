@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,15 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require("react-responsive");
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-var _listFunctions = require('./listFunctions/listFunctions');
+var _listFunctions = require("./listFunctions/listFunctions");
 
 var _listFunctions2 = _interopRequireDefault(_listFunctions);
 
@@ -40,6 +40,7 @@ var List = function (_React$Component) {
             id: props.id,
             className: props.className,
             box: props.box,
+            vars: props.vars,
             styledList: '',
             keys: ''
         };
@@ -47,234 +48,786 @@ var List = function (_React$Component) {
     }
 
     _createClass(List, [{
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var props = this.props;
             var state = this.state;
             var styledList = void 0,
-                use = '';
+                use = void 0,
+                LIST = void 0,
+                tempItems = void 0,
+                nestedItems = '';
             var self = this;
             var slides = [];
             var listItems = [];
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var num = CHILDS.length;
             var tempkeys = [];
-            for (var i = 0; i <= num; i++) {
+            for (var i = 0; i <= CHILDS.length + 3; i++) {
                 tempkeys.push(tempkeys[i] = Math.random());
             }
-            if (this.state.box === "1") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("1", props, state, self);
-                var LIST = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    LIST
-                )];
-            } else if (this.state.box === "2") {
-                var nestedItems = [];
-                var tempItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
-                    for (var w = 0; w < +this.state.listAmount; w += 1) {
-                        nestedItems.push(tempItems[w]);
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("1", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("1", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
                     }
-                    listItems.push(nestedItems);
-                    nestedItems = [];
-                    tempItems.splice(0, this.state.listAmount);
-                }
-                use = (0, _listFunctions2.default)("2", props, state, self);
-                var _LIST = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
-                    _LIST
-                )];
-            } else if (this.state.box === "3") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("3", props, state, self);
-                var _LIST2 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST2
-                )];
-            } else if (this.state.box === "4") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("4", props, state, self);
-                var _LIST3 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST3
-                )];
-            } else {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("3", props, state, self);
-                var _LIST4 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: tempkeys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: tempkeys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST4
-                )];
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            nestedItems = [];
+                            tempItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
+                                for (var w = 0; w < +this.state.listAmount; w += 1) {
+                                    nestedItems.push(tempItems[w]);
+                                }
+                                listItems.push(nestedItems);
+                                nestedItems = [];
+                                tempItems.splice(0, this.state.listAmount);
+                            }
+                            use = (0, _listFunctions2.default)("2", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            nestedItems = [];
+                            tempItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
+                                for (var w = 0; w < +this.state.listAmount; w += 1) {
+                                    nestedItems.push(tempItems[w]);
+                                }
+                                listItems.push(nestedItems);
+                                nestedItems = [];
+                                tempItems.splice(0, this.state.listAmount);
+                            }
+                            use = (0, _listFunctions2.default)("2", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("3", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("3", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("4", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("4", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: tempkeys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    listItems = CHILDS.map(function (x) {
+                        return x;
+                    });
+                    use = (0, _listFunctions2.default)("3", props, state, self);
+                    LIST = listItems.map(function (x, i) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: tempkeys[i + 3], style: use.listitemstyle },
+                            x
+                        );
+                    });
+                    styledList = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    )];
             }
             this.setState({ listItem: listItems, styledList: styledList, keys: tempkeys });
         }
     }, {
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
             var _this2 = this;
 
             var props = newProps;
             var state = this.state;
             var styledList = void 0,
-                use = '';
+                use = void 0,
+                LIST = void 0,
+                tempItems = void 0,
+                nestedItems = '';
             var self = this;
             var listItems = [];
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            var num = CHILDS.length;
             listItems = CHILDS.map(function (x) {
                 return x;
             });
-            if (this.state.box === "1") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("1", props, state, self);
-                var LIST = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    LIST
-                )];
-            } else if (this.state.box === "2") {
-                var nestedItems = [];
-                var tempItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
-                    for (var w = 0; w < +this.state.listAmount; w += 1) {
-                        nestedItems.push(tempItems[w]);
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("1", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("1", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
                     }
-                    listItems.push(nestedItems);
-                    nestedItems = [];
-                    tempItems.splice(0, this.state.listAmount);
-                }
-                use = (0, _listFunctions2.default)("2", props, state, self);
-                var _LIST5 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: 'bigList ' + this.state.className },
-                    _LIST5
-                )];
-            } else if (this.state.box === "3") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("3", props, state, self);
-                var _LIST6 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST6
-                )];
-            } else if (this.state.box === "4") {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("4", props, state, self);
-                var _LIST7 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ul',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST7
-                )];
-            } else {
-                listItems = CHILDS.map(function (x) {
-                    return x;
-                });
-                use = (0, _listFunctions2.default)("3", props, state, self);
-                var _LIST8 = listItems.map(function (x, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: _this2.state.keys[i], style: use.LISTSTYLE.listitemstyle },
-                        x
-                    );
-                });
-                styledList = [_react2.default.createElement(
-                    'ol',
-                    { key: this.state.keys[num], style: use.LISTSTYLE.liststyle, id: this.state.id, className: this.state.className },
-                    _LIST8
-                )];
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            nestedItems = [];
+                            tempItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
+                                for (var w = 0; w < +this.state.listAmount; w += 1) {
+                                    nestedItems.push(tempItems[w]);
+                                }
+                                listItems.push(nestedItems);
+                                nestedItems = [];
+                                tempItems.splice(0, this.state.listAmount);
+                            }
+                            use = (0, _listFunctions2.default)("2", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            nestedItems = [];
+                            tempItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
+                                for (var w = 0; w < +this.state.listAmount; w += 1) {
+                                    nestedItems.push(tempItems[w]);
+                                }
+                                listItems.push(nestedItems);
+                                nestedItems = [];
+                                tempItems.splice(0, this.state.listAmount);
+                            }
+                            use = (0, _listFunctions2.default)("2", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: "bigList " + this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("3", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("3", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ol",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("4", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                        default:
+                            listItems = CHILDS.map(function (x) {
+                                return x;
+                            });
+                            use = (0, _listFunctions2.default)("4", props, state, self);
+                            LIST = listItems.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                                    x
+                                );
+                            });
+                            styledList = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.liststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smliststyle, id: this.state.id, className: this.state.className },
+                                    LIST
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    listItems = CHILDS.map(function (x) {
+                        return x;
+                    });
+                    use = (0, _listFunctions2.default)("3", props, state, self);
+                    LIST = listItems.map(function (x, i) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: _this2.state.keys[i + 3], style: use.listitemstyle },
+                            x
+                        );
+                    });
+                    styledList = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "ol",
+                            { style: use.liststyle, id: this.state.id, className: this.state.className },
+                            LIST
+                        )
+                    )];
             }
 
             this.setState({ listItem: listItems, styledList: styledList });
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
                 _react2.default.Fragment,
