@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,19 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../css/reset.css');
+var _reactResponsive = require("react-responsive");
 
-require('../css/animations.css');
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-var _nestingstyles = require('nestingstyles');
-
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
-
-var _cardFunctions = require('./cardFunctions/cardFunctions');
+var _cardFunctions = require("./cardFunctions/cardFunctions");
 
 var _cardFunctions2 = _interopRequireDefault(_cardFunctions);
 
@@ -43,15 +39,17 @@ var Card = function (_React$Component) {
             id: props.id,
             className: props.className,
             box: props.box,
+            vars: props.vars,
             styledCard: '',
-            keys: ''
+            keys: '',
+            btnOnClick: props.btnOnClick
         };
         _this.renderStuff = _this.renderStuff.bind(_this);
         return _this;
     }
 
     _createClass(Card, [{
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var props = this.props;
             var state = this.state;
@@ -59,154 +57,835 @@ var Card = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _cardFunctions2.default)("1", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
-                        )
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _cardFunctions2.default)("2", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { style: use.CARDSTYLE.btnstyle, onClick: this.state.btnOnClick },
-                        this.state.btnText
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _cardFunctions2.default)("3", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement(
-                        'ul',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[0]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[1]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[3]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[4]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[5]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[6]
-                        )
-                    )
-                )];
-            } else {
-                use = (0, _cardFunctions2.default)("1", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: tempkey,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
-                        )
-                    )
-                )];
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            this.setState({ childs: CHILDS, styledCard: styledCard, keys: tempkey });
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("1", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("1", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("2", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("2", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("3", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("3", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _cardFunctions2.default)("1", props, state, self);
+                    styledCard = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "div",
+                            {
+                                style: use.cardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.imgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.cardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.cardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.cardbody },
+                                    CHILDS[3]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            "div",
+                            {
+                                style: use.mdcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.mdimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.mdcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.mdcardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.mdcardbody },
+                                    CHILDS[3]
+                                )
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "div",
+                            {
+                                style: use.smcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.smimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.smcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.smcardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.smcardbody },
+                                    CHILDS[3]
+                                )
+                            )
+                        )
+                    )];
+            }
+            this.setState({ childs: CHILDS, styledCard: styledCard, keys: tempkeys });
         }
     }, {
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
             var props = newProps;
             var state = this.state;
@@ -214,153 +893,831 @@ var Card = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                use = (0, _cardFunctions2.default)("1", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.key,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("1", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("1", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("2", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("2", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: CHILDS[0],
+                                        alt: CHILDS[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            CHILDS[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("3", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("3", props, state, self);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            CHILDS[6]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _cardFunctions2.default)("1", props, state, self);
+                    styledCard = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
+                            "div",
+                            {
+                                style: use.cardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.imgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.cardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.cardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.cardbody },
+                                    CHILDS[3]
+                                )
+                            )
                         )
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _cardFunctions2.default)("2", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.key,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
+                            "div",
+                            {
+                                style: use.mdcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.mdimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.mdcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.mdcardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.mdcardbody },
+                                    CHILDS[3]
+                                )
+                            )
                         )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { style: use.CARDSTYLE.btnstyle, onClick: this.state.btnOnClick },
-                        this.state.btnText
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _cardFunctions2.default)("3", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.key,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement(
-                        'ul',
-                        { style: use.CARDSTYLE.cardcontent },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[0]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[1]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[3]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[4]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[5]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            CHILDS[6]
+                            "div",
+                            {
+                                style: use.smcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: CHILDS[0],
+                                alt: CHILDS[1],
+                                style: use.smimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.smcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.smcardheading },
+                                    CHILDS[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.smcardbody },
+                                    CHILDS[3]
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _cardFunctions2.default)("1", props, state, self);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.key,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: CHILDS[0],
-                        alt: CHILDS[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            CHILDS[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            CHILDS[3]
-                        )
-                    )
-                )];
+                    )];
             }
-            return this.setState({ childs: CHILDS, styledCard: styledCard });
+            this.setState({ styledCard: styledCard });
         }
     }, {
-        key: 'renderStuff',
+        key: "renderStuff",
         value: function renderStuff() {
             var props = this.props;
             var state = this.state;
@@ -368,153 +1725,831 @@ var Card = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            if (this.state.box === "1") {
-                use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: this.state.childs[0],
-                        alt: this.state.childs[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.imgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.cardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.cardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.mdbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.mdimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.mdcardheading },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.mdcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.btnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement("img", {
+                                        src: this.state.childs[0],
+                                        alt: this.state.childs[1],
+                                        style: use.smimgstyle }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "h5",
+                                            { style: use.smcardheading },
+                                            CHILDS[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { style: use.smcardbody },
+                                            this.state.childs[3]
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { style: use.smbtnstyle, onClick: this.state.btnOnClick },
+                                        this.state.btnText
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
+                            styledCard = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.cardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.cardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.item },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.mdcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.mditem },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "div",
+                                    {
+                                        style: use.smcardstyle,
+                                        id: this.state.id,
+                                        className: this.state.className,
+                                        onMouseEnter: use.changeHover,
+                                        onMouseLeave: use.changeHoverBack },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smcardcontent },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[0]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[1]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[2]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[3]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[4]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[5]
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { style: use.smitem },
+                                            this.state.childs[6]
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
+                    styledCard = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            this.state.childs[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            this.state.childs[3]
+                            "div",
+                            {
+                                style: use.cardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: this.state.childs[0],
+                                alt: this.state.childs[1],
+                                style: use.imgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.cardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.cardheading },
+                                    this.state.childs[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.cardbody },
+                                    this.state.childs[3]
+                                )
+                            )
                         )
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: this.state.childs[0],
-                        alt: this.state.childs[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            this.state.childs[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            this.state.childs[3]
+                            "div",
+                            {
+                                style: use.mdcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: this.state.childs[0],
+                                alt: this.state.childs[1],
+                                style: use.mdimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.mdcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.mdcardheading },
+                                    this.state.childs[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.mdcardbody },
+                                    this.state.childs[3]
+                                )
+                            )
                         )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { style: use.CARDSTYLE.btnstyle, onClick: this.state.btnOnClick },
-                        this.state.btnText
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement(
-                        'ul',
-                        { style: use.CARDSTYLE.cardcontent },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[0]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[1]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[2]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[3]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[4]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[5]
-                        ),
-                        _react2.default.createElement(
-                            'li',
-                            { style: use.CARDSTYLE.item },
-                            this.state.childs[6]
+                            "div",
+                            {
+                                style: use.smcardstyle,
+                                id: this.state.id,
+                                className: this.state.className,
+                                onMouseEnter: use.changeHover,
+                                onMouseLeave: use.changeHoverBack },
+                            _react2.default.createElement("img", {
+                                src: this.state.childs[0],
+                                alt: this.state.childs[1],
+                                style: use.smimgstyle }),
+                            _react2.default.createElement(
+                                "div",
+                                { style: use.smcardcontent },
+                                _react2.default.createElement(
+                                    "h5",
+                                    { style: use.smcardheading },
+                                    this.state.childs[2]
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { style: use.smcardbody },
+                                    this.state.childs[3]
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
-                styledCard = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys,
-                        style: use.CARDSTYLE.cardstyle,
-                        id: this.state.id,
-                        className: this.state.className,
-                        onMouseEnter: use.changeHover,
-                        onMouseLeave: use.changeHoverBack },
-                    _react2.default.createElement('img', {
-                        src: this.state.childs[0],
-                        alt: this.state.childs[1],
-                        style: use.CARDSTYLE.imgstyle }),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CARDSTYLE.cardcontent },
-                        _react2.default.createElement(
-                            'h5',
-                            { style: use.CARDSTYLE.cardheading },
-                            this.state.childs[2]
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.CARDSTYLE.cardbody },
-                            this.state.childs[3]
-                        )
-                    )
-                )];
+                    )];
             }
             this.setState({ styledCard: styledCard });
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
                 _react2.default.Fragment,
