@@ -26,9 +26,7 @@ Please see [React-stylux](https://foxdesignagency.com/react-stylux/documentation
 
 ## Known Bugs
 
-**Doesnt seem to work with Safari - this needs immediate fix if possible**
-
-**Too many**
+**Now that a system is starting to form, this section will be filled out soon**
 
 
 ## Feature Wish List
@@ -45,7 +43,9 @@ Please see [React-stylux](https://foxdesignagency.com/react-stylux/documentation
 a link should go to the code of conduct
 
 ## Contributing
-
+**Contributions will be either for basic box style or variation style of box style through vars prop**
+- box style should be greatly different than other box styles and not achievable through a basic vars implementation
+- vars implementation should be as basic as possible. The differences between vars #'s should not be achievable through a theme implementation
 Contribution form and system is currently being thought through. No contributions will currently be accepted outside of Fox Design Agency until system is put into place.
 
 
