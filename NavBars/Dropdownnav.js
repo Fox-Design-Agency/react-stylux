@@ -67,6 +67,7 @@ var Dropdownnav = function (_React$Component) {
             mddis: props.mdDis || 'flex',
             keys: '',
             box: props.box,
+            vars: props.vars,
             styledDropdown: ''
         };
         _this.enter = _this.enter.bind(_this);
@@ -84,80 +85,274 @@ var Dropdownnav = function (_React$Component) {
             var styledDropdown = void 0,
                 use = void 0,
                 NAVBAR = void 0,
-                FIRST = '';
+                FIRST = void 0,
+                DropDown_NavBar_Li = '';
             var self = this;
-            var tempkey = Math.random();
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
+            }
 
             var CHILDS = _react2.default.Children.toArray(this.props.children);
 
-            if (this.state.box === "1") {
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
-                var DropDown_NavBar_Li = {
-                    color: this.state.color
-                };
-                NAVBAR = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: DropDown_NavBar_Li },
-                        arr[i + 1]
-                    );
-                });
-                FIRST = CHILDS[0];
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: tempkey, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this2.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this2.left();
-                            } },
-                        FIRST,
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                            DropDown_NavBar_Li = {
+                                color: this.state.color
+                            };
+                            NAVBAR = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: DropDown_NavBar_Li },
+                                    arr[i + 1]
+                                );
+                            });
+                            FIRST = CHILDS[0];
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                            DropDown_NavBar_Li = {
+                                color: this.state.color
+                            };
+                            NAVBAR = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: DropDown_NavBar_Li },
+                                    arr[i + 1]
+                                );
+                            });
+                            FIRST = CHILDS[0];
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this2.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+
+                default:
+                    use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                    DropDown_NavBar_Li = {
+                        color: this.state.color
+                    };
+                    NAVBAR = CHILDS.map(function (x, i, arr) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: i, style: DropDown_NavBar_Li },
+                            arr[i + 1]
+                        );
+                    });
+                    FIRST = CHILDS[0];
+                    styledDropdown = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            NAVBAR
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this2.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this2.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
-                var _DropDown_NavBar_Li = {
-                    color: this.state.color
-                };
-                NAVBAR = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: _DropDown_NavBar_Li },
-                        arr[i + 1]
-                    );
-                });
-                FIRST = CHILDS[0];
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: tempkey, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this2.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this2.left();
-                            } },
-                        FIRST,
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            NAVBAR
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this2.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this2.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this2.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this2.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
+                        )
+                    )];
+
             }
-            this.setState({ childs: NAVBAR, first: FIRST, styledDropdown: styledDropdown, keys: tempkey });
+            this.setState({ childs: NAVBAR, first: FIRST, styledDropdown: styledDropdown, keys: tempkeys });
         }
     }, {
         key: "componentWillReceiveProps",
@@ -169,75 +364,266 @@ var Dropdownnav = function (_React$Component) {
             var styledDropdown = void 0,
                 use = void 0,
                 NAVBAR = void 0,
-                FIRST = '';
+                FIRST = void 0,
+                DropDown_NavBar_Li = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
-                var DropDown_NavBar_Li = {
-                    color: this.state.color
-                };
-                NAVBAR = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: DropDown_NavBar_Li },
-                        arr[i + 1]
-                    );
-                });
-                FIRST = CHILDS[0];
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this3.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this3.left();
-                            } },
-                        this.state.first,
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                            DropDown_NavBar_Li = {
+                                color: this.state.color
+                            };
+                            NAVBAR = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: DropDown_NavBar_Li },
+                                    arr[i + 1]
+                                );
+                            });
+                            FIRST = CHILDS[0];
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                            DropDown_NavBar_Li = {
+                                color: this.state.color
+                            };
+                            NAVBAR = CHILDS.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: DropDown_NavBar_Li },
+                                    arr[i + 1]
+                                );
+                            });
+                            FIRST = CHILDS[0];
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this3.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this3.left();
+                                            } },
+                                        FIRST,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            NAVBAR
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+
+                default:
+                    use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
+                    DropDown_NavBar_Li = {
+                        color: this.state.color
+                    };
+                    NAVBAR = CHILDS.map(function (x, i, arr) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: i, style: DropDown_NavBar_Li },
+                            arr[i + 1]
+                        );
+                    });
+                    FIRST = CHILDS[0];
+                    styledDropdown = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            NAVBAR
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this3.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this3.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self);
-                var _DropDown_NavBar_Li2 = {
-                    color: this.state.color
-                };
-                NAVBAR = CHILDS.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: _DropDown_NavBar_Li2 },
-                        arr[i + 1]
-                    );
-                });
-                FIRST = CHILDS[0];
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this3.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this3.left();
-                            } },
-                        this.state.first,
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            NAVBAR
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this3.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this3.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this3.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this3.left();
+                                    } },
+                                FIRST,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    NAVBAR
+                                )
+                            )
+                        )
+                    )];
+
             }
             this.setState({ childs: NAVBAR, first: FIRST, styledDropdown: styledDropdown });
         }
@@ -249,54 +635,234 @@ var Dropdownnav = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var styledDropdown = void 0,
-                use = '';
+                use = void 0,
+                show = '';
             var self = this;
-            if (this.state.box === "1") {
-                var show = "visible";
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this4.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this4.left();
-                            } },
-                        this.state.first,
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            show = "visible";
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            show = "visible";
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this4.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this4.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    show = "visible";
+                    use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                    styledDropdown = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            this.state.childs
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this4.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this4.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                var _show = "visible";
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self, _show);
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this4.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this4.left();
-                            } },
-                        this.state.first,
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            this.state.childs
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this4.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this4.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this4.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this4.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
+                        )
+                    )];
+
             }
             this.setState({
                 styledDropdown: styledDropdown
@@ -310,54 +876,233 @@ var Dropdownnav = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var styledDropdown = void 0,
-                use = '';
+                use = void 0,
+                show = '';
             var self = this;
-            if (this.state.box === "1") {
-                var show = "hidden";
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this5.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this5.left();
-                            } },
-                        this.state.first,
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            show = "hidden";
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            show = "hidden";
+                            use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                            styledDropdown = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        "li",
+                                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                            onMouseOver: function onMouseOver() {
+                                                return _this5.enter();
+                                            },
+                                            onMouseOut: function onMouseOut() {
+                                                return _this5.left();
+                                            } },
+                                        this.state.first,
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                            this.state.childs
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    show = "hidden";
+                    use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
+                    styledDropdown = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            this.state.childs
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this5.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this5.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                var _show2 = "hidden";
-                use = (0, _dropdownnavFunctions2.default)("1", props, state, self, _show2);
-                styledDropdown = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
-                    _react2.default.createElement(
-                        "li",
-                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
-                            onMouseOver: function onMouseOver() {
-                                return _this5.enter();
-                            },
-                            onMouseOut: function onMouseOut() {
-                                return _this5.left();
-                            } },
-                        this.state.first,
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            "ul",
-                            { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
-                            this.state.childs
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this5.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this5.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
+                            _react2.default.createElement(
+                                "li",
+                                { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
+                                    onMouseOver: function onMouseOver() {
+                                        return _this5.enter();
+                                    },
+                                    onMouseOut: function onMouseOut() {
+                                        return _this5.left();
+                                    } },
+                                this.state.first,
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
+                                    this.state.childs
+                                )
+                            )
+                        )
+                    )];
             }
             this.setState({
                 styledDropdown: styledDropdown
