@@ -1,8 +1,8 @@
 'use strict';
 
-var _TestBlock = require('./TestBlock');
+var _Block = require('./Other/Block2');
 
-var _TestBlock2 = _interopRequireDefault(_TestBlock);
+var _Block2 = _interopRequireDefault(_Block);
 
 var _Wrapper = require('./Wrappers/Wrapper');
 
@@ -96,7 +96,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 module.exports = {
     A: _A2.default,
-    Block2: _TestBlock2.default,
+    Block2: _Block2.default,
     Wrapper: _Wrapper2.default,
     Holder: _Holder2.default,
     HR: _HR2.default,

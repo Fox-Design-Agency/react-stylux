@@ -47,7 +47,11 @@ var A = function (_React$Component) {
             transform: props.transform,
             transformOrigin: props.transformOrigin,
             id: props.id,
-            className: props.className
+            className: props.className,
+            box: props.box,
+            vars: props.vars,
+            styledA: '',
+            keys: ''
         };
         return _this;
     }
@@ -56,47 +60,157 @@ var A = function (_React$Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
+            }
+
+            var astyle = {
+                width: this.state.width,
+                height: this.state.height,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+            var smastyle = {
+                display: this.state.smDis,
+                width: this.state.width,
+                height: this.state.height,
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+            var mdastyle = {
+                display: this.state.mdDis,
+                width: this.state.width,
+                height: this.state.height,
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+
+            var styledA = [_react2.default.createElement(
+                MediaQuery,
+                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                _react2.default.createElement(
+                    'a',
+                    { style: astyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            ), _react2.default.createElement(
+                MediaQuery,
+                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                _react2.default.createElement(
+                    'a',
+                    { style: mdastyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            ), _react2.default.createElement(
+                MediaQuery,
+                { key: tempkeys[2], maxWidth: 767 },
+                _react2.default.createElement(
+                    'a',
+                    { style: smastyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            )];
             this.setState({
-                childs: CHILDS
+                childs: CHILDS,
+                styledA: styledA,
+                keys: tempkeys
             });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            return this.setState({ childs: CHILDS });
+            var astyle = {
+                width: this.state.width,
+                height: this.state.height,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+            var smastyle = {
+                display: this.state.smDis,
+                width: this.state.width,
+                height: this.state.height,
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+            var mdastyle = {
+                display: this.state.mdDis,
+                width: this.state.width,
+                height: this.state.height,
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: this.state.fontSize,
+                transform: this.state.transform,
+                transformOrigin: this.state.transformOrigin
+            };
+
+            var styledA = [_react2.default.createElement(
+                MediaQuery,
+                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                _react2.default.createElement(
+                    'a',
+                    { style: astyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            ), _react2.default.createElement(
+                MediaQuery,
+                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                _react2.default.createElement(
+                    'a',
+                    { style: mdastyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            ), _react2.default.createElement(
+                MediaQuery,
+                { key: this.state.keys[2], maxWidth: 767 },
+                _react2.default.createElement(
+                    'a',
+                    { style: smastyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
+                        id: this.state.id,
+                        className: this.state.className },
+                    CHILDS
+                )
+            )];
+            this.setState({
+                childs: CHILDS,
+                styledA: styledA
+            });
         }
     }, {
         key: 'render',
         value: function render() {
-            var ASTYLE = _nestingstyles2.default.create({
-                astyle: {
-                    width: this.state.width,
-                    height: this.state.height,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: this.state.fontSize,
-                    transform: this.state.transform,
-                    transformOrigin: this.state.transformOrigin
-                },
-                '@media screen and (max-width: 440px)': {
-                    astyle: {
-                        display: this.state.smDis
-                    }
-                },
-                '@media screen and (min-width: 441px) and (max-width: 760px)': {
-                    astyle: {
-                        display: this.state.mdDis
-                    }
-                }
-            });
             return _react2.default.createElement(
-                'a',
-                { style: ASTYLE.astyle, href: this.state.href, target: this.state.target, rel: this.state.rel,
-                    id: this.state.id,
-                    className: this.state.className },
-                this.state.childs
+                _react2.default.Fragment,
+                null,
+                this.state.styledA
             );
         }
     }]);
