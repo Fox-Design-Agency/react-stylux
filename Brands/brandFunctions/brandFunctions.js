@@ -24,7 +24,7 @@ function brandFunction(type, props, state, self) {
             return {
                 brand: {
                     display: display,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: direction,
                     //width: '15%',
                     alignItems: 'center',
@@ -48,7 +48,7 @@ function brandFunction(type, props, state, self) {
                 },
                 smbrand: {
                     display: smdis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: direction,
                     //width: '15%',
                     alignItems: 'center',
@@ -72,7 +72,7 @@ function brandFunction(type, props, state, self) {
                 },
                 mdbrand: {
                     display: mddis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: direction,
                     //width: '15%',
                     alignItems: 'center',
@@ -99,7 +99,7 @@ function brandFunction(type, props, state, self) {
             return {
                 brand: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -110,7 +110,7 @@ function brandFunction(type, props, state, self) {
                 },
                 smbrand: {
                     display: smdis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -122,7 +122,7 @@ function brandFunction(type, props, state, self) {
                 },
                 mdbrand: {
                     display: mddis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -137,7 +137,7 @@ function brandFunction(type, props, state, self) {
             return {
                 brand: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -148,7 +148,7 @@ function brandFunction(type, props, state, self) {
                 },
                 smbrand: {
                     display: smdis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -160,7 +160,7 @@ function brandFunction(type, props, state, self) {
                 },
                 mdbrand: {
                     display: mddis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -175,7 +175,7 @@ function brandFunction(type, props, state, self) {
             return {
                 brand: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -186,7 +186,7 @@ function brandFunction(type, props, state, self) {
                 },
                 smbrand: {
                     display: smdis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -198,7 +198,7 @@ function brandFunction(type, props, state, self) {
                 },
                 mdbrand: {
                     display: mddis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -213,7 +213,7 @@ function brandFunction(type, props, state, self) {
             return {
                 brand: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -224,7 +224,7 @@ function brandFunction(type, props, state, self) {
                 },
                 smbrand: {
                     display: smdis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,
@@ -236,7 +236,7 @@ function brandFunction(type, props, state, self) {
                 },
                 mdbrand: {
                     display: mddis,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     animationIterationCount: animationIterationCount,
                     animationTimingFunction: animationTimingFunction,

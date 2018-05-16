@@ -109,6 +109,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamMenuDis,
+                    alignItems: "center",
                     flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'
@@ -118,6 +119,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamSmDis,
+                    alignItems: "center",
                     flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'
@@ -127,6 +129,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamMdDis,
+                    alignItems: "center",
                     flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'

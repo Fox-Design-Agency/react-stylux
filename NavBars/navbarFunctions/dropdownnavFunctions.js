@@ -22,7 +22,7 @@ function dropdownnavFunction(type, props, state, self) {
                     width: state.width,
                     padding: '5px',
                     textAlign: state.textAlign,
-                    flex: "1 0 auto",
+                    flex: "1",
                     background: state.background || "#fff",
                     zIndex: "2000",
                     color: state.color,

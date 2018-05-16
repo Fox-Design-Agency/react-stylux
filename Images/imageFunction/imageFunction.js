@@ -95,7 +95,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: state.hoverShadow
@@ -117,7 +117,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: _defineProperty({
@@ -202,7 +202,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -224,7 +224,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -244,7 +244,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
         case "3":
@@ -309,7 +309,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -331,7 +331,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -351,7 +351,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
 
@@ -417,7 +417,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -438,7 +438,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -457,7 +457,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
         case "5":
@@ -521,7 +521,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -542,7 +542,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -561,7 +561,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
         case "6":
@@ -626,7 +626,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: state.hoverShadow
@@ -648,7 +648,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -668,7 +668,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
 
             };
@@ -734,7 +734,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -756,7 +756,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding
-                }, _defineProperty(_smimageStyles, 'display', display), _defineProperty(_smimageStyles, 'flex', "1 0 auto"), _smimageStyles),
+                }, _defineProperty(_smimageStyles, 'display', display), _defineProperty(_smimageStyles, 'flex', "1"), _smimageStyles),
                 mdimageStyles: {
                     display: mddis,
                     width: mdimgWidth,
@@ -774,7 +774,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
 
@@ -839,7 +839,7 @@ function imageFunction(type, size, props, state, self) {
                     margin: margin,
                     padding: padding,
                     display: display,
-                    flex: "1 0 auto"
+                    flex: "1"
                 },
                 hoverStyle: {
                     boxShadow: hoverShadow
@@ -860,7 +860,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
 
                 },
                 mdimageStyles: {
@@ -879,7 +879,7 @@ function imageFunction(type, size, props, state, self) {
                     boxShadow: boxShadow,
                     margin: margin,
                     padding: padding,
-                    flex: "1 0 auto"
+                    flex: "1"
                 }
             };
         default:

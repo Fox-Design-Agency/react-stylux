@@ -1366,10 +1366,6 @@ var Navbar = function (_React$Component) {
                 smdis = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            var tempkeys = [];
-            for (var _i2 = 0; _i2 <= CHILDS.length; _i2++) {
-                tempkeys.push(tempkeys[_i2] = Math.random());
-            }
             if (this.state.box === "1" || this.state.box === "2") {
                 navbar_navbar_li = {
                     display: this.state.display,
@@ -1447,7 +1443,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1472,7 +1468,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1497,7 +1493,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1526,7 +1522,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1551,7 +1547,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1576,7 +1572,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1609,7 +1605,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1634,7 +1630,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1659,7 +1655,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1688,7 +1684,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1713,7 +1709,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1738,7 +1734,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1765,7 +1761,7 @@ var Navbar = function (_React$Component) {
                             }
 
                     }
-                    return this.setState({ childs: NAVBARLG, hams: NAVBARSM, smdis: 'none', keys: tempkeys, styledNavbar: styledNavbar });
+                    return this.setState({ childs: NAVBARLG, hams: NAVBARSM, smdis: 'none', styledNavbar: styledNavbar });
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
@@ -1781,7 +1777,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1794,7 +1790,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1807,7 +1803,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1823,7 +1819,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1836,7 +1832,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1849,7 +1845,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1869,7 +1865,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1882,7 +1878,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1895,7 +1891,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1911,7 +1907,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1924,7 +1920,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1937,7 +1933,7 @@ var Navbar = function (_React$Component) {
                                         )
                                     ), _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[2], maxWidth: 767 },
+                                        { key: this.state.keys[2], maxWidth: 767 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1957,7 +1953,6 @@ var Navbar = function (_React$Component) {
                         hamShow: false,
                         hamSmDis: 'none',
                         hamMdDis: 'none',
-                        keys: tempkeys,
                         styledNavbar: styledNavbar
                     });
                 }
@@ -2034,7 +2029,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2047,7 +2042,7 @@ var Navbar = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2060,7 +2055,7 @@ var Navbar = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[2], maxWidth: 767 },
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2073,7 +2068,7 @@ var Navbar = function (_React$Component) {
                         )
                     )];
 
-                    return this.setState({ childs: NAVBARLG, hams: NAVBARSM, smdis: 'none', keys: tempkeys, styledNavbar: styledNavbar });
+                    return this.setState({ childs: NAVBARLG, hams: NAVBARSM, smdis: 'none', styledNavbar: styledNavbar });
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
@@ -2086,7 +2081,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2099,7 +2094,7 @@ var Navbar = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2112,7 +2107,7 @@ var Navbar = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[2], maxWidth: 767 },
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2131,7 +2126,6 @@ var Navbar = function (_React$Component) {
                     hamShow: false,
                     hamSmDis: 'none',
                     hamMdDis: 'none',
-                    keys: tempkeys,
                     styledNavbar: styledNavbar
                 });
             }

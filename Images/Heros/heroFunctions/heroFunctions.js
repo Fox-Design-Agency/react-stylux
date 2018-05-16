@@ -33,7 +33,7 @@ function heroFunction(type, props, state, self) {
                     width: width,
                     height: height,
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 },
@@ -46,7 +46,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
 
@@ -60,7 +60,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 }
@@ -77,7 +77,7 @@ function heroFunction(type, props, state, self) {
                     width: width,
                     height: height,
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 },
@@ -97,7 +97,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 },
@@ -110,7 +110,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 }
@@ -127,7 +127,7 @@ function heroFunction(type, props, state, self) {
                     width: width,
                     height: height,
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 },
@@ -140,7 +140,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
 
@@ -154,7 +154,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 }
@@ -171,7 +171,7 @@ function heroFunction(type, props, state, self) {
                     width: width,
                     height: height,
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 },
@@ -184,7 +184,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
 
@@ -198,7 +198,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center'
                 }
@@ -215,7 +215,7 @@ function heroFunction(type, props, state, self) {
                     width: width,
                     height: height,
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 },
@@ -228,7 +228,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
 
@@ -242,7 +242,7 @@ function heroFunction(type, props, state, self) {
                     backgroundSize: backgroundSize,
                     width: width,
                     height: height,
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'flex-end',
                     justifyContent: 'center'
                 }

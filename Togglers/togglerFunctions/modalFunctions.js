@@ -59,7 +59,7 @@ function modalFunction(type, props, state, self) {
                     right: boxRight,
                     bottom: boxBottom,
                     display: show ? 'flex' : 'none',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: boxAlign,
                     justifyContent: boxJustify,
                     boxShadow: boxShadow,
@@ -73,7 +73,7 @@ function modalFunction(type, props, state, self) {
                 },
                 CLICKBOX: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     alignItems: 'center',
                     justifyContent: 'center',
                     cursor: 'pointer',
@@ -108,7 +108,7 @@ function modalFunction(type, props, state, self) {
 
                 MODAL: _defineProperty({
                     display: show ? 'flex' : 'none',
-                    flex: "1 0 auto",
+                    flex: "1",
                     position: 'fixed',
                     zIndex: '1',
                     right: '0',
@@ -144,7 +144,7 @@ function modalFunction(type, props, state, self) {
             return {
                 MODAL: _defineProperty({
                     display: show ? 'flex' : 'none',
-                    flex: "1 0 auto",
+                    flex: "1",
                     position: 'fixed',
                     zIndex: '1',
                     right: '0',
@@ -156,7 +156,7 @@ function modalFunction(type, props, state, self) {
                 }, 'backgroundColor', 'rgba(0,0,0,0.4)'),
                 MODALCONTENT: {
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: 'column',
                     backgroundColor: '#fff',
                     margin: 'auto',

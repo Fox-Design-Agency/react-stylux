@@ -32,7 +32,7 @@ function carouselFunction(type, props, state, self) {
                     background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     padding: padding
                 },
                 LEFT_ARROW: {
@@ -61,7 +61,7 @@ function carouselFunction(type, props, state, self) {
                     height: height,
                     overflowX: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -84,7 +84,7 @@ function carouselFunction(type, props, state, self) {
                     background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     padding: padding
                 },
                 SLIDER: {
@@ -103,7 +103,7 @@ function carouselFunction(type, props, state, self) {
                     height: height,
                     overflowX: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -153,7 +153,7 @@ function carouselFunction(type, props, state, self) {
                     background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     padding: padding
                 },
                 SLIDER: {
@@ -172,7 +172,7 @@ function carouselFunction(type, props, state, self) {
                     height: height,
                     overflowX: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -222,7 +222,7 @@ function carouselFunction(type, props, state, self) {
                     background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     padding: padding
                 },
                 SLIDER: {
@@ -241,7 +241,7 @@ function carouselFunction(type, props, state, self) {
                     height: height,
                     overflowX: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
@@ -263,7 +263,7 @@ function carouselFunction(type, props, state, self) {
                     background: background,
                     overflowY: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     padding: padding
                 },
                 SLIDER: {
@@ -282,7 +282,7 @@ function carouselFunction(type, props, state, self) {
                     height: height,
                     overflowX: 'hidden',
                     display: 'flex',
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',

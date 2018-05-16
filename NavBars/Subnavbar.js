@@ -68,7 +68,7 @@ var Subnavbar = function (_React$Component) {
             left: props.left,
             right: props.right,
             position: props.position || "relative",
-            zIndex: props.zIndex || '200',
+            zIndex: props.zIndex || "100",
             styledSubnavbar: '',
             box: props.box,
             vars: props.vars,
@@ -103,7 +103,7 @@ var Subnavbar = function (_React$Component) {
                         case "1":
                             _subnavbar_navbar_li = {
                                 display: 'flex',
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -113,7 +113,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             _smsubnavbar_navbar_li = {
                                 display: this.state.smdis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -124,7 +124,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             _mdsubnavbar_navbar_li = {
                                 display: this.state.mddis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -180,7 +180,7 @@ var Subnavbar = function (_React$Component) {
                         default:
                             _subnavbar_navbar_li = {
                                 display: 'flex',
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -190,7 +190,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             _smsubnavbar_navbar_li = {
                                 display: this.state.smdis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -201,7 +201,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             _mdsubnavbar_navbar_li = {
                                 display: this.state.mddis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -298,7 +298,7 @@ var Subnavbar = function (_React$Component) {
                 default:
                     var _subnavbar_navbar_li = {
                         display: 'flex',
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -308,7 +308,7 @@ var Subnavbar = function (_React$Component) {
                     };
                     var _smsubnavbar_navbar_li = {
                         display: this.state.smdis,
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -319,7 +319,7 @@ var Subnavbar = function (_React$Component) {
                     };
                     var _mdsubnavbar_navbar_li = {
                         display: this.state.mddis,
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -397,7 +397,7 @@ var Subnavbar = function (_React$Component) {
                         case "1":
                             subnavbar_navbar_li = {
                                 display: 'flex',
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -407,7 +407,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             smsubnavbar_navbar_li = {
                                 display: this.state.smdis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -418,7 +418,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             mdsubnavbar_navbar_li = {
                                 display: this.state.mddis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -474,7 +474,7 @@ var Subnavbar = function (_React$Component) {
                         default:
                             subnavbar_navbar_li = {
                                 display: 'flex',
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -484,7 +484,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             smsubnavbar_navbar_li = {
                                 display: this.state.smdis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -495,7 +495,7 @@ var Subnavbar = function (_React$Component) {
                             };
                             mdsubnavbar_navbar_li = {
                                 display: this.state.mddis,
-                                flex: "1 0 auto",
+                                flex: "1",
                                 fontSize: this.state.fontSize,
                                 fontWeight: this.state.fontWeight,
                                 justifyContent: 'center',
@@ -553,7 +553,7 @@ var Subnavbar = function (_React$Component) {
                 default:
                     subnavbar_navbar_li = {
                         display: 'flex',
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -563,7 +563,7 @@ var Subnavbar = function (_React$Component) {
                     };
                     smsubnavbar_navbar_li = {
                         display: this.state.smdis,
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',
@@ -574,7 +574,7 @@ var Subnavbar = function (_React$Component) {
                     };
                     mdsubnavbar_navbar_li = {
                         display: this.state.mddis,
-                        flex: "1 0 auto",
+                        flex: "1",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
                         justifyContent: 'center',

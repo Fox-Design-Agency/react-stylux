@@ -46,7 +46,7 @@ function paragraphFunction(type, props, state, self) {
             size = fontSize || '1.333em';
             return {
                 paragraph: {
-                    flex: "1 0 auto",
+                    flex: "1",
                     width: width,
                     height: height,
                     maxWidth: maxWidth,
@@ -85,7 +85,7 @@ function paragraphFunction(type, props, state, self) {
                 smparagraph: {
                     display: smdis,
                     fontSize: smFontSize,
-                    flex: "1 0 auto",
+                    flex: "1",
                     width: width,
                     height: height,
                     maxWidth: maxWidth,
@@ -120,7 +120,7 @@ function paragraphFunction(type, props, state, self) {
                 mdparagraph: {
                     display: mddis,
                     fontSize: mdFontSize,
-                    flex: "1 0 auto",
+                    flex: "1",
                     width: width,
                     height: height,
                     maxWidth: maxWidth,
@@ -188,7 +188,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 },
@@ -225,7 +225,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
 
@@ -260,7 +260,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
 
@@ -302,7 +302,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 },
@@ -339,7 +339,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
 
@@ -374,7 +374,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 }
@@ -418,7 +418,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 },
@@ -455,7 +455,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
 
@@ -490,7 +490,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 }
@@ -528,7 +528,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 },
@@ -565,7 +565,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
 
@@ -600,7 +600,7 @@ function paragraphFunction(type, props, state, self) {
                     transform: transform,
                     transformOrigin: transformOrigin,
                     animationFillMode: animationFillMode,
-                    flex: "1 0 auto",
+                    flex: "1",
                     flexWrap: "wrap",
                     wordWrap: wordWrap
                 }
