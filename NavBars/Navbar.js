@@ -102,9 +102,6 @@ var Navbar = function (_React$Component) {
             var state = this.state;
             var styledNavbar = void 0,
                 use = void 0,
-                NAVBARACTUAL = void 0,
-                NAVBARLG = void 0,
-                NAVBARSM = void 0,
                 smdis = void 0,
                 show = '';
             var self = this;
@@ -119,7 +116,7 @@ var Navbar = function (_React$Component) {
                             case "1":
                                 styledNavbar = [_react2.default.createElement(
                                     _reactResponsive2.default,
-                                    { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                    { key: this.state.keys[0], minWidth: 1224 },
                                     _react2.default.createElement(
                                         "nav",
                                         {
@@ -193,10 +190,11 @@ var Navbar = function (_React$Component) {
                                         )
                                     )
                                 )];
+                                break;
                             default:
                                 styledNavbar = [_react2.default.createElement(
                                     _reactResponsive2.default,
-                                    { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                    { key: this.state.keys[0], minWidth: 1224 },
                                     _react2.default.createElement(
                                         "nav",
                                         {
@@ -277,7 +275,7 @@ var Navbar = function (_React$Component) {
                             case "1":
                                 styledNavbar = [_react2.default.createElement(
                                     _reactResponsive2.default,
-                                    { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                    { key: this.state.keys[0], minWidth: 1224 },
                                     _react2.default.createElement(
                                         "nav",
                                         {
@@ -351,10 +349,11 @@ var Navbar = function (_React$Component) {
                                         )
                                     )
                                 )];
+                                break;
                             default:
                                 styledNavbar = [_react2.default.createElement(
                                     _reactResponsive2.default,
-                                    { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                    { key: this.state.keys[0], minWidth: 1224 },
                                     _react2.default.createElement(
                                         "nav",
                                         {
@@ -429,7 +428,84 @@ var Navbar = function (_React$Component) {
                                     )
                                 )];
                         }
-
+                        break;
+                    default:
+                        styledNavbar = [_react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[0], minWidth: 1224 },
+                            _react2.default.createElement(
+                                "nav",
+                                {
+                                    style: use.navbar, id: this.state.navid, className: this.state.navClassName },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                    this.state.childs
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { style: use.HAMNAV, onClick: this.toggle },
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES })
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.hamestnav },
+                                    this.state.hams
+                                )
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                            _react2.default.createElement(
+                                "nav",
+                                {
+                                    style: use.mdnavbar, id: this.state.navid, className: this.state.navClassName },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdnavbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                    this.state.childs
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { style: use.mdHAMNAV, onClick: this.toggle },
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES })
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.mdhamestnav },
+                                    this.state.hams
+                                )
+                            )
+                        ), _react2.default.createElement(
+                            _reactResponsive2.default,
+                            { key: this.state.keys[2], maxWidth: 767 },
+                            _react2.default.createElement(
+                                "nav",
+                                {
+                                    style: use.smnavbar, id: this.state.navid, className: this.state.navClassName },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smnavbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                    this.state.childs
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { style: use.smHAMNAV, onClick: this.toggle },
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES }),
+                                    _react2.default.createElement("div", { style: use.HAMLINES })
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { style: use.smhamestnav },
+                                    this.state.hams
+                                )
+                            )
+                        )];
                 }
                 return this.setState({ styledNavbar: styledNavbar, hamShow: !this.state.hamShow });
             } else {
@@ -438,7 +514,7 @@ var Navbar = function (_React$Component) {
                 use = (0, _navbarFunctions2.default)("1", props, state, self, smdis, show);
                 styledNavbar = [_react2.default.createElement(
                     _reactResponsive2.default,
-                    { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                    { key: this.state.keys[0], minWidth: 1224 },
                     _react2.default.createElement(
                         "nav",
                         {
@@ -539,8 +615,8 @@ var Navbar = function (_React$Component) {
 
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var tempkeys = [];
-            for (var _i = 0; _i <= CHILDS.length + 3; _i++) {
-                tempkeys.push(tempkeys[_i] = Math.random());
+            for (var i = 0; i <= CHILDS.length * 2 + 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
             if (this.state.box === "1" || this.state.box === "2") {
                 navbar_navbar_li = {
@@ -555,15 +631,14 @@ var Navbar = function (_React$Component) {
                 };
                 hoverStyle = {
                     color: this.state.hoverColor
-                };
-                smnavbar_navbar_li = {
-                    display: this.state.smdis
+                    // smnavbar_navbar_li = {
+                    //     display: this.state.smdis,
 
-                };
-                mdnavbar_navbar_li = {
-                    display: this.state.mddis
-                };
-                ham_navbar_li = {
+                    // }
+                    // mdnavbar_navbar_li = {
+                    //     display: this.state.mddis,
+                    // }
+                };ham_navbar_li = {
                     visibility: this.state.hamShow ? 'visible' : 'collaspe',
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
@@ -581,33 +656,33 @@ var Navbar = function (_React$Component) {
                     // hoverStyle= {
                     //     color: this.state.hoverColor
                     // }
-                };smham_navbar_li = {
-                    visibility: this.state.hamShow ? 'visible' : 'collaspe'
+                    // smham_navbar_li = {
+                    //     visibility: this.state.hamShow ? 'visible' : 'collaspe',
 
-                };
-                mdham_navbar_li = {
-                    visibility: this.state.hamShow ? 'visible' : 'collaspe'
-                };
-                if (+this.state.initialCount !== 0) {
+                    // }
+                    // mdham_navbar_li = {
+                    //     visibility: this.state.hamShow ? 'visible' : 'collaspe',
+                    // }
+                };if (+this.state.initialCount !== 0) {
                     LGDIS = [];
                     SMDIS = [];
                     for (var x = 0; x < +this.state.initialCount; x += 1) {
                         LGDIS.push(CHILDS[x]);
                     }
-                    for (var i = +this.state.initialCount; i < CHILDS.length; i += 1) {
-                        SMDIS.push(CHILDS[i]);
+                    for (var _i = +this.state.initialCount; _i < CHILDS.length; _i += 1) {
+                        SMDIS.push(CHILDS[_i]);
                     }
                     NAVBARLG = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: tempkeys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: ham_navbar_li },
+                            { key: tempkeys[i + 3 + CHILDS.length], style: ham_navbar_li },
                             x
                         );
                     });
@@ -619,7 +694,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -693,12 +768,13 @@ var Navbar = function (_React$Component) {
                                             )
                                         )
                                     )];
+                                    break;
                                 default:
                                     smdis = "none";
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -781,7 +857,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -855,12 +931,13 @@ var Navbar = function (_React$Component) {
                                             )
                                         )
                                     )];
+                                    break;
                                 default:
                                     smdis = "none";
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -935,14 +1012,93 @@ var Navbar = function (_React$Component) {
                                         )
                                     )];
                             }
-
+                            break;
+                        default:
+                            smdis = "none";
+                            use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
+                            styledNavbar = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], minWidth: 1224 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    {
+                                        style: use.navbar, id: this.state.navid, className: this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                        NAVBARLG
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.HAMNAV, onClick: this.toggle },
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES })
+                                    ),
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.hamestnav },
+                                        NAVBARSM
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    {
+                                        style: use.mdnavbar, id: this.state.navid, className: this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdnavbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                        NAVBARLG
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.mdHAMNAV, onClick: this.toggle },
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES })
+                                    ),
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdhamestnav },
+                                        NAVBARSM
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    {
+                                        style: use.smnavbar, id: this.state.navid, className: this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smnavbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
+                                        NAVBARLG
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { style: use.smHAMNAV, onClick: this.toggle },
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                                        _react2.default.createElement("div", { style: use.HAMLINES })
+                                    ),
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smhamestnav },
+                                        NAVBARSM
+                                    )
+                                )
+                            )];
                     }
                     return this.setState({ childs: NAVBARLG, hams: NAVBARSM, smdis: 'none', keys: tempkeys, styledNavbar: styledNavbar });
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: tempkeys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
@@ -953,7 +1109,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -991,11 +1147,12 @@ var Navbar = function (_React$Component) {
                                             )
                                         )
                                     )];
+                                    break;
                                 default:
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1041,7 +1198,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1083,7 +1240,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                        { key: tempkeys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1182,23 +1339,23 @@ var Navbar = function (_React$Component) {
                 if (+this.state.initialCount !== 0) {
                     LGDIS = [];
                     SMDIS = [];
-                    for (var x = 0; x < +this.state.initialCount; x += 1) {
-                        LGDIS.push(CHILDS[x]);
+                    for (var _x = 0; _x < +this.state.initialCount; _x += 1) {
+                        LGDIS.push(CHILDS[_x]);
                     }
-                    for (var i = +this.state.initialCount; i < CHILDS.length; i += 1) {
-                        SMDIS.push(CHILDS[i]);
+                    for (var _i2 = +this.state.initialCount; _i2 < CHILDS.length; _i2 += 1) {
+                        SMDIS.push(CHILDS[_i2]);
                     }
                     NAVBARLG = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: tempkeys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: ham_navbar_li },
+                            { key: tempkeys[i + CHILDS.length + 3], style: ham_navbar_li },
                             x
                         );
                     });
@@ -1206,7 +1363,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -1286,7 +1443,7 @@ var Navbar = function (_React$Component) {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: tempkeys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
@@ -1294,7 +1451,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -1347,6 +1504,8 @@ var Navbar = function (_React$Component) {
     }, {
         key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
+            var _this2 = this;
+
             var props = newProps;
             var state = this.state;
             var styledNavbar = void 0,
@@ -1424,14 +1583,14 @@ var Navbar = function (_React$Component) {
                     NAVBARLG = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: _this2.state.keys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: ham_navbar_li },
+                            { key: _this2.state.keys[i + CHILDS.length + 3], style: ham_navbar_li },
                             x
                         );
                     });
@@ -1443,7 +1602,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1522,7 +1681,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1605,7 +1764,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1684,7 +1843,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1766,7 +1925,7 @@ var Navbar = function (_React$Component) {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: _this2.state.keys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
@@ -1777,7 +1936,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1819,7 +1978,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1865,7 +2024,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -1907,7 +2066,7 @@ var Navbar = function (_React$Component) {
                                     use = (0, _navbarFunctions2.default)("1", props, state, self);
                                     styledNavbar = [_react2.default.createElement(
                                         _reactResponsive2.default,
-                                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                        { key: this.state.keys[0], minWidth: 1224 },
                                         _react2.default.createElement(
                                             "nav",
                                             {
@@ -2014,14 +2173,14 @@ var Navbar = function (_React$Component) {
                     NAVBARLG = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: _this2.state.keys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: ham_navbar_li },
+                            { key: _this2.state.keys[i + CHILDS.length + 3], style: ham_navbar_li },
                             x
                         );
                     });
@@ -2029,7 +2188,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             {
@@ -2073,7 +2232,7 @@ var Navbar = function (_React$Component) {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
                             "li",
-                            { key: i, style: navbar_navbar_li },
+                            { key: _this2.state.keys[i + 3], style: navbar_navbar_li },
                             x
                         );
                     });
@@ -2081,7 +2240,7 @@ var Navbar = function (_React$Component) {
                     use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                     styledNavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             {

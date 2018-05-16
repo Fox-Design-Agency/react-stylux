@@ -68,7 +68,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -161,7 +161,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -258,7 +258,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -366,7 +366,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -478,7 +478,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -634,7 +634,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -792,7 +792,7 @@ var Card = function (_React$Component) {
                     use = (0, _cardFunctions2.default)("1", props, state, self);
                     styledCard = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "div",
                             {
@@ -900,7 +900,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -993,7 +993,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1090,7 +1090,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1198,7 +1198,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1310,7 +1310,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1466,7 +1466,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1624,7 +1624,7 @@ var Card = function (_React$Component) {
                     use = (0, _cardFunctions2.default)("1", props, state, self);
                     styledCard = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "div",
                             {
@@ -1732,7 +1732,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1825,7 +1825,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -1922,7 +1922,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -2030,7 +2030,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("2", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -2142,7 +2142,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -2298,7 +2298,7 @@ var Card = function (_React$Component) {
                             use = (0, _cardFunctions2.default)("3", props, state, self, arguments[0]);
                             styledCard = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "div",
                                     {
@@ -2456,7 +2456,7 @@ var Card = function (_React$Component) {
                     use = (0, _cardFunctions2.default)("1", props, state, self, arguments[0]);
                     styledCard = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "div",
                             {

@@ -70,7 +70,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("1", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -119,7 +119,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("2", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -168,7 +168,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("3", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -217,7 +217,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("4", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -267,7 +267,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("5", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -318,7 +318,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -371,7 +371,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -422,7 +422,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -472,7 +472,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("4", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -534,7 +534,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("1", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -583,7 +583,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("2", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -632,7 +632,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("3", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -681,7 +681,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("4", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -731,7 +731,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("5", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -782,7 +782,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -835,7 +835,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -886,7 +886,7 @@ var Image = function (_React$Component) {
 
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,
@@ -936,7 +936,7 @@ var Image = function (_React$Component) {
                     use = (0, _imageFunction2.default)("4", this.state.size, props, state);
                     styledImage = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('img', {
                             style: use.imageStyles,
                             id: this.state.id,

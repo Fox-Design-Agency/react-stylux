@@ -74,7 +74,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -119,7 +119,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -168,7 +168,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -213,7 +213,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -262,7 +262,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -307,7 +307,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -356,7 +356,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -401,7 +401,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -450,7 +450,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -495,7 +495,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -542,7 +542,7 @@ var Button = function (_React$Component) {
                     use = (0, _buttonFunctions2.default)("1", props, state, self);
                     styledButton = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'button',
                             {
@@ -603,7 +603,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -648,7 +648,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -697,7 +697,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -742,7 +742,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -791,7 +791,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -836,7 +836,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -885,7 +885,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -930,7 +930,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -979,7 +979,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1024,7 +1024,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1071,7 +1071,7 @@ var Button = function (_React$Component) {
                     use = (0, _buttonFunctions2.default)("1", props, state, self);
                     styledButton = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'button',
                             {
@@ -1130,7 +1130,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1175,7 +1175,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1224,7 +1224,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1269,7 +1269,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("2", props, state, self, arguments[0], arguments[1], arguments[2]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1318,7 +1318,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1363,7 +1363,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("3", props, state, self, arguments[0]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1412,7 +1412,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1457,7 +1457,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("4", props, state, self, arguments[0], arguments[1]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1507,7 +1507,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1552,7 +1552,7 @@ var Button = function (_React$Component) {
                             use = (0, _buttonFunctions2.default)("5", props, state, self, arguments[0]);
                             styledButton = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'button',
                                     {
@@ -1599,7 +1599,7 @@ var Button = function (_React$Component) {
                     use = (0, _buttonFunctions2.default)("1", props, state, self, arguments[0], arguments[1]);
                     styledButton = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'button',
                             {

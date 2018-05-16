@@ -71,7 +71,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -128,7 +128,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -189,7 +189,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -246,7 +246,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -305,7 +305,7 @@ var PLQ = function (_React$Component) {
                     use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                     styledPullQuote = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'blockquote',
                             {
@@ -377,7 +377,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -434,7 +434,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("1", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -495,7 +495,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -552,7 +552,7 @@ var PLQ = function (_React$Component) {
                             use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                             styledPullQuote = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'blockquote',
                                     {
@@ -611,7 +611,7 @@ var PLQ = function (_React$Component) {
                     use = (0, _pullquoteFunctions2.default)("2", props, state, self);
                     styledPullQuote = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'blockquote',
                             {

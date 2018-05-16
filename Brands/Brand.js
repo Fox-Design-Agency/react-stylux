@@ -75,7 +75,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("1", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -144,7 +144,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("1", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -217,7 +217,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("2", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -271,7 +271,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("2", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -329,7 +329,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("3", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -383,7 +383,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("3", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -441,7 +441,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("4", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -495,7 +495,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("4", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -553,7 +553,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("5", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -586,7 +586,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("5", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -621,7 +621,7 @@ var Brand = function (_React$Component) {
                     use = (0, _brandFunctions2.default)("2", props, state, self);
                     styledBrand = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.brand,
@@ -690,7 +690,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("1", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -756,74 +756,7 @@ var Brand = function (_React$Component) {
                                 )
                             )];
                         default:
-                            use = (0, _brandFunctions2.default)("1", props, state, self);
-                            styledBrand = [_react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.brand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { style: use.brand_name },
-                                        CHILDS[1]
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.mdbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { style: use.mdbrand_name },
-                                        CHILDS[1]
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[2], maxWidth: 767 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.smbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { style: use.smbrand_name },
-                                        CHILDS[1]
-                                    )
-                                )
-                            )];
+
                     }
                     break;
                 case "2":
@@ -832,7 +765,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("2", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -883,59 +816,7 @@ var Brand = function (_React$Component) {
                                 )
                             )];
                         default:
-                            use = (0, _brandFunctions2.default)("2", props, state, self);
-                            styledBrand = [_react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.brand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '5',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.mdbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '5',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[2], maxWidth: 767 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.smbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '5',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            )];
+
                     }
                     break;
                 case "3":
@@ -944,7 +825,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("3", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -995,59 +876,7 @@ var Brand = function (_React$Component) {
                                 )
                             )];
                         default:
-                            use = (0, _brandFunctions2.default)("3", props, state, self);
-                            styledBrand = [_react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.brand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.mdbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[2], maxWidth: 767 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.smbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            )];
+
                     }
                     break;
                 case "4":
@@ -1056,7 +885,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("4", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -1107,59 +936,7 @@ var Brand = function (_React$Component) {
                                 )
                             )];
                         default:
-                            use = (0, _brandFunctions2.default)("4", props, state, self);
-                            styledBrand = [_react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.brand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.mdbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[2], maxWidth: 767 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.smbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    _react2.default.createElement(
-                                        _Image2.default,
-                                        {
-                                            box: '4',
-                                            size: this.state.size },
-                                        CHILDS[0],
-                                        'logo'
-                                    )
-                                )
-                            )];
+
                     }
                     break;
                 case "5":
@@ -1168,7 +945,7 @@ var Brand = function (_React$Component) {
                             use = (0, _brandFunctions2.default)("5", props, state, self);
                             styledBrand = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.brand,
@@ -1198,45 +975,14 @@ var Brand = function (_React$Component) {
                                 )
                             )];
                         default:
-                            use = (0, _brandFunctions2.default)("5", props, state, self);
-                            styledBrand = [_react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.brand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    CHILDS
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.mdbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    CHILDS
-                                )
-                            ), _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { key: this.state.keys[2], maxWidth: 767 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { style: use.smbrand,
-                                        id: this.state.id,
-                                        className: this.state.className },
-                                    CHILDS
-                                )
-                            )];
+
                     }
                     break;
                 default:
                     use = (0, _brandFunctions2.default)("2", props, state, self);
                     styledBrand = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.brand,

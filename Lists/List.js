@@ -82,7 +82,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -119,7 +119,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -169,7 +169,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
@@ -215,7 +215,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
@@ -256,7 +256,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -293,7 +293,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -334,7 +334,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -371,7 +371,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -410,7 +410,7 @@ var List = function (_React$Component) {
                     });
                     styledList = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -471,7 +471,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -508,7 +508,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -558,7 +558,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
@@ -604,7 +604,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: "bigList " + this.state.className },
@@ -645,7 +645,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -682,7 +682,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ol",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -723,7 +723,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -760,7 +760,7 @@ var List = function (_React$Component) {
                             });
                             styledList = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "ul",
                                     { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -799,7 +799,7 @@ var List = function (_React$Component) {
                     });
                     styledList = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },

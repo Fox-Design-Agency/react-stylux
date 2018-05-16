@@ -142,7 +142,7 @@ var Subnavbar = function (_React$Component) {
                             use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                             styledSubnavbar = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "nav",
                                     { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
@@ -219,7 +219,7 @@ var Subnavbar = function (_React$Component) {
                             use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                             styledSubnavbar = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "nav",
                                     { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
@@ -337,7 +337,7 @@ var Subnavbar = function (_React$Component) {
                     use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                     styledSubnavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
@@ -436,7 +436,7 @@ var Subnavbar = function (_React$Component) {
                             use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                             styledSubnavbar = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "nav",
                                     { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
@@ -513,7 +513,7 @@ var Subnavbar = function (_React$Component) {
                             use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                             styledSubnavbar = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "nav",
                                     { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
@@ -592,7 +592,7 @@ var Subnavbar = function (_React$Component) {
                     use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                     styledSubnavbar = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "nav",
                             { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },

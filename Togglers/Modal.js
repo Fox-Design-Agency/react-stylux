@@ -74,7 +74,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -143,7 +143,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -216,7 +216,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -297,7 +297,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -383,7 +383,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -509,7 +509,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -638,7 +638,7 @@ var Modal = function (_React$Component) {
                     use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                     styledModal = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             null,
@@ -736,7 +736,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -805,7 +805,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -878,7 +878,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -959,7 +959,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -1045,7 +1045,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -1171,7 +1171,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, this.state.show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -1300,7 +1300,7 @@ var Modal = function (_React$Component) {
                     use = (0, _modalFunctions2.default)("2", props, state, self, this.state.show);
                     styledModal = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             null,
@@ -1397,7 +1397,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -1466,7 +1466,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("1", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { id: this.state.id, className: this.state.className },
@@ -1539,7 +1539,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -1620,7 +1620,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("2", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -1706,7 +1706,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -1832,7 +1832,7 @@ var Modal = function (_React$Component) {
                             use = (0, _modalFunctions2.default)("3", props, state, self, show);
                             styledModal = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 ' ',
                                 _react2.default.createElement(
                                     'div',
@@ -1961,7 +1961,7 @@ var Modal = function (_React$Component) {
                     use = (0, _modalFunctions2.default)("2", props, state, self, show);
                     styledModal = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             null,

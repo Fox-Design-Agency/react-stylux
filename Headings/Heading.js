@@ -97,7 +97,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -143,7 +143,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -189,7 +189,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -235,7 +235,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -282,7 +282,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -332,7 +332,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -378,7 +378,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 " ",
                                 _react2.default.createElement(
                                     "h2",
@@ -427,7 +427,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -473,7 +473,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -520,7 +520,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -570,7 +570,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -616,7 +616,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -663,7 +663,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -709,7 +709,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -756,7 +756,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -806,7 +806,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -852,7 +852,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -898,7 +898,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -945,7 +945,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -992,7 +992,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1041,7 +1041,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1087,7 +1087,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1133,7 +1133,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1180,7 +1180,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1226,7 +1226,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1276,7 +1276,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1322,7 +1322,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1368,7 +1368,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1415,7 +1415,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1462,7 +1462,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1509,7 +1509,7 @@ var H = function (_React$Component) {
                     use = (0, _heading3Functions2.default)("2", props, state, self);
                     styledHeading = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "h3",
                             { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1581,7 +1581,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1627,7 +1627,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1673,7 +1673,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1719,7 +1719,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1766,7 +1766,7 @@ var H = function (_React$Component) {
                             use = (0, _heading1Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h1",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1816,7 +1816,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1862,7 +1862,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 " ",
                                 _react2.default.createElement(
                                     "h2",
@@ -1911,7 +1911,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -1957,7 +1957,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2004,7 +2004,7 @@ var H = function (_React$Component) {
                             use = (0, _heading2Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h2",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2054,7 +2054,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2100,7 +2100,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2147,7 +2147,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2193,7 +2193,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2240,7 +2240,7 @@ var H = function (_React$Component) {
                             use = (0, _heading3Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h3",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2290,7 +2290,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2336,7 +2336,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2382,7 +2382,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2429,7 +2429,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("4", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2476,7 +2476,7 @@ var H = function (_React$Component) {
                             use = (0, _heading4Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h4",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2525,7 +2525,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2571,7 +2571,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2617,7 +2617,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2664,7 +2664,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2710,7 +2710,7 @@ var H = function (_React$Component) {
                             use = (0, _heading5Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h5",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2760,7 +2760,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("1", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2806,7 +2806,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("2", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2852,7 +2852,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2899,7 +2899,7 @@ var H = function (_React$Component) {
 
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2946,7 +2946,7 @@ var H = function (_React$Component) {
                             use = (0, _heading6Functions2.default)("3", props, state, self);
                             styledHeading = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     "h6",
                                     { style: use.heading, id: this.state.id, className: this.state.className,
@@ -2993,7 +2993,7 @@ var H = function (_React$Component) {
                     use = (0, _heading3Functions2.default)("2", props, state, self);
                     styledHeading = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             "h3",
                             { style: use.heading, id: this.state.id, className: this.state.className,

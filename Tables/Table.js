@@ -155,7 +155,7 @@ var Table = function (_React$Component) {
                             use = (0, _tableFunctions2.default)("1", props, state, self);
                             styledTable = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.tableres, id: this.state.id, className: this.state.className },
@@ -221,7 +221,7 @@ var Table = function (_React$Component) {
                             use = (0, _tableFunctions2.default)("1", props, state, self);
                             styledTable = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.tableres, id: this.state.id, className: this.state.className },
@@ -289,7 +289,7 @@ var Table = function (_React$Component) {
                     use = (0, _tableFunctions2.default)("1", props, state, self);
                     styledTable = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.tableres, id: this.state.id, className: this.state.className },
@@ -447,7 +447,7 @@ var Table = function (_React$Component) {
                             use = (0, _tableFunctions2.default)("1", props, state, self);
                             styledTable = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.tableres, id: this.state.id, className: this.state.className },
@@ -513,7 +513,7 @@ var Table = function (_React$Component) {
                             use = (0, _tableFunctions2.default)("1", props, state, self);
                             styledTable = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.tableres, id: this.state.id, className: this.state.className },
@@ -581,7 +581,7 @@ var Table = function (_React$Component) {
                     use = (0, _tableFunctions2.default)("1", props, state, self);
                     styledTable = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.tableres, id: this.state.id, className: this.state.className },

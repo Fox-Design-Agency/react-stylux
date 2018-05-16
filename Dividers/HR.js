@@ -68,7 +68,7 @@ var HR = function (_React$Component) {
                             use = (0, _hrFunctions2.default)("1", props, state, self);
                             styledHR = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
@@ -83,7 +83,7 @@ var HR = function (_React$Component) {
                             use = (0, _hrFunctions2.default)("1", props, state, self);
                             styledHR = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
@@ -100,7 +100,7 @@ var HR = function (_React$Component) {
                     use = (0, _hrFunctions2.default)("1", props, state, self);
                     styledHR = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
@@ -113,7 +113,7 @@ var HR = function (_React$Component) {
                     )];
             }
 
-            this.setState({ styledHR: styledHR, keys: tempkeys });
+            this.setState({ styledHR: styledHR });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -131,7 +131,7 @@ var HR = function (_React$Component) {
                             use = (0, _hrFunctions2.default)("1", props, state, self);
                             styledHR = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
@@ -146,7 +146,7 @@ var HR = function (_React$Component) {
                             use = (0, _hrFunctions2.default)("1", props, state, self);
                             styledHR = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
@@ -163,7 +163,7 @@ var HR = function (_React$Component) {
                     use = (0, _hrFunctions2.default)("1", props, state, self);
                     styledHR = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement('hr', { style: use.STYLES, id: this.state.id, className: this.state.className })
                     ), _react2.default.createElement(
                         _reactResponsive2.default,

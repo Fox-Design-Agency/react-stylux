@@ -75,7 +75,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self, show);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -123,7 +123,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self, show);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -169,7 +169,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self, show);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -217,7 +217,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self, show);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -273,7 +273,7 @@ var Popup = function (_React$Component) {
                     use = (0, _popupFunctions2.default)("1", props, state, self, show);
                     styledPopup = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.POPUPCLICK, onClick: this.toggle },
@@ -335,7 +335,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -377,7 +377,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -424,7 +424,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -472,7 +472,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                { key: tempkeys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -522,7 +522,7 @@ var Popup = function (_React$Component) {
                     use = (0, _popupFunctions2.default)("1", props, state, self);
                     styledPopup = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        { key: tempkeys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.POPUPCLICK, onClick: this.toggle },
@@ -582,7 +582,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -624,7 +624,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("1", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK, onClick: this.toggle },
@@ -671,7 +671,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -719,7 +719,7 @@ var Popup = function (_React$Component) {
                             use = (0, _popupFunctions2.default)("2", props, state, self);
                             styledPopup = [_react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                { key: this.state.keys[0], minWidth: 1224 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.POPUPCLICK,
@@ -769,7 +769,7 @@ var Popup = function (_React$Component) {
                     use = (0, _popupFunctions2.default)("1", props, state, self);
                     styledPopup = [_react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        { key: this.state.keys[0], minWidth: 1224 },
                         _react2.default.createElement(
                             'div',
                             { style: use.POPUPCLICK, onClick: this.toggle },
