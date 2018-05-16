@@ -71,6 +71,7 @@ var Subnavbar = function (_React$Component) {
             zIndex: props.zIndex || '200',
             styledSubnavbar: '',
             box: props.box,
+            vars: props.vars,
             keys: ''
 
         };
@@ -86,53 +87,175 @@ var Subnavbar = function (_React$Component) {
             var state = this.state;
             var styledSubnavbar = void 0,
                 use = void 0,
-                NAVBAR = '';
+                NAVBAR = void 0,
+                subnavbar_navbar_li = void 0,
+                smsubnavbar_navbar_li = void 0,
+                mdsubnavbar_navbar_li = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempKeys = [];
-            for (var i = 0; i < CHILDS.length; i++) {
-                tempKeys.push(tempKeys[i] = Math.random());
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
-                    subnavbar_navbar_li: {
-                        display: 'flex',
-                        flex: "1 0 auto",
-                        fontSize: this.state.fontSize,
-                        fontWeight: this.state.fontWeight,
-                        justifyContent: 'center',
-                        margin: this.state.itemSpaceing,
-                        background: this.state.itemBackground,
-                        fontVariant: this.state.fontVariant
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.mddis
-                        }
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            _subnavbar_navbar_li = {
+                                display: 'flex',
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            _smsubnavbar_navbar_li = {
+                                display: this.state.smdis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+
+                            };
+                            _mdsubnavbar_navbar_li = {
+                                display: this.state.mddis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            NAVBAR = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: _subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
+                                    x
+                                );
+                            });
+                            use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                            styledSubnavbar = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            )];
+                        default:
+                            _subnavbar_navbar_li = {
+                                display: 'flex',
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            _smsubnavbar_navbar_li = {
+                                display: this.state.smdis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+
+                            };
+                            _mdsubnavbar_navbar_li = {
+                                display: this.state.mddis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            NAVBAR = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: _subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
+                                    x
+                                );
+                            });
+                            use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                            styledSubnavbar = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            )];
                     }
-                });
-                NAVBAR = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
-                        x
-                    );
-                });
-                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
-                styledSubnavbar = [_react2.default.createElement(
-                    "nav",
-                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
-                    _react2.default.createElement(
-                        "ul",
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
-                        NAVBAR
-                    )
-                )];
+                    break;
 
                 // } else if (this.state.box === "2") {
                 //     const SUBNAVBAR_NAVBAR_LI = {
@@ -171,9 +294,9 @@ var Subnavbar = function (_React$Component) {
                 //     </nav>
                 //     ]
 
-            } else {
-                var _SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
-                    subnavbar_navbar_li: {
+
+                default:
+                    var _subnavbar_navbar_li = {
                         display: 'flex',
                         flex: "1 0 auto",
                         fontSize: this.state.fontSize,
@@ -182,38 +305,76 @@ var Subnavbar = function (_React$Component) {
                         margin: this.state.itemSpaceing,
                         background: this.state.itemBackground,
                         fontVariant: this.state.fontVariant
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.mddis
-                        }
-                    }
-                });
-                NAVBAR = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: _SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
-                        x
-                    );
-                });
-                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
-                styledSubnavbar = [_react2.default.createElement(
-                    "nav",
-                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
-                    _react2.default.createElement(
-                        "ul",
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
-                        NAVBAR
-                    )
-                )];
+                    };
+                    var _smsubnavbar_navbar_li = {
+                        display: this.state.smdis,
+                        flex: "1 0 auto",
+                        fontSize: this.state.fontSize,
+                        fontWeight: this.state.fontWeight,
+                        justifyContent: 'center',
+                        margin: this.state.itemSpaceing,
+                        background: this.state.itemBackground,
+                        fontVariant: this.state.fontVariant
+
+                    };
+                    var _mdsubnavbar_navbar_li = {
+                        display: this.state.mddis,
+                        flex: "1 0 auto",
+                        fontSize: this.state.fontSize,
+                        fontWeight: this.state.fontWeight,
+                        justifyContent: 'center',
+                        margin: this.state.itemSpaceing,
+                        background: this.state.itemBackground,
+                        fontVariant: this.state.fontVariant
+                    };
+                    NAVBAR = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: i, style: _subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
+                            x
+                        );
+                    });
+                    use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                    styledSubnavbar = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    )];
             }
 
-            this.setState({ childs: NAVBAR, keys: tempKeys, styledSubnavbar: styledSubnavbar });
+            this.setState({ childs: NAVBAR, keys: tempkeys, styledSubnavbar: styledSubnavbar });
         }
     }, {
         key: "componentWillReceiveProps",
@@ -224,12 +385,173 @@ var Subnavbar = function (_React$Component) {
             var state = this.state;
             var styledSubnavbar = void 0,
                 use = void 0,
-                NAVBAR = '';
+                NAVBAR = void 0,
+                subnavbar_navbar_li = void 0,
+                smsubnavbar_navbar_li = void 0,
+                mdsubnavbar_navbar_li = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
-                    subnavbar_navbar_li: {
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            subnavbar_navbar_li = {
+                                display: 'flex',
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            smsubnavbar_navbar_li = {
+                                display: this.state.smdis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+
+                            };
+                            mdsubnavbar_navbar_li = {
+                                display: this.state.mddis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            NAVBAR = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
+                                    x
+                                );
+                            });
+                            use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                            styledSubnavbar = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            )];
+                        default:
+                            subnavbar_navbar_li = {
+                                display: 'flex',
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            smsubnavbar_navbar_li = {
+                                display: this.state.smdis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+
+                            };
+                            mdsubnavbar_navbar_li = {
+                                display: this.state.mddis,
+                                flex: "1 0 auto",
+                                fontSize: this.state.fontSize,
+                                fontWeight: this.state.fontWeight,
+                                justifyContent: 'center',
+                                margin: this.state.itemSpaceing,
+                                background: this.state.itemBackground,
+                                fontVariant: this.state.fontVariant
+                            };
+                            NAVBAR = CHILDS.map(function (x, i) {
+                                return _react2.default.createElement(
+                                    "li",
+                                    { key: i, style: subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
+                                    x
+                                );
+                            });
+                            use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                            styledSubnavbar = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    "nav",
+                                    { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                        NAVBAR
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    subnavbar_navbar_li = {
                         display: 'flex',
                         flex: "1 0 auto",
                         fontSize: this.state.fontSize,
@@ -238,39 +560,9 @@ var Subnavbar = function (_React$Component) {
                         margin: this.state.itemSpaceing,
                         background: this.state.itemBackground,
                         fontVariant: this.state.fontVariant
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.mddis
-                        }
-                    }
-                });
-                NAVBAR = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
-                        x
-                    );
-                });
-                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
-                styledSubnavbar = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
-                    _react2.default.createElement(
-                        "ul",
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
-                        NAVBAR
-                    )
-                )];
-            } else {
-                var _SUBNAVBAR_NAVBAR_LI2 = StyleSheet.create({
-                    subnavbar_navbar_li: {
-                        display: 'flex',
+                    };
+                    smsubnavbar_navbar_li = {
+                        display: this.state.smdis,
                         flex: "1 0 auto",
                         fontSize: this.state.fontSize,
                         fontWeight: this.state.fontWeight,
@@ -278,35 +570,64 @@ var Subnavbar = function (_React$Component) {
                         margin: this.state.itemSpaceing,
                         background: this.state.itemBackground,
                         fontVariant: this.state.fontVariant
-                    },
-                    '@media screen and (max-width: 768px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.smdis
-                        }
-                    },
-                    '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                        subnavbar_navbar_li: {
-                            display: this.state.mddis
-                        }
-                    }
-                });
-                NAVBAR = CHILDS.map(function (x, i) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: i, style: _SUBNAVBAR_NAVBAR_LI2.subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
-                        x
-                    );
-                });
-                use = (0, _subnavbarFunctions2.default)("1", props, state, self);
-                styledSubnavbar = [_react2.default.createElement(
-                    "nav",
-                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
-                    _react2.default.createElement(
-                        "ul",
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
-                        NAVBAR
-                    )
-                )];
+
+                    };
+                    mdsubnavbar_navbar_li = {
+                        display: this.state.mddis,
+                        flex: "1 0 auto",
+                        fontSize: this.state.fontSize,
+                        fontWeight: this.state.fontWeight,
+                        justifyContent: 'center',
+                        margin: this.state.itemSpaceing,
+                        background: this.state.itemBackground,
+                        fontVariant: this.state.fontVariant
+                    };
+                    NAVBAR = CHILDS.map(function (x, i) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: i, style: subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
+                            x
+                        );
+                    });
+                    use = (0, _subnavbarFunctions2.default)("1", props, state, self);
+                    styledSubnavbar = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: "(min-width: 1224px)" },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.mdsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.mdsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            "nav",
+                            { style: use.smsubnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
+                            _react2.default.createElement(
+                                "ul",
+                                { style: use.smsubnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
+                                NAVBAR
+                            )
+                        )
+                    )];
+
             }
             this.setState({ childs: NAVBAR, styledSubnavbar: styledSubnavbar });
         }
