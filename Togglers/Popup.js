@@ -44,7 +44,8 @@ var Popup = function (_React$Component) {
             keys: '',
             styledPopup: '',
             show: false,
-            box: props.box
+            box: props.box,
+            vars: props.vars
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
@@ -61,55 +62,256 @@ var Popup = function (_React$Component) {
                 use = '';
             var self = this;
             var show = !this.state.show;
-            if (this.state.box === "1") {
-                if (!this.state.show) {
-                    setTimeout(function () {
-                        return _this2.toggle();
-                    }, 3000);
-                }
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            if (!this.state.show) {
+                                setTimeout(function () {
+                                    return _this2.toggle();
+                                }, 3000);
+                            }
 
-                use = (0, _popupFunctions2.default)("1", props, state, self, show);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _popupFunctions2.default)("2", props, state, self, show);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK,
-                        onMouseEnter: this.toggle,
-                        onMouseLeave: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
-            } else {
-                if (!this.state.show) {
-                    setTimeout(function () {
-                        return _this2.toggle();
-                    }, 3000);
-                }
-                use = (0, _popupFunctions2.default)("1", props, state, self, show);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
+                            use = (0, _popupFunctions2.default)("1", props, state, self, show);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            if (!this.state.show) {
+                                setTimeout(function () {
+                                    return _this2.toggle();
+                                }, 3000);
+                            }
+
+                            use = (0, _popupFunctions2.default)("1", props, state, self, show);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _popupFunctions2.default)("2", props, state, self, show);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _popupFunctions2.default)("2", props, state, self, show);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    this.state.childs[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        this.state.childs[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    if (!this.state.show) {
+                        setTimeout(function () {
+                            return _this2.toggle();
+                        }, 3000);
+                    }
+
+                    use = (0, _popupFunctions2.default)("1", props, state, self, show);
+                    styledPopup = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            this.state.childs[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                this.state.childs[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            this.state.childs[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                this.state.childs[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            this.state.childs[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                this.state.childs[1]
+                            )
+                        )
+                    )];
+
             }
             return this.setState({ visibility: 'visible', styledPopup: styledPopup, show: !this.state.show });
         }
@@ -122,48 +324,246 @@ var Popup = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempKeys = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _popupFunctions2.default)("1", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys, style: use.POPUPCLICK, onClick: this.toggle },
-                    CHILDS[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        CHILDS[0]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _popupFunctions2.default)("2", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys, style: use.POPUPCLICK,
-                        onMouseEnter: this.toggle,
-                        onMouseLeave: this.toggle },
-                    CHILDS[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        CHILDS[0]
-                    )
-                )];
-            } else {
-                use = (0, _popupFunctions2.default)("1", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys, style: use.POPUPCLICK, onClick: this.toggle },
-                    CHILDS[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        CHILDS[0]
-                    )
-                )];
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
+            }
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _popupFunctions2.default)("1", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _popupFunctions2.default)("1", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _popupFunctions2.default)("2", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _popupFunctions2.default)("2", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _popupFunctions2.default)("1", props, state, self);
+                    styledPopup = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+
             }
 
-            this.setState({ childs: CHILDS, keys: tempKeys, styledPopup: styledPopup });
+            this.setState({ childs: CHILDS, keys: tempkeys, styledPopup: styledPopup });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -175,44 +575,239 @@ var Popup = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
 
-            if (this.state.box === "1") {
-                use = (0, _popupFunctions2.default)("1", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _popupFunctions2.default)("2", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK,
-                        onMouseEnter: this.toggle,
-                        onMouseLeave: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
-            } else {
-                use = (0, _popupFunctions2.default)("1", props, state, self);
-                styledPopup = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys, style: use.POPUPCLICK, onClick: this.toggle },
-                    this.state.childs[1],
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.POPUPSTYLE },
-                        this.state.childs[0]
-                    )
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _popupFunctions2.default)("1", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _popupFunctions2.default)("1", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK, onClick: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _popupFunctions2.default)("2", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _popupFunctions2.default)("2", props, state, self);
+                            styledPopup = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.POPUPCLICK,
+                                        onMouseEnter: this.toggle,
+                                        onMouseLeave: this.toggle },
+                                    CHILDS[0],
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.POPUPSTYLE },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _popupFunctions2.default)("1", props, state, self);
+                    styledPopup = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.POPUPCLICK, onClick: this.toggle },
+                            CHILDS[0],
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.POPUPSTYLE },
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+
             }
 
             return this.setState({ childs: CHILDS, styledPopup: styledPopup });
