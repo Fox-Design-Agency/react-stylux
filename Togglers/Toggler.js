@@ -46,6 +46,7 @@ var Toggler = function (_React$Component) {
             toggleClassName: props.toggleClassName,
             childs: [],
             box: props.box,
+            vars: props.vars,
             keys: '',
             styledToggler: '',
             first: ''
@@ -62,153 +63,613 @@ var Toggler = function (_React$Component) {
             var props = this.props;
             var state = this.state;
             var styledToggler = void 0,
-                use = '';
+                use = void 0,
+                labels = void 0,
+                text = void 0,
+                CHECKS = void 0,
+                LABELS = void 0,
+                TEXT = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var first = '';
-            var tempKeys = [];
-            for (var _i = 0; _i <= CHILDS.length; _i++) {
-                tempKeys.push(tempKeys[_i] = Math.random());
+            var tempkeys = [];
+            for (var _i = 0; _i <= CHILDS.length + 3; _i++) {
+                tempkeys.push(tempkeys[_i] = Math.random());
             }
-            if (this.state.box === "1") {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("1", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        CHILDS
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("2", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        CHILDS
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                var labels = [];
-                var text = [];
-                for (var i = 0; i < CHILDS.length; i += 1) {
-                    if ((i + 1) % 2 === 0) {
-                        text.push(CHILDS[i]);
-                    } else {
-                        labels.push(CHILDS[i]);
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("1", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
+                        default:
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("1", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
                     }
-                }
-                use = (0, _togglerFunctions2.default)("3", props, state, self);
-                var CHECKS = labels.map(function (x, i, arr) {
-                    return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
-                });
-                var LABELS = labels.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'label',
-                        { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
-                        x
-                    );
-                });
-                var TEXT = text.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: i, id: 'panel' + (i + 1), className: _this2.state.panelClassName },
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.TEXTBOX },
-                            x
-                        )
-                    );
-                });
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
-                    CHECKS,
-                    _react2.default.createElement(
-                        'nav',
-                        { id: this.state.toggleid, className: this.state.toggleClassName },
-                        LABELS
-                    ),
-                    TEXT
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _togglerFunctions2.default)("4", props, state, self);
-                var _labels = [];
-                var _text = [];
-                for (var i = 0; i < CHILDS.length; i += 1) {
-                    if ((i + 1) % 2 === 0) {
-                        _text.push(CHILDS[i]);
-                    } else {
-                        _labels.push(CHILDS[i]);
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("2", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
+                        default:
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("2", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
                     }
-                }
-                var _CHECKS = _labels.map(function (x, i, arr) {
-                    return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
-                });
-                var _LABELS = _labels.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'label',
-                        { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
-                        x
-                    );
-                });
-                var _TEXT = _text.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: i, id: 'Vpanel' + (i + 1), className: _this2.state.panelClassName },
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            use = (0, _togglerFunctions2.default)("3", props, state, self);
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'panel' + (i + 1), className: _this2.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                        default:
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            use = (0, _togglerFunctions2.default)("3", props, state, self);
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'panel' + (i + 1), className: _this2.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _togglerFunctions2.default)("4", props, state, self);
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'Vpanel' + (i + 1), className: _this2.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                        default:
+                            use = (0, _togglerFunctions2.default)("4", props, state, self);
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'Vpanel' + (i + 1), className: _this2.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    first = CHILDS.shift();
+                    use = (0, _togglerFunctions2.default)("1", props, state, self);
+                    styledToggler = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
-                            'p',
-                            { style: use.TEXTBOX },
-                            x
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
                         )
-                    );
-                });
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
-                    _CHECKS,
-                    _react2.default.createElement(
-                        'nav',
-                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
-                        _LABELS
-                    ),
-                    _TEXT
-                )];
-            } else {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("1", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        CHILDS
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
+                        )
+                    )];
             }
-            this.setState({ first: first, childs: CHILDS, keys: tempKeys, styledToggler: styledToggler });
+            this.setState({ first: first, childs: CHILDS, keys: tempkeys, styledToggler: styledToggler });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -218,147 +679,607 @@ var Toggler = function (_React$Component) {
             var props = newProps;
             var state = this.state;
             var styledToggler = void 0,
-                use = '';
+                use = void 0,
+                labels = void 0,
+                text = void 0,
+                CHECKS = void 0,
+                LABELS = void 0,
+                TEXT = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             var first = '';
-            if (this.state.box === "1") {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("1", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        CHILDS
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("2", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        CHILDS
-                    )
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _togglerFunctions2.default)("3", props, state, self);
-                var labels = [];
-                var text = [];
-                for (var i = 0; i < CHILDS.length; i += 1) {
-                    if ((i + 1) % 2 === 0) {
-                        text.push(CHILDS[i]);
-                    } else {
-                        labels.push(CHILDS[i]);
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("1", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
+                        default:
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("1", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
                     }
-                }
-                var CHECKS = labels.map(function (x, i, arr) {
-                    return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
-                });
-                var LABELS = labels.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'label',
-                        { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
-                        x
-                    );
-                });
-                var TEXT = text.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: i, id: 'panel' + (i + 1), className: _this3.state.panelClassName },
-                        _react2.default.createElement(
-                            'p',
-                            { style: use.TEXTBOX },
-                            x
-                        )
-                    );
-                });
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
-                    CHECKS,
-                    _react2.default.createElement(
-                        'nav',
-                        { id: this.state.toggleid, className: this.state.toggleClassName },
-                        LABELS
-                    ),
-                    TEXT
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _togglerFunctions2.default)("4", props, state, self);
-                var _labels2 = [];
-                var _text2 = [];
-                for (var i = 0; i < CHILDS.length; i += 1) {
-                    if ((i + 1) % 2 === 0) {
-                        _text2.push(CHILDS[i]);
-                    } else {
-                        _labels2.push(CHILDS[i]);
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("2", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
+                        default:
+                            first = CHILDS.shift();
+                            use = (0, _togglerFunctions2.default)("2", props, state, self);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        CHILDS
+                                    )
+                                )
+                            )];
                     }
-                }
-                var _CHECKS2 = _labels2.map(function (x, i, arr) {
-                    return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
-                });
-                var _LABELS2 = _labels2.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'label',
-                        { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
-                        x
-                    );
-                });
-                var _TEXT2 = _text2.map(function (x, i, arr) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: i, id: 'Vpanel' + (i + 1), className: _this3.state.panelClassName },
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            use = (0, _togglerFunctions2.default)("3", props, state, self);
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'panel' + (i + 1), className: _this3.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                        default:
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            use = (0, _togglerFunctions2.default)("3", props, state, self);
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'tab' + (i + 1), type: 'radio', name: 'panel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'tab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'panel' + (i + 1), className: _this3.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'panels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _togglerFunctions2.default)("4", props, state, self);
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'Vpanel' + (i + 1), className: _this3.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                        default:
+                            use = (0, _togglerFunctions2.default)("4", props, state, self);
+                            labels = [];
+                            text = [];
+                            for (var i = 0; i < CHILDS.length; i += 1) {
+                                if ((i + 1) % 2 === 0) {
+                                    text.push(CHILDS[i]);
+                                } else {
+                                    labels.push(CHILDS[i]);
+                                }
+                            }
+                            CHECKS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement('input', { key: i, id: 'Vtab' + (i + 1), type: 'radio', name: 'Vpanel_select', defaultChecked: true, style: use.CHECKSSTYLE });
+                            });
+                            LABELS = labels.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'label',
+                                    { key: i, style: use.LABELSSTYLES, htmlFor: 'Vtab' + (i + 1) },
+                                    x
+                                );
+                            });
+                            TEXT = text.map(function (x, i, arr) {
+                                return _react2.default.createElement(
+                                    'div',
+                                    { key: i, id: 'Vpanel' + (i + 1), className: _this3.state.panelClassName },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.TEXTBOX },
+                                        x
+                                    )
+                                );
+                            });
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
+                                    CHECKS,
+                                    _react2.default.createElement(
+                                        'nav',
+                                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        LABELS
+                                    ),
+                                    TEXT
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    first = CHILDS.shift();
+                    use = (0, _togglerFunctions2.default)("1", props, state, self);
+                    styledToggler = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
-                            'p',
-                            { style: use.TEXTBOX },
-                            x
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
                         )
-                    );
-                });
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], style: use.PANELS, id: this.state.mainid, className: 'vpanels ' + this.state.mainClassName },
-                    _CHECKS2,
-                    _react2.default.createElement(
-                        'nav',
-                        { style: use.LABELTITLES, id: this.state.toggleid, className: this.state.toggleClassName },
-                        _LABELS2
-                    ),
-                    _TEXT2
-                )];
-            } else {
-                first = CHILDS.shift();
-                use = (0, _togglerFunctions2.default)("1", props, state, self);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
-                        CHILDS
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, onClick: this.toggle },
+                                first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX },
+                                CHILDS
+                            )
+                        )
+                    )];
             }
             this.setState({ first: first, childs: CHILDS, styledToggler: styledToggler });
         }
@@ -371,54 +1292,285 @@ var Toggler = function (_React$Component) {
                 use = '';
             var self = this;
             var show = !this.state.show;
-            if (this.state.box === "1") {
-                use = (0, _togglerFunctions2.default)("1", props, state, self, show);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
-                        this.state.first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
-                        this.state.childs
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _togglerFunctions2.default)("2", props, state, self, show);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        this.state.first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        this.state.childs
-                    )
-                )];
-            } else {
-                use = (0, _togglerFunctions2.default)("1", props, state, self, show);
-                styledToggler = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.CLICKBOX, onClick: this.toggle },
-                        this.state.first
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { style: use.TOGGLERBOX },
-                        this.state.childs
-                    )
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _togglerFunctions2.default)("1", props, state, self, show);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _togglerFunctions2.default)("1", props, state, self, show);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                        this.state.childs
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _togglerFunctions2.default)("2", props, state, self, show);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _togglerFunctions2.default)("2", props, state, self, show);
+                            styledToggler = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { key: this.state.keys[0], id: this.state.id, style: use.FULLELEMENT, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.CLICKBOX, onClick: this.toggle },
+                                        this.state.first
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { style: use.TOGGLERBOX },
+                                        this.state.childs
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _togglerFunctions2.default)("1", props, state, self, show);
+                    styledToggler = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'div',
+                            { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                this.state.first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                this.state.childs
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'div',
+                            { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                this.state.first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                this.state.childs
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { key: this.state.keys[0], id: this.state.mainid, className: this.state.mainClassName },
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },
+                                this.state.first
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: use.TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
+                                this.state.childs
+                            )
+                        )
+                    )];
             }
             this.setState({
                 show: show,
