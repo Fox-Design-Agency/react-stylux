@@ -44,6 +44,7 @@ var PLQ = function (_React$Component) {
             className: props.className,
             childs: '',
             box: props.box,
+            vars: props.vars,
             styledPullQuote: '',
             keys: ''
         };
@@ -59,57 +60,306 @@ var PLQ = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _pullquoteFunctions2.default)("1", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _pullquoteFunctions2.default)("2", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote2-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
-            } else {
-                use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: tempkey, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            this.setState({ childs: CHILDS, styledPullQuote: styledPullQuote, keys: tempkey });
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _pullquoteFunctions2.default)("1", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _pullquoteFunctions2.default)("1", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                    styledPullQuote = [_react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.text, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.cite },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.mdtext, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.mdcite },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.smtext, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.smcite },
+                                CHILDS[1]
+                            )
+                        )
+                    )];
+            }
+            this.setState({ childs: CHILDS, styledPullQuote: styledPullQuote, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -120,54 +370,300 @@ var PLQ = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                use = (0, _pullquoteFunctions2.default)("1", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _pullquoteFunctions2.default)("2", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote2-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
-            } else {
-                use = (0, _pullquoteFunctions2.default)("custom", props, state, self);
-                styledPullQuote = [_react2.default.createElement(
-                    'blockquote',
-                    { key: this.state.keys, style: use.PULLQUOTESTYLES.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
-                    _react2.default.createElement(
-                        'p',
-                        { style: use.PULLQUOTESTYLES.text, className: 'pullQuote1-text' },
-                        CHILDS[0]
-                    ),
-                    _react2.default.createElement(
-                        'cite',
-                        { style: use.PULLQUOTESTYLES.cite },
-                        CHILDS[1]
-                    )
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _pullquoteFunctions2.default)("1", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _pullquoteFunctions2.default)("1", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote1 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote1-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                            styledPullQuote = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.text, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.cite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.mdtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.mdcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'blockquote',
+                                    {
+                                        style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { style: use.smtext, className: 'pullQuote2-text' },
+                                        CHILDS[0]
+                                    ),
+                                    _react2.default.createElement(
+                                        'cite',
+                                        { style: use.smcite },
+                                        CHILDS[1]
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _pullquoteFunctions2.default)("2", props, state, self);
+                    styledPullQuote = [_react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.pullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.text, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.cite },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.mdpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.mdtext, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.mdcite },
+                                CHILDS[1]
+                            )
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'blockquote',
+                            {
+                                style: use.smpullquotestyles, id: this.state.id, className: 'pullQuote2 ' + this.state.className },
+                            _react2.default.createElement(
+                                'p',
+                                { style: use.smtext, className: 'pullQuote2-text' },
+                                CHILDS[0]
+                            ),
+                            _react2.default.createElement(
+                                'cite',
+                                { style: use.smcite },
+                                CHILDS[1]
+                            )
+                        )
+                    )];
             }
             this.setState({ childs: CHILDS, styledPullQuote: styledPullQuote });
         }

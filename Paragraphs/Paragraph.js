@@ -44,6 +44,7 @@ var P = function (_React$Component) {
             childs: '',
             paragraphStyle: '',
             box: props.box,
+            vars: props.vars,
             keys: ''
         };
         return _this;
@@ -58,64 +59,396 @@ var P = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var tempkey = Math.random();
-            if (this.state.box === "1") {
-                use = (0, _paragraphFunctions2.default)("1", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _paragraphFunctions2.default)("2", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _paragraphFunctions2.default)("3", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _paragraphFunctions2.default)("4", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _paragraphFunctions2.default)("5", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else {
-                use = (0, _paragraphFunctions2.default)("1", props, state, self);
-
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: tempkey,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
+            var tempkeys = [];
+            for (var i = 0; i <= 3; i++) {
+                tempkeys.push(tempkeys[i] = Math.random());
             }
-            this.setState({ childs: CHILDS, paragraphStyle: styledParagraph, keys: tempkey });
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("2", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("2", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("3", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("3", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("4", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("4", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("5", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("5", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: tempkeys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                    styledParagraph = [_react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.paragraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.mdparagraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: tempkeys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.smparagraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    )];
+            }
+            this.setState({ childs: CHILDS, paragraphStyle: styledParagraph, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -126,60 +459,390 @@ var P = function (_React$Component) {
                 use = '';
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
-            if (this.state.box === "1") {
-                use = (0, _paragraphFunctions2.default)("1", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "2") {
-                use = (0, _paragraphFunctions2.default)("2", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "3") {
-                use = (0, _paragraphFunctions2.default)("3", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "4") {
-                use = (0, _paragraphFunctions2.default)("4", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else if (this.state.box === "5") {
-                use = (0, _paragraphFunctions2.default)("5", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
-            } else {
-                use = (0, _paragraphFunctions2.default)("1", props, state, self);
-                styledParagraph = [_react2.default.createElement(
-                    'p',
-                    { key: this.state.keys,
-                        style: use.PARAGRAPHSTYLES.paragraph, id: this.state.id, className: this.state.className
-                    },
-                    CHILDS
-                )];
+            switch (this.state.box) {
+                case "1":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "2":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("2", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("2", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "3":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("3", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("3", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "4":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("4", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("4", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                case "5":
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _paragraphFunctions2.default)("5", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                        default:
+                            use = (0, _paragraphFunctions2.default)("5", props, state, self);
+                            styledParagraph = [_react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.paragraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.mdparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            ), _react2.default.createElement(
+                                MediaQuery,
+                                { key: this.state.keys[2], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'p',
+                                    {
+                                        style: use.smparagraph, id: this.state.id, className: this.state.className
+                                    },
+                                    CHILDS
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _paragraphFunctions2.default)("1", props, state, self);
+                    styledParagraph = [_react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.paragraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.mdparagraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    ), _react2.default.createElement(
+                        MediaQuery,
+                        { key: this.state.keys[2], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'p',
+                            {
+                                style: use.smparagraph, id: this.state.id, className: this.state.className
+                            },
+                            CHILDS
+                        )
+                    )];
             }
             this.setState({ childs: CHILDS, paragraphStyle: styledParagraph });
         }

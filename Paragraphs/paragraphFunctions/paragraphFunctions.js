@@ -154,7 +154,9 @@ function paragraphFunction(type, props, state, self) {
                 }
             };
         case '2':
-            size = state.fontSize || '0.95em';
+            size = props.size || '0.95em';
+            smFontSize = props.smSize || "0.95em";
+            mdFontSize = props.mdSize || "0.95em";
             return {
                 paragraph: {
                     width: width,
