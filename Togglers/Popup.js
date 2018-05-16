@@ -10,9 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 require('../css/reset.css');
 

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,19 +6,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require("react-responsive");
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-require('../css/reset.css');
+require("../css/reset.css");
 
-require('../css/animations.css');
+require("../css/animations.css");
 
-var _dropdownnavFunctions = require('./navbarFunctions/dropdownnavFunctions');
+var _dropdownnavFunctions = require("./navbarFunctions/dropdownnavFunctions");
 
 var _dropdownnavFunctions2 = _interopRequireDefault(_dropdownnavFunctions);
 
@@ -75,7 +75,7 @@ var Dropdownnav = function (_React$Component) {
     }
 
     _createClass(Dropdownnav, [{
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var _this2 = this;
 
@@ -97,18 +97,18 @@ var Dropdownnav = function (_React$Component) {
                 };
                 NAVBAR = CHILDS.map(function (x, i, arr) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: DropDown_NavBar_Li },
                         arr[i + 1]
                     );
                 });
                 FIRST = CHILDS[0];
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: tempkey, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: tempkey, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this2.enter();
                             },
@@ -117,7 +117,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         FIRST,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             NAVBAR
                         )
@@ -130,18 +130,18 @@ var Dropdownnav = function (_React$Component) {
                 };
                 NAVBAR = CHILDS.map(function (x, i, arr) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: _DropDown_NavBar_Li },
                         arr[i + 1]
                     );
                 });
                 FIRST = CHILDS[0];
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: tempkey, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: tempkey, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this2.enter();
                             },
@@ -150,7 +150,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         FIRST,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             NAVBAR
                         )
@@ -160,7 +160,7 @@ var Dropdownnav = function (_React$Component) {
             this.setState({ childs: NAVBAR, first: FIRST, styledDropdown: styledDropdown, keys: tempkey });
         }
     }, {
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
             var _this3 = this;
 
@@ -179,18 +179,18 @@ var Dropdownnav = function (_React$Component) {
                 };
                 NAVBAR = CHILDS.map(function (x, i, arr) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: DropDown_NavBar_Li },
                         arr[i + 1]
                     );
                 });
                 FIRST = CHILDS[0];
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this3.enter();
                             },
@@ -199,7 +199,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             NAVBAR
                         )
@@ -212,18 +212,18 @@ var Dropdownnav = function (_React$Component) {
                 };
                 NAVBAR = CHILDS.map(function (x, i, arr) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: _DropDown_NavBar_Li2 },
                         arr[i + 1]
                     );
                 });
                 FIRST = CHILDS[0];
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this3.enter();
                             },
@@ -232,7 +232,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             NAVBAR
                         )
@@ -242,7 +242,7 @@ var Dropdownnav = function (_React$Component) {
             this.setState({ childs: NAVBAR, first: FIRST, styledDropdown: styledDropdown });
         }
     }, {
-        key: 'enter',
+        key: "enter",
         value: function enter() {
             var _this4 = this;
 
@@ -255,11 +255,11 @@ var Dropdownnav = function (_React$Component) {
                 var show = "visible";
                 use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this4.enter();
                             },
@@ -268,7 +268,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             this.state.childs
                         )
@@ -278,11 +278,11 @@ var Dropdownnav = function (_React$Component) {
                 var _show = "visible";
                 use = (0, _dropdownnavFunctions2.default)("1", props, state, self, _show);
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this4.enter();
                             },
@@ -291,7 +291,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             this.state.childs
                         )
@@ -303,7 +303,7 @@ var Dropdownnav = function (_React$Component) {
             });
         }
     }, {
-        key: 'left',
+        key: "left",
         value: function left() {
             var _this5 = this;
 
@@ -316,11 +316,11 @@ var Dropdownnav = function (_React$Component) {
                 var show = "hidden";
                 use = (0, _dropdownnavFunctions2.default)("1", props, state, self, show);
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this5.enter();
                             },
@@ -329,7 +329,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             this.state.childs
                         )
@@ -339,11 +339,11 @@ var Dropdownnav = function (_React$Component) {
                 var _show2 = "hidden";
                 use = (0, _dropdownnavFunctions2.default)("1", props, state, self, _show2);
                 styledDropdown = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys, id: this.state.mainid, className: 'dropdownnav1 ' + this.state.mainClassName },
+                    "nav",
+                    { key: this.state.keys, id: this.state.mainid, className: "dropdownnav1 " + this.state.mainClassName },
                     _react2.default.createElement(
-                        'li',
-                        { id: this.state.titleid, className: 'DropDown ' + this.state.titleClassName, style: use.HASCHILDS,
+                        "li",
+                        { id: this.state.titleid, className: "DropDown " + this.state.titleClassName, style: use.HASCHILDS,
                             onMouseOver: function onMouseOver() {
                                 return _this5.enter();
                             },
@@ -352,7 +352,7 @@ var Dropdownnav = function (_React$Component) {
                             } },
                         this.state.first,
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                             this.state.childs
                         )
@@ -364,7 +364,7 @@ var Dropdownnav = function (_React$Component) {
             });
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
                 _react2.default.Fragment,

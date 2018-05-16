@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactResponsive = require('react-responsive');
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
 require('../css/reset.css');
 
 require('../css/animations.css');

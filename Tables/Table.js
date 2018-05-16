@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _tableFunctions = require('./tableFunctions/tableFunctions');
 
@@ -48,6 +48,7 @@ var Table = function (_React$Component) {
             smdis: props.smDis,
             mddis: props.mdDis,
             box: props.box,
+            vars: props.vars,
             keys: '',
             styledTable: ''
 
@@ -72,56 +73,31 @@ var Table = function (_React$Component) {
                 HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
-            var TABLEHEAD = _nestingstyles2.default.create({
-                tablehead: {
-                    borderTop: props.hbordertop,
-                    borderRight: props.hborderRight,
-                    borderBottom: props.hborderBottom,
-                    borderLeft: props.hborderLeft,
-                    border: props.hborder || '1px solid black',
-                    margin: props.hvertical || 'center',
-                    padding: props.headPadding || '10px',
-                    textAlign: 'center',
-                    width: props.headWidth,
-                    height: props.headHeight
+            var tablehead = {
+                borderTop: props.hbordertop,
+                borderRight: props.hborderRight,
+                borderBottom: props.hborderBottom,
+                borderLeft: props.hborderLeft,
+                border: props.hborder || '1px solid black',
+                margin: props.hvertical || 'center',
+                padding: props.headPadding || '10px',
+                textAlign: 'center',
+                width: props.headWidth,
+                height: props.headHeight
 
-                },
-                '@media screen and (max-width: 768px)': {
-                    tablehead: {
-                        display: this.state.smdis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tablehead: {
-                        display: this.state.mddis
-                    }
-                }
-            });
-            var TABLEBODY = _nestingstyles2.default.create({
-                tablebody: {
-                    borderTop: props.dbordertop,
-                    borderRight: props.dborderRight,
-                    borderBottom: props.dborderBottom,
-                    borderLeft: props.dborderLeft,
-                    border: props.dborder || '1px solid black',
-                    margin: props.dmargin,
-                    padding: props.dpadding || '5px',
-                    textAlign: 'center',
-                    width: props.dwidth,
-                    height: props.dheight
-
-                },
-                '@media screen and (max-width: 768px)': {
-                    tablebody: {
-                        display: this.state.smDis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tablebody: {
-                        display: this.state.mdDis
-                    }
-                }
-            });
+            };
+            var tablebody = {
+                borderTop: props.dbordertop,
+                borderRight: props.dborderRight,
+                borderBottom: props.dborderBottom,
+                borderLeft: props.dborderLeft,
+                border: props.dborder || '1px solid black',
+                margin: props.dmargin,
+                padding: props.dpadding || '5px',
+                textAlign: 'center',
+                width: props.dwidth,
+                height: props.dheight
+            };
 
             var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children);
             var tempKeys = [];
@@ -145,7 +121,7 @@ var Table = function (_React$Component) {
                         HEAD = tempHead.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'th',
-                                { key: i, style: TABLEHEAD.tablehead },
+                                { key: i, style: tablehead },
                                 x
                             );
                         });
@@ -159,7 +135,7 @@ var Table = function (_React$Component) {
                         BODY = temperBody.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'td',
-                                { key: i, style: TABLEBODY.tablebody },
+                                { key: i, style: tablebody },
                                 x
                             );
                         });
@@ -172,46 +148,209 @@ var Table = function (_React$Component) {
                     rows -= 1;
                 }
             }
-            if (this.state.box === '1') {
-                use = (0, _tableFunctions2.default)("1", props, state, self);
-                styledTable = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.TABLERES.tableres, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'table',
-                        { style: use.TABLESTYLE.tablestyle },
+            switch (this.state.box) {
+                case '1':
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _tableFunctions2.default)("1", props, state, self);
+                            styledTable = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.tableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.tablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.mdtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.smtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.smtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _tableFunctions2.default)("1", props, state, self);
+                            styledTable = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.tableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.tablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.mdtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.smtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.smtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _tableFunctions2.default)("1", props, state, self);
+                    styledTable = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
-                            'thead',
-                            null,
-                            HEADROW
-                        ),
-                        _react2.default.createElement(
-                            'tbody',
-                            null,
-                            BODYROW
+                            'div',
+                            { style: use.tableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.tablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _tableFunctions2.default)("1", props, state, self);
-                styledTable = [_react2.default.createElement(
-                    'div',
-                    { key: tempKeys[0], style: use.TABLERES.tableres, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'table',
-                        { style: use.TABLESTYLE.tablestyle },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            'thead',
-                            null,
-                            HEADROW
-                        ),
-                        _react2.default.createElement(
-                            'tbody',
-                            null,
-                            BODYROW
+                            'div',
+                            { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.mdtablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smtableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.smtablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
+                        )
+                    )];
             }
             this.setState({ head: HEADROW, body: BODYROW, styledTable: styledTable, keys: tempKeys });
         }
@@ -231,56 +370,31 @@ var Table = function (_React$Component) {
                 HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
-            var TABLEHEAD = _nestingstyles2.default.create({
-                tablehead: {
-                    borderTop: props.hbordertop,
-                    borderRight: props.hborderRight,
-                    borderBottom: props.hborderBottom,
-                    borderLeft: props.hborderLeft,
-                    border: props.hborder || '1px solid black',
-                    margin: props.hvertical || 'center',
-                    padding: props.headPadding || '10px',
-                    textAlign: 'center',
-                    width: props.headWidth,
-                    height: props.headHeight
+            var tablehead = {
+                borderTop: props.hbordertop,
+                borderRight: props.hborderRight,
+                borderBottom: props.hborderBottom,
+                borderLeft: props.hborderLeft,
+                border: props.hborder || '1px solid black',
+                margin: props.hvertical || 'center',
+                padding: props.headPadding || '10px',
+                textAlign: 'center',
+                width: props.headWidth,
+                height: props.headHeight
 
-                },
-                '@media screen and (max-width: 768px)': {
-                    tablehead: {
-                        display: this.state.smdis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tablehead: {
-                        display: this.state.mddis
-                    }
-                }
-            });
-            var TABLEBODY = _nestingstyles2.default.create({
-                tablebody: {
-                    borderTop: props.dbordertop,
-                    borderRight: props.dborderRight,
-                    borderBottom: props.dborderBottom,
-                    borderLeft: props.dborderLeft,
-                    border: props.dborder || '1px solid black',
-                    margin: props.dmargin,
-                    padding: props.dpadding || '5px',
-                    textAlign: 'center',
-                    width: props.dwidth,
-                    height: props.dheight
-
-                },
-                '@media screen and (max-width: 768px)': {
-                    tablebody: {
-                        display: this.state.smDis
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    tablebody: {
-                        display: this.state.mdDis
-                    }
-                }
-            });
+            };
+            var tablebody = {
+                borderTop: props.dbordertop,
+                borderRight: props.dborderRight,
+                borderBottom: props.dborderBottom,
+                borderLeft: props.dborderLeft,
+                border: props.dborder || '1px solid black',
+                margin: props.dmargin,
+                padding: props.dpadding || '5px',
+                textAlign: 'center',
+                width: props.dwidth,
+                height: props.dheight
+            };
             var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children);
             if (CHILDS !== '') {
                 childs = CHILDS.map(function (x, i, arr) {
@@ -299,7 +413,7 @@ var Table = function (_React$Component) {
                         HEAD = tempHead.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'th',
-                                { key: i, style: TABLEHEAD.tablehead },
+                                { key: i, style: tablehead },
                                 x
                             );
                         });
@@ -313,7 +427,7 @@ var Table = function (_React$Component) {
                         BODY = temperBody.map(function (x, i, arr) {
                             return _react2.default.createElement(
                                 'td',
-                                { key: i, style: TABLEBODY.tablebody },
+                                { key: i, style: tablebody },
                                 x
                             );
                         });
@@ -326,46 +440,209 @@ var Table = function (_React$Component) {
                     rows -= 1;
                 }
             }
-            if (this.state.box === '1') {
-                use = (0, _tableFunctions2.default)("1", props, state, self);
-                styledTable = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], style: use.TABLERES.tableres, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'table',
-                        { style: use.TABLESTYLE.tablestyle },
+            switch (this.state.box) {
+                case '1':
+                    switch (this.state.vars) {
+                        case "1":
+                            use = (0, _tableFunctions2.default)("1", props, state, self);
+                            styledTable = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.tableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.tablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.mdtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.smtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.smtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            )];
+                        default:
+                            use = (0, _tableFunctions2.default)("1", props, state, self);
+                            styledTable = [_react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], query: '(min-width: 1224px)' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.tableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.tablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.mdtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            ), _react2.default.createElement(
+                                _reactResponsive2.default,
+                                { key: this.state.keys[0], maxWidth: 767 },
+                                _react2.default.createElement(
+                                    'div',
+                                    { style: use.smtableres, id: this.state.id, className: this.state.className },
+                                    _react2.default.createElement(
+                                        'table',
+                                        { style: use.smtablestyle },
+                                        _react2.default.createElement(
+                                            'thead',
+                                            null,
+                                            HEADROW
+                                        ),
+                                        _react2.default.createElement(
+                                            'tbody',
+                                            null,
+                                            BODYROW
+                                        )
+                                    )
+                                )
+                            )];
+                    }
+                    break;
+                default:
+                    use = (0, _tableFunctions2.default)("1", props, state, self);
+                    styledTable = [_react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
-                            'thead',
-                            null,
-                            HEADROW
-                        ),
-                        _react2.default.createElement(
-                            'tbody',
-                            null,
-                            BODYROW
+                            'div',
+                            { style: use.tableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.tablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
                         )
-                    )
-                )];
-            } else {
-                use = (0, _tableFunctions2.default)("1", props, state, self);
-                styledTable = [_react2.default.createElement(
-                    'div',
-                    { key: this.state.keys[0], style: use.TABLERES.tableres, id: this.state.id, className: this.state.className },
-                    _react2.default.createElement(
-                        'table',
-                        { style: use.TABLESTYLE.tablestyle },
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
-                            'thead',
-                            null,
-                            HEADROW
-                        ),
-                        _react2.default.createElement(
-                            'tbody',
-                            null,
-                            BODYROW
+                            'div',
+                            { style: use.mdtableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.mdtablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
                         )
-                    )
-                )];
+                    ), _react2.default.createElement(
+                        _reactResponsive2.default,
+                        { key: this.state.keys[0], maxWidth: 767 },
+                        _react2.default.createElement(
+                            'div',
+                            { style: use.smtableres, id: this.state.id, className: this.state.className },
+                            _react2.default.createElement(
+                                'table',
+                                { style: use.smtablestyle },
+                                _react2.default.createElement(
+                                    'thead',
+                                    null,
+                                    HEADROW
+                                ),
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    BODYROW
+                                )
+                            )
+                        )
+                    )];
             }
             this.setState({ head: HEADROW, body: BODYROW, styledTable: styledTable });
         }

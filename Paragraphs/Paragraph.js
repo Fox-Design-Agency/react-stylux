@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _paragraphFunctions = require('./paragraphFunctions/paragraphFunctions');
 
@@ -69,7 +69,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("1", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -79,7 +79,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -89,7 +89,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -102,7 +102,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("1", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -112,7 +112,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -122,7 +122,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -139,7 +139,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("2", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -149,7 +149,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -159,7 +159,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -172,7 +172,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("2", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -182,7 +182,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -192,7 +192,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -209,7 +209,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("3", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -219,7 +219,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -229,7 +229,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -242,7 +242,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("3", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -252,7 +252,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -262,7 +262,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -279,7 +279,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("4", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -289,7 +289,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -299,7 +299,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -312,7 +312,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("4", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -322,7 +322,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -332,7 +332,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -349,7 +349,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("5", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -359,7 +359,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -369,7 +369,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -382,7 +382,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("5", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -392,7 +392,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -402,7 +402,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: tempkeys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -417,7 +417,7 @@ var P = function (_React$Component) {
                 default:
                     use = (0, _paragraphFunctions2.default)("1", props, state, self);
                     styledParagraph = [_react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: tempkeys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
                             'p',
@@ -427,7 +427,7 @@ var P = function (_React$Component) {
                             CHILDS
                         )
                     ), _react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'p',
@@ -437,7 +437,7 @@ var P = function (_React$Component) {
                             CHILDS
                         )
                     ), _react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: tempkeys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'p',
@@ -465,7 +465,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("1", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -475,7 +475,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -485,7 +485,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -498,7 +498,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("1", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -508,7 +508,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -518,7 +518,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -535,7 +535,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("2", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -545,7 +545,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -555,7 +555,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -568,7 +568,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("2", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -578,7 +578,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -588,7 +588,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -605,7 +605,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("3", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -615,7 +615,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -625,7 +625,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -638,7 +638,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("3", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -648,7 +648,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -658,7 +658,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -675,7 +675,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("4", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -685,7 +685,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -695,7 +695,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -708,7 +708,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("4", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -718,7 +718,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -728,7 +728,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -745,7 +745,7 @@ var P = function (_React$Component) {
                         case "1":
                             use = (0, _paragraphFunctions2.default)("5", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -755,7 +755,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -765,7 +765,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -778,7 +778,7 @@ var P = function (_React$Component) {
                         default:
                             use = (0, _paragraphFunctions2.default)("5", props, state, self);
                             styledParagraph = [_react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                                 _react2.default.createElement(
                                     'p',
@@ -788,7 +788,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'p',
@@ -798,7 +798,7 @@ var P = function (_React$Component) {
                                     CHILDS
                                 )
                             ), _react2.default.createElement(
-                                MediaQuery,
+                                _reactResponsive2.default,
                                 { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'p',
@@ -813,7 +813,7 @@ var P = function (_React$Component) {
                 default:
                     use = (0, _paragraphFunctions2.default)("1", props, state, self);
                     styledParagraph = [_react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: this.state.keys[0], query: '(min-width: 1224px)' },
                         _react2.default.createElement(
                             'p',
@@ -823,7 +823,7 @@ var P = function (_React$Component) {
                             CHILDS
                         )
                     ), _react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'p',
@@ -833,7 +833,7 @@ var P = function (_React$Component) {
                             CHILDS
                         )
                     ), _react2.default.createElement(
-                        MediaQuery,
+                        _reactResponsive2.default,
                         { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'p',

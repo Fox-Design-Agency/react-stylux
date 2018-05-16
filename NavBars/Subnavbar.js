@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,17 +6,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require("react-responsive");
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-require('../css/reset.css');
+require("../css/reset.css");
 
-var _subnavbarFunctions = require('./navbarFunctions/subnavbarFunctions');
+var _subnavbarFunctions = require("./navbarFunctions/subnavbarFunctions");
 
 var _subnavbarFunctions2 = _interopRequireDefault(_subnavbarFunctions);
 
@@ -78,7 +78,7 @@ var Subnavbar = function (_React$Component) {
     }
 
     _createClass(Subnavbar, [{
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var _this2 = this;
 
@@ -94,7 +94,7 @@ var Subnavbar = function (_React$Component) {
                 tempKeys.push(tempKeys[i] = Math.random());
             }
             if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: "1 0 auto",
@@ -118,18 +118,18 @@ var Subnavbar = function (_React$Component) {
                 });
                 NAVBAR = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
                         x
                     );
                 });
                 use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
-                    'nav',
-                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
+                    "nav",
+                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
                     _react2.default.createElement(
-                        'ul',
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
+                        "ul",
+                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
                         NAVBAR
                     )
                 )];
@@ -172,7 +172,7 @@ var Subnavbar = function (_React$Component) {
                 //     ]
 
             } else {
-                var _SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var _SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: "1 0 auto",
@@ -196,18 +196,18 @@ var Subnavbar = function (_React$Component) {
                 });
                 NAVBAR = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: _SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
                         x
                     );
                 });
                 use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
-                    'nav',
-                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
+                    "nav",
+                    { key: tempKeys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
                     _react2.default.createElement(
-                        'ul',
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
+                        "ul",
+                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
                         NAVBAR
                     )
                 )];
@@ -216,7 +216,7 @@ var Subnavbar = function (_React$Component) {
             this.setState({ childs: NAVBAR, keys: tempKeys, styledSubnavbar: styledSubnavbar });
         }
     }, {
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
             var _this3 = this;
 
@@ -228,7 +228,7 @@ var Subnavbar = function (_React$Component) {
             var self = this;
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             if (this.state.box === "1") {
-                var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: "1 0 auto",
@@ -252,23 +252,23 @@ var Subnavbar = function (_React$Component) {
                 });
                 NAVBAR = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
                         x
                     );
                 });
                 use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
+                    "nav",
+                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
                     _react2.default.createElement(
-                        'ul',
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
+                        "ul",
+                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
                         NAVBAR
                     )
                 )];
             } else {
-                var _SUBNAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
+                var _SUBNAVBAR_NAVBAR_LI2 = StyleSheet.create({
                     subnavbar_navbar_li: {
                         display: 'flex',
                         flex: "1 0 auto",
@@ -292,18 +292,18 @@ var Subnavbar = function (_React$Component) {
                 });
                 NAVBAR = CHILDS.map(function (x, i) {
                     return _react2.default.createElement(
-                        'li',
+                        "li",
                         { key: i, style: _SUBNAVBAR_NAVBAR_LI2.subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
                         x
                     );
                 });
                 use = (0, _subnavbarFunctions2.default)("1", props, state, self);
                 styledSubnavbar = [_react2.default.createElement(
-                    'nav',
-                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
+                    "nav",
+                    { key: this.state.keys[0], style: use.SUBNAVBAR.subnavbar, id: this.state.navid, className: "subnavbar1 socialness " + this.state.navClassName },
                     _react2.default.createElement(
-                        'ul',
-                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
+                        "ul",
+                        { style: use.SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: "subnavbar1-navbar " + this.state.listClassName },
                         NAVBAR
                     )
                 )];
@@ -311,7 +311,7 @@ var Subnavbar = function (_React$Component) {
             this.setState({ childs: NAVBAR, styledSubnavbar: styledSubnavbar });
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
                 _react2.default.Fragment,

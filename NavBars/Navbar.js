@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,19 +6,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require("react-responsive");
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-require('../css/reset.css');
+require("../css/reset.css");
 
-require('../css/animations.css');
+require("../css/animations.css");
 
-var _navbarFunctions = require('./navbarFunctions/navbarFunctions');
+var _navbarFunctions = require("./navbarFunctions/navbarFunctions");
 
 var _navbarFunctions2 = _interopRequireDefault(_navbarFunctions);
 
@@ -95,7 +95,7 @@ var Navbar = function (_React$Component) {
     }
 
     _createClass(Navbar, [{
-        key: 'toggle',
+        key: "toggle",
         value: function toggle() {
             var props = this.props;
             var state = this.state;
@@ -112,46 +112,46 @@ var Navbar = function (_React$Component) {
                 use = (0, _navbarFunctions2.default)("1", props, state, self, smdis, show);
                 if (this.state.box === "1") {
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: this.state.keys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                             this.state.childs
                         ),
                         _react2.default.createElement(
-                            'div',
+                            "div",
                             { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES })
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES })
                         ),
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.HAMESTNAV.hamestnav },
                             this.state.hams
                         )
                     )];
                 } else if (this.state.box === "2") {
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: this.state.keys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar" },
                             this.state.childs
                         ),
                         _react2.default.createElement(
-                            'div',
+                            "div",
                             { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES })
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES })
                         ),
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.HAMESTNAV.hamestnav },
                             this.state.hams
                         )
@@ -163,23 +163,23 @@ var Navbar = function (_React$Component) {
                 var _show = !this.state.hamShow;
                 use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis, _show);
                 styledNavbar = [_react2.default.createElement(
-                    'nav',
+                    "nav",
                     { key: this.state.keys[0],
                         style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                     _react2.default.createElement(
-                        'ul',
-                        { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                        "ul",
+                        { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                         this.state.childs
                     ),
                     _react2.default.createElement(
-                        'div',
+                        "div",
                         { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                        _react2.default.createElement('div', { style: use.HAMLINES }),
-                        _react2.default.createElement('div', { style: use.HAMLINES }),
-                        _react2.default.createElement('div', { style: use.HAMLINES })
+                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                        _react2.default.createElement("div", { style: use.HAMLINES }),
+                        _react2.default.createElement("div", { style: use.HAMLINES })
                     ),
                     _react2.default.createElement(
-                        'ul',
+                        "ul",
                         { style: use.HAMESTNAV.hamestnav },
                         this.state.hams
                     )
@@ -188,7 +188,7 @@ var Navbar = function (_React$Component) {
             }
         }
     }, {
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var props = this.props;
             var state = this.state;
@@ -205,7 +205,7 @@ var Navbar = function (_React$Component) {
                 tempKeys.push(tempKeys[_i] = Math.random());
             }
             if (this.state.box === "1" || this.state.box === "2") {
-                var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var NAVBAR_NAVBAR_LI = StyleSheet.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: "1 0 auto",
@@ -230,7 +230,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var HAM_NAVBAR_LI = _nestingstyles2.default.create({
+                var HAM_NAVBAR_LI = StyleSheet.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: "1 0 auto",
@@ -272,14 +272,14 @@ var Navbar = function (_React$Component) {
                     }
                     var _NAVBARLG = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
                     });
                     var _NAVBARSM = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: HAM_NAVBAR_LI.ham_navbar_li },
                             x
                         );
@@ -288,23 +288,23 @@ var Navbar = function (_React$Component) {
                         var smdis = "none";
                         use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                                 this.state.childs
                             ),
                             _react2.default.createElement(
-                                'div',
+                                "div",
                                 { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES })
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES })
                             ),
                             _react2.default.createElement(
-                                'ul',
+                                "ul",
                                 { style: use.HAMESTNAV.hamestnav },
                                 this.state.hams
                             )
@@ -313,23 +313,23 @@ var Navbar = function (_React$Component) {
                         var _smdis2 = "none";
                         use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis2);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar ' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar " },
                                 _NAVBARLG
                             ),
                             _react2.default.createElement(
-                                'div',
+                                "div",
                                 { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES })
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES })
                             ),
                             _react2.default.createElement(
-                                'ul',
+                                "ul",
                                 { style: use.HAMESTNAV.hamestnav },
                                 _NAVBARSM
                             )
@@ -339,7 +339,7 @@ var Navbar = function (_React$Component) {
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
@@ -347,24 +347,24 @@ var Navbar = function (_React$Component) {
                     if (this.state.box === "1") {
                         use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                                 NAVBARACTUAL
                             )
                         )];
                     } else if (this.state.box === "2") {
                         use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar ' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar " },
                                 NAVBARACTUAL
                             )
                         )];
@@ -380,7 +380,7 @@ var Navbar = function (_React$Component) {
                     styledNavbar: styledNavbar
                 });
             } else {
-                var _NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var _NAVBAR_NAVBAR_LI = StyleSheet.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: "1 0 auto",
@@ -405,7 +405,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var _HAM_NAVBAR_LI = _nestingstyles2.default.create({
+                var _HAM_NAVBAR_LI = StyleSheet.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: "1 0 auto",
@@ -447,14 +447,14 @@ var Navbar = function (_React$Component) {
                     }
                     NAVBARLG = _LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = _SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _HAM_NAVBAR_LI.ham_navbar_li },
                             x
                         );
@@ -462,23 +462,23 @@ var Navbar = function (_React$Component) {
                     var _smdis3 = "none";
                     use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis3);
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: tempKeys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                             NAVBARLG
                         ),
                         _react2.default.createElement(
-                            'div',
+                            "div",
                             { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES })
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES })
                         ),
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.HAMESTNAV.hamestnav },
                             NAVBARSM
                         )
@@ -488,7 +488,7 @@ var Navbar = function (_React$Component) {
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
@@ -496,12 +496,12 @@ var Navbar = function (_React$Component) {
                     var _smdis4 = "flex";
                     use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis4);
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: tempKeys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                             NAVBARACTUAL
                         )
                     )];
@@ -518,7 +518,7 @@ var Navbar = function (_React$Component) {
             }
         }
     }, {
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
         value: function componentWillReceiveProps(newProps) {
             var props = newProps;
             var state = this.state;
@@ -534,7 +534,7 @@ var Navbar = function (_React$Component) {
                 tempKeys.push(tempKeys[_i2] = Math.random());
             }
             if (this.state.box === "1" || this.state.box === "2") {
-                var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
+                var NAVBAR_NAVBAR_LI = StyleSheet.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: "1 0 auto",
@@ -559,7 +559,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var HAM_NAVBAR_LI = _nestingstyles2.default.create({
+                var HAM_NAVBAR_LI = StyleSheet.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: "1 0 auto",
@@ -601,14 +601,14 @@ var Navbar = function (_React$Component) {
                     }
                     var _NAVBARLG2 = LGDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
                     });
                     var _NAVBARSM2 = SMDIS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: HAM_NAVBAR_LI.ham_navbar_li },
                             x
                         );
@@ -617,23 +617,23 @@ var Navbar = function (_React$Component) {
                         var smdis = "none";
                         use = (0, _navbarFunctions2.default)("1", props, state, self, smdis);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                                 this.state.childs
                             ),
                             _react2.default.createElement(
-                                'div',
+                                "div",
                                 { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES })
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES })
                             ),
                             _react2.default.createElement(
-                                'ul',
+                                "ul",
                                 { style: use.HAMESTNAV.hamestnav },
                                 this.state.hams
                             )
@@ -642,23 +642,23 @@ var Navbar = function (_React$Component) {
                         var _smdis5 = "none";
                         use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis5);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar ' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar " },
                                 _NAVBARLG2
                             ),
                             _react2.default.createElement(
-                                'div',
+                                "div",
                                 { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES }),
-                                _react2.default.createElement('div', { style: use.HAMLINES })
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES }),
+                                _react2.default.createElement("div", { style: use.HAMLINES })
                             ),
                             _react2.default.createElement(
-                                'ul',
+                                "ul",
                                 { style: use.HAMESTNAV.hamestnav },
                                 _NAVBARSM2
                             )
@@ -668,7 +668,7 @@ var Navbar = function (_React$Component) {
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: NAVBAR_NAVBAR_LI.navbar_navbar_li },
                             x
                         );
@@ -676,24 +676,24 @@ var Navbar = function (_React$Component) {
                     if (this.state.box === "1") {
                         use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                                 NAVBARACTUAL
                             )
                         )];
                     } else if (this.state.box === "2") {
                         use = (0, _navbarFunctions2.default)("1", props, state, self);
                         styledNavbar = [_react2.default.createElement(
-                            'nav',
+                            "nav",
                             { key: tempKeys[0],
                                 style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                             _react2.default.createElement(
-                                'ul',
-                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar ' },
+                                "ul",
+                                { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar " },
                                 NAVBARACTUAL
                             )
                         )];
@@ -709,7 +709,7 @@ var Navbar = function (_React$Component) {
                     styledNavbar: styledNavbar
                 });
             } else {
-                var _NAVBAR_NAVBAR_LI2 = _nestingstyles2.default.create({
+                var _NAVBAR_NAVBAR_LI2 = StyleSheet.create({
                     navbar_navbar_li: {
                         display: this.state.display,
                         flex: "1 0 auto",
@@ -734,7 +734,7 @@ var Navbar = function (_React$Component) {
                         }
                     }
                 });
-                var _HAM_NAVBAR_LI2 = _nestingstyles2.default.create({
+                var _HAM_NAVBAR_LI2 = StyleSheet.create({
                     ham_navbar_li: {
                         visibility: this.state.hamShow ? 'visible' : 'collaspe',
                         flex: "1 0 auto",
@@ -776,14 +776,14 @@ var Navbar = function (_React$Component) {
                     }
                     NAVBARLG = _LGDIS2.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _NAVBAR_NAVBAR_LI2.navbar_navbar_li },
                             x
                         );
                     });
                     NAVBARSM = _SMDIS2.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _HAM_NAVBAR_LI2.ham_navbar_li },
                             x
                         );
@@ -791,23 +791,23 @@ var Navbar = function (_React$Component) {
                     var _smdis6 = "none";
                     use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis6);
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: tempKeys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                             NAVBARLG
                         ),
                         _react2.default.createElement(
-                            'div',
+                            "div",
                             { style: use.HAMNAV.HAMNAV, onClick: this.toggle },
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES }),
-                            _react2.default.createElement('div', { style: use.HAMLINES })
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES }),
+                            _react2.default.createElement("div", { style: use.HAMLINES })
                         ),
                         _react2.default.createElement(
-                            'ul',
+                            "ul",
                             { style: use.HAMESTNAV.hamestnav },
                             NAVBARSM
                         )
@@ -817,7 +817,7 @@ var Navbar = function (_React$Component) {
                 } else {
                     NAVBARACTUAL = CHILDS.map(function (x, i) {
                         return _react2.default.createElement(
-                            'li',
+                            "li",
                             { key: i, style: _NAVBAR_NAVBAR_LI2.navbar_navbar_li },
                             x
                         );
@@ -825,12 +825,12 @@ var Navbar = function (_React$Component) {
                     var _smdis7 = "flex";
                     use = (0, _navbarFunctions2.default)("1", props, state, self, _smdis7);
                     styledNavbar = [_react2.default.createElement(
-                        'nav',
+                        "nav",
                         { key: tempKeys[0],
                             style: use.NAVBAR.navbar, id: this.state.navid, className: this.state.navClassName },
                         _react2.default.createElement(
-                            'ul',
-                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + ' navbar1-navbar socialness' },
+                            "ul",
+                            { style: use.NAVBAR_NAVBAR.navbar_navbar, id: this.state.navid, className: this.state.navClassName + " navbar1-navbar socialness" },
                             NAVBARACTUAL
                         )
                     )];
@@ -847,7 +847,7 @@ var Navbar = function (_React$Component) {
             }
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
                 _react2.default.Fragment,
