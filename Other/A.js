@@ -14,9 +14,9 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _nestingstyles = require('nestingstyles');
+var _reactResponsive = require('react-responsive');
 
-var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -97,7 +97,7 @@ var A = function (_React$Component) {
             };
 
             var styledA = [_react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: tempkeys[0], query: '(min-width: 1224px)' },
                 _react2.default.createElement(
                     'a',
@@ -107,7 +107,7 @@ var A = function (_React$Component) {
                     CHILDS
                 )
             ), _react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                 _react2.default.createElement(
                     'a',
@@ -117,7 +117,7 @@ var A = function (_React$Component) {
                     CHILDS
                 )
             ), _react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: tempkeys[2], maxWidth: 767 },
                 _react2.default.createElement(
                     'a',
@@ -169,7 +169,7 @@ var A = function (_React$Component) {
             };
 
             var styledA = [_react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: this.state.keys[0], query: '(min-width: 1224px)' },
                 _react2.default.createElement(
                     'a',
@@ -179,7 +179,7 @@ var A = function (_React$Component) {
                     CHILDS
                 )
             ), _react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                 _react2.default.createElement(
                     'a',
@@ -189,7 +189,7 @@ var A = function (_React$Component) {
                     CHILDS
                 )
             ), _react2.default.createElement(
-                MediaQuery,
+                _reactResponsive2.default,
                 { key: this.state.keys[2], maxWidth: 767 },
                 _react2.default.createElement(
                     'a',

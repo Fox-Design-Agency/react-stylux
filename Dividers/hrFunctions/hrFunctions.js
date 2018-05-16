@@ -9,8 +9,8 @@ function hrFunction(type, props, state, self) {
 
     var width = props.width || '100%';
     var height = props.height || '5px';
-    var mdheight = props.mdheight || '5px';
-    var smheight = props.smheight || '5px';
+    var mdheight = props.mdheight || height;
+    var smheight = props.smheight || height;
     var background = props.background || 'black';
     var padding = props.padding;
     var margin = props.margin || '5px 0px 5px 0px';

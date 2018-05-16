@@ -22,8 +22,8 @@ function holderSwitch21_25(num, props, state) {
     var margin = props.margin || '10px 0';
     var smdis = props.smDis || 'flex';
     var mddis = props.mdDis || 'flex';
-    var smflexDir = props.smflexDir || 'row';
-    var mdflexDir = props.mdflexDir || 'row';
+    var smflexDir = props.smflexDir || direction;
+    var mdflexDir = props.mdflexDir || direction;
     var alignBlocks = props.alignBlocks;
     switch (num) {
         case 21:
