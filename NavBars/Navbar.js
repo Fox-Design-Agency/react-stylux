@@ -545,7 +545,7 @@ var Navbar = function (_React$Component) {
             if (this.state.box === "1" || this.state.box === "2") {
                 navbar_navbar_li = {
                     display: this.state.display,
-                    flex: "1 0 auto",
+                    flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
@@ -565,10 +565,10 @@ var Navbar = function (_React$Component) {
                 };
                 ham_navbar_li = {
                     visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                    flex: "1 0 auto",
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
+                    flex: 1,
                     margin: this.state.itemSpaceing,
                     background: this.state.itemBackground,
                     fontVariant: this.state.fontVariant,
@@ -1136,7 +1136,7 @@ var Navbar = function (_React$Component) {
             } else {
                 navbar_navbar_li = {
                     display: this.state.display,
-                    flex: "1 0 auto",
+                    flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
@@ -1156,10 +1156,10 @@ var Navbar = function (_React$Component) {
                 };
                 ham_navbar_li = {
                     visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                    flex: "1 0 auto",
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
+                    flex: 1,
                     margin: this.state.itemSpaceing,
                     background: this.state.itemBackground,
                     fontVariant: this.state.fontVariant,
@@ -1373,7 +1373,7 @@ var Navbar = function (_React$Component) {
             if (this.state.box === "1" || this.state.box === "2") {
                 navbar_navbar_li = {
                     display: this.state.display,
-                    flex: "1 0 auto",
+                    flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
@@ -1393,8 +1393,8 @@ var Navbar = function (_React$Component) {
                 };
                 ham_navbar_li = {
                     visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                    flex: "1 0 auto",
                     fontSize: this.state.fontSize,
+                    flex: 1,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
                     margin: this.state.itemSpaceing,
@@ -1964,7 +1964,7 @@ var Navbar = function (_React$Component) {
             } else {
                 navbar_navbar_li = {
                     display: this.state.display,
-                    flex: "1 0 auto",
+                    flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',
@@ -1984,7 +1984,7 @@ var Navbar = function (_React$Component) {
                 };
                 ham_navbar_li = {
                     visibility: this.state.hamShow ? 'visible' : 'collaspe',
-                    flex: "1 0 auto",
+                    flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
                     justifyContent: 'center',

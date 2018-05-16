@@ -25,8 +25,7 @@ function navbarFunction(type, props, state, self) {
                     width: state.totalWidth,
                     height: state.totalHeight,
                     display: 'flex',
-                    flex: "1 0 auto",
-                    flexDirection: 'column',
+                    flexDirection: state.direction,
                     alignItems: state.alignItems,
                     margin: '0',
                     padding: state.padding,
@@ -37,9 +36,8 @@ function navbarFunction(type, props, state, self) {
                 smnavbar: {
                     width: state.totalWidth,
                     height: state.totalHeight,
-                    display: 'flex',
-                    flex: "1 0 auto",
-                    flexDirection: 'column',
+                    display: "flex",
+                    flexDirection: state.direction,
                     alignItems: state.alignItems,
                     margin: '0',
                     padding: state.padding,
@@ -50,9 +48,8 @@ function navbarFunction(type, props, state, self) {
                 mdnavbar: {
                     width: state.totalWidth,
                     height: state.totalHeight,
-                    display: 'flex',
-                    flex: "1 0 auto",
-                    flexDirection: 'column',
+                    display: "flex",
+                    flexDirection: state.direction,
                     alignItems: state.alignItems,
                     margin: '0',
                     padding: state.padding,
@@ -61,10 +58,10 @@ function navbarFunction(type, props, state, self) {
                 },
                 navbar_navbar: {
                     width: state.navBarWidth,
-                    height: 'inherit',
+                    height: state.height,
                     display: state.display,
+                    flex: 1,
                     flexWrap: 'wrap',
-                    flex: "1 0 auto",
                     alignItems: state.columnAlign,
                     fontFamily: state.fontFamily,
                     flexDirection: state.direction,
@@ -77,10 +74,10 @@ function navbarFunction(type, props, state, self) {
                 },
                 smnavbar_navbar: {
                     display: smdis,
+                    flex: 1,
                     width: state.navBarWidth,
-                    height: 'inherit',
+                    height: state.height,
                     flexWrap: 'wrap',
-                    flex: "1 0 auto",
                     alignItems: state.columnAlign,
                     fontFamily: state.fontFamily,
                     flexDirection: state.direction,
@@ -94,10 +91,10 @@ function navbarFunction(type, props, state, self) {
                 },
                 mdnavbar_navbar: {
                     display: state.mddis,
+                    flex: 1,
                     width: state.navBarWidth,
-                    height: 'inherit',
+                    height: state.height,
                     flexWrap: 'wrap',
-                    flex: "1 0 auto",
                     alignItems: state.columnAlign,
                     fontFamily: state.fontFamily,
                     flexDirection: state.direction,
@@ -112,7 +109,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamMenuDis,
-                    flex: "1 0 auto",
+                    flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'
 
@@ -121,7 +118,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamSmDis,
-                    flex: "1 0 auto",
+                    flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'
 
@@ -130,7 +127,7 @@ function navbarFunction(type, props, state, self) {
                     width: '50px',
                     height: '50px',
                     display: state.hamMdDis,
-                    flex: "1 0 auto",
+                    flex: 1,
                     cursor: 'pointer',
                     flexDirection: 'column'
                 },
@@ -149,8 +146,8 @@ function navbarFunction(type, props, state, self) {
                     top: state.hamTop,
                     left: state.hamLeft,
                     background: state.hamBackground,
-                    display: 'flex',
-                    flex: "1 0 auto"
+                    flex: 1,
+                    display: 'flex'
                 }, _defineProperty(_hamestnav, "flexDirection", 'column'), _defineProperty(_hamestnav, "alignItems", 'center'), _defineProperty(_hamestnav, "boxShadow", state.hamShadow), _defineProperty(_hamestnav, "animationIterationCount", state.animationIterationCount), _defineProperty(_hamestnav, "animationTimingFunction", state.animationTimingFunction), _defineProperty(_hamestnav, "animationName", state.animationName), _defineProperty(_hamestnav, "animationDuration", state.animationDuration), _defineProperty(_hamestnav, "transformOrigin", state.transformOrigin), _defineProperty(_hamestnav, "animationFillMode", state.animationFillMode), _hamestnav),
                 smhamestnav: (_smhamestnav = {
                     visibility: show ? 'visible' : 'hidden',
@@ -160,9 +157,8 @@ function navbarFunction(type, props, state, self) {
                     top: state.hamTop,
                     left: state.hamLeft,
                     background: state.hamBackground,
-                    display: 'flex',
-                    flex: "1 0 auto"
-                }, _defineProperty(_smhamestnav, "flexDirection", 'column'), _defineProperty(_smhamestnav, "alignItems", 'center'), _defineProperty(_smhamestnav, "boxShadow", state.hamShadow), _defineProperty(_smhamestnav, "animationIterationCount", state.animationIterationCount), _defineProperty(_smhamestnav, "animationTimingFunction", state.animationTimingFunction), _defineProperty(_smhamestnav, "animationName", state.animationName), _defineProperty(_smhamestnav, "animationDuration", state.animationDuration), _defineProperty(_smhamestnav, "transformOrigin", state.transformOrigin), _defineProperty(_smhamestnav, "animationFillMode", state.animationFillMode), _smhamestnav),
+                    display: 'flex'
+                }, _defineProperty(_smhamestnav, "flexDirection", 'column'), _defineProperty(_smhamestnav, "flex", 1), _defineProperty(_smhamestnav, "alignItems", 'center'), _defineProperty(_smhamestnav, "boxShadow", state.hamShadow), _defineProperty(_smhamestnav, "animationIterationCount", state.animationIterationCount), _defineProperty(_smhamestnav, "animationTimingFunction", state.animationTimingFunction), _defineProperty(_smhamestnav, "animationName", state.animationName), _defineProperty(_smhamestnav, "animationDuration", state.animationDuration), _defineProperty(_smhamestnav, "transformOrigin", state.transformOrigin), _defineProperty(_smhamestnav, "animationFillMode", state.animationFillMode), _smhamestnav),
                 mdhamestnav: (_mdhamestnav = {
                     visibility: show ? 'visible' : 'hidden',
                     width: '100%',
@@ -172,7 +168,7 @@ function navbarFunction(type, props, state, self) {
                     left: state.hamLeft,
                     background: state.hamBackground,
                     display: 'flex',
-                    flex: "1 0 auto"
+                    flex: 1
                 }, _defineProperty(_mdhamestnav, "flexDirection", 'column'), _defineProperty(_mdhamestnav, "alignItems", 'center'), _defineProperty(_mdhamestnav, "boxShadow", state.hamShadow), _defineProperty(_mdhamestnav, "animationIterationCount", state.animationIterationCount), _defineProperty(_mdhamestnav, "animationTimingFunction", state.animationTimingFunction), _defineProperty(_mdhamestnav, "animationName", state.animationName), _defineProperty(_mdhamestnav, "animationDuration", state.animationDuration), _defineProperty(_mdhamestnav, "transformOrigin", state.transformOrigin), _defineProperty(_mdhamestnav, "animationFillMode", state.animationFillMode), _mdhamestnav)
                 // case (type = '2'):
                 //     cursor = "pointer"

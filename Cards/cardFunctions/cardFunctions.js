@@ -29,7 +29,6 @@ function cardFunction(type, props, state, self) {
                 cardstyle: {
                     margin: '10px',
                     display: 'flex',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -63,7 +62,6 @@ function cardFunction(type, props, state, self) {
                 smcardstyle: {
                     display: smDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -90,7 +88,6 @@ function cardFunction(type, props, state, self) {
                 },
                 smcardcontent: {
                     display: smDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -100,7 +97,6 @@ function cardFunction(type, props, state, self) {
                 mdcardstyle: {
                     display: mdDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -127,7 +123,6 @@ function cardFunction(type, props, state, self) {
                 },
                 mdcardcontent: {
                     display: mdDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -149,7 +144,6 @@ function cardFunction(type, props, state, self) {
                 cardstyle: {
                     display: 'flex',
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -173,7 +167,6 @@ function cardFunction(type, props, state, self) {
                 },
                 cardcontent: {
                     display: 'flex',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -190,7 +183,6 @@ function cardFunction(type, props, state, self) {
                 smcardstyle: {
                     display: smDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -217,7 +209,6 @@ function cardFunction(type, props, state, self) {
                 },
                 smcardcontent: {
                     display: smDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -235,7 +226,6 @@ function cardFunction(type, props, state, self) {
                 mdcardstyle: {
                     display: mdDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -262,7 +252,6 @@ function cardFunction(type, props, state, self) {
                 },
                 mdcardcontent: {
                     display: mdDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -294,7 +283,6 @@ function cardFunction(type, props, state, self) {
                 cardstyle: {
                     display: 'flex',
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -316,7 +304,6 @@ function cardFunction(type, props, state, self) {
                 },
                 cardcontent: {
                     display: 'flex',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -330,7 +317,6 @@ function cardFunction(type, props, state, self) {
                 smcardstyle: {
                     display: smDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -354,7 +340,6 @@ function cardFunction(type, props, state, self) {
                 },
                 smcardcontent: {
                     display: smDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",
@@ -369,7 +354,6 @@ function cardFunction(type, props, state, self) {
                 mdcardstyle: {
                     display: mdDis,
                     margin: '10px',
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     boxShadow: boxShadow,
                     transition: '0.3s',
@@ -400,7 +384,6 @@ function cardFunction(type, props, state, self) {
                 },
                 mdcardcontent: {
                     display: mdDis,
-                    flex: "1 0 auto",
                     flexDirection: 'column',
                     padding: '2px 16px',
                     wordWrap: "break-word",

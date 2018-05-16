@@ -418,7 +418,7 @@ var List = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[1], query: "(min-width: 1224px)" },
+                        { key: tempkeys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -426,7 +426,7 @@ var List = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: tempkeys[2], query: "(min-width: 1224px)" },
+                        { key: tempkeys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -807,7 +807,7 @@ var List = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[1], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },
@@ -815,7 +815,7 @@ var List = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[2], query: "(min-width: 1224px)" },
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             "ol",
                             { style: use.liststyle, id: this.state.id, className: this.state.className },
