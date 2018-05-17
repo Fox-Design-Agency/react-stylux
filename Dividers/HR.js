@@ -113,7 +113,7 @@ var HR = function (_React$Component) {
                     )];
             }
 
-            this.setState({ styledHR: styledHR });
+            this.setState({ styledHR: styledHR, keys: tempkeys });
         }
     }, {
         key: 'componentWillReceiveProps',
