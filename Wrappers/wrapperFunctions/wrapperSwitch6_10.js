@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = wrapperSwitch6_10;
-function wrapperSwitch6_10(num, props, state) {
+function wrapperSwitch6_10(num, props, state, themer) {
     var blocks = '';
-    var background = props.background;
+    var background = props.background || themer.background;
     var display = props.display || 'flex';
     var direction = props.direction || 'column';
     var height = props.height;
@@ -18,8 +18,8 @@ function wrapperSwitch6_10(num, props, state) {
     var borderTop = props.bTop;
     var borderBottom = props.bBottom;
     var border = props.border;
-    var padding = props.padding || '0';
-    var margin = props.margin || '10px 0';
+    var padding = props.padding;
+    var margin = props.margin;
     var smdis = props.smDis || 'flex';
     var mddis = props.mdDis || 'flex';
     var smflexDir = props.smflexDir || 'column';
@@ -104,7 +104,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: display,
-                    flex: "1",
                     flexDirection: direction,
                     flexWrap: 'wrap',
                     background: background,
@@ -123,7 +122,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: smdis,
-                    flex: "1",
                     flexDirection: smflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -143,7 +141,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: mddis,
-                    flex: "1",
                     flexDirection: mdflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -497,7 +494,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: display,
-                    flex: "1",
                     flexDirection: direction,
                     flexWrap: 'wrap',
                     background: background,
@@ -516,7 +512,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: smdis,
-                    flex: "1",
                     flexDirection: smflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -536,7 +531,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: mddis,
-                    flex: "1",
                     flexDirection: mdflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -773,7 +767,7 @@ function wrapperSwitch6_10(num, props, state) {
                     justifyContent: blocks.justifyBlock6
                 },
                 smblock6styles: {
-                    display: blocks.block5smdis,
+                    display: blocks.block6smdis,
                     flex: blocks.block6,
                     flexDirection: 'column',
                     flexWrap: 'wrap',
@@ -787,7 +781,7 @@ function wrapperSwitch6_10(num, props, state) {
                     justifyContent: blocks.justifyBlock6
                 },
                 mdblock6styles: {
-                    display: blocks.block4mddis,
+                    display: blocks.block6mddis,
                     flex: blocks.block6,
                     flexDirection: 'column',
                     flexWrap: 'wrap',
@@ -801,7 +795,7 @@ function wrapperSwitch6_10(num, props, state) {
                     justifyContent: blocks.justifyBlock6
                 },
                 block7styles: {
-                    display: 'flex',
+                    display: "flex",
                     flex: blocks.block7,
                     flexDirection: 'column',
                     flexWrap: 'wrap',
@@ -944,7 +938,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: display,
-                    flex: "1",
                     flexDirection: direction,
                     flexWrap: 'wrap',
                     background: background,
@@ -963,7 +956,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: smdis,
-                    flex: "1",
                     flexDirection: smflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -983,7 +975,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: mddis,
-                    flex: "1",
                     flexDirection: mdflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -1445,7 +1436,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: display,
-                    flex: "1",
                     flexDirection: direction,
                     flexWrap: 'wrap',
                     background: background,
@@ -1464,7 +1454,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: smdis,
-                    flex: "1",
                     flexDirection: smflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -1484,7 +1473,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: mddis,
-                    flex: "1",
                     flexDirection: mdflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -2000,7 +1988,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: display,
-                    flex: "1",
                     flexDirection: direction,
                     flexWrap: 'wrap',
                     background: background,
@@ -2019,7 +2006,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: smdis,
-                    flex: "1",
                     flexDirection: smflexDir,
                     flexWrap: 'wrap',
                     background: background,
@@ -2039,7 +2025,6 @@ function wrapperSwitch6_10(num, props, state) {
                     padding: padding,
                     margin: margin,
                     display: mddis,
-                    flex: "1",
                     flexDirection: mdflexDir,
                     flexWrap: 'wrap',
                     background: background,
