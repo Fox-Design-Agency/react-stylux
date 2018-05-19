@@ -70,25 +70,19 @@ var Figure = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var CAPTION = StyleSheet.create({
-                caption: {
-                    padding: '10px',
-                    color: 'gray',
-                    textAlign: 'center'
-                },
-                '@media screen and (max-width: 768px)': {
-                    caption: {
-                        display: this.state.smDis,
-                        fontSize: '6em'
-                    }
-                },
-                '@media screen and (min-width: 769px) and (max-width: 1200px)': {
-                    caption: {
-                        display: this.state.mdDis,
-                        fontSize: '6em'
-                    }
-                }
-            });
+            var caption = {
+                padding: '10px',
+                color: 'gray',
+                textAlign: 'center'
+            };
+            var smcaption = {
+                display: this.state.smDis,
+                fontSize: '6em'
+            };
+            var mdcaption = {
+                display: this.state.mdDis,
+                fontSize: '6em'
+            };
             return _react2.default.createElement(
                 _react2.default.Fragment,
                 null,

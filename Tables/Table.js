@@ -176,7 +176,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -197,7 +197,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], maxWidth: 767 },
+                                { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.smtableres, id: this.state.id, className: this.state.className },
@@ -242,7 +242,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -263,7 +263,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], maxWidth: 767 },
+                                { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.smtableres, id: this.state.id, className: this.state.className },
@@ -310,7 +310,7 @@ var Table = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'div',
                             { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -331,7 +331,7 @@ var Table = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], maxWidth: 767 },
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'div',
                             { style: use.smtableres, id: this.state.id, className: this.state.className },
@@ -468,7 +468,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -489,7 +489,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], maxWidth: 767 },
+                                { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.smtableres, id: this.state.id, className: this.state.className },
@@ -534,7 +534,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                                { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -555,7 +555,7 @@ var Table = function (_React$Component) {
                                 )
                             ), _react2.default.createElement(
                                 _reactResponsive2.default,
-                                { key: this.state.keys[0], maxWidth: 767 },
+                                { key: this.state.keys[2], maxWidth: 767 },
                                 _react2.default.createElement(
                                     'div',
                                     { style: use.smtableres, id: this.state.id, className: this.state.className },
@@ -602,7 +602,7 @@ var Table = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], minWidth: 768, maxWidth: 1223 },
+                        { key: this.state.keys[1], minWidth: 768, maxWidth: 1223 },
                         _react2.default.createElement(
                             'div',
                             { style: use.mdtableres, id: this.state.id, className: this.state.className },
@@ -623,7 +623,7 @@ var Table = function (_React$Component) {
                         )
                     ), _react2.default.createElement(
                         _reactResponsive2.default,
-                        { key: this.state.keys[0], maxWidth: 767 },
+                        { key: this.state.keys[2], maxWidth: 767 },
                         _react2.default.createElement(
                             'div',
                             { style: use.smtableres, id: this.state.id, className: this.state.className },
