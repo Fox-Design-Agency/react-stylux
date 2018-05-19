@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = wrapperSwitch6_10;
 function wrapperSwitch6_10(num, props, state, themer) {
     var blocks = '';
-    var background = props.background || themer.background;
+    var background = props.background || props.themes ? props.themes.background : themer.background;
     var display = props.display || 'flex';
     var direction = props.direction || 'column';
     var height = props.height;
